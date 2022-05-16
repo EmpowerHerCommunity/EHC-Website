@@ -7,7 +7,9 @@ import Footer from '../src/components/Footer';
 const Contact = () => {
   return (
     <div>
-        Veedahv, this is your part of the work <b>  Contact Page</b> Do not bother with the NavBar and Footer components
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     <NavBar />
     <Form />
     <ContactUs />
