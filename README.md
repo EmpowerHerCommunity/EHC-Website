@@ -21,6 +21,7 @@ Great Programmers are not always easy to acquire and when we sure do come across
 - Jessica Joseph
 - Sharon Falomo
 - Nancy Olatuja
+- Khadijat Ibidapo
 
 ## Roadmap 🔍
 Here are some of the links you should look out for to make navigation on the site easier for you. 
