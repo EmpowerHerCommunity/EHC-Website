@@ -6,12 +6,12 @@ The Empower Her Community is a technology based community that sees to the growt
 
 The Empower Her community website was developed utilizing the following libraries and frameworks;
 
-- Next.js
 - React.js
+- Next.js
 - Tailwind 
 
 
-## Meet the EHC Software Development Team
+## 👋  Meet the EHC Software Development Team 
 
 Great Programmers are not always easy to acquire and when we sure do come across such rare gems, we love to appreciate these gems. Here is a list of our very own developers who have spent time on replicating the EHC design with their codes and skills;
 
@@ -22,7 +22,9 @@ Great Programmers are not always easy to acquire and when we sure do come across
 - Sharon Falomo
 - Nancy Olatuja
 
-##WEBPAGES
+## Roadmap
+Here are some of the links you should look out for to make navigation on the site easier for you. 
+### Top links
 
 - xxxxxx
 - xxxxxx
