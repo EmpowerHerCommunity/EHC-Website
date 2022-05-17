@@ -7,13 +7,21 @@ import Footer from '../src/components/Footer';
 const Contact = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <NavBar />
-    <Form />
-    <ContactUs />
-    <Footer />
+      <NavBar />
+      <main className="main bg-light">
+        <div className="container px-4 mx-auto py-24 relative">
+          <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
+          <div className="flex flex-col-reverse lg:flex-row gap-14 lg:gap-36 relative mt-16">
+            <div className="w-full lg:w-6/12 lg:flex-auto">
+              <Form />
+            </div>
+            <div className="w-full lg:w-5/12 lg:flex-auto">
+              <ContactUs />
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }
