@@ -1,6 +1,15 @@
-# EmpowerHerCommunity Website 
+# Empower Her Community  
 
 The Empower Her Community is a technology based community that sees to the growth and progress of women in techology. Our founder Elizabeth Okaome is not just an advocate for women in tech but she is also a driven Community Manager who derives so much pleasure in aiding female tech communities and passionate about getting as many women as possible into the tech space.
+
+## About The Project
+
+The Empower Her community website was developed utilizing the following libraries and frameworks;
+
+- Next.js
+- React.js
+- Tailwind 
+
 
 ## Meet the EHC Software Development Team
 
