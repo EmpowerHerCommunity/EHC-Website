@@ -22,10 +22,10 @@ const Team = () => {
               Founder
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -42,10 +42,10 @@ const Team = () => {
               Lead, Operations
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -61,10 +61,10 @@ const Team = () => {
               Lead, Community Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -80,10 +80,10 @@ const Team = () => {
               Programs Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -99,10 +99,10 @@ const Team = () => {
               Lead, Finance
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -118,10 +118,10 @@ const Team = () => {
               Lead, Engineering
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -137,10 +137,10 @@ const Team = () => {
               Lead, Design
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -156,10 +156,10 @@ const Team = () => {
               Lead, Communications
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -175,10 +175,10 @@ const Team = () => {
               Legal Advisor
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -194,10 +194,10 @@ const Team = () => {
               Public Relations Officer
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://twitter.com/EOkaome?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
