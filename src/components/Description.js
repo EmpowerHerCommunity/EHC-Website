@@ -11,8 +11,10 @@ const Description = () => {
            <Image src='/events2.jpg' width='498px' height='350px' />
          </div>
          <div>
-         <h2>Who Are We?</h2>
+         <h2 className='hero-h2 font-normal md:text-5xl text-2xl mb-6 font-bold'>Who Are We?</h2>
+         <p className='hero-paragraph font-normal text-xl leading-6 mb-4'> 
          The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
+         </p>
          <div className='leading-6 mt-2 mb-12'> 
             <button className='bg-fuchsia-900  py-2 px-4  hover:border-transparent rounded w-40'>
               <span className={styles.span2}>
@@ -52,4 +54,3 @@ export default Description;
 
 
 
-// The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.

@@ -8,13 +8,13 @@ const HeroHome = () => {
       <div className='flex justify-between lg:px-32 lg:py-32 sm:px-12 sm:py-12 p-7' >
         <div>
           <article>
-            <div className='lg:text-l w-96 h-6 font-normal uppercase tracking-widest'>
+            <div className='herohome-text lg:text-l w-96 h-6 font-normal uppercase tracking-widest font-light'>
               A female-oriented tech community
             </div> 
-            <div className='lg:text-7xl sm:text-4xl text-4xl text-fuchsia-800'>
+            <div className='herohome-title lg:text-7xl sm:text-4xl text-4xl text-fuchsia-800 font-bold'>
               Empower Her Community
             </div> 
-            <div className='lg:text-xl my-8 w-96 h-20'>
+            <div className='lg:text-xl md:my-8 my-4 w-96 h-20'>
               We are a female community seeing to the growth and progress of all women in tech worldwide
             </div>
 
@@ -38,9 +38,11 @@ const HeroHome = () => {
             </div>
           </article>
         </div>
-        <div className='hidden sm:block bg-slate-100 rounded-r-lg'>
+         
+        <div className='hidden sm:block bg-slate-100 rounded-r-lg h-3/4'>
           <Image src='/herogirl.png' width='548px' height='539px' alt ='' />
         </div>
+      
       </div>
     </div>
   )

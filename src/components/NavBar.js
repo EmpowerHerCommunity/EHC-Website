@@ -40,45 +40,47 @@ const NavBar = () => {
         </div>
 
       <div className={` ${ active ? '' : 'hidden'} w-full lg:inline-flex lg:w-auto`}>
-        <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center items-start  flex flex-col lg:h-auto w-full'>         
+        <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center items-start  flex flex-col lg:h-auto w-full '>         
       
           
             <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-start hover:bg-green-600 hover:text-white '>
+              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start  hover:text-purple-900 hover:text-xl '>
                 Home
               </a>
             </Link>
           
           
             <Link href='/aboutUs'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-start hover:bg-green-600 hover:text-white '>
+              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start hover:text-purple-900 hover:text-xl'>
                 About
               </a>
             </Link>
           
           
             <Link href='/events'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-start hover:bg-green-600 hover:text-white '>
+              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start  hover:text-purple-900 hover:text-xl'>
                 Events
               </a>
             </Link>
           
           
             <Link href='/contact'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-start hover:bg-green-600 hover:text-white '>
+              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start hover:text-purple-900 hover:text-xl'>
                 Contact
               </a>
             </Link>
           
           
             <Link href='/volunteer'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-start hover:bg-green-600 hover:text-white mr-52'>
+              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start  hover:text-purple-900 hover:text-xl mr-52'>
                 Volunteer
               </a>
             </Link>
           
         
-        <div className={styles.btn1}> 
+        { active ? null :
+         <> 
+          <div className={styles.btn1}> 
         <button className='bg-transparent py-2 px-4 border border-2 border-purple-400 hover:border-transparent rounded w-40 mr-10'>
          <span className={styles.span1}>  Support Us </span>
         </button>
@@ -89,6 +91,7 @@ const NavBar = () => {
         <span className={styles.span2}> Join Us Today </span>
         </button>
         </div>
+        </>}
 
       </div>
     </div>

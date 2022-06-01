@@ -51,7 +51,7 @@ const Testimonial = () => {
       sliderClass=""
       slidesToSlide={1}
       >
-  <div className="bg-[url('/rectangle.png')] font-normal text-lg leading-6 p-5">
+  <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
   Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Okafor Favor <br />
@@ -63,7 +63,7 @@ const Testimonial = () => {
   <div>
     <Image src='/testimonial1.jpg' width='213px' height='315px' />
   </div>
-  <div className="bg-[url('/rectangle.png')] font-normal text-lg leading-6 p-5">
+  <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
   Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Natasha Johnson <br />
@@ -75,7 +75,7 @@ const Testimonial = () => {
   <div>
     <Image src='/testimonial2.jpg' width='213px' height='315px' />
   </div>
-  <div className="bg-[url('/rectangle.png')] font-normal text-lg leading-6 p-5">
+  <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
   Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Mary Jane <br />
