@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;   
 }
 
 a {
@@ -17,4 +18,24 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* HeroHome.js */
+
+/* Description.js */
+.hero-h2,
+.hero-paragraph{
+  color: #363636;
+}
+/* Events */
+.read-more{
+  color: #FFCF00;
+}
+/* Partnership.js */
+.patnership-title{
+  color: #363636;
+}
+/* Footer.js */
+.footer{
+  background: linear-gradient(0deg, rgba(102, 0, 102, 0.6), rgba(102, 0, 102, 0.6)), url(/footerImg.png);
 }
