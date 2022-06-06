@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
-
+import AOS from 'aos';
 
 const Description = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
+
   return (
      <div className='m-12'>
        <div className='grid lg:grid-cols-2 grid-cols-1 gap-4'>
-         <div>
+         <div data-aos='fade-down'>
            <Image src='/events2.jpg' width='498px' height='350px' />
          </div>
          <div>
-         <h2 className='hero-h2 font-normal md:text-5xl text-2xl mb-6 font-bold'>Who Are We?</h2>
-         <p className='hero-paragraph font-normal text-xl leading-6 mb-4'> 
+         <h2 className='hero-h2 font-normal md:text-5xl text-2xl mb-6 font-bold' data-aos='fade-right'>Who Are We?</h2>
+         <p className='hero-paragraph font-normal text-xl leading-6 mb-4' data-aos='fade-up'> 
          The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
          </p>
          <div className='leading-6 mt-2 mb-12'> 
@@ -22,7 +28,7 @@ const Description = () => {
               </span>
               </button>
           </div>
-              <div className='grid grid-cols-3 gap-8'>
+              <div className='grid grid-cols-3 gap-8' data-aos='fade-up-right'>
       <div>
 <Image src='/1.png' width='36px' height='36px' />
 </div>

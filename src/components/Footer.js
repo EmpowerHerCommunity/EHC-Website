@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SiInstagram, SiTwitter, SiFacebook, SiLinkedin } from 'react-icons/si';
 import { BsTelephone } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
+import AOS from 'aos';
 
 
 
 const Footer = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
+
   return (
     <div className='footer md:grid grid-cols-2 gap-x-24 p-12 pb-16 text-white'>
-      <div className='flex flex-col '>
+      <div className='flex flex-col' data-aos='zoom-in-up'>
         <h2 className='leading-10 md:text-5xl text-3xl font-normal mb-4'>Empower Her Community</h2>
         <p className='font-normal md:text-xl  leading-8 mb-8'>
         A Technology-based community focused on training 
@@ -31,7 +38,7 @@ technology, so as to help them advance in their career.
         </div>
         <h4>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
       </div>
-      <div className='grid grid-cols-3 gap-4 mt-12 '>
+      <div className='grid grid-cols-3 gap-4 mt-12' data-aos='zoom-in-down'>
         <div>Home</div>
         <div>Volunteer</div>
         <div>Contact</div>
