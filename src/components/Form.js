@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import AOS from 'aos';
 
 const Form = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
+
   const [state, handleSubmit] = useForm("xyyolabb");
   const [form, setForm] = useState({
     name: "",
@@ -25,12 +32,12 @@ const Form = () => {
         message: ""
       });
     }
-  }, [state.submitting])
+  }, [state.submitting]);
   return (
-    <div>
+    <div className='m-4'>
       <form className="form text-dark" onSubmit={() => handleSubmit}>
         <div className="flex flex-wrap sm:flex-nowrap gap-4">
-          <div className="input-group w-full py-2 sm:flex-1">
+          <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-right'>
             <label htmlFor="name" className="uppercase text-lg">name</label>
             <input
               type="text"
@@ -47,7 +54,7 @@ const Form = () => {
               errors={state.errors}
             />
           </div>
-          <div className="input-group w-full py-2 sm:flex-1">
+          <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-left'>
             <label htmlFor="email" className="uppercase text-lg">email</label>
             <input
               type="email"
@@ -65,7 +72,7 @@ const Form = () => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap sm:flex-nowrap gap-4">
+        <div className="flex flex-wrap sm:flex-nowrap gap-4" data-aos='fade-right'>
           <div className="input-group w-full py-2 sm:flex-1">
             <label htmlFor="mobile-number" className="uppercase text-lg">mobile number</label>
             <input
@@ -83,7 +90,7 @@ const Form = () => {
               errors={state.errors}
             />
           </div>
-          <div className="input-group w-full py-2 sm:flex-1">
+          <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-left'>
             <label htmlFor="nationality" className="uppercase text-lg">Nationality</label>
             <input 
               type="text"
@@ -101,7 +108,7 @@ const Form = () => {
             />
           </div>
         </div>
-        <div className="">
+        <div className="" data-aos='fade-right'>
           <div className="input-group w-full py-2">
             <label htmlFor="" className="uppercase text-xl">message</label>
             <textarea
@@ -120,8 +127,8 @@ const Form = () => {
             />
           </div>
         </div>
-        <div className="input-group w-full py-2">
-          <button className="bg-primary text-white text-3xl w-full p-3" type="submit" disabled={state.submitting}>Submit</button>
+        <div className="input-group w-full py-2" data-aos='zoom-in'>
+          <button className="bg-primary text-white text-3xl w-full p-3" type="submit" disabled={state.submitting}>Submit 🙂</button>
         </div>
       </form>
     </div>

@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css';
+import AOS from 'aos';
 
 
 const NavBar = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
 
   const [active, setActive ] = useState(false);
 
@@ -14,7 +20,7 @@ const NavBar = () => {
   return (
     <div className='w-full'>
       <nav className='lg:flex  items-center flex-wrap p-3 '>
-        <div className='flex '> 
+        <div className='flex' data-aos='zoom-in'> 
             <Link href='/'>
               <a className='inline-flex items-center p-2 mr-4'>
                 <Image src='/logo.png' width='91px' height='90px' />
