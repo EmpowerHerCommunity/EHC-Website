@@ -15,7 +15,7 @@ import React from 'react'
       </div>
       <div>
         <h2 className='md:text-5xl text-3xl text-center my-10 w-fit  relative'>About Us <span><img src='/line2.png' alt='' /></span></h2>
-        <p className='font-normal md:text-xl leading-6 '>
+        <p className='font-normal md:text-xl text-lg mb-4 leading-6 '>
         The <span className='text-purple-800'>EmpowerHer Community</span> is a female oriented tech community which focuses on training and promoting women in the field of information technology.
 
 We aim to promote and spread more awareness for opportunities in information technology and incorporate as many women as possible. Having started our journey in May 2019, we have not backed down in helping women transition smoothly into the Information Technology industry. 

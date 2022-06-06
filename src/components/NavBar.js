@@ -22,7 +22,7 @@ const NavBar = () => {
       <nav className='lg:flex  items-center flex-wrap p-3 '>
         <div className='flex' data-aos='zoom-in'> 
             <Link href='/'>
-              <a className='inline-flex items-center p-2 mr-4'>
+              <a className='inline-flex items-center p-2 mr-4 border-none'>
                 <Image src='/logo.png' width='91px' height='90px' />
               </a>
             </Link>
