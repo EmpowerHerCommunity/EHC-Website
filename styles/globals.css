@@ -35,6 +35,18 @@ a {
 .patnership-title{
   color: #363636;
 }
+.our-vision{
+  color: #363636;
+}
+
+/* HeroAbout.js */
+.hero-about{
+  background-color: rgba(102, 0, 102, 0.1);
+}
+.hero-about-list{
+  color: #363636;
+}
+
 /* Footer.js */
 .footer{
   background: linear-gradient(0deg, rgba(102, 0, 102, 0.6), rgba(102, 0, 102, 0.6)), url(/footerImg.png);

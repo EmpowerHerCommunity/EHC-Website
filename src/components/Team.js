@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 
 const Team = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
+
   return (
-    <section className="">
+    <section className="p-6">
       <div className='container mx-auto py-5 text-dark relative'>
         <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
-        <h2 className="text-5xl text-center my-10 w-fit mx-auto relative">
+        <h2 className="md:text-5xl text-3xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
           Meet The Team
           <img src="/sun.png" alt="" className="absolute top-[-10px] right-[-25px] w-14" />
           {/* <img src="/sun.png" alt="" className="absolute top-[-5px] right-[0px]" /> */}
         </h2>
         <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10">
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-right'>
               <img src="/team-images/beth.png" alt="Elizabeth Okaome image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -32,7 +39,7 @@ const Team = () => {
 
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-left'>
               <img src="/team-images/precious.png" alt="Precious Oriarewo image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -51,7 +58,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-right'>
               <img src="/team-images/peace.png" alt="Peace Ngozi Okafor image" className="w-[85%]" />
             </div>
             <p className="text-lg">
@@ -70,7 +77,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-left'>
               <img src="/team-images/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -89,7 +96,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-right'>
               <img src="/team-images/mary.png" alt="Mary Sule image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -108,7 +115,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-left'>
               <img src="/team-images/pearl.png" alt="Pearl Christain image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -127,7 +134,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-up'>
               <img src="/team-images/kelechi.png" alt="Kelechi Amachukwu image" className="w-[85%]" />
             </div>
             <p className="text-lg">
@@ -146,7 +153,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
               <img src="/team-images/anita.png" alt="Anita Kimemenihia image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -165,7 +172,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-right'>
               <img src="/team-images/gracious.png" alt="Gracious Sede image" className="w-[80%]" />
             </div>
             <p className="text-lg">
@@ -184,7 +191,7 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-right'>
               <img src="/team-images/eunice.png" alt="Eunice Kadri image" className="w-[85%]" />
             </div>
             <p className="text-lg">
