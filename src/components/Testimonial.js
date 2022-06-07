@@ -52,7 +52,7 @@ const Testimonial = () => {
       slidesToSlide={1}
       >
   <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
+  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Okafor Favor <br />
     </div>
@@ -61,10 +61,10 @@ const Testimonial = () => {
       </span>
   </div>
   <div>
-    <Image src='/testimonial1.jpg' width='213px' height='315px' />
+    <Image src='/testimonial1.jpg' width='213px' height='315px' alt='' />
   </div>
   <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
+  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Natasha Johnson <br />
     </div>
@@ -73,10 +73,10 @@ const Testimonial = () => {
       </span>
   </div>
   <div>
-    <Image src='/testimonial2.jpg' width='213px' height='315px' />
+    <Image src='/testimonial2.jpg' width='213px' height='315px' alt=''/>
   </div>
   <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I've learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I'm grateful for it. 
+  Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it. 
     <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
       Mary Jane <br />
     </div>
@@ -85,7 +85,7 @@ const Testimonial = () => {
       </span>
   </div>
   <div>
-    <Image src='/testimonial3.jpg' width='213px' height='315px' />
+    <Image src='/testimonial3.jpg' width='213px' height='315px' alt=''/>
   </div>
       </Carousel>
     </div>

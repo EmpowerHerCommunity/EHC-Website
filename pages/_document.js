@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" 
                         href="/static/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
             <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,500&display=swap" rel="stylesheet" />
 {/* Inject MUI styles first to match with the prepend: true configuration. */}
                     {this.props.emotionStyleTags}
