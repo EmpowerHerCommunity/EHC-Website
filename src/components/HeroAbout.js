@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+
 
  const HeroAbout = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500});
+    AOS.refresh();
+  }, []);
+  
   return (
     <div className='hero-about p-8'> 
     <div className='grid md:grid-cols-2 md:m-12 md:p-16'>
-      <div className=' hero-about-list font-normal text-lg leading-7'>
+      <div className=' hero-about-list font-normal text-lg leading-7' data-aos='fade-right'>
         <img src='/contact-dots.svg' alt='' />
         <ul className='ml-8 mt-8'>
           <li><b> About Us. </b></li>
@@ -14,8 +22,8 @@ import React from 'react'
         </ul>
       </div>
       <div>
-        <h2 className='md:text-5xl text-3xl text-center my-10 w-fit  relative'>About Us <span><img src='/line2.png' alt='' /></span></h2>
-        <p className='font-normal md:text-xl text-lg mb-4 leading-6 '>
+        <h2 className='md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative'>About Us <span><img src='/line2.png' alt='' /></span></h2>
+        <p className='font-normal md:text-xl text-lg mb-4 leading-6' data-aos='fade-left'>
         The <span className='text-purple-800'>EmpowerHer Community</span> is a female oriented tech community which focuses on training and promoting women in the field of information technology.
 
 We aim to promote and spread more awareness for opportunities in information technology and incorporate as many women as possible. Having started our journey in May 2019, we have not backed down in helping women transition smoothly into the Information Technology industry. 
@@ -24,7 +32,7 @@ We have trained more than 700 women all across the globe, we aim to have trained
         </p>
       </div>
     </div>
-    <div className='h-4/5'> <img src='/events2.jpg' alt='' className='w-full h-4/5'/></div>
+    <div className='h-4/5' data-aos='zoom-in'> <img src='/events2.jpg' alt='' className='w-full h-4/5'/></div>
     </div>
   )
 }
