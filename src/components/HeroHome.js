@@ -1,6 +1,7 @@
 import React,{ useEffect } from 'react';
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import  AOS  from 'aos';
 
 const HeroHome = () => {
@@ -27,16 +28,24 @@ const HeroHome = () => {
 
           <div> 
             <button className='bg-transparent md:py-2 md:px-4 p-8 border border-2 border-purple-400 hover:border-transparent rounded md:w-40 w-56  mr-10'>
-              <span className={styles.span1}>
-                Support Us 
-              </span>
+              <Link href='https://paystack.com/pay/empowerhercommunity'>
+                <a target='_blank'>   
+                  <span className={styles.span1}>
+                    Support Us 
+                  </span>
+                </a>
+              </Link>
             </button>
 
              
               <button className='join-btn md:py-2 md:px-4 p-8  hover:border-transparent rounded md:w-40 w-56'>
-              <span className={styles.span2}>
-                Join Us Today 
-              </span>
+              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
+                <a target='_blank'>     
+                <span className={styles.span2}>
+                  Join Us Today 
+                </span>
+                </a>
+                </Link>
               </button>
               <div className='mt-24'>
                 <Image src='/group2.png' width='137px' height='137px' alt='' />

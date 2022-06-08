@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 import AOS from 'aos';
 
@@ -22,10 +23,14 @@ const Description = () => {
          The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
          </p>
          <div className='leading-6 mt-2 mb-12'> 
-            <button className='bg-fuchsia-900  py-2 px-4  hover:border-transparent rounded w-40'>
-              <span className={styles.span2}>
-                Join Us Today 
-              </span>
+            <button className='bg-fuchsia-900  md:py-2 py-4 px-4  hover:border-transparent rounded md:w-40 w-56'>
+              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
+                <a target='_blank'>  
+                  <span className={styles.span2}>
+                    Join Us Today 
+                  </span>
+                </a>
+              </Link>
               </button>
           </div>
               <div className='grid grid-cols-3 gap-8' data-aos='fade-up-right'>
