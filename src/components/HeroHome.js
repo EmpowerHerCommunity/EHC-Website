@@ -19,7 +19,7 @@ const HeroHome = () => {
             <div className='herohome-text lg:text-l  w-96 h-6 font-normal uppercase tracking-widest font-light'>
               A female-oriented tech community
             </div> 
-            <div className='herohome-title md:text-7xl  text-5xl font-bold'>
+            <div className='herohome-title md:text-7xl  text-6xl font-bold'>
               Empower Her Community
             </div> 
             <div className=' md:text-xl text-2xl md:my-8 my-4 w-96 md:h-20 h-24'>

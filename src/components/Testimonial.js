@@ -13,7 +13,7 @@ const responsive = {
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 2, // optional, default to 1.
     partialVisibilityGutter: 30
   },
   mobile: {
@@ -26,7 +26,7 @@ const responsive = {
 
 const Testimonial = () => {
   return (
-    <div className='p-10'>
+    <div className='p-2'>
       <Carousel
       additionalTransfrom={0}
       arrows={true}

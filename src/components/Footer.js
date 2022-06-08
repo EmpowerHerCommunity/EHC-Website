@@ -109,7 +109,7 @@ technology, so as to help them advance in their career.
         <div>
           <Link href='/'>
             <a>  
-              Partners
+            Partners
             </a>
           </Link>
         </div>
