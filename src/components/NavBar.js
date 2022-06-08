@@ -26,7 +26,7 @@ const NavBar = () => {
                 <Image src='/logo.png' width='91px' height='90px' />
               </a>
             </Link>
-        <button className= ' p-3 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+        <button className= 'p-3 rounded lg:hidden text-white ml-auto hover:text-white active:bg-white outline-none'
         onClick={handleClick}>
             <svg
             className='w-10 h-10'

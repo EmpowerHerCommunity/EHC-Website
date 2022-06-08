@@ -12,11 +12,11 @@ const NewsLetter = () => {
     <section className="bg-primary bg-opacity-10 p-8">
       <div className='container mx-auto py-10'>
         <div className="flex flex-wrap gap-6 text-dark">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl w-full lg:w-1/2 lg:flex-auto" data-aos='fade-right'>
+          <h2 className="md:text-4xl sm:text-5xl lg:text-6xl text-5xl w-full lg:w-1/2 lg:flex-auto" data-aos='fade-right'>
             Join our NewsLetter
           </h2>
           <div className="w-full lg:w-5/12 lg:flex-auto">
-            <p className="" data-aos='fade-right'>
+            <p className="text-xl" data-aos='fade-right'>
             Subscribe to our news letter to receive updates
             </p>
             <div className="flex gap-2 mt-2" data-aos='fade-left'>
