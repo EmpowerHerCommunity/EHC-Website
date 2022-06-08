@@ -128,7 +128,7 @@ const Form = () => {
           </div>
         </div>
         <div className="input-group w-full py-2" data-aos='zoom-in'>
-          <button className="bg-primary text-white text-3xl w-full p-3" type="submit" disabled={state.submitting}>Submit 🙂</button>
+          <button className="bg-primary text-white text-4xl w-full p-3" type="submit" disabled={state.submitting}>Submit 🙂</button>
         </div>
       </form>
     </div>

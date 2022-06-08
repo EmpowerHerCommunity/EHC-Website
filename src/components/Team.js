@@ -12,7 +12,7 @@ const Team = () => {
     <section className="p-6" id='team'>
       <div className='container mx-auto py-5 text-dark relative'>
         <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
-        <h2 className="md:text-5xl text-3xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
+        <h2 className="md:text-5xl text-5xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
           Meet The Team
           <img src="/sun.png" alt="" className="absolute top-[-10px] right-[-25px] w-14" />
           {/* <img src="/sun.png" alt="" className="absolute top-[-5px] right-[0px]" /> */}
@@ -22,10 +22,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-right'>
               <img src="/team-images/beth.png" alt="Elizabeth Okaome image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Elizabeth Okaome
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Founder
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -42,10 +42,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-left'>
               <img src="/team-images/precious.png" alt="Precious Oriarewo image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Precious Oriarewo
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Operations
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -61,10 +61,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-right'>
               <img src="/team-images/peace.png" alt="Peace Ngozi Okafor image" className="w-[85%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Peace Ngozi Okafor
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Community Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -80,10 +80,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-left'>
               <img src="/team-images/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Tracy Obakhena
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Programs Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -99,10 +99,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-right'>
               <img src="/team-images/mary.png" alt="Mary Sule image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Mary Sule
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Finance
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -118,10 +118,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-left'>
               <img src="/team-images/pearl.png" alt="Pearl Christain image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Pearl Christain
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Engineering
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -137,10 +137,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-up'>
               <img src="/team-images/kelechi.png" alt="Kelechi Amachukwu image" className="w-[85%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Kelechi Amachukwu
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Design
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -156,10 +156,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
               <img src="/team-images/anita.png" alt="Anita Kimemenihia image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Anita Kimemenihia
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Lead, Communications
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -175,10 +175,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-right'>
               <img src="/team-images/gracious.png" alt="Gracious Sede image" className="w-[80%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Gracious Sede
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Legal Advisor
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -194,10 +194,10 @@ const Team = () => {
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-right'>
               <img src="/team-images/eunice.png" alt="Eunice Kadri image" className="w-[85%]" />
             </div>
-            <p className="text-lg">
+            <p className="md:text-lg text-xl">
               Eunice Kadri
             </p>
-            <p className="text-[#737373]">
+            <p className="text-[#737373] text-lg">
               Public Relations Officer
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -215,4 +215,4 @@ const Team = () => {
   )
 }
 
-export default Team
+export default Team;
