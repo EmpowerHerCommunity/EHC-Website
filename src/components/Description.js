@@ -17,8 +17,8 @@ const Description = () => {
            <Image src='/events2.jpg' width='498px' height='350px' />
          </div>
          <div>
-         <h2 className='hero-h2 font-normal md:text-5xl text-2xl mb-6 font-bold' data-aos='fade-right'>Who Are We?</h2>
-         <p className='hero-paragraph font-normal text-xl leading-6 mb-4' data-aos='fade-up'> 
+         <h2 className='hero-h2 font-normal md:text-5xl text-5xl mb-6 font-bold' data-aos='fade-right'>Who Are We?</h2>
+         <p className='hero-paragraph font-normal md:text-xl text-3xl md:leading-6 leading-8 mb-4' data-aos='fade-up'> 
          The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
          </p>
          <div className='leading-6 mt-2 mb-12'> 

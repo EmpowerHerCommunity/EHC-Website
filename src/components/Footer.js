@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <div className='footer md:grid grid-cols-2 gap-x-24 p-12 pb-16 text-white'>
       <div className='flex flex-col' data-aos='zoom-in-up'>
-        <h2 className='leading-10 md:text-5xl text-3xl font-normal mb-4'>Empower Her Community</h2>
-        <p className='font-normal md:text-xl  leading-8 mb-8'>
+        <h2 className='leading-10 md:text-5xl text-4xl font-normal mb-4'>Empower Her Community</h2>
+        <p className='font-normal md:text-xl text-2xl leading-8 mb-8'>
         A Technology-based community focused on training 
 and promoting women in the field of information 
 technology, so as to help them advance in their career.

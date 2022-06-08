@@ -15,13 +15,13 @@ const HeroHome = () => {
       <div className='flex justify-between lg:px-32 lg:py-32 sm:px-12 sm:py-12 p-7' >
         <div data-aos='fade-left'>
           <article>
-            <div className='herohome-text lg:text-l w-96 h-6 font-normal uppercase tracking-widest font-light'>
+            <div className='herohome-text lg:text-l  w-96 h-6 font-normal uppercase tracking-widest font-light'>
               A female-oriented tech community
             </div> 
-            <div className='herohome-title lg:text-7xl sm:text-4xl text-4xl text-fuchsia-800 font-bold'>
+            <div className='herohome-title md:text-7xl  text-5xl font-bold'>
               Empower Her Community
             </div> 
-            <div className='lg:text-xl md:my-8 my-4 w-96 h-20'>
+            <div className=' text-xl md:my-8 my-4 w-96 h-20'>
               We are a female community seeing to the growth and progress of all women in tech worldwide
             </div>
 
@@ -33,7 +33,7 @@ const HeroHome = () => {
             </button>
 
              
-              <button className='bg-fuchsia-900  py-2 px-4  hover:border-transparent rounded w-40'>
+              <button className='join-btn py-2 px-4  hover:border-transparent rounded w-40'>
               <span className={styles.span2}>
                 Join Us Today 
               </span>

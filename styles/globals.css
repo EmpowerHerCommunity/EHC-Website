@@ -10,6 +10,12 @@ body {
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;   
 }
+/* global css */
+:root {
+  --main-color: #660066;
+  --secondary-color: #363636;
+  --third-color: #FFCF00;
+}
 
 a {
   color: inherit;
@@ -21,22 +27,28 @@ a {
 }
 
 /* HeroHome.js */
+.herohome-title{
+  color: var(--main-color);
+}
+.join-btn{
+  background-color: var(--main-color);
+}
 
 /* Description.js */
 .hero-h2,
 .hero-paragraph{
-  color: #363636;
+  color: var(--secondary-color)
 }
 /* Events */
 .read-more{
-  color: #FFCF00;
+  color: var(--third-color);
 }
 /* Partnership.js */
 .patnership-title{
-  color: #363636;
+  color: var(--secondary-color)
 }
 .our-vision{
-  color: #363636;
+  color: var(--secondary-color)
 }
 
 /* HeroAbout.js */
@@ -44,7 +56,7 @@ a {
   background-color: rgba(102, 0, 102, 0.1);
 }
 .hero-about-list{
-  color: #363636;
+  color: var(--secondary-color)
 }
 
 /* Footer.js */
