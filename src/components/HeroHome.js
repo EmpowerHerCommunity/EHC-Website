@@ -21,19 +21,19 @@ const HeroHome = () => {
             <div className='herohome-title md:text-7xl  text-5xl font-bold'>
               Empower Her Community
             </div> 
-            <div className=' text-xl md:my-8 my-4 w-96 h-20'>
+            <div className=' md:text-xl text-2xl md:my-8 my-4 w-96 md:h-20 h-24'>
               We are a female community seeing to the growth and progress of all women in tech worldwide
             </div>
 
           <div> 
-            <button className='bg-transparent py-2 px-4 border border-2 border-purple-400 hover:border-transparent rounded w-40 mr-10'>
+            <button className='bg-transparent md:py-2 md:px-4 p-8 border border-2 border-purple-400 hover:border-transparent rounded md:w-40 w-56  mr-10'>
               <span className={styles.span1}>
                 Support Us 
               </span>
             </button>
 
              
-              <button className='join-btn py-2 px-4  hover:border-transparent rounded w-40'>
+              <button className='join-btn md:py-2 md:px-4 p-8  hover:border-transparent rounded md:w-40 w-56'>
               <span className={styles.span2}>
                 Join Us Today 
               </span>
