@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import AOS from 'aos';
 
 
@@ -21,7 +22,11 @@ const Events = () => {
           <h2 className='text-white font-normal md:text-3xl text-4xl leading-10 mb-2 font-bold'>Webinar</h2>
           <p className='text-white font-normal md:text-lg text-xl leading-5 tracking-wider'> 
           A webinar to address the disinterest of girls in information technology and enlighten women on the need to transition into the technology space. <br />
-          <span className='read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg'>READ MORE...</span>
+          <Link href='/aboutUs'>
+            <a>  
+              <span className='read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg'>READ MORE...</span>
+            </a>
+          </Link>
           </p>
         </div>
         <div data-aos='fade-up' className='mb-8 text-center'>
@@ -31,7 +36,11 @@ const Events = () => {
         <h2 className='text-white font-normal md:text-3xl text-4xl leading-10 mb-2 font-bold'>Bootcamp 1.0</h2>
         <p className='text-white font-normal md:text-lg text-xl  leading-5 tracking-wider'>
         The EmpowerHer Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
-          <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+        <Link href='/aboutUs'>
+          <a>  
+            <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+          </a>
+          </Link>
         </p>
         </div>
         <div data-aos='fade-up'className='text-center'>
@@ -41,7 +50,11 @@ const Events = () => {
         <h2 className='text-white font-normal md:text-3xl text-4xl leading-10 mb-2 font-bold'>Outreach</h2>
         <p className='text-white font-normal md:text-lg text-xl leading-5 tracking-wider'> 
         We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br />
-          <span className='read-more font-normal text-lg  leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+          <Link href='/aboutUs'>
+            <a>  
+              <span className='read-more font-normal text-lg  leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+            </a>
+          </Link>
         </p>
         </div>
       </div>

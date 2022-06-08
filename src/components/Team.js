@@ -9,7 +9,7 @@ const Team = () => {
   }, []);
 
   return (
-    <section className="p-6">
+    <section className="p-6" id='team'>
       <div className='container mx-auto py-5 text-dark relative'>
         <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
         <h2 className="md:text-5xl text-3xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
