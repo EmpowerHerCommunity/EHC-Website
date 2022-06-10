@@ -8,6 +8,7 @@ const Cards = () => {
     AOS.init({ duration: 2500});
     AOS.refresh();
   }, []);
+  
   return (
     <div className={styles.hero}>
 		<div className='relative pb-20'> 
