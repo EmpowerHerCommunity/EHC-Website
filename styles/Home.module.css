@@ -20,3 +20,36 @@
 .hero{
   background-color: rgba(102, 0, 102, 0.1);
 }
+
+/* Volunteer.js */
+.overlay{
+  background-color: rgba(0,0,0,0.8);
+  margin-top: 2rem;
+}
+.volunteer{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 5px 25px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.volBtn1{
+  background: #FF7262;
+}
+.volBtn2{
+  background: #FFCF00;
+}
+.volBtn3{
+  background: #3C3C3C;
+}
+.volBtn4{
+  background: #BA2989;
+}
+.volBtn5{
+  background: #7B61FF;
+}
+.volBtn6{
+  background: #0156BB;
+}
