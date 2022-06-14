@@ -6,9 +6,7 @@ import Footer from '../src/components/Footer';
 
 const Volunteer = () => {
   return (
-    <div>
-        
-        Pearl this is your part of the job: <b>Volunteer Page</b>. Do not bother with the NavBar and Footer pages yet. 
+    <div> 
         <NavBar />
         <Hero />
         <Cards />
