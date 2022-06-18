@@ -8,15 +8,16 @@ import Footer from '../src/components/Footer'
 
 const aboutUs = () => {
   return (
-    <>
-        <NavBar />
+    <div className="overflow-hidden">
+      <NavBar />
+      <main className="main overflow-hidden">
         <HeroAbout />
         <OurVision />
         <Team />
         <NewsLetter />
-        <Footer />
-    
-    </>
+      </main>
+      <Footer />
+    </div>
   )
 }
 

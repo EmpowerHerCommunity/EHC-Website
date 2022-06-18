@@ -15,13 +15,11 @@ const Events = () => {
     <section className="bg-primary py-20">
       <div className="container mx-auto px-4 relative">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          {/* <img src="/contact-dots.svg" alt="" className="" /> */}
           <Image src='/white-dots-up.png' width='135px' height='135px' />
         </div>
         <div className=''>
 
           <div className="relative mb-8 max-w-max mx-auto">
-            {/* <h2 className='hero-h2 font-normal md:text-5xl text-5xl font-bold max-w-max' data-aos='fade-right'>Who Are We?</h2> */}
             <h2 className='text-white font-normal md:text-5xl text-4xl text-center font-bold'>Events</h2>
             <hr className="border-0 h-1 w-4/5 absolute bottom-0 left-0 bg-yellow" />
           </div>

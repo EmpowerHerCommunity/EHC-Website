@@ -1,35 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-// import { FaLongArrowRight } from 'react-icons/fa';
-// import { FaLongArrowAltRight } from 'react-icons/fa';
-// import { FaArrow } from 'react-icons/fa';
-// import { FaLongArrow } from 'react-icons/fa';
 import styles from '../../styles/Home.module.css';
-import AOS from 'aos';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 1, // optional, default to 1.
-    partialVisibilityGutter: 40
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-    partialVisibilityGutter: 30
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-    partialVisibilityGutter: 50
-  }
-};
 
 const Testimonial = () => {
   const allTestimonials = [
@@ -58,12 +31,7 @@ const Testimonial = () => {
   const [prevIndex, setPrevIndex] = useState(2);
   const [nextIndex, setNextIndex] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animate, setAnimate] = useState("");
-  // const prevRef = useRef(null);
-  const currentRef = useRef(null);
-  // const nextRef = useRef(null);
   const prevFunc = () => {
-    // setPrevIndex(prevState => {
     setPrevIndex(
       prevIndex <= 0 ? allTestimonials.length - 1 : prevIndex - 1
     )
@@ -73,82 +41,25 @@ const Testimonial = () => {
     setCurrentIndex(
       currentIndex <= 0 ? allTestimonials.length - 1 : currentIndex - 1
     )
-    console.log('Test prev');
-    // })
   }
-  // once: true,
-  useEffect(() => {
-    AOS.init({
-      duration: 400,
-      // startEvent
-    });
-    AOS.refresh();
-  }, []);
   const nextFunc = () => {
-    console.log('Test next');
-    // setPrevIndex(prevState => {
-    // currentIndex <= 0 ? allTestimonials.length - 1 : currentIndex + 1
-
-
-    // setPrevIndex(
-    //   prevIndex >= allTestimonials.length - 1 ? 0 : prevIndex + 1
-    //   )
-    //   setNextIndex(
-    //     nextIndex >= allTestimonials.length - 1 ? 0 : nextIndex + 1
-    //     )
-    //     // setCurrentIndex(prev => prev + 1)
-    //     // })
-    //     setCurrentIndex(
-    //       currentIndex >= allTestimonials.length - 1 ? 0 : currentIndex + 1
-    //       )
-    // currentRef.current.classList.remove('aos-animate')
-    // prevRef.current.classList.remove('aos-animate')
-    // nextRef.current.classList.remove('aos-animate')
-    // currentRef.current.classList.remove('transitionLeftIn')
-    // prevRef.current.classList.remove('transitionLeftIn')
-    // nextRef.current.classList.remove('transitionLeftIn')
-    // console.log(prevRef.current);
-    // // currentRef.current.classList.remove('aos-init')
-    // console.log(nextRef.current);
-    // console.log(currentRef.current.classList);
     setTimeout(() => {
-      // currentRef.current.classList.add('aos-animate')
-      // prevRef.current.classList.add('aos-animate')
-      // nextRef.current.classList.add('aos-animate')
-      // currentRef.current.classList.add('transitionLeftIn')
-      // prevRef.current.classList.add('transitionLeftIn')
-      // nextRef.current.classList.add('transitionLeftIn')
-      // currentRef.current.classList.add('aos-init')
-      // console.log(currentRef.current.classList);
-      // // console.log(prevRef.current.classList);
-      // console.log(nextRef.current.classList);
-      // console.log(prevRef.current);
-      // console.log(nextRef.current);
       setPrevIndex(
         prevIndex >= allTestimonials.length - 1 ? 0 : prevIndex + 1
       )
       setNextIndex(
         nextIndex >= allTestimonials.length - 1 ? 0 : nextIndex + 1
       )
-      // setCurrentIndex(prev => prev + 1)
-      // })
       setCurrentIndex(
         currentIndex >= allTestimonials.length - 1 ? 0 : currentIndex + 1
       )
 
     }, 100);
-    console.log(currentRef);
-    // setAnimate('fade-right');
-    setAnimate('fade-left');
-    // AOS.init({ duration: 2500 });
-    // AOS.refresh();
-    // console.log(this.refs)
   }
   return (
     <section className="py-12">
       <div className="container mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          {/* <img src="/contact-dots.svg" alt="" className="" /> */}
           <Image src='/group2.png' width='115px' height='115px' />
         </div>
         <div className=''>
@@ -189,10 +100,7 @@ const Testimonial = () => {
                             <div className={" bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 bg-no-repeat bg-cover bg-right-top w-full h-full"}>
                               <div className="flex items-stretch h-full">
                                 <div className="p-5 flex-auto">
-                                  {/* {prevIndex} |
-                                  {currentIndex} |
-                                  {nextIndex} */}
-                                  <p className="text-lg">
+                                  <p className="text-lg lg:text-base">
                                     {testimonial.testimonial}
                                   </p>
                                   <p className='text-2xl font-normal leading-6 mt-5 text-primary'>
@@ -235,70 +143,6 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className=''>
-            <Carousel
-              additionalTransfrom={0}
-              arrows={true}
-              autoPlaySpeed={3000}
-              autoPlay={true}
-              // centerMode={true}
-              partialVisible={true}
-              // className="bg-[url('/rectangle.png')]"
-              containerClass="carousel-container"
-              // customButtonGroup={<ButtonGroup />}
-              dotListClass=""
-              draggable
-              focusOnSelect={false}
-              infinite={true}
-              itemClass=""
-              keyBoardControl
-              minimumTouchDrag={80}
-              renderButtonGroupOutside={false}
-              renderDotsOutside={false}
-              responsive={responsive}
-              // showDots={true}
-              sliderClass=""
-              slidesToSlide={1}
-            >
-              <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-                Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it.
-                <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
-                  Okafor Favor <br />
-                </div>
-                <span className='text-base leading-6 font-normal'>
-                  Product Designer
-                </span>
-              </div>
-              <div>
-                <Image src='/testimonial1.jpg' width='213px' height='315px' alt='' />
-              </div>
-              <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-                Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it.
-                <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
-                  Natasha Johnson <br />
-                </div>
-                <span className='text-base leading-6 font-normal'>
-                  Software Engineer
-                </span>
-              </div>
-              <div>
-                <Image src='/testimonial2.jpg' width='213px' height='315px' alt='' />
-              </div>
-              <div className="bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 p-5">
-                Serene environment. Great facilitators. The Empower Her boot camp exceeded my expectations. This for me was a journey to self discovery. I&apos;ve learned a lot and gained tools to help me in not just the tech world but in life. This was a great opportunity and I&apos;m grateful for it.
-                <div className='text-2xl font-normal leading-6 mt-5 text-fuchsia-900'>
-                  Mary Jane <br />
-                </div>
-                <span className='text-base leading-6 font-normal'>
-                  Blockchain Developer
-                </span>
-              </div>
-              <div>
-                <Image src='/testimonial3.jpg' width='213px' height='315px' alt='' />
-              </div>
-            </Carousel>
           </div>
         </div>
       </div>

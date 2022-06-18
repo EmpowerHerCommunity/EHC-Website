@@ -19,12 +19,12 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className="main overflow-hidden">
-      <HeroHome />
-      <Description />
-      <Events />
-      <Partnership />
-      <Testimonial />
-        </main>
+        <HeroHome />
+        <Description />
+        <Events />
+        <Partnership />
+        <Testimonial />
+      </main>
       <Footer />
     </div>
   )
