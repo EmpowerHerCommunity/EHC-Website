@@ -1,26 +1,5 @@
-/* NavBar.js */
-
-.btn2{
-  background-color: #660066;
-}
-.span1{
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #660066;
-}
-.span2{
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
-}
 
 /* HeroHome.js */
-.hero{
-  background-color: rgba(102, 0, 102, 0.1);
-}
-
 .navigationCard::after {
   background-color: rgba(102, 0, 102, 0.7);
   content: "";

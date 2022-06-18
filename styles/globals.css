@@ -26,37 +26,9 @@ a {
   box-sizing: border-box;
 }
 
-/* HeroHome.js */
-.herohome-title{
-  color: var(--main-color);
-}
-.join-btn{
-  background-color: var(--main-color);
-}
-
-/* Description.js */
-.hero-h2,
-.hero-paragraph{
-  color: var(--secondary-color)
-}
 /* Events */
 .read-more{
   color: var(--third-color);
-}
-/* Partnership.js */
-.patnership-title{
-  color: var(--secondary-color)
-}
-.our-vision{
-  color: var(--secondary-color)
-}
-
-/* HeroAbout.js */
-.hero-about{
-  background-color: rgba(102, 0, 102, 0.1);
-}
-.hero-about-list{
-  color: var(--secondary-color)
 }
 
 /* Footer.js */
