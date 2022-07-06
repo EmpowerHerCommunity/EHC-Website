@@ -25,7 +25,7 @@ const HeroAbout = () => {
           <div>
             <h2 className='md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative'>About Us <span><img src='/line2.png' alt='' /></span></h2>
             <p className='font-normal md:text-xl text-2xl mb-4 md:leading-6' data-aos='fade-left'>
-              The <span className='text-purple-800'>EmpowerHer Community</span> is a female oriented tech community which focuses on training and promoting women in the field of information technology.
+              The <span className='text-primary text-opacity-60'>EmpowerHer Community</span> is a female oriented tech community which focuses on training and promoting women in the field of information technology.
 
               We aim to promote and spread more awareness for opportunities in information technology and incorporate as many women as possible. Having started our journey in May 2019, we have not backed down in helping women transition smoothly into the Information Technology industry.
 
