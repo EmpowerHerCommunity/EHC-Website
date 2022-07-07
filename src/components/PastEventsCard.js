@@ -17,9 +17,18 @@ const PastEventsCard = ({ event, i }) => {
 
     return (
         <div className={(i % 2 === 0) ? "" : "bg-primary bg-opacity-10"}>
-            <div className="container mx-auto px-4">
-                <div className={((i % 2 === 0) ? "flex-row-reverse" : "") + ' flex justify-between items-start gap-14 lg:py-32 sm:py-12 py-7'} >
-                    <div data-aos='fade-left' className='md:flex-auto w-full md:w-7/12'>
+            <div className="container relative xl:max-w-screen-xl mx-auto px-4 py-10">
+                {
+                    (i % 2 === 0) ?
+                        <div className='absolute bottom-[40px] right-0'>
+                            <Image src='/purple-dots-down.png' width='137px' height='137px' alt='' />
+                        </div> :
+                        <div className='absolute top-full left-0 transform -translate-y-1/2'>
+                            <Image src='/group2.png' width='137px' height='137px' alt='' />
+                        </div>
+                }
+                <div className={((i % 2 === 0) ? "lg:flex-row-reverse" : "lg:flex-row") + ' flex flex-col justify-between items-start gap-14'} >
+                    <div data-aos='fade-left' className='lg:flex-auto w-full lg:w-6/12'>
                         <div>
                             <div className="relative mb-14 pt-4 max-w-max">
                                 <h2 className='md:text-5xl text-4xl font-bold max-w-max'>
@@ -50,18 +59,29 @@ const PastEventsCard = ({ event, i }) => {
                                         </Link>
                                     </button>
                                 </div>
-                                <div className='mt-14'>
-                                    <Image src='/group2.png' width='137px' height='137px' alt='' />
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className='md:flex-auto w-full md:w-5/12' data-aos='fade-right'>
-                    <div className='overflow-hidden rounded-bl-[55px] rounded-tr-[55px] flex w-full max-w-max' data-aos='fade-right'>
-                        {/* <Image src='/herogirl.png' width='548px' height='539px' alt='' /> */}
-                        <Image src={event.image} width='732px' height='744px' alt={event.title} />
-                    </div>
-                    <EventsGallery images={event.gallery} galleryI={i} />
+                    <div className='lg:flex-auto w-full lg:w-5/12' data-aos='fade-right'>
+                        <div className="relative p-4">
+                            <div className="flex absolute top-0 left-0">
+                                <Image src='/border-tl.png' width='106px' height='106px' alt='' />
+                            </div>
+                            <div className="flex absolute top-0 right-0">
+                                <Image src='/border-tr.png' width='106px' height='106px' alt='' />
+                            </div>
+                            <div className="flex absolute bottom-0 left-0">
+                                <Image src='/border-bl.png' width='106px' height='106px' alt='' />
+                            </div>
+                            <div className="flex absolute bottom-0 right-0">
+                                <Image src='/border-br.png' width='106px' height='106px' alt='' />
+                            </div>
+                            <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-full max-w-max' data-aos='fade-right'>
+                                {/* <Image src='/herogirl.png' width='548px' height='539px' alt='' /> */}
+                                <Image src={event.image} width='732px' height='744px' alt={event.title} />
+                            </div>
+                        </div>
+                        <EventsGallery images={event.gallery} galleryI={i} />
                     </div>
                 </div>
             </div>

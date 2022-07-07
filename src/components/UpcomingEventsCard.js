@@ -21,7 +21,7 @@ const UpcomingEventsCard = ({ event, i }) => {
         <div className="shadow h-full" data-aos='zoom-out'>
             <div className={' flex flex-col justify-between items-start gap-0'} >
                 <div className='w-full'>
-                    <Image src={event.image} width='370px' height='200px' alt={event.title} />
+                    <Image src={event.image} width='740px' height='440px' alt={event.title} />
                 </div>
                 <div className='w-full py-3 px-5'>
                     <div>

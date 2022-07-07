@@ -7,7 +7,7 @@ import UpcomingEvents from '../src/components/UpcomingEvents';
 
 const events = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <NavBar />
       <main className="main overflow-hidden">
         <HeroEvents />

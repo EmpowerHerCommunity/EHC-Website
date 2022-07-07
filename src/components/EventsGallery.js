@@ -68,29 +68,32 @@ const EventsGallery = ({images, galleryI}) => {
         // }, 100);
     }
     return (
-        <div className="">
-            <div className="flex gap-4 relative z-10 mt-3">
+        <div className="py-4">
+            <h3 className="text-lg my-4 font-bold">
+            Gallery
+            </h3>
+            <div className="flex gap-1 relative z-10 mt-3">
                 <div className={`overflow-hidden relative z-30 lg:p-0 min-w-fit flex-none`}>
-                    <div className={`overflow-hidden relative z-10 lg:w-10 h-full flex items-center justify-center`}>
+                    <div className={`overflow-hidden relative z-10 w-10 h-full flex items-center justify-center`}>
                         <button className={((currentIndex <= 0) ? "opacity-30" : "") + " rounded-full w-10 h-10 block bg-primary hover:opacity-80"} onClick={prevFunc} disabled={currentIndex <= 0}>
                             <FaArrowLeft size="1.5rem" className='mx-auto text-white' />
                         </button>
                     </div>
                 </div>
-                <div className="overlow-hidden relative min-h-[480px] sm:min-h-[360px] md:min-h-[85px] z-20 flex-auto">
-                    <div className={`overflow-hidden relative z-10 w-full h-full flex items-center gap-2`}>
+                <div className="overlow-hidden relative min-h-[100px] z-20 flex-auto">
+                    <div className={`overflow-hidden relative z-10 w-full h-full flex items-center`}>
                         {
                             images.map((image, i) => {
                                 return (
                                     <div
-                                        className={`overflow-hidden absolute z-10 w-1/4 h-full flex items-center justify-center flex-none`}
+                                        className={`overflow-hidden absolute z-10 px-2 w-1/4 h-full flex items-center justify-center flex-none`}
                                         style={{ transform: `translateX(${(i - currentIndex) * 100}%)`, transition: 'all 0.5s' }}
                                         key={`gallery${i}`}
                                     >
                                         <div className={" w-full h-full"}>
                                             <div className="flex items-stretch h-full">
-                                                <div className="flex-none flex items-end w-44 sm:w-fit">
-                                                    <Image src={image} width='85px' height='85px' alt='' />
+                                                <div className="flex-none flex overflow-hidden rounded-xl w-fit">
+                                                    <Image src={image} width='100px' height='100px' alt='' />
                                                 </div>
                                             </div>
                                         </div>
@@ -102,8 +105,8 @@ const EventsGallery = ({images, galleryI}) => {
                     </div>
                 </div>
                 <div className={`overflow-hidden relative z-30 lg:p-0 min-w-fit flex-none`}>
-                    <div className={`overflow-hidden relative z-10 lg:w-10 h-full flex items-center justify-center`}>
-                        <button className="rounded-full w-10 h-10 block bg-primary opacity-30 hover:opacity-80 lg:opacity-100" onClick={nextFunc} disabled={currentIndex >= images.length - 4}>
+                    <div className={`overflow-hidden relative z-10 w-10 h-full flex items-center justify-center`}>
+                        <button className={((currentIndex >= images.length - 4) ? "opacity-30" : "") + " rounded-full w-10 h-10 block bg-primary hover:opacity-80 "} onClick={nextFunc} disabled={currentIndex >= images.length - 4}>
                             <FaArrowRight size="1.5rem" className='mx-auto text-white' />
                         </button>
                     </div>
