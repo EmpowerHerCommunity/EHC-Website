@@ -6,11 +6,13 @@ import Footer from '../src/components/Footer';
 
 const Volunteer = () => {
   return (
-    <div> 
-        <NavBar />
-        <Hero />
-        <Cards />
-        <Footer />
+    <div className='overflow-hidden'>
+      <NavBar />
+      <main className="main overflow-hidden bg-primary bg-opacity-10">
+      <Hero />
+      <Cards />
+      </main>
+      <Footer />
     </div>
   )
 }

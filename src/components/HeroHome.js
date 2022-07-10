@@ -12,7 +12,7 @@ const HeroHome = () => {
 
   return (
     <section className="bg-primary bg-opacity-10">
-      <div className="container mx-auto px-4">
+      <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className='flex justify-between lg:py-32 sm:py-12 py-7' >
           <div data-aos='fade-left'>
             <article>

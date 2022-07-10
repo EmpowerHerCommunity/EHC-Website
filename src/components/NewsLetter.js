@@ -63,7 +63,7 @@ const NewsLetter = () => {
           </div>
         </div>
       </div>)}
-      <div className='container mx-auto py-10'>
+      <div className='container xl:max-w-screen-xl mx-auto py-10'>
         <div className="flex flex-wrap gap-6 text-dark">
           <h2 className="md:text-4xl sm:text-5xl lg:text-6xl text-5xl w-full lg:w-1/2 lg:flex-auto" data-aos='fade-right'>
             Join our NewsLetter

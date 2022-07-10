@@ -11,7 +11,7 @@ const HeroAbout = () => {
 
   return (
     <section className="bg-primary bg-opacity-10">
-      <div className="container mx-auto px-4">
+      <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className='grid md:grid-cols-2 py-4 md:py-16 md:px-24'>
           <div className=' hero-about-list text-dark font-normal md:text-lg text-3xl  leading-7' data-aos='fade-right'>
             <img src='/contact-dots.svg' alt='' />

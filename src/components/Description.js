@@ -12,7 +12,7 @@ const Description = () => {
 
   return (
     <section className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className=''>
           <div className='grid lg:grid-cols-2 grid-cols-1 gap-4'>
             <div data-aos='fade-down'>

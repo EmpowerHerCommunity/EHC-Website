@@ -9,7 +9,7 @@ const Contact = () => {
     <div className='overflow-hidden'>
       <NavBar />
       <main className="main bg-light">
-        <div className="container px-4 mx-auto py-24 relative">
+        <div className="container xl:max-w-screen-xl px-4 mx-auto py-24 relative">
           <div className=''> 
           <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] ml-4" />
           </div>
