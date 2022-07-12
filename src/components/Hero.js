@@ -30,7 +30,6 @@ const Hero = () => {
                             </div>
                             <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-full max-w-max' data-aos='fade-right'> */}
                                 {/* <Image src='/herogirl.png' width='548px' height='539px' alt='' /> */}
-                                {/* <Image src={event.image} width='732px' height='744px' alt={event.title} /> */}
 								{/* <Image src='/volunteers.JPEG' className='object-cover' width='384px' height='384px' alt='' /> */}
                             {/* </div> */}
                         {/* </div> */}
