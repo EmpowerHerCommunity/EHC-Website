@@ -9,8 +9,8 @@ import { MdOutlineEmail, MdLocationPin, MdCalendarToday, MdCalendarViewMonth } f
 
 const UpcomingEventsCard = ({ event, i }) => {
 
-    console.log(event)
-    console.log(i)
+    // console.log(event)
+    // console.log(i)
 
     useEffect(() => {
         AOS.init({ duration: 2500 });
@@ -21,12 +21,12 @@ const UpcomingEventsCard = ({ event, i }) => {
         <div className="shadow h-full" data-aos='zoom-out'>
             <div className={' flex flex-col justify-between items-start gap-0'} >
                 <div className='w-full'>
-                    <Image src={event.image} width='740px' height='440px' alt={event.title} />
+                    <Image src={event.image} width='740px' height='440px' alt={event.name} />
                 </div>
                 <div className='w-full py-3 px-5'>
                     <div>
                         <h2 className='md:text-lg text-lg font-bold'>
-                            {event.title}
+                            {event.name}
                         </h2>
                             <p className='text-base text-black text-opacity-60 leading-tight my-4'>
                                 {event.description}
