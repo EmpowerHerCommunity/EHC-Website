@@ -13,7 +13,7 @@ const Events = () => {
 
   return (
     <section className="bg-primary py-20">
-      <div className="container mx-auto px-4 relative">
+      <div className="container xl:max-w-screen-xl mx-auto px-4 relative">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
           <Image src='/white-dots-up.png' width='135px' height='135px' />
         </div>

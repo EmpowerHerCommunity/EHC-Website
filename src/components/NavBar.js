@@ -19,7 +19,7 @@ const NavBar = () => {
   }
   return (
     <div className='w-full'>
-      <div className="container mx-auto px-4">
+      <div className="container xl:max-w-screen-xl mx-auto px-4">
         <nav className='lg:flex items-center flex-wrap lg:flex-nowrap w-full gap-3'>
           <div className='flex' data-aos='zoom-in'>
             <Link href='/'>

@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container mx-auto px-4 py-12 text-white">
+      <div className="container xl:max-w-screen-xl mx-auto px-4 py-12 text-white">
         <h2 className='leading-10 md:text-5xl text-4xl font-normal mb-6'>Empower Her Community</h2>
         <div className='flex flex-wrap lg:flex-nowrap justify-between gap-10 w-full'>
           <div className='flex flex-col max-w-lg w-full' data-aos='zoom-in-up'>
@@ -119,8 +119,7 @@ const Footer = () => {
                 <Link href='mailto:info@empowerher.community'>
                   <a className='flex items-center gap-4'>
                     <MdOutlineEmail />
-                    info@empowerher
-                    .community
+                    info@empowerher.community
                   </a>
                 </Link>
               </li>

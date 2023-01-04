@@ -11,7 +11,7 @@ const OurVision = () => {
 
   return (
     <section className="">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container xl:max-w-screen-xl mx-auto px-4 py-16">
         <div className='our-vision md:grid grid-cols-2 gap-8'>
           <div data-aos='zoom-in'>
             <div className='purple md:mb-8 mb-2'>

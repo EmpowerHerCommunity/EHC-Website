@@ -58,7 +58,7 @@ const Testimonial = () => {
   }
   return (
     <section className="py-12">
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container xl:max-w-screen-xl mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
           <Image src='/group2.png' width='115px' height='115px' />
         </div>
@@ -77,7 +77,11 @@ const Testimonial = () => {
                     {
                       allTestimonials.map((testimonial, i) => {
                         return (
-                          <div className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`} style={{ transform: `translateX(${(i - prevIndex) * 100}%)`, transition: 'all 0.5s' }}>
+                          <div
+                            className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`}
+                            style={{ transform: `translateX(${(i - prevIndex) * 100}%)`, transition: 'all 0.5s' }}
+                            key={`prevTestimonial${1}`}
+                          >
                             <div className={`relative z-10 w-0 lg:w-full h-full flex items-center justify-center bg-no-repeat bg-cover bg-center ${styles.navigationCard}`} style={{ backgroundImage: `url('${testimonial.image}')` }}>
                             </div>
                           </div>
@@ -92,35 +96,39 @@ const Testimonial = () => {
                 </div>
               </div>
               <div className="overlow-hidden relative min-h-[480px] sm:min-h-[360px] xl:min-h-[340px] z-20 flex-auto">
-                  <div className={`overflow-hidden relative z-10 w-full h-full flex items-center`}>
-                    {
-                      allTestimonials.map((testimonial, i) => {
-                        return (
-                          <div className={`overflow-hidden absolute z-10 w-full h-full flex items-center justify-center flex-none`} style={{ transform: `translateX(${(i - currentIndex) * 100}%)`, transition: 'all 0.5s' }}>
-                            <div className={" bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 bg-no-repeat bg-cover bg-right-top w-full h-full"}>
-                              <div className="flex items-stretch h-full">
-                                <div className="p-5 flex-auto">
-                                  <p className="text-lg lg:text-base">
-                                    {testimonial.testimonial}
-                                  </p>
-                                  <p className='text-2xl font-normal leading-6 mt-5 text-primary'>
-                                    {testimonial.name}
-                                  </p>
-                                  <span className='text-base leading-6 font-normal'>
-                                    {testimonial.role}
-                                  </span>
-                                </div>
-                                <div className="flex-none flex items-end w-44 sm:w-fit">
-                                  <Image src={testimonial.image} width='213px' height='315px' alt='' />
-                                </div>
+                <div className={`overflow-hidden relative z-10 w-full h-full flex items-center`}>
+                  {
+                    allTestimonials.map((testimonial, i) => {
+                      return (
+                        <div
+                          className={`overflow-hidden absolute z-10 w-full h-full flex items-center justify-center flex-none`}
+                          style={{ transform: `translateX(${(i - currentIndex) * 100}%)`, transition: 'all 0.5s' }}
+                          key={`currentTestimonial${1}`}
+                        >
+                          <div className={" bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 bg-no-repeat bg-cover bg-right-top w-full h-full"}>
+                            <div className="flex items-stretch h-full">
+                              <div className="p-5 flex-auto">
+                                <p className="text-lg lg:text-base">
+                                  {testimonial.testimonial}
+                                </p>
+                                <p className='text-2xl font-normal leading-6 mt-5 text-primary'>
+                                  {testimonial.name}
+                                </p>
+                                <span className='text-base leading-6 font-normal'>
+                                  {testimonial.role}
+                                </span>
+                              </div>
+                              <div className="flex-none flex items-end w-44 sm:w-fit">
+                                <Image src={testimonial.image} width='213px' height='315px' alt='' />
                               </div>
                             </div>
                           </div>
-                        )
-                      }
+                        </div>
                       )
                     }
-                  </div>
+                    )
+                  }
+                </div>
               </div>
               <div className={`overflow-hidden absolute top-0 bottom-0 right-0 lg:relative z-30 p-2 lg:p-0 min-w-fit flex-none`}>
                 <div className={`overflow-hidden relative z-10 lg:w-44 h-full flex items-center justify-center`}>
@@ -128,7 +136,11 @@ const Testimonial = () => {
                     {
                       allTestimonials.map((testimonial, i) => {
                         return (
-                          <div className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`} style={{ transform: `translateX(${(i - nextIndex) * 100}%)`, transition: 'all 0.5s' }}>
+                          <div
+                            className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`}
+                            style={{ transform: `translateX(${(i - nextIndex) * 100}%)`, transition: 'all 0.5s' }}
+                            key={`Testimonial${1}`}
+                          >
                             <div className={`relative z-10 w-0 lg:w-full h-full flex items-center justify-center bg-no-repeat bg-cover bg-center ${styles.navigationCard}`} style={{ backgroundImage: `url('${testimonial.image}')` }}>
                             </div>
                           </div>

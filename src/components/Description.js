@@ -12,9 +12,9 @@ const Description = () => {
 
   return (
     <section className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className=''>
-          <div className='grid lg:grid-cols-2 grid-cols-1 gap-4'>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-10'>
             <div data-aos='fade-down'>
               <div className="relative px-10 py-14 z-5">
                 <div className="absolute top-0 left-0">
@@ -61,7 +61,7 @@ const Description = () => {
                 <div>
                   <Image src='/3.png' width='36px' height='36px' />
                   <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
-                    5000+ <br />
+                    1000+ <br />
                     <span className='text-base text-dark font-normal'>Community Members</span>
                   </p>
                 </div>
