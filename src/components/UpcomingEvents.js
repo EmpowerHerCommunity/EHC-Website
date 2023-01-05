@@ -28,10 +28,7 @@ const UpcomingEvents = () => {
 				`https://empowerherapi.herokuapp.com/api/v1/indexapi/events/`
 			);
 			const data = await res.json();
-			console.log(data);
-			console.log(data.results);
             setEvents(data.results);
-            console.log(events);
 		} catch (err) {
 			console.log(err);
 		}
@@ -53,9 +50,7 @@ const UpcomingEvents = () => {
                     {
                         events.map((event, i) => {
                             return (
-                                // <div className="">
                                     <UpcomingEventsCard event={event} i={i} key={`upcomingEvent${i}`} />
-                                // </div>
                             )
                         })
                     }

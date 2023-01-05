@@ -7,9 +7,6 @@ import EventsGallery from './EventsGallery';
 
 const PastEventsCard = ({ event, i }) => {
 
-    console.log(event)
-    console.log(i)
-
     useEffect(() => {
         AOS.init({ duration: 2500 });
         AOS.refresh();
@@ -40,8 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='md:text-xl text-2xl md:my-8 my-4'>
-                                                {/* We are a female community seeing to the growth and progress of all women in tech worldwide */}
+                                            <p className='md:text-xl text-2xl md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
@@ -77,7 +73,6 @@ const PastEventsCard = ({ event, i }) => {
                                 <Image src='/border-br.png' width='106px' height='106px' alt='' />
                             </div>
                             <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-full max-w-max' data-aos='fade-right'>
-                                {/* <Image src='/herogirl.png' width='548px' height='539px' alt='' /> */}
                                 <Image src={event.image} width='732px' height='744px' alt={event.title} />
                             </div>
                         </div>

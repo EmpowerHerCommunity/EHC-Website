@@ -5,8 +5,6 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 // import styles from '../../styles/Home.module.css';
 
 const EventsGallery = ({images, galleryI}) => {
-    console.log(images);
-    console.log(galleryI);
     const allTestimonials = [
         {
             id: 1,

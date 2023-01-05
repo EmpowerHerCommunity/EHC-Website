@@ -2,15 +2,11 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AOS from 'aos';
-import { SiInstagram, SiTwitter, SiFacebook, SiLinkedin } from 'react-icons/si';
-import { BsTelephone, BsPinMap, BsPin, BsCalendarFill } from 'react-icons/bs';
-import { MdOutlineEmail, MdLocationPin, MdCalendarToday, MdCalendarViewMonth } from 'react-icons/md';
+import { BsCalendarFill } from 'react-icons/bs';
+import { MdLocationPin } from 'react-icons/md';
 
 
 const UpcomingEventsCard = ({ event, i }) => {
-
-    // console.log(event)
-    // console.log(i)
 
     useEffect(() => {
         AOS.init({ duration: 2500 });
