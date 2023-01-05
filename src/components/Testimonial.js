@@ -80,7 +80,7 @@ const Testimonial = () => {
                           <div
                             className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`}
                             style={{ transform: `translateX(${(i - prevIndex) * 100}%)`, transition: 'all 0.5s' }}
-                            key={`prevTestimonial${1}`}
+                            key={`prevTestimonial${i}`}
                           >
                             <div className={`relative z-10 w-0 lg:w-full h-full flex items-center justify-center bg-no-repeat bg-cover bg-center ${styles.navigationCard}`} style={{ backgroundImage: `url('${testimonial.image}')` }}>
                             </div>
@@ -103,7 +103,7 @@ const Testimonial = () => {
                         <div
                           className={`overflow-hidden absolute z-10 w-full h-full flex items-center justify-center flex-none`}
                           style={{ transform: `translateX(${(i - currentIndex) * 100}%)`, transition: 'all 0.5s' }}
-                          key={`currentTestimonial${1}`}
+                          key={`currentTestimonial${i}`}
                         >
                           <div className={" bg-[url('/rectangle.png')] font-normal md:text-lg text-sm leading-6 bg-no-repeat bg-cover bg-right-top w-full h-full"}>
                             <div className="flex items-stretch h-full">
@@ -139,7 +139,7 @@ const Testimonial = () => {
                           <div
                             className={`overflow-hidden absolute z-10 w-0 lg:w-full h-full flex items-center justify-center flex-none`}
                             style={{ transform: `translateX(${(i - nextIndex) * 100}%)`, transition: 'all 0.5s' }}
-                            key={`Testimonial${1}`}
+                            key={`Testimonial${i}`}
                           >
                             <div className={`relative z-10 w-0 lg:w-full h-full flex items-center justify-center bg-no-repeat bg-cover bg-center ${styles.navigationCard}`} style={{ backgroundImage: `url('${testimonial.image}')` }}>
                             </div>

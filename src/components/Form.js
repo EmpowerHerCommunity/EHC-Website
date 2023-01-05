@@ -21,7 +21,6 @@ const Form = () => {
     setForm(prevState => { return { ...prevState, [key]: value } })
   }
   useEffect(() => {
-    console.log(state)
     if (state.succeeded && !state.submitting) {
       console.log("Thanks for joining!");
       setForm({

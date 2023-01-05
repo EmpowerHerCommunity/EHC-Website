@@ -69,6 +69,12 @@ const NavBar = () => {
               </Link>
 
 
+              <Link href='/blog'>
+                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start hover:text-purple-900 md:hover:text-xl text-2xl hover:text-3xl'>
+                  Blog
+                </a>
+              </Link>
+
               <Link href='/contact'>
                 <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start hover:text-purple-900 md:hover:text-xl text-2xl hover:text-3xl'>
                   Contact
