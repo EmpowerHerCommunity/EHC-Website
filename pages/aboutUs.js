@@ -17,6 +17,7 @@ const aboutUs = () => {
         <NewsLetter />
       </main>
       <Footer />
+
     </div>
   )
 }

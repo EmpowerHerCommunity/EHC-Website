@@ -11,6 +11,11 @@ module.exports = {
         'light': '#F8F8F8',
         'dark': ' #363636',
         'yellow': ' #FFCF00',
+        'popUpColor': '#460046',
+      },
+      width: {
+        'widthPopUp': '680px',
+        'widthPopUpBtn': '550px',
       },
     },
   },
