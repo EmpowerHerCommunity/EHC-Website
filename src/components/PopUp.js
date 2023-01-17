@@ -4,15 +4,31 @@ import Image from "next/image";
 import PopupImage from "../../public/PopupImage.svg";
 import CancelButton from "../../public/CancelButton.svg";
 import PopUpBlock from "../../public/PopUpBlock.svg";
+import LineTen from '../../public/Line 10.svg';
+import LineEight from '../../public/Line 8.svg';
+import LineNine from '../../public/Line 9.svg';
+import LineNineB from '../../public/Line 9 (1).svg'
+
+
 
 function PopUp() {
   return (
     <main className="grid grid-col-1 py-8">
       <section className="flex justify-between mx-10 items-start">
         <Image src={PopUpBlock} alt="block" width="130px" height="130px" />
-        <div className="pt-10">
-        <Image src={PopupImage} alt="bootcamp" width="200px" height="200px" className="" />
-        </div>
+
+        <section className="pt-10 flex flex-col justify-center items-center relative">
+        <figure className="display flex justify-between w-80 absolute bottom-48">
+          <Image src ={LineTen} alt ='border icon' width="80px" height='80px'/>
+          <Image src ={LineEight} alt ='border icon' width="80px" height='72px'/>
+        </figure>
+        <Image src={PopupImage} alt="bootcamp" width="250px" height="250px" />
+        <figure className="display flex justify-between w-80 absolute top-56">
+          <Image src ={LineNineB} alt ='border icon' width="80px" height='8px'/>
+          <Image src ={LineNine} alt ='border icon' width="80px" height='80px'/>
+        </figure>
+        </section>
+
         <Image src={CancelButton} alt="block" width="45px" height="45px" />
       </section>
       <section className="grid place-items-center">
