@@ -96,7 +96,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/'>
+                <Link href='#partnership'>
                   <a>
                     Partners
                   </a>
