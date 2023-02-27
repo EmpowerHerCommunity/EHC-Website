@@ -10,7 +10,7 @@ const Partnership = () => {
   }, []);
 
   return (
-    <section className="">
+    <section className="" id="partnership">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative py-20">
         <div className="absolute top-[30px] right-0 ml-4">
           <Image src='/purple-dots-down.png' width='105px' height='105px' />

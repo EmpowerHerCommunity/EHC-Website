@@ -114,7 +114,7 @@ const Team = () => {
               </a>
             </div>
           </div>
-          <div className="w-[220px] xl:w-[250px] text-center">
+          {/* <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-left'>
               <img src="/team-images/pearl.png" alt="Pearl Christain image" className="w-[80%]" />
             </div>
@@ -132,7 +132,7 @@ const Team = () => {
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-up'>
               <img src="/team-images/kelechi.png" alt="Kelechi Amachukwu image" className="w-[85%]" />
