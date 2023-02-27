@@ -26,7 +26,7 @@ const Events = () => {
           <div className='md:grid grid-cols-3 gap-4'>
             <div data-aos='fade-up' className='mb-8 text-center md:text-left'>
               <div data-aos='fade-down'>
-                <Image src='/events1.jpg' width='422px' height='270px' />
+                <Image src='/webinar.jpeg' width='422px' height='270px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
               <p className='text-white font-normal md:text-xl text-2xl tracking-wider'>
@@ -44,7 +44,7 @@ const Events = () => {
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
               <p className='text-white font-normal md:text-xl text-2xl tracking-wider'>
-                The EmpowerHer Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
+                The Empower Her Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
                 <Link href='/aboutUs'>
                   <a>
                     <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6'>READ MORE...</span>
@@ -54,11 +54,12 @@ const Events = () => {
             </div>
             <div data-aos='fade-up' className='text-center md:text-left'>
               <div data-aos='fade-down'>
-                <Image src='/events3.jpg' width='422px' height='270px' />
+                <Image src='/events3.jpeg' width='422px' height='270px' />
               </div>
-              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Outreach</h2>
+              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 2.0</h2>
               <p className='text-white font-normal md:text-xl text-2xl tracking-wider'>
-                We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br />
+                {/* We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br /> */}
+                Empower Her Community in collaboration with Non-Tech In Tech organized a 2 months bootcamp to train women in non technical roles.<br />
                 <Link href='/aboutUs'>
                   <a>
                     <span className='read-more font-normal text-lg  leading-6 md:flex justify-end mt-6'>READ MORE...</span>
