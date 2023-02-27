@@ -35,3 +35,14 @@ a {
 .footer{
   background: linear-gradient(0deg, rgba(102, 0, 102, 0.6), rgba(102, 0, 102, 0.6)), url(/footerImg.png);
 }
+
+
+/* login.js */
+.sub-btn {
+  background-color: #660066;
+}
+
+.login, .pw, .sign-up {
+  color: #660066;
+}
+
