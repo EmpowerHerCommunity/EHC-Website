@@ -43,7 +43,7 @@ const App = () => {
 
     const memoedFunction = useCallback(() => {
         return fetchData()
-    }, [])
+    }, [fetchData])
 
     useEffect(() => {
         memoedFunction()
