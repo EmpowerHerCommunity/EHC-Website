@@ -119,7 +119,7 @@ const Testimonial = () => {
                                 </span>
                               </div>
                               <div className="flex-none flex items-end w-44 sm:w-fit">
-                                <Image src={testimonial.image} width='213px' height='315px' alt='' />
+                                <Image src={testimonial.image} width='213px' height='315px' alt='attendee' />
                               </div>
                             </div>
                           </div>
