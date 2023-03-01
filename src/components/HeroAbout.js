@@ -53,7 +53,7 @@ const HeroAbout = () => {
         </div>
       </div>
       <div
-        className="h-[300px] md:h-[450px] w-full bg-no-repeat bg-cover bg-top bg-[url('/events2.jpg')]"
+        className="h-[300px] md:h-[450px] w-full bg-no-repeat bg-cover bg-top bg-[url('/events/group.png')]"
         data-aos="zoom-in"
       >
         {/* <div className="h-4/5 w-full" data-aos='zoom-in'>  */}
