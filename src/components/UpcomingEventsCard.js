@@ -43,7 +43,7 @@ const UpcomingEventsCard = ({ event, i }) => {
                             <button className='bg-primary bg-opacity-80 py-3 px-4 border border-primary hover:border-transparent w-44'>
                                 <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
                                     <a target='_blank'>
-                                        <span className="text-white text-lg"> Get Tickets </span>
+                                        <span className="text-white text-lg"> Read More </span>
                                     </a>
                                 </Link>
                             </button>
