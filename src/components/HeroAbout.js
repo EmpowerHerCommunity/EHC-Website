@@ -26,7 +26,7 @@ const HeroAbout = () => {
           </div>
           <div>
             <h2 className="md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative">
-              About Us{" "}
+              About Us
               <span>
                 <img src="/line2.png" alt="" />
               </span>
@@ -35,10 +35,10 @@ const HeroAbout = () => {
               className="font-normal md:text-xl text-2xl mb-4 md:leading-6"
               data-aos="fade-left"
             >
-              The{" "}
+              The
               <span className="text-primary text-opacity-60">
                 EmpowerHer Community
-              </span>{" "}
+              </span>
               is a female oriented tech community which focuses on training and
               promoting women in the field of information technology. We aim to
               promote and spread more awareness for opportunities in information
@@ -53,7 +53,7 @@ const HeroAbout = () => {
         </div>
       </div>
       <div
-        className="h-[300px] md:h-[450px] w-full bg-no-repeat bg-cover bg-top bg-[url('/events2.jpg')]"
+        className="h-[300px] md:h-[450px] w-full bg-no-repeat bg-cover bg-top bg-[url('/events/group.png')]"
         data-aos="zoom-in"
       >
         {/* <div className="h-4/5 w-full" data-aos='zoom-in'>  */}

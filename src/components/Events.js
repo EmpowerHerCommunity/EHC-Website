@@ -54,9 +54,9 @@ const Events = () => {
             </div>
             <div data-aos='fade-up' className='text-center md:text-left'>
               <div data-aos='fade-down'>
-                <Image src='/events3.jpeg' width='422px' height='270px' />
+                <Image src='/nontech.jpg' width='422px' height='270px' />
               </div>
-              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 2.0</h2>
+              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Non Technical Bootcamp</h2>
               <p className='text-white font-normal md:text-xl text-2xl tracking-wider'>
                 {/* We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br /> */}
                 Empower Her Community in collaboration with Non-Tech In Tech organized a 2 months bootcamp to train women in non technical roles.<br />
