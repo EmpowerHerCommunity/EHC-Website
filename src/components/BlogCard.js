@@ -14,7 +14,7 @@ const BlogCard = () => {
                                     <h2 className="mb-1 ml-2 text-xs"> . 5 Minutes Read</h2>
                                 </section>
                                 <h1 className="lg:text-2xl text-xl font-bold mt-1 mb-2">Why CSS units matter to your responsive website designs</h1>
-                                <p class="text-base leading-relaxed">Let's discuss using CSS units to create fully responsive websites that size and resize elements. Plus, how to decide on the best units for each situation.</p>
+                                <p className="text-base leading-relaxed">Let's discuss using CSS units to create fully responsive websites that size and resize elements. Plus, how to decide on the best units for each situation.</p>
                                 <section className="flex items-center flex-wrap mt-3">
                                     <img src="/blog-card.jpg" className="w-8 h-8 rounded-full" alt="writer" />
                                     <p className="font-medium ml-2 md:mb-1 lg:mb-0">Aniekwe Jessica</p>
@@ -34,7 +34,7 @@ const BlogCard = () => {
                                     <h2 className="mb-1 ml-2 text-xs"> . 5 Minutes Read</h2>
                                 </section>
                                 <h1 className="lg:text-2xl text-xl font-bold mt-1 mb-2">Why CSS units matter to your responsive website designs</h1>
-                                <p class="leading-relaxed text-base">Let's discuss using CSS units to create fully responsive websites that size and resize elements. Plus, how to decide on the best units for each situation.</p>
+                                <p className="leading-relaxed text-base">Let's discuss using CSS units to create fully responsive websites that size and resize elements. Plus, how to decide on the best units for each situation.</p>
                                 <section className="flex items-center flex-wrap mt-3">
                                     <img src="/blog-card.jpg" className="w-8 h-8 rounded-full" alt="writer" />
                                     <p className="font-medium ml-2 md:mb-1 lg:mb-0">Aniekwe Jessica</p>
