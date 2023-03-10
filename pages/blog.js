@@ -1,8 +1,9 @@
 // import "./App.css";
 import React from "react";
 import { useEffect, useState, useCallback } from "react";
-import NavBar from "../src/components/NavBar";
-import Footer from "../src/components/Footer";
+import NavBar from '../src/components/NavBar';
+import Footer from '../src/components/Footer';
+import BlogCard from '../src/components/BlogCard';
 
 const App = () => {
   const variables = { page: 0 };
@@ -58,38 +59,25 @@ const App = () => {
           <section className="App font-mono">
             {loading && <p className="ml-6">fetching blogs...</p>}
 
-            {posts &&
-              posts.map((post) => (
-                <article
-                  key={post.id}
-                  className="flex justify-between ml-6 mr-4 mb-6 p-4 items-center text-justify cursor-pointer hover:shadow-2xl shadow-lg"
-                >
-                  <a
-                    href={`https://blog.empowerher.community/${post.slug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={post.coverImage}
-                      alt="blog post cover"
-                      className="lg:w-96 w-36"
-                    />
-                  </a>
-                  <a
-                    href={`https://blog.empowerher.community/${post.slug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <figcaption className="ml-6">
-                      <h2 className="font-bold lg:text-lg text-sm mb-2">
-                        {post.title}
-                      </h2>
-                      <p className="lg:text-base text-xs">{post.brief}</p>
-                    </figcaption>
-                  </a>
-                </article>
-              ))}
-          </section>
+                        {posts &&
+                            posts.map((post) => (
+                                <article key={post.id} className="flex justify-between ml-6 mr-4 mb-6 p-4 items-center text-justify cursor-pointer hover:shadow-2xl shadow-lg">
+                                    <a href={`https://blog.empowerher.community/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                                        <img src={post.coverImage} alt="blog post cover" className="lg:w-96 w-36" />
+                                    </a>
+                                    <a href={`https://blog.empowerher.community/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                                        <figcaption className="ml-6">
+                                            <h2 className="font-bold lg:text-lg text-sm mb-2">{post.title}</h2>
+                                            <p className="lg:text-base text-xs">{post.brief}</p>
+                                        </figcaption>
+                                    </a>
+                                </article>
+                            ))}
+                    </section>
+                </div>
+            </main>
+            <BlogCard />
+            <Footer />
         </div>
       </main>
       <Footer />
