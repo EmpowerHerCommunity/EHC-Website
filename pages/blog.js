@@ -3,6 +3,7 @@ import React from 'react';
 import { useEffect, useState, useCallback } from "react";
 import NavBar from '../src/components/NavBar';
 import Footer from '../src/components/Footer';
+import BlogCard from '../src/components/BlogCard';
 
 const App = () => {
 
@@ -78,6 +79,7 @@ const App = () => {
                     </section>
                 </div>
             </main>
+            <BlogCard />
             <Footer />
         </div>
     );
