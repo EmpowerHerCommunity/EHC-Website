@@ -8,6 +8,8 @@ const Team = () => {
     AOS.refresh();
   }, []);
 
+ 
+
   return (
     <section className="" id='team'>
       <div className='container xl:max-w-screen-xl mx-auto py-5 px-4 text-dark relative'>

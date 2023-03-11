@@ -9,16 +9,27 @@ const blogs = [
     author: "Aniekwe Jessica",
     tag: ["CSS", "React"],
   },
+  
+  {
+    date: "4 March 2023",
+    read: "5 Minutes Read",
+    image: "/blog-card.jpg",
+    title: "Why CSS units matter to your responsive website designs",
+    description:
+      "Let's discuss using CSS units to create fully responsive websites that size and resize elements. Plus, how to decide on the best units for each situation.",
+    author: "Aniekwe Jessica",
+    tag: ["CSS", "React"],
+  },
 ];
 
 const BlogCard = () => {
   return (
     <>
       <section>
-        <section className="container px-5 py-16 mx-auto">
+        <section className="container px-5 py-16 mx-auto grid grid-cols-2">
           {blogs &&
             blogs.map((blog) => (
-              <article className="xl:w-1/2 md:w-1/2 p-4">
+              <article className="xl:w-10/12 p-4">
                 <div className="border-2 border-black px-3 py-2 rounded-lg">
                   <img
                     className="h-64 rounded-lg w-full object-cover object-center mb-6"
