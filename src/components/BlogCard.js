@@ -1,3 +1,5 @@
+import BlogNewsletter from "./BlogNewsletter";
+
 const blogs = [
   {
     date: "4 March 2023",
