@@ -11,6 +11,14 @@ module.exports = {
         'light': '#F8F8F8',
         'dark': ' #363636',
         'yellow': ' #FFCF00',
+        'blogBtn': ' #F3F3F3',
+        'blogSearch': '#999999',
+      },
+      width:{
+        nav:"30rem"
+      },     
+       height:{
+        feature:"28rem"
       },
     },
   },

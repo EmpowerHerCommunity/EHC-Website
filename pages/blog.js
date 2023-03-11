@@ -1,10 +1,10 @@
 // import "./App.css";
-import React from 'react';
+import React from "react";
 import { useEffect, useState, useCallback } from "react";
 import NavBar from '../src/components/NavBar';
 import Footer from '../src/components/Footer';
 import BlogCard from '../src/components/BlogCard';
-import BlogNewsletter from '../src/components/BlogNewsletter';
+import BlogNewsletter from '..src/componen'
 
 const App = () => {
 
