@@ -22,6 +22,7 @@ const blogs = [
   },
 ];
 
+
 const BlogCard = () => {
   return (
     <>
