@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import NavBar from '../src/components/NavBar';
 import Footer from '../src/components/Footer';
 import BlogCard from '../src/components/BlogCard';
+import BlogNewsletter from '../src/components/BlogNewsletter';
 
 const App = () => {
 
@@ -80,6 +81,7 @@ const App = () => {
                 </div>
             </main>
             <BlogCard />
+            <BlogNewsletter/>
             <Footer />
         </div>
     );
