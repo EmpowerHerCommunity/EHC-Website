@@ -17,7 +17,7 @@ const FeaturedBlog = () => {
 
   return (
     <header className="container mx-auto mt-14 cursor-pointer">
-      <nav className="flex justify-between items-center text-sm font-semibold">
+      <nav className="justify-between items-center text-sm font-semibold lg:flex hidden">
         <div className="flex justify-between items-center">
           <button className="w-28 h-9 rounded-full border border-black font-semibold bg-blogBtn">
             ALL TOPICS
@@ -45,10 +45,10 @@ const FeaturedBlog = () => {
       {blogs &&
         blogs.map((blog) => (
           <article className=" ">
-            <figure className="0 absolute">
-              <Image src={blog.blogImage} width={1020} height={450} />
+            <figure className=" absolute h-feature">
+              <img src={blog.blogImage}  className="object-fill w-11/12" />
             </figure>
-            <figcaption className="w-9/12 relative flex flex-col h-feature px-10 justify-center text-blogBtn" >
+            <figcaption className="lg:w-9/12 w-12/12 relative flex flex-col h-feature px-10 justify-center text-blogBtn" >
               <hgroup className="flex justify-between w-96 items-center text-sm">
                 <h4> Featured Article </h4>
                 <div className="h-2 w-2 bg-blogBtn rounded-full border"></div>
@@ -57,8 +57,8 @@ const FeaturedBlog = () => {
                 <h4>{blog.read}</h4>
               </hgroup>
               <hgroup>
-                <h1 className="text-5xl py-4">{blog.title}</h1>
-                <p className="text-lg">{blog.description}</p>
+                <h1 className="text-sm lg:text-5xl py-4">{blog.title}</h1>
+                <p className="text-sm lg:text-lg">{blog.description}</p>
               </hgroup>
               <div className=" flex justify-between w-40 items-center py-4">
                 <Image src={blog.authorImage} alt="author avatar" width={35} height={35} className="rounded-full" />

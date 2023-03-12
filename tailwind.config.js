@@ -18,7 +18,8 @@ module.exports = {
         nav:"30rem"
       },     
        height:{
-        feature:"28rem"
+        feature:"28rem",
+        sm:"40rem",
       },
     },
   },
