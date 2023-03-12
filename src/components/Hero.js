@@ -3,6 +3,7 @@ import AOS from 'aos';
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image';
 
+
 const Hero = () => {
 	useEffect(() => {
 		AOS.init({ duration: 2500 });
@@ -10,36 +11,27 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<section className="">
-			<div className="container xl:max-w-screen-xl mx-auto px-4 pt-20 pb-14">
-				<div className={styles.hero}>
-					<div className='flex justify-around gap-24'>
-						<div className='hidden md:block h-2/4 lg:w-2/5 lg:flex-auto' data-aos='fade-up'>
-							<div className='w-fit mx-auto' data-aos='fade-up'>
-								<Image src='/volunteers.JPEG' className='object-cover' width='384px' height='384px' alt='' />
-							</div>
-						</div>
+		<>
+			<section className="">
+				<div className="container mx-auto flex px-5 py-24 items-center md:flex-row flex-col">
+					<div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0" data-aos='fade-up'>
+		                <Image src='/blog-card.jpg' className='object-cover object-center rounded' width='390px' height='384px' alt='volunteer hero' />
+					</div>
 
-						<div className='lg:w-3/5 lg:flex-auto' data-aos='fade-left'>
-							<article>
-								<div className='hero-h2 md:text-6xl  text-5xl font-bold'>
-									Call For Volunteers
-								</div>
-								<div className=' md:text-xl text-2xl md:mt-8 mt-4 font-medium'>
-									Volunteer Requirements:
-								</div>
-								<ul className='list-disc ml-6 text-lg'>
-									<li>An individual who is a team player.</li>
-									<li>An individual who is motivated and interested in tech.</li>
-									<li>An individual with good organizational and managerial skills.</li>
-									<li>An individual with experience in related field.</li>
-								</ul>
-							</article>
-						</div>
+					<div className="lg:flex-grow md:w-1/2 lg:pl-12 md:pl-16 flex flex-col md:items-start md:text-left text-left" data-aos='fade-left'>
+						<h1 className="sm:text-4xl text-3xl mb-4 font-semibold">You can volunteer to work with us</h1>
+						<p className="mb-3 font-medium">All it takes is:</p>
+						<ul className="list-disc ml-3">
+							<li>Being motivated</li>
+							<li className="mt-2">Being motivated</li>
+							<li className="mt-2">Having an interest for women in tech</li>
+							<li className="mt-2">Having good organizational and managerial skills</li>
+							<li className="mt-2">Having experience in a related field</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	)
 }
 
