@@ -1,3 +1,5 @@
+import BlogNewsletter from "./BlogNewsletter";
+
 const blogs = [
   {
     date: "4 March 2023",
@@ -27,7 +29,7 @@ const BlogCard = () => {
   return (
     <>
       <section>
-        <section className="container px-5 py-16 mx-auto grid grid-cols-2">
+        <section className="container px-5 py-16 mx-auto grid lg:grid-cols-2 grid-col-1">
           {blogs &&
             blogs.map((blog) => (
               <article className="xl:w-10/12 p-4">
