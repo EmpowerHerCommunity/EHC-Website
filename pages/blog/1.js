@@ -31,7 +31,7 @@ const BlogPage = () => {
       {blogs &&
         blogs.map((blog) => (
           <>
-            <article className="container mx-auto lg:ml-40">
+            <article className="container mx-auto lg:pl-40 ">
               <figcaption className="lg:w-9/12 w-12/12 flex flex-col h-feature px-10 justify-center text-black">
                 <hgroup className="flex justify-between w-56 items-center text-sm">
                   <h4>{blog.date}</h4>
@@ -63,7 +63,7 @@ const BlogPage = () => {
               </figcaption>
             </article>
 
-            <article className="container mx-auto py-0">
+            <article className="container py-0 mx-10">
               <figure>
                 <Image
                   src={Header}

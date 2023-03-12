@@ -15,7 +15,7 @@ module.exports = {
         'blogSearch': '#999999',
       },
       width:{
-        nav:"30rem"
+        nav:"28rem"
       },     
        height:{
         feature:"28rem",
