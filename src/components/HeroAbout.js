@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 
 
+
 const HeroAbout = () => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
@@ -60,6 +61,8 @@ const HeroAbout = () => {
         {/* <Image src='/group.png' alt='' className='w-full h-4/5' /> */}
       </div>
     </section>
+    
+    
   );
 };
 export default HeroAbout;
