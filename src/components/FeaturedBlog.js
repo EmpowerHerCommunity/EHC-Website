@@ -45,8 +45,8 @@ const FeaturedBlog = () => {
       {blogs &&
         blogs.map((blog) => (
           <article className=" ">
-            <figure className=" absolute">
-              <Image src={blog.blogImage} width={1010} height={450} className="" />
+            <figure className=" absolute h-feature">
+              <img src={blog.blogImage}  className="object-fill w-11/12" />
             </figure>
             <figcaption className="lg:w-9/12 w-12/12 relative flex flex-col h-feature px-10 justify-center text-blogBtn" >
               <hgroup className="flex justify-between w-96 items-center text-sm">

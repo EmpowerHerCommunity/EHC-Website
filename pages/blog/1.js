@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Header from "../public/blog/header.svg";
-import BlogNewsletter from "../src/components/BlogNewsletter";
-import NavBar from "../src/components/NavBar";
+import Header from "../../public/blog/header.svg";
+import BlogNewsletter from "../../src/components/BlogNewsletter";
+import NavBar from "../../src/components/NavBar";
 
 const BlogPage = () => {
   const blogs = [
