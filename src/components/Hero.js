@@ -22,7 +22,7 @@ const Hero = () => {
 						<h1 className="sm:text-4xl text-3xl mb-4 font-semibold">You can volunteer to work with us</h1>
 						<p className="mb-3 font-medium">All it takes is:</p>
 						<ul className="list-disc ml-3">
-							<li className="mt-4">Being motivated.</li>
+							<li className="mt-1">Being motivated.</li>
 							<li className="mt-2">Having an interest for women in tech.</li>
 							<li className="mt-2">Having good organizational and managerial skills.</li>
 							<li className="mt-2">Having experience in a related field.</li>
