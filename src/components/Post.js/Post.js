@@ -1,8 +1,8 @@
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import BlogCard from "../BlogCard";
-import BlogNewsletter from "../BlogNewsletter";
-import FeaturedBlog from "../FeaturedBlog";
+import BlogCard from "../Blog/BlogCard";
+import BlogNewsletter from "../Blog/BlogNewsletter";
+import FeaturedBlog from "../Blog/FeaturedBlog";
 
 const post = ({ posts }) => {
   return (

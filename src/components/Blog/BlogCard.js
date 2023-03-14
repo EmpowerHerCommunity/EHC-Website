@@ -1,22 +1,25 @@
+import Link from "next/link";
+import { sortByDate } from "../../../utils";
 import BlogNewsletter from "./BlogNewsletter";
 
 const BlogCard = ({ posts: blogs }) => {
-  console.log(blogs);
   return (
     <>
       <section>
-        <section className="container px-5 py-16 mx-auto grid lg:grid-cols-2 grid-col-1">
-          {blogs.map((blog) => (
-            <article className="xl:w-10/12 p-4">
-              <div className="border-2 border-black px-3 py-2 rounded-lg">
+        <section className="container px-5 mx-auto grid lg:grid-cols-2 grid-col-1">
+          {blogs.map((blog, index) => (
+            <article className="xl:w-10/12 p-4 mb-4" key={index}>
+              <div className="border-2 h-full border-black px-3 py-2 rounded-lg">
+                <Link href ={`/blog/${blog.slug}`}>
+                  <div>
                 <img
                   className="h-64 rounded-lg w-full object-cover object-center mb-6"
                   src={blog.data.image}
                   alt="content"
                 />
                 <section className="flex">
-                  <h2 className="text-xs font-medium mb-1">{blog.date}</h2>
-                  <h2 className="mb-1 ml-2 text-xs">{blog.read}</h2>
+                  <h2 className="text-xs font-medium mb-1">{blog.data.date}</h2>
+                  <h2 className="mb-1 ml-2 text-xs">{blog.data.read}</h2>
                 </section>
                 <h1 className="lg:text-2xl text-xl font-bold mt-1 mb-2">
                   {blog.data.title}
@@ -26,7 +29,7 @@ const BlogCard = ({ posts: blogs }) => {
                 </p>
                 <section className="flex items-center flex-wrap mt-3">
                   <img
-                    src="/blog-card.jpg"
+                    src={blog.data.image}
                     className="w-8 h-8 rounded-full"
                     alt="writer"
                   />
@@ -42,6 +45,8 @@ const BlogCard = ({ posts: blogs }) => {
                     {blog.data.tagOne}
                   </button>
                 </aside>
+                </div>
+                </Link>
               </div>
             </article>
           ))}
