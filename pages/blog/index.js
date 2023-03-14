@@ -1,20 +1,37 @@
-// import "./App.css";
-import NavBar from '../../src/components/NavBar';
-import Footer from '../../src/components/Footer';
-import BlogCard from '../../src/components/BlogCard';
-import BlogNewsletter from '../../src/components/BlogNewsletter';
-import FeaturedBlog from '../../src/components/FeaturedBlog';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Post from "../../src/components/Post.js/Post"
 
-const Blog = () => {
-    return (
-        <div className='overflow-hidden'>
-            <NavBar />
-            <FeaturedBlog/>
-            <BlogCard />
-            <BlogNewsletter/>
-            <Footer />
-        </div>
-    );
+export default function Blog({ posts }) {
+  console.log(posts);
+  return (
+    <section className="overflow-hidden">
+         <Post posts={posts}/>
+    </section>
+  );
 }
 
-export default Blog;
+export async function getStaticProps() {
+  //get files from the post directory
+  const files = fs.readdirSync(path.join("posts"));
+//   console.log(files);
+  //get slug and the posts
+  const posts = files.map((fileName) => {
+    //create slug
+    const slug = fileName.replace(".md", "");
+    //get post
+    const markDownaPosts = fs.readFileSync(path.join("posts", fileName), "utf-8");
+    const { data } = matter(markDownaPosts);
+     return {
+      slug,
+      data,
+    }
+console.log(posts)
+  });
+  return {
+    props: {
+      posts: posts,
+    },
+  };
+}
