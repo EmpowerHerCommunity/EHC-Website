@@ -16,10 +16,13 @@
     "@mui/material": "^5.7.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.2.12",
     "next": "^12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
+    "react-markdown": "^8.0.5",
     "react-multi-carousel": "^2.8.0"
   },
   "devDependencies": {

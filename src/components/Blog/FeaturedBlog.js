@@ -1,4 +1,4 @@
-import search from "../../public/blog/searchicon.png";
+import search from "../../../public/blog/searchicon.png";
 import Image from "next/image";
 const FeaturedBlog = () => {
   const blogs = [
@@ -42,13 +42,13 @@ const FeaturedBlog = () => {
         </div>
       </nav>
 
-      {blogs &&
+      {/* {blogs &&
         blogs.map((blog) => (
-          <article className=" ">
-            <figure className=" absolute">
-              <img src={blog.blogImage}  className="object-fill w-11/12 mx-6 " />
+          <article className=" container mx-6">
+            <figure className=" relative container h-96 border-8">
+              <img src={blog.blogImage}  />
             </figure>
-            <figcaption className="lg:w-9/12 w-12/12 relative flex flex-col h-feature px-20 justify-center text-blogBtn" >
+            <figcaption className="lg:w-9/12 w-12/12 relative bottom-80 flex flex-col  px-20 border-8  justify-center text-blogBtn" >
               <hgroup className="flex justify-between w-96 items-center text-sm">
                 <h4> Featured Article </h4>
                 <div className="h-2 w-2 bg-blogBtn rounded-full border"></div>
@@ -70,7 +70,7 @@ const FeaturedBlog = () => {
               </div>
             </figcaption>
           </article>
-        ))}
+        ))} */}
     </header>
   );
 };
