@@ -3,6 +3,7 @@ import { sortByDate } from "../../../utils";
 import BlogNewsletter from "./BlogNewsletter";
 
 const BlogCard = ({ posts: blogs }) => {
+
   return (
     <>
       <section>
@@ -19,7 +20,6 @@ const BlogCard = ({ posts: blogs }) => {
                 />
                 <section className="flex">
                   <h2 className="text-xs font-medium mb-1">{blog.data.date}</h2>
-                  <h2 className="mb-1 ml-2 text-xs">{blog.data.read}</h2>
                 </section>
                 <h1 className="lg:text-2xl text-xl font-bold mt-1 mb-2">
                   {blog.data.title}
