@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import ReactMarkdown from 'react-markdown'
-import marked from "marked";
+import md from "markdown-it"
 import Navbar from "../../src/components/NavBar";
 import Image from "next/image";
 import BlogNewsletter from "../../src/components/Blog/BlogNewsletter";
@@ -23,11 +22,12 @@ export default function SlugPage({
   slug,
   content,
 }) {
+  
   return (
-    <section>
+    <section className="border-8" >
       <Navbar />
-      <section>
-        <article className="container mx-auto lg:pl-40 ">
+      <section >
+        <article className="lg:pl-40">
           <figcaption className="lg:w-9/12 w-12/12 flex flex-col h-feature px-10 justify-center text-black">
             <hgroup className="flex justify-between w-56 items-center text-sm">
               <h4>{date}</h4>
@@ -105,10 +105,8 @@ export default function SlugPage({
                   </figure>
                 </div>
               </div>
-              <div className="content pb-10">
-                <ReactMarkdown>
-                    {content}
-                </ReactMarkdown>
+              <div className="content pb-10 w-11/12 ">
+                <div dangerouslySetInnerHTML={{__html: md().render(content)}} className="prose lg:prose-md max-w-screen-lg"/>
               </div>
         </article>
       </section>
@@ -118,6 +116,7 @@ export default function SlugPage({
 }
 
 export async function getStaticPaths() {
+  //retrieve slugs by getting our post  
   const files = fs.readdirSync(path.join("posts"));
   const paths = files.map((fileName) => ({
     params: {
