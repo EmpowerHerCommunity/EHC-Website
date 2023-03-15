@@ -17,8 +17,6 @@ The CSS units of measurement that we will cover in this article will help us to 
 
 # Veniensque tu magis parabat et postquam admonitu
 
-## Urit meum solutis nec audentes lacertos moratur
-
 Lorem markdownum **instat** hospitibus tanta. Ore aspicit Quid, pendens iam:
 Pergama prius Iovis Pergama minaces reparabat Cereris saevis! Hinc cornuque
 Aonias, erat, madefactaque vidit inde invenit Horae.
@@ -46,6 +44,10 @@ dentibus hasta tormenta!
 > Exemplis et Ide Iulius filia resonant, illa loco viridem. Quisquis effudit
 > alasque.
 
+
+* Apples
+* Bananas
+* Peanut butter
 
 ## Nefas abundet clipeus est pariter caesae
 
