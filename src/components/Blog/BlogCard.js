@@ -24,7 +24,7 @@ const BlogCard = ({ posts: blogs }) => {
                 <h1 className="lg:text-lg text-lg font-bold mt-1 mb-1">
                   {blog.data.title}
                 </h1>
-                <p className="text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed w-11/12">
                   {blog.data.description}
                 </p>
                 <section className="flex items-center flex-wrap mt-3 rounded-full">
