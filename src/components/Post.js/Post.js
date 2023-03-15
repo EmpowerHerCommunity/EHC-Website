@@ -8,7 +8,7 @@ const post = ({ posts }) => {
   return (
     <>
       <NavBar />
-      <FeaturedBlog posts = {posts}/>
+      {/* <FeaturedBlog posts = {posts}/> */}
       <BlogCard posts = {posts}/>
       <BlogNewsletter />
       <Footer />
