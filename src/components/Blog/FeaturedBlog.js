@@ -19,10 +19,14 @@ const FeaturedBlog = () => {
     <header className="container mx-auto mt-14 cursor-pointer">
       <nav className="justify-between items-center text-sm font-semibold lg:flex hidden mx-10">
         <div className="flex items-center">
-          <button className="w-28 h-9 rounded-full border border-black font-semibold bg-blogBtn">
+          <button className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn">
             ALL TOPICS
           </button>
-          <ul className="flex justify-between w-nav items-center ml-10">
+         
+        </div>
+
+        <div className="w-7/12">
+        <ul className="flex justify-between items-center w-11/12">
             <li>REACT</li>
             <li>CSS</li>
             <li>PRODUCT</li>
@@ -31,10 +35,10 @@ const FeaturedBlog = () => {
           </ul>
         </div>
 
-        <div className="relative mt-5 px-10">
+        <div className="relative mt-5">
           <input
             placeholder="Search"
-            className="border rounded-full h-9 px-3 placeholder:left-7 placeholder:relative text-sm w-80"
+            className="border rounded-full h-10 px-3 placeholder:left-7 placeholder:relative text-sm w-80"
           />
           <figure className="relative bottom-6 left-5">
             <Image src={search} width={14} height={14} />

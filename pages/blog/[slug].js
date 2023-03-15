@@ -23,6 +23,18 @@ export default function SlugPage({
   content,
 }) {
   
+  function calculateReadingTime(content) {
+    const wordsPerMinute = 200;
+    const wordCount = content?.trim().split(/\s+/).length;
+    const readingTimeInMinutes = wordCount / wordsPerMinute;
+    const minutes = Math.floor(readingTimeInMinutes);
+    const seconds = Math.floor((readingTimeInMinutes - minutes) * 60);
+    const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
+    return readingTime;
+  }
+  const readTime = calculateReadingTime(content); // call the function and store the result in a variable
+
+  
   return (
     <section className="border-8" >
       <Navbar />
@@ -32,7 +44,7 @@ export default function SlugPage({
             <hgroup className="flex justify-between w-56 items-center text-sm">
               <h4>{date}</h4>
               <div className="h-2 w-2 bg-black rounded-full border"></div>
-              <h4>{read}</h4>
+              <h4>{readTime > 1 ? `${readTime} minutes read` : `${readTime} minute read`}</h4>
             </hgroup>
             <hgroup>
               <h1 className="text-sm lg:text-5xl py-4">{title}</h1>

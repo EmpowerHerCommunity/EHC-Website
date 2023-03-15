@@ -13,6 +13,7 @@ module.exports = {
         'yellow': ' #FFCF00',
         'blogBtn': ' #F3F3F3',
         'blogSearch': '#999999',
+        "footer":"#6600660D",
       },
       width:{
         nav:"28rem"

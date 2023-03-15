@@ -23,7 +23,7 @@ export async function getStaticProps() {
      return {
       slug,
       data,
-    }
+     }
   }
     );
 
