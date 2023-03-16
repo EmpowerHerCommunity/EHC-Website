@@ -31,7 +31,7 @@ const Description = () => {
                 <h2 className='hero-h2 font-normal text-dark md:text-5xl text-4xl font-bold max-w-max'>Who Are We?</h2>
                 <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
               </div>
-              <p className='hero-paragraph font-normal md:text-xl text-2xl text-dark md:leading-6 leading-8 mb-4' data-aos='fade-up'>
+              <p className='hero-paragraph font-normal md:text-lg text-xl text-dark md:leading-6 leading-8 mb-4' data-aos='fade-up'>
                 The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
               </p>
               <div className='leading-6 mt-2 mb-12'>
