@@ -2,8 +2,8 @@ import React from 'react'
 
 const BlogNewsletter = () => {
 return(
-  <div className="flex justify-center items-center my-20">
-  <div className="m-auto p-8 bg-white border-2 border-gray-900 rounded-lg shadow-lg md:w-8/12">
+  <div className="flex justify-center items-center my-14">
+  <div className="m-auto p-8 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg md:w-8/12">
     <p className="text-center text-xs font-bold">STAY UPDATED</p>
     <h3 className="text-center mt-2 text-2xl font-bold">Get Community Updates and Opportunities.</h3>
     <div className="flex my-8 items-center justify-center ">

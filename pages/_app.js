@@ -21,11 +21,10 @@ export default function MyApp(props) {
         clientSideEmotionCache, pageProps } = props;
   
     return (
-        <CacheProvider value={emotionCache}>
+        <CacheProvider value={emotionCache} className="font-fontFamily">
             <Head>
                 <meta name="viewport" 
                     content="width=device-width initial-scale=0.65" />
-                    
             </Head>
             <ThemeProvider theme={theme}>
                   

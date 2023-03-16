@@ -5,6 +5,8 @@ import md from "markdown-it"
 import Navbar from "../../src/components/NavBar";
 import Image from "next/image";
 import BlogNewsletter from "../../src/components/Blog/BlogNewsletter";
+import BlogCard from "../../src/components/Blog/BlogCard";
+
 
 export default function SlugPage({
   data: {
@@ -36,29 +38,27 @@ export default function SlugPage({
 
   
   return (
-    <section className="border-8" >
+    <section className="container mx-auto font-fontFamily" >
       <Navbar />
-      <section >
-        <article className="lg:pl-40">
-          <figcaption className="lg:w-9/12 w-12/12 flex flex-col h-feature px-10 justify-center text-black">
-            <hgroup className="flex justify-between w-56 items-center text-sm">
+      <section>
+        <article className="pt-3">
+          <figcaption className="lg:w-12/12 w-12/12 flex flex-col h-96 px-10 justify-center lg:pl-32 text-black">
+            <hgroup className="flex justify-between w-56 items-center text-sm text-slug">
               <h4>{date}</h4>
               <div className="h-2 w-2 bg-black rounded-full border"></div>
               <h4>{readTime > 1 ? `${readTime} minutes read` : `${readTime} minute read`}</h4>
             </hgroup>
-            <hgroup>
-              <h1 className="text-sm lg:text-5xl py-4">{title}</h1>
-              <p className="text-sm lg:text-lg">{description}</p>
+            <hgroup className="lg:w-8/12">
+              <h1 className="text-sm lg:text-3xl py-4 font-semibold">{title}</h1>
+              <p className="text-sm lg:text-base">{description}</p>
             </hgroup>
-            <div className=" flex justify-between w-40 items-center py-4">
-              <Image
+            <div className=" flex justify-between w-40  items-center py-4">
+              <img
                 src={authorImage}
                 alt="author avatar"
-                width={35}
-                height={35}
-                className="rounded-full"
+                className="rounded-full w-9 h-9"
               />
-              <p>{author}</p>
+              <p className="font-semibold text-sm text-slug">{author}</p>
             </div>
             <div className="flex justify-between w-52 text-sm">
               <button className="w-24 h-8 rounded-full border border-black font-semibold bg-white text-black">
@@ -69,20 +69,21 @@ export default function SlugPage({
               </button>
             </div>
           </figcaption>
-          <figure>
-              <Image
+
+          <figure className="px-8">
+              <img
                 src={header}
                 alt="artcle cover image"
-                width={1000}
-                height={400}
-                className="object-cover"
+                className="object-cover w-full rounded-md h-96"
               />
           </figure>
-          <div className="flex justify-between pt-6 ">
+          <div className="flex justify-between pt-14 lg:pl-32 w-12/12">
+
                 <figcaption className="w-10/12 text-justify">
                   <p>{introduction}</p>
                 </figcaption>
-                <div className=" w-2/12 flex flex-col h-52 justify-between items-center cursor-pointer">
+
+                <div className=" w-1/12 flex flex-col h-52 justify-between items-center cursor-pointer">
                   <figure className="border border-black h-9 w-9 flex justify-center items-center">
                     <Image
                       src="/blog/facebook.svg"
@@ -117,12 +118,16 @@ export default function SlugPage({
                   </figure>
                 </div>
               </div>
-              <div className="content pb-10 w-11/12 ">
+
+              <div className="content pb-10 w-10/12 lg:pl-32 ">
                 <div dangerouslySetInnerHTML={{__html: md().render(content)}} className="prose lg:prose-md max-w-screen-lg"/>
               </div>
         </article>
       </section>
+      <>
       <BlogNewsletter />
+       {/* <BlogCard/> */}
+      </>
     </section>
   );
 }
