@@ -15,6 +15,8 @@ module.exports = {
         'blogSearch': '#999999',
         "footer":"#6600660D",
         "slug":"#444444",
+        "event":"#6600660D",
+
       },
       width:{
         nav:"28rem"

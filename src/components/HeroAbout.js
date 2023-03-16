@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 
-
-
 const HeroAbout = () => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
@@ -18,7 +16,7 @@ const HeroAbout = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-8 mt-8">
+            <ul className="ml-20 mt-8 lg:text-lg text-base">
               <li className="font-semibold my-1"> About Us. </li>
               <li className="font-semibold my-1"> Our Vision. </li>
               <li className="font-semibold my-1"> Our Mission. </li>
@@ -33,14 +31,11 @@ const HeroAbout = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-xl text-2xl mb-4 md:leading-6"
+              className="font-normal md:text-lg text-xl mb-4 md:leading-7"
               data-aos="fade-left"
             >
-              The
-              <span className="text-primary text-opacity-60">
-                EmpowerHer Community
-              </span>
-              is a female oriented tech community which focuses on training and
+
+              {/* is a female oriented tech community which focuses on training and
               promoting women in the field of information technology. We aim to
               promote and spread more awareness for opportunities in information
               technology and incorporate as many women as possible. Having
@@ -48,21 +43,31 @@ const HeroAbout = () => {
               helping women transition smoothly into the Information Technology
               industry. We have kickstarted the tech careers of more than 1,500
               women all across the globe. Our aim is to train 10,000 women by
-              the end of 2025.
+              the end of 2025. */}
+              The
+              <span className="text-primary text-opacity-60">
+                 {" "} Empower Her Community
+              </span> is a female-focused tech community of
+              over 2,000 women that is dedicated to the inclusion of women
+              across all tech roles in the global tech ecosystem. We aim to make
+              the tech industry accessible to every willing woman through
+              training, mentorships and promoting awareness for opportunities in
+              tech. 
             </p>
+            <p
+              className="font-normal md:text-lg text-xl mb-4 md:leading-7"
+              data-aos="fade-left"
+            >Founded in May, 2021, the community has successfully
+              completed the training of over 120 women and kickstarted the
+              learning process of over 500 women, successfully connected
+              members of the community to employment opportunities through
+              internships and referrals and continue to provide learning support
+              to aid their career growth.
+              </p>
           </div>
         </div>
       </div>
-      <div
-        className="h-[300px] md:h-[450px] w-full bg-no-repeat bg-cover bg-top bg-[url('/events/group.png')]"
-        data-aos="zoom-in"
-      >
-        {/* <div className="h-4/5 w-full" data-aos='zoom-in'>  */}
-        {/* <Image src='/group.png' alt='' className='w-full h-4/5' /> */}
-      </div>
     </section>
-    
-    
   );
 };
 export default HeroAbout;
