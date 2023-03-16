@@ -14,6 +14,7 @@ module.exports = {
         'blogBtn': ' #F3F3F3',
         'blogSearch': '#999999',
         "footer":"#6600660D",
+        "slug":"#444444",
       },
       width:{
         nav:"28rem"
@@ -21,6 +22,9 @@ module.exports = {
        height:{
         feature:"28rem",
         sm:"40rem",
+      },
+      fontFamily:{
+        fontFamily: ['Archivo', 'sans-serif']
       },
     },
   },
