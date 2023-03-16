@@ -47,7 +47,7 @@ const NavBar = () => {
           </div>
 
           <div className={` ${active ? '' : 'hidden'} w-full lg:inline-flex justify-between lg:w-full`}>
-            <div className='lg:inline-flex lg:flex-row lg:w-auto lg:items-center items-start  flex flex-col lg:h-auto w-full '>
+            <div className='lg:inline-flex lg:flex-row lg:w-auto lg:items-center items-start  flex flex-col lg:h-auto w-full'>
               <Link href='/'>
                 <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-normal items-center justify-start  hover:text-purple-900 md:hover:text-xl text-2xl hover:text-3xl '>
                   Home

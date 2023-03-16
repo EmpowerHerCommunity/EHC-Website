@@ -14,17 +14,17 @@ const Hero = () => {
       <section className="">
         <div className="container mx-auto  lg:px-24 px-5 flex-col items-center">
 			<section className="flex lg:flex-row  md:flex-row flex-col justify-center items-center lg:mt-32 mt-16">
-          <div className="relative w-5/12 md:w-5/12 lg:h-96 md:h-52 h-44 border-black">
+          <div className="relative w-5/12 md:w-6/12 lg:h-96 md:h-52 h-44 border-black">
             <figure
               className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
               data-aos="fade-up"
             >
               <Image
                 src="/hero-volunteer.png"
-                className="object-cover object-center rounded"
+                className="object-cover object-center"
                 width="260px"
                 height="260px"
-                alt="cup"
+                alt="cup"   
               />
             </figure>
 
@@ -68,7 +68,7 @@ const Hero = () => {
           </div>
 
           <div
-            className="lg:flex-grow md:w-1/2 lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-left py-10 pb-16"
+            className="lg:flex-grow md:w-5/2 lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-left py-10 pb-16"
             data-aos="fade-left"
           >
             <h1 className="sm:text-4xl text-3xl mb-4 font-semibold">
