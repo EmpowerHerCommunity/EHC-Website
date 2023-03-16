@@ -21,7 +21,7 @@ const Footer = () => {
         <h2 className='leading-10 md:text-5xl text-4xl font-normal mb-6'>Empower Her Community</h2>
         <div className='flex flex-wrap lg:flex-nowrap justify-between gap-10 w-full'>
           <div className='flex flex-col max-w-lg w-full' data-aos='zoom-in-up'>
-            <p className='font-normal md:text-xl text-2xl leading-8 mb-8'>
+            <p className='font-normal md:text-lg text-xl leading-8 mb-8'>
               A Technology-based community focused on training
               and promoting women in the field of information
               technology, so as to help them advance in their career.

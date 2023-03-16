@@ -16,13 +16,13 @@ const HeroHome = () => {
         <div className='flex justify-between lg:py-32 sm:py-12 py-7' >
           <div data-aos='fade-left'>
             <article>
-              <div className='lg:text-l w-96 h-6 font-normal uppercase tracking-widest font-light'>
+              <div className='lg:text-l w-96 h-6 uppercase tracking-widest font-light'>
                 A female-oriented tech community
               </div>
               <div className='md:text-7xl text-6xl text-primary font-bold'>
                 Empower Her Community
               </div>
-              <div className=' md:text-xl text-2xl md:my-8 my-4 w-96 md:h-20 h-24'>
+              <div className=' md:text-lg text-xl md:my-8 my-4 w-96 md:h-20 h-24'>
                 We are a female community seeing to the growth and progress of all women in tech worldwide
               </div>
               <div>
