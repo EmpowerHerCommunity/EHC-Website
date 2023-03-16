@@ -1,7 +1,7 @@
 ---
-date: "March 4 2023"
+date: "March 7 2023"
 read: "5 Minutes Read"
-image: "/blog-card.jpg"
+image: "/blog/header.svg"
 header: "/blog/header.svg"
 title: "Why CSS units matter to your responsive website designs"
 description: "Let's discuss using CSS units to create fully responsive websites that size and resize elements."
@@ -15,7 +15,7 @@ Creating websites involves building responsive layouts. You have to size, resize
 The CSS units of measurement that we will cover in this article will help us to understand how to create a fully responsive websites, size and resize elements on our website appropriately, and how to figure out the best units to use."
 ---
 
-# Veniensque tu magis parabat et postquam admonitu
+## Veniensque tu magis parabat et postquam admonitu
 
 Lorem markdownum **instat** hospitibus tanta. Ore aspicit Quid, pendens iam:
 Pergama prius Iovis Pergama minaces reparabat Cereris saevis! Hinc cornuque

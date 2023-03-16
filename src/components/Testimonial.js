@@ -57,7 +57,7 @@ const Testimonial = () => {
     }, 100);
   }
   return (
-    <section className="py-12">
+    <section className="py-12 text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
           <Image src='/group2.png' width='115px' height='115px' />

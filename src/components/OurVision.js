@@ -10,7 +10,7 @@ const OurVision = () => {
   }, []);
 
   return (
-    <section className="">
+    <section className="text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4 py-16">
         <div className='our-vision md:grid grid-cols-2 gap-8'>
           <div data-aos='zoom-in'>

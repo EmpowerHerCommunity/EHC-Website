@@ -10,7 +10,7 @@ const HeroAbout = () => {
   }, []);
 
   return (
-    <section className="bg-primary bg-opacity-10">
+    <section className="bg-primary bg-opacity-10 text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className="grid md:grid-cols-2 py-4 md:py-16 md:px-24">
           <div
