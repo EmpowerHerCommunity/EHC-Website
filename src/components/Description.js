@@ -32,7 +32,7 @@ const Description = () => {
                 <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
               </div>
               <p className='hero-paragraph font-normal md:text-lg text-xl text-dark md:leading-6 leading-8 mb-4' data-aos='fade-up'>
-                The Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
+              Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
               </p>
               <div className='leading-6 mt-2 mb-12'>
                 <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44'>
@@ -47,8 +47,8 @@ const Description = () => {
                 <div>
                   <Image src='/1.png' width='36px' height='36px' />
                   <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
-                    700+ <br />
-                    <span className='text-base text-dark font-normal'>Impacted</span>
+                    3000+ <br />
+                    <span className='text-base text-dark font-normal'>Trained</span>
                   </p>
                 </div>
                 <div>
@@ -61,7 +61,7 @@ const Description = () => {
                 <div>
                   <Image src='/3.png' width='36px' height='36px' />
                   <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
-                    1000+ <br />
+                    5000+ <br />
                     <span className='text-base text-dark font-normal'>Community Members</span>
                   </p>
                 </div>
