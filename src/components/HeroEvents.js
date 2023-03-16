@@ -15,7 +15,7 @@ const HeroEvents = () => {
                 <div className='grid md:grid-cols-2 py-4 md:py-16 md:px-24'>
                     <div className=' hero-about-list text-dark font-normal md:text-lg text-3xl  leading-7' data-aos='fade-right'>
                         <img src='/contact-dots.svg' alt='' />
-                        <ul className='ml-8 mt-8'>
+                        <ul className='ml-32 text-lg mt-8'>
                             <li className='font-semibold my-1'> Events. </li>
                             <li className='font-semibold my-1'> Bootcamps. </li>
                             <li className='font-semibold my-1'>  Webinars. </li>
@@ -29,17 +29,16 @@ const HeroEvents = () => {
                                 <img src='/line2.png' alt='' />
                             </span>
                         </h2>
-                        <p className='font-normal md:text-xl text-2xl mb-4 md:leading-6' data-aos='fade-left'>
-                            Since we began, we’ve had interactive sessions, media outreach,
-                            bootcamps, we’ve hosted ladies all over the world.
+                        <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
+                            Since we began, we’ve had interactive sessions, webwinars,
+                            bootcamps, that have benefited ladies all over the world.
                         </p>
-                        <p className='font-normal md:text-xl text-2xl mb-4 md:leading-6' data-aos='fade-left'>
-                            The <span className='text-primary opacity-60'>Empower Her Community</span>
+                        <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
+                            The <span className='text-primary opacity-60'>Empower Her Community </span>
                             Bootcamp 1.0 was a free bootcamp that ran for the course of 1 month.
-                            The facilitators were all volunteers who gave of their time to see that these women were trained efficiently.
+                            The facilitators gave of their time to see that these women were trained efficiently.
                         </p>
-                        <p className='font-normal md:text-xl text-2xl mb-4 md:leading-6' data-aos='fade-left'>
-
+                        <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
                             The bootcamp featured Digital Marketing, Web development,
                             Graphics Design, Data Science, 3D Design, Modeling and Printing.
                             There has been so many  bootcamps since, all have been towards the empowerment of women in tech.
