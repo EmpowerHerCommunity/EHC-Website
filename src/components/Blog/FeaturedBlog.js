@@ -24,7 +24,7 @@ const FeaturedBlog = () => {
           </button>
         </div>
 
-        <div className="lg:w-6/12 md:w-6/12 lg:block md:block hidden">
+        <div className="lg:w-5/12 md:w-6/12 lg:block md:block hidden">
         <ul className="flex justify-between items-center lg:w-11/12">
             <li>REACT</li>
             <li>CSS</li>

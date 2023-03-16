@@ -1,8 +1,8 @@
 ---
 date: "March 10 2023"
 read: "6 Minutes Read"
-image: "/blog/header.svg"
-header: "/blog/header.svg"
+image: "/blog/blog.svg"
+header: "/blog/blog.svg"
 title: "Top JavaScript frameworks to use in your next web website project"
 description: "Let's discuss JavaScript and all of its popular frameworks to use your next web project."
 author: "Jessica Joseph"

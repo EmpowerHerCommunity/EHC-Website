@@ -51,12 +51,10 @@ export default function SlugPage({
               <p className="text-sm lg:text-lg">{description}</p>
             </hgroup>
             <div className=" flex justify-between w-40 items-center py-4">
-              <Image
+              <img
                 src={authorImage}
                 alt="author avatar"
-                width={35}
-                height={35}
-                className="rounded-full"
+                className="rounded-full w-9 h-9"
               />
               <p>{author}</p>
             </div>
