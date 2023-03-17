@@ -31,7 +31,7 @@ const HeroAbout = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-lg text-xl mb-4 md:leading-7"
+              className="font-normal md:text-lg text-lg mb-4 md:leading-7"
               data-aos="fade-left"
             >
               {/* is a female oriented tech community which focuses on training and
@@ -55,7 +55,7 @@ const HeroAbout = () => {
               awareness for opportunities in tech.
             </p>
             <p
-              className="font-normal md:text-lg text-xl mb-4 md:leading-7"
+              className="font-normal md:text-lg text-lg mb-4 md:leading-7"
               data-aos="fade-left"
             >
               Since its founding in May 2021, our community has trained over
