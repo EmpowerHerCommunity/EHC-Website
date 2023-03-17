@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../../styles/Home.module.css';
-import AOS from 'aos';
-
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../../styles/Home.module.css";
+import AOS from "aos";
 
 const NavBar = () => {
-
   useEffect(() => {
     AOS.init({ duration: 2500 });
     AOS.refresh();
@@ -16,10 +14,62 @@ const NavBar = () => {
 
   const handleClick = () => {
     setActive(!active);
-  }
+  };
+
   return (
-    <div className='w-full'>
-      <div className="container xl:max-w-screen-xl mx-auto px-4">
+    <div className="container mx-auto cursor-pointer">
+      <nav className="flex lg:flex-row items-center py-10 lg:py-0 flex-col-reverse lg:justify-center px-1" >
+      <ul
+          className={`${
+            active ? "block" : "hidden"
+          } lg:inline-flex lg:flex-row lg:w-4/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-xl font-medium`}
+        >          
+        <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="">Home</Link>
+          </li>
+          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="">About Us</Link>
+          </li>
+          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="">Events</Link>
+          </li>
+          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="">Contact</Link>
+          </li>
+          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="">Volunteer</Link>
+          </li>
+        </ul>
+        <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 lg:w-4/12 lg:justify-center items-center">
+          <Link href="/">
+            <a className="border-none">
+              <Image src="/logo.png" width="91px" height="90px" />
+            </a>
+          </Link>
+          <button className=' rounded lg:hidden text-white ml-auto hover:text-white active:bg-white outline-none'
+              onClick={handleClick}>
+              <svg
+                className='w-10 h-10'
+                fill='none'
+                stroke='black'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M4 6h16M4 12h16M4 18h16'
+                />
+              </svg>
+            </button>
+        </figure>
+        <div className="w-4/12 lg:flex hidden lg:flex-row flex-col justify-between items-center h-56 lg:h-0 lg-py-0 py-11">
+          <button className="w-44 rounded-md h-12  text-primary font-medium border-primary border-2 font-mono hover:scale-105">Join Us</button>
+          <button className="w-56 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">Support Our Vision</button>
+        </div>
+      </nav>
+      {/* <div className="container xl:max-w-screen-xl mx-auto px-4">
         <nav className='lg:flex items-center flex-wrap lg:flex-nowrap w-full gap-3'>
           <div className='flex' data-aos='zoom-in'>
             <Link href='/'>
@@ -99,12 +149,10 @@ const NavBar = () => {
               </div>
             }
           </div>
-        </nav>
-      </div>
-
-
+        </nav> */}
+      {/* </div> */}
     </div>
-  )
-}
+  );
+};
 
 export default NavBar;
