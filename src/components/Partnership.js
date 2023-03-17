@@ -17,7 +17,7 @@ const Partnership = () => {
         </div>
         <div className='container mx-auto'>
           <div className="relative mb-12 max-w-max mx-auto">
-            <h2 className='patnership-title font-normal font-bold md:text-5xl text-4xl text-dark text-center'>In Partnership With</h2>
+            <h2 className='patnership-title font-bold md:text-5xl text-4xl text-dark text-center'>In Partnership With</h2>
             <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
           </div>
           <div>
