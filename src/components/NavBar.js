@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div className="container mx-auto cursor-pointer">
-      <nav className="flex lg:flex-row items-center py-10 lg:py-0 flex-col-reverse lg:justify-center px-1" >
+      <nav className="flex lg:flex-row items-center py-10 lg:py-0 flex-col-reverse lg:justify-center px-5" >
       <ul
           className={`${
             active ? "block" : "hidden"
@@ -66,7 +66,7 @@ const NavBar = () => {
         </figure>
         <div className="w-4/12 lg:flex hidden lg:flex-row flex-col justify-between items-center h-56 lg:h-0 lg-py-0 py-11">
           <button className="w-44 rounded-md h-12  text-primary font-medium border-primary border-2 font-mono hover:scale-105">Join Us</button>
-          <button className="w-56 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">Support Our Vision</button>
+          <button className="w-52 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">Support Our Vision</button>
         </div>
       </nav>
       {/* <div className="container xl:max-w-screen-xl mx-auto px-4">
