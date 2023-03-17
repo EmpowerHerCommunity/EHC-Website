@@ -18,7 +18,7 @@ const OurVision = () => {
               <Image src='/eye.png' width='90px' height='90px' alt='our vision icon' />
             </div>
             <h2 className='font-bold md:text-4xl text-3xl w-60 mb-4'>Our Vision</h2>
-            <p className='font-normal md:text-lg text-xl md:leading-7 mb-4'>
+            <p className='font-normal md:text-lg text-lg md:leading-7 mb-4'>
               To make the field of information technology accessible to all women from all works of life.
               We aim at promoting the inclusin of women regardless of their age, background or financial status into the tech industry.
             </p>
@@ -34,7 +34,7 @@ const OurVision = () => {
               <Image src='/mission.png' width='90px' height='90px' alt='our mission icon' />
             </div>
             <h2 className='font-bold md:text-4xl text-3xl mb-4'> Our Mission </h2>
-            <p className='font-normal md:text-lg text-xl md:leading-7'>To build a community that focuses on providing opportunites for women transitioning into information technology. A community where Information Technology is perceived accessible to all women regardless of their age or background.</p>
+            <p className='font-normal md:text-lg text-lg md:leading-7'>To build a community that focuses on providing opportunites for women transitioning into information technology. A community where Information Technology is perceived accessible to all women regardless of their age or background.</p>
           </div>
         </div>
       </div>
