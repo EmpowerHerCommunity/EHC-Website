@@ -71,7 +71,7 @@ const Hero = () => {
             className="lg:flex-grow md:w-5/2 lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-left py-10 pb-16"
             data-aos="fade-left"
           >
-            <h1 className="sm:text-4xl text-4xl mb-4 font-semibold">
+            <h1 className="sm:text-4xl lg:text-3xl text-4xl mb-4 font-semibold">
               You can volunteer to work with us
             </h1>
             <p className="mb-3 font-medium text-lg">All it takes is:</p>
