@@ -63,16 +63,16 @@ const PastEventsCard = ({ event, i }) => {
                             <div className="flex absolute top-0 left-0">
                                 <Image src='/border-tl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute top-0 right-0">
+                            <div className="flex absolute top-0 right-16">
                                 <Image src='/border-tr.png' width='106px' height='106px' alt='' />
                             </div>
                             <div className="flex absolute bottom-0 left-0">
                                 <Image src='/border-bl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute bottom-0 right-0">
+                            <div className="flex absolute bottom-0 right-16">
                                 <Image src='/border-br.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-full max-w-max' data-aos='fade-right'>
+                            <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-10/12 max-w-max' data-aos='fade-right'>
                                 <Image src={event.image} width='732px' height='744px' alt={event.title} />
                             </div>
                         </div>

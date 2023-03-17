@@ -11,7 +11,7 @@ const Description = () => {
   }, []);
 
   return (
-    <section className="py-12 text-justify">
+    <section className="py-12 text-justify  lg:px-0 px-3">
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className=''>
           <div className='grid lg:grid-cols-2 grid-cols-1 gap-10'>

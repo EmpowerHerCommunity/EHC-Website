@@ -11,7 +11,7 @@ const HeroHome = () => {
   }, []);
 
   return (
-    <section className="bg-primary bg-opacity-10">
+    <section className="bg-primary bg-opacity-10 lg:px-0 px-3">
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className='flex justify-between lg:py-32 sm:py-12 py-7' >
           <div data-aos='fade-left'>
