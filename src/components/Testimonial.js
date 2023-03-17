@@ -22,10 +22,11 @@ const Testimonial = () => {
     },
     {
       id: 3,
-      image: '/testimonial3.png',
+      image: '/Jessica.png',
       name: 'Jessica Joseph',
       role: 'Front end developer',
-      testimonial: "My experience at EHC cohort 2 Bootcamp is definitely one to remember. I didn’t just gain the knowledge I also found my tech family. After graduation, all the knowledge I acquired from my facilitators improved me, as I went from being a basic frontend developer to a React developer in three months."
+      height:"400px",
+      testimonial: "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but also very supportive. I also found a tech family that I can rely on for advice, guidance, and friendship. I am grateful for the opportunity to have been a part of such an amazing community and I look forward to staying connected with this family."
     },
   ]
   const [prevIndex, setPrevIndex] = useState(2);
@@ -63,9 +64,9 @@ const Testimonial = () => {
           <Image src='/group2.png' width='115px' height='115px' />
         </div>
         <div className=''>
-          <div className="relative mb-14 pt-4 max-w-max mx-auto">
+          <div className="relative mb-14  max-w-max mx-auto lg:pt-4 pt-36">
             <h2 className='hero-h2 font-normal md:text-5xl text-4xl font-bold max-w-max'>
-              What Our Students Say
+              What Our Participants Have to Say
             </h2>
             <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
           </div>
@@ -119,7 +120,7 @@ const Testimonial = () => {
                                 </span>
                               </div>
                               <div className="flex-none flex items-end w-44 sm:w-fit">
-                                <Image src={testimonial.image} width='213px' height='315px' alt='attendee' />
+                                <Image src={testimonial.image} width='190px' height='300px' alt='attendee' />
                               </div>
                             </div>
                           </div>
