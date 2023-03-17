@@ -29,7 +29,7 @@ const Events = () => {
                 <Image src='/web.jpg' width='300px' height='300px'  />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
-              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify lg:w-9/12 w-11/12 h-40'>
+              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify lg:w-9/12 w-12/12 h-40'>
                 A webinar to address the disinterest of girls in information technology and enlighten women on the need to transition into the technology space. <br />
                 <Link href='/aboutUs'>
                   <a>
@@ -43,7 +43,7 @@ const Events = () => {
                 <Image src='/bootcamp.jpg' width='300px' height='300px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
-              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify lg:w-9/12 w-11/12 '>
+              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify lg:w-9/12 w-12/12 '>
                 The Empower Her Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
                 <Link href='/aboutUs'>
                   <a>
@@ -57,7 +57,7 @@ const Events = () => {
                 <Image src='/nontechb.jpg' width='300px' height='300px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Non Technical Bootcamp</h2>
-              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify w-11/12 lg:w-9/12 h-40'>
+              <p className='text-white font-normal md:text-base text-lg tracking-wider text-justify w-12/12 lg:w-9/12 h-40'>
                 {/* We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br /> */}
                 Empower Her Community in collaboration with Non-Tech In Tech organized a 2 months bootcamp to train women in non technical roles.<br />
                 <Link href='/aboutUs'>
