@@ -27,17 +27,36 @@ const Footer = () => {
               technology, so as to help them advance in their career.
             </p>
             <div className='flex gap-6 mb-4'>
-              <span className='border-2 border-solid rounded-full p-2'>
+              {/* <span className='border-2 border-solid rounded-full p-2'>
                 <SiInstagram size='1.6rem' />
+              </span> */}
+              <span className='border-2 border-solid rounded-full p-2'>
+                <Link href="https://www.instagram.com/empowerher_community/">
+                  <a>
+                    <SiInstagram size='1.6rem' />
+                  </a>
+                </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <SiTwitter size='1.6rem' />
+                <Link href="https://twitter.com/empowerhercom?s=20">
+                  <a>
+                    <SiTwitter size='1.6rem' />
+                  </a>
+                </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <SiFacebook size='1.6rem' />
+                <Link href="https://www.facebook.com/empowerhercom/">
+                  <a>
+                    <SiFacebook size='1.6rem' />
+                  </a>
+                </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <SiLinkedin size='1.6rem' />
+                <Link href="https://www.linkedin.com/company/empower-her-community/">
+                  <a>
+                    <SiLinkedin size='1.6rem' />
+                  </a>
+                </Link>
               </span>
             </div>
             <h4>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
