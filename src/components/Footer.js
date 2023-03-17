@@ -59,9 +59,9 @@ const Footer = () => {
                 </Link>
               </span>
             </div>
-            <h4>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
+            <h4 className='text-lg'>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
           </div>
-          <div className='flex flex-wrap sm:flex-nowrap gap-8 w-full lg:w-auto' data-aos='zoom-in-down'>
+          <div className='flex flex-wrap sm:flex-nowrap gap-8 w-full lg:w-auto text-lg' data-aos='zoom-in-down'>
             <ul className="min-w-max">
               <li className="mb-4">
                 <Link href='/'>

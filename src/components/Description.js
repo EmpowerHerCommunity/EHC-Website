@@ -31,7 +31,7 @@ const Description = () => {
                 <h2 className='hero-h2 font-normal text-dark md:text-5xl text-4xl font-bold max-w-max'>Who Are We?</h2>
                 <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
               </div>
-              <p className='hero-paragraph font-normal md:text-lg text-xl text-dark md:leading-6 leading-8 mb-4' data-aos='fade-up'>
+              <p className='hero-paragraph font-normal md:text-lg text-lg text-dark md:leading-6 leading-8 mb-4' data-aos='fade-up'>
               Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
               </p>
               <div className='leading-6 mt-2 mb-12'>
@@ -43,26 +43,26 @@ const Description = () => {
                   </Link>
                 </button>
               </div>
-              <div className='flex items-end gap-20' data-aos='fade-up-right'>
+              <div className='flex items-end lg:gap-20 gap-24' data-aos='fade-up-right'>
                 <div>
                   <Image src='/1.png' width='36px' height='36px' />
-                  <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
+                  <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     3000+ <br />
                     <span className='text-base text-dark font-normal'>Trained</span>
                   </p>
                 </div>
                 <div>
                   <Image src='/2.png' width='50px' height='44px' />
-                  <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
+                  <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     1000+ <br />
                     <span className='text-base text-dark font-normal'>Mentored</span>
                   </p>
                 </div>
                 <div>
                   <Image src='/3.png' width='36px' height='36px' />
-                  <p className="text-4xl md:text-5xl text-primary font-semibold leading-5 mt-6">
+                  <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     5000+ <br />
-                    <span className='text-base text-dark font-normal'>Community Members</span>
+                    <span className='text-base text-dark font-normal'> Members</span>
                   </p>
                 </div>
               </div>
