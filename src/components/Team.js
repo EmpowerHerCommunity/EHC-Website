@@ -135,25 +135,7 @@ const Team = () => {
               </a>
             </div>
           </div> */}
-          <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-up'>
-              <img src="/team-images/kelechi.png" alt="Kelechi Amachukwu image" className="w-[85%]" />
-            </div>
-            <p className="md:text-lg text-xl">
-              Kelechi Amachukwu
-            </p>
-            <p className="text-[#737373] text-lg">
-              Lead, Design
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="https://twitter.com/Kcee437?t=i5iFQXlW7z2qwBWElEjnbA&s=09" className="" target="_blank" rel="noopener noreferrer">
-                <img src="/social-media/twitter.png" alt="" className="" />
-              </a>
-              <a href="https://www.linkedin.com/in/kelechi-endurance-5921b820b" className="" target="_blank" rel="noopener noreferrer">
-                <img src="/social-media/linkedin.png" alt="" className="" />
-              </a>
-            </div>
-          </div>
+         
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
               <img src="/team-images/anita.png" alt="Anita Kimemenihia image" className="w-[80%]" />

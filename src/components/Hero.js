@@ -22,8 +22,8 @@ const Hero = () => {
               <Image
                 src="/hero-volunteer.png"
                 className="object-cover object-center"
-                width="260px"
-                height="260px"
+                width="270px"
+                height="270px"
                 alt="cup"   
               />
             </figure>
@@ -71,11 +71,11 @@ const Hero = () => {
             className="lg:flex-grow md:w-5/2 lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-left py-10 pb-16"
             data-aos="fade-left"
           >
-            <h1 className="sm:text-4xl text-3xl mb-4 font-semibold">
+            <h1 className="sm:text-4xl lg:text-3xl text-4xl mb-4 font-semibold">
               You can volunteer to work with us
             </h1>
-            <p className="mb-3 font-medium">All it takes is:</p>
-            <ul className="list-disc ml-3">
+            <p className="mb-3 font-medium text-lg">All it takes is:</p>
+            <ul className="list-disc ml-3 text-lg">
               <li className="mt-1">Being motivated.</li>
               <li className="mt-2">Having an interest for women in tech.</li>
               <li className="mt-2">

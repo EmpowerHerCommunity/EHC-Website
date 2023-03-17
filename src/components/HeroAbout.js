@@ -34,7 +34,6 @@ const HeroAbout = () => {
               className="font-normal md:text-lg text-xl mb-4 md:leading-7"
               data-aos="fade-left"
             >
-
               {/* is a female oriented tech community which focuses on training and
               promoting women in the field of information technology. We aim to
               promote and spread more awareness for opportunities in information
@@ -46,24 +45,25 @@ const HeroAbout = () => {
               the end of 2025. */}
               The
               <span className="text-primary text-opacity-60">
-                 {" "} Empower Her Community
-              </span> is a female-focused tech community of
-              over 2,000 women that is dedicated to the inclusion of women
-              across all tech roles in the global tech ecosystem. We aim to make
-              the tech industry accessible to every willing woman through
-              training, mentorships and promoting awareness for opportunities in
-              tech. 
+                {" "}
+                Empower Her Community
+              </span>{" "}
+              is a female-focused tech community of over 5,000 women that is
+              dedicated to the inclusion of women across all tech roles in the
+              global tech ecosystem. We aim to make the tech industry accessible
+              to every willing woman through training, mentorships and promoting
+              awareness for opportunities in tech.
             </p>
             <p
               className="font-normal md:text-lg text-xl mb-4 md:leading-7"
               data-aos="fade-left"
-            >Founded in May, 2021, the community has successfully
-              completed the training of over 120 women and kickstarted the
-              learning process of over 500 women, successfully connected
-              members of the community to employment opportunities through
-              internships and referrals and continue to provide learning support
-              to aid their career growth.
-              </p>
+            >
+              Since its founding in May 2021, our community has trained over
+              3,000 women and mentored more than 1,000 others. We have also
+              connected many members to employment opportunities through
+              internships and referrals, with some landing positions at top
+              companies
+            </p>
           </div>
         </div>
       </div>

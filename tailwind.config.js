@@ -26,7 +26,7 @@ module.exports = {
         sm:"40rem",
       },
       fontFamily:{
-        fontFamily: ['Archivo', 'sans-serif']
+        font: ['Poppins', 'sans-serif']
       },
     },
   },

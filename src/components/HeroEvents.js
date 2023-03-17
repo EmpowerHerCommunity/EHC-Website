@@ -30,11 +30,11 @@ const HeroEvents = () => {
                             </span>
                         </h2>
                         <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
-                            Since we began, we’ve had interactive sessions, webwinars,
+                            Since we began, we have had interactive sessions, webwinars,
                             bootcamps, that have benefited ladies all over the world.
                         </p>
                         <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
-                            The <span className='text-primary opacity-60'>Empower Her Community </span>
+                           <span className='text-primary opacity-60'>Empower Her Community </span>
                             Bootcamp 1.0 was a free bootcamp that ran for the course of 1 month.
                             The facilitators gave of their time to see that these women were trained efficiently.
                         </p>
