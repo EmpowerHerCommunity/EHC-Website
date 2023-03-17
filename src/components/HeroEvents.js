@@ -30,7 +30,7 @@ const HeroEvents = () => {
                             </span>
                         </h2>
                         <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
-                            Since we began, we’ve had interactive sessions, webwinars,
+                            Since we began, we have had interactive sessions, webwinars,
                             bootcamps, that have benefited ladies all over the world.
                         </p>
                         <p className='font-normal md:text-lg text-xl mb-4 md:leading-7' data-aos='fade-left'>
