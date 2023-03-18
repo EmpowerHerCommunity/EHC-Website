@@ -40,7 +40,7 @@ const Events = () => {
             </div>
             <div data-aos='fade-up' className='mb-8 text-center md:text-left lg:w-4/12 w-11/12'>
               <div data-aos='fade-down'>
-                <Image src='/bootcamp.jpg' width='300px' height='300px' />
+                <Image src='/volunteers.JPEG' width='300px' height='300px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
               <p className='text-white font-normal md:text-lg text-lg tracking-wider text-justify lg:w-9/12 w-12/12 '>
