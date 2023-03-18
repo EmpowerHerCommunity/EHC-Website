@@ -43,16 +43,14 @@ const HeroAbout = () => {
               industry. We have kickstarted the tech careers of more than 1,500
               women all across the globe. Our aim is to train 10,000 women by
               the end of 2025. */}
-              The
               <span className="text-primary text-opacity-60">
                 {" "}
                 Empower Her Community
               </span>{" "}
-              is a female-focused tech community of over 5,000 women that is
-              dedicated to the inclusion of women across all tech roles in the
-              global tech ecosystem. We aim to make the tech industry accessible
-              to every willing woman through training, mentorships and promoting
-              awareness for opportunities in tech.
+             is a community of 5,000+ women dedicated to fostering
+              gender diversity in tech. We strive to make the industry more
+              accessible by providing training, mentorship, and raising
+              awareness of opportunities for women in tech.
             </p>
             <p
               className="font-normal md:text-lg text-lg mb-4 md:leading-7"
@@ -62,7 +60,7 @@ const HeroAbout = () => {
               3,000 women and mentored more than 1,000 others. We have also
               connected many members to employment opportunities through
               internships and referrals, with some landing positions at top
-              companies
+              companies.
             </p>
           </div>
         </div>

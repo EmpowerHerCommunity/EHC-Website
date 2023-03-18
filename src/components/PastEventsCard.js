@@ -37,7 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='md:text-lg text-xl leading-7 md:my-8 my-4' key={'event-card-' + i}>
+                                            <p className='text-justify md:text-lg text-lg leading-7 md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
