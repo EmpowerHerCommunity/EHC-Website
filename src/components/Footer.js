@@ -126,14 +126,14 @@ const Footer = () => {
               <li className="mb-4">
                 Contact Information
               </li>
-              <li className="mb-4">
+              {/* <li className="mb-4">
                 <Link href='tel:+2349050475524'>
                   <a className='flex items-center gap-4'>
                     <BsTelephone />
                     +234 9050475524
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li className="mb-4">
                 <Link href='mailto:info@empowerher.community'>
                   <a className='flex items-center gap-4'>

@@ -30,7 +30,7 @@ const Events = () => {
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
               <p className='text-white font-normal md:text-lg text-lg tracking-wider text-justify lg:w-9/12 w-12/12 h-40'>
-                A webinar to address the disinterest of girls in information technology and enlighten women on the need to transition into the technology space. <br />
+               An interactive session aimed at addressing the disinterest and discouragement that girls often experience in the field of IT.<br />
                 <Link href='/aboutUs'>
                   <a>
                     <span className='read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg'>READ MORE...</span>
@@ -44,7 +44,7 @@ const Events = () => {
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
               <p className='text-white font-normal md:text-lg text-lg tracking-wider text-justify lg:w-9/12 w-12/12 '>
-                 Empower Her Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
+                 Empower Her Community Bootcamp was a game-changing initiative that provided women with a month-long, free-of-charge training program.<br />
                 <Link href='/aboutUs'>
                   <a>
                     <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6'>READ MORE...</span>
