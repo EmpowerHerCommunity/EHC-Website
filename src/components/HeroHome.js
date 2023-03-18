@@ -16,7 +16,7 @@ const HeroHome = () => {
         <div className='flex justify-between lg:py-32 sm:py-12 py-7' >
           <div data-aos='fade-left'>
             <article>
-              <div className='lg:text-base text-lg w-96 h-6 uppercase tracking-widest font-light'>
+              <div className='lg:text-base text-base w-96 h-6 uppercase tracking-widest font-light'>
                 A female-oriented tech community
               </div>
               <div className='md:text-7xl text-6xl text-primary font-bold'>
