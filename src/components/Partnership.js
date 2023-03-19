@@ -23,7 +23,7 @@ const Partnership = () => {
           <div>
             <div className='grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto'>
              <div className=' flex items-center justify-center border-2 border-primary bg-white h-full w-full'>
-             <Image src='/sponsor/check.jpg' width='58px' height='51px' alt='get equity' className='object-contain' data-aos='fade-up-right' />
+             <Image src='/sponsor/GetEquityBlue.png' width='200px' height='44px' alt='get equity' data-aos='fade-up-right' />
             </div> 
 
             <div className=' flex items-center justify-center border-2 border-primary bg-black h-64 w-full '>
@@ -34,16 +34,16 @@ const Partnership = () => {
              <Image src='/sponsor/check.jpg' width='58px' height='51px' alt='check' data-aos='fade-up-right' />
             </div>
 
+            <div className=' flex items-center justify-center border-2 border-primary bg-black  h-64 w-full'>
+             <Image src='/sponsor/NTIT.png' width='58px' height='51px' alt='get equity' data-aos='fade-up-right' />
+            </div>
+
             <div className=' flex items-center justify-center border-2 border-primary bg-white  h-64 w-full'>
              <Image src='/sponsor/check.jpg' width='58px' height='51px' alt='get equity' data-aos='fade-up-right' />
             </div>
 
-             <div className=' flex items-center justify-center border-2 border-primary bg-black  h-full w-full'>
-             <Image src='/sponsor/NTIT.png' width='58px' height='51px' alt='getequity' data-aos='fade-up-right' />
-            </div>
-
-            <div className=' flex items-center justify-center border-2 border-primary bg-white  h-full w-full'>
-             <Image src='/partnership.jpg' className='object-contain' width='60px' height='60px' alt='get equity' data-aos='fade-up-right' />
+            <div className=' flex items-center justify-center border-2 border-primary bg-black  h-64 w-full'>
+             <Image src='/sponsor/GetEquitywhite.png' width='200px' height='44px' alt='get equity' data-aos='fade-up-right' />
             </div>
           </div>
           
