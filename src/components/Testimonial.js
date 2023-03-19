@@ -127,7 +127,7 @@ const Testimonial = () => {
                         >
                           <div className="flex items-stretch h-full">
                             <div className="p-5 flex-auto">
-                              <p className="text-base lg:text-base">
+                              <p className="text-lg lg:text-base">
                                 {testimonial.testimonial}
                               </p>
                               <p className="text-2xl font-normal leading-6 mt-5 text-primary">
