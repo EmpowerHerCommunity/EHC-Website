@@ -37,7 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='md:text-lg text-xl leading-7 md:my-8 my-4' key={'event-card-' + i}>
+                                            <p className='text-justify md:text-lg text-lg leading-7 md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
@@ -63,17 +63,17 @@ const PastEventsCard = ({ event, i }) => {
                             <div className="flex absolute top-0 left-0">
                                 <Image src='/border-tl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute top-0 right-16">
+                            <div className="flex absolute top-0 right-28">
                                 <Image src='/border-tr.png' width='106px' height='106px' alt='' />
                             </div>
                             <div className="flex absolute bottom-0 left-0">
                                 <Image src='/border-bl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute bottom-0 right-16">
+                            <div className="flex absolute bottom-0 right-28">
                                 <Image src='/border-br.png' width='106px' height='106px' alt='' />
                             </div>
                             <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-10/12 max-w-max' data-aos='fade-right'>
-                                <Image src={event.image} width='732px' height='744px' alt={event.title} />
+                                <Image src={event.image} width='400px' height='400px' alt={event.title} />
                             </div>
                         </div>
                         <EventsGallery images={event.gallery} galleryI={i} />
