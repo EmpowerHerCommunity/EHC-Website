@@ -34,13 +34,13 @@ const NavBar = () => {
             <Link href="/events">Events</Link>
           </li>
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
-            <Link href="/contact">Contact</Link>
-          </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/blog">Blog</Link>
           </li>
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/volunteer">Volunteer</Link>
+          </li>
+          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
         <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 lg:w-3/12 lg:justify-center items-center">
