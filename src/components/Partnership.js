@@ -23,7 +23,7 @@ const Partnership = () => {
           <div>
             <div className='grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto'>
              <div className=' flex items-center justify-center border-2 border-primary bg-white h-full w-full'>
-             <Image src='/sponsor/GetEquityBlue.png' width='200px' height='44px' alt='get equity' data-aos='fade-up-right' />
+             <Image src='/sponsor/GetEquityBlue.png'  className="filter grayscale brightness-50" width='200px' height='44px' alt='get equity' data-aos='fade-up-right' />
             </div> 
 
             <div className=' flex items-center justify-center border-2 border-primary bg-black h-64 w-full '>
