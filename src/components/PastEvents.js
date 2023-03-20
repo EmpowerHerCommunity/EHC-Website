@@ -21,27 +21,11 @@ const PastEvents = () => {
         "/groupPic.jpg",
       ],
     },
-    // {
-    //   title: "Webinar",
-    //   description: [
-    //     "An interactive session aimed at addressing the disinterest and discouragement that girls often experience in the field of IT. The session featured an esteemed keynote speaker, Miss Elizabeth Okaome, who expertly highlighted the factors that contribute to women's disinterest in IT and proposed solutions that the community is implementing to address these challenges. Through her insightful presentation and thought-provoking discussion, Miss Okaome inspired attendees to reconsider their perceptions of the IT industry and encouraged them to pursue their passions with confidence."
-    //   ],
-    //   image: "/events/event1.jpg",
-    //   gallery: [
-    //     "/events/event1.jpg",
-    //     "/events/gallery2.jpg",
-    //     "/events/gallery3.jpg",
-    //     "/events/gallery4.jpg",
-    //     "/events/event1.jpg",
-    //     "/events/gallery2.jpg",
-    //     "/events/gallery3.jpg",
-    //     "/events/gallery4.jpg",
-    //   ],
-    // },
+
     {
       title: "Bootcamp 2.0",
       description: [
-        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Product Management, Cybersecurity, Data Science, Digital Marketing, Product Design, and Blockchain. The program was completely free and provided participants with access to a team of experienced and dedicated volunteer facilitators who were committed to ensuring the success of each participant.",
+        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Product Management, Cybersecurity, Data Science, Digital Marketing, Product Design, and Blockchain. The program was completely free and provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
       ],
       image: "/web.jpg",
       gallery: [
@@ -70,14 +54,14 @@ const PastEvents = () => {
     },
     {
       title: "Webinar",
-      description: ["The interactive sessions were specifically designed to tackle the prevalent disinterest and discouragement experienced by girls in the IT field. With some amazing keynote speakers, the session expertly highlighted the factors that contribute to women's disinterest in IT and provided practical solutions that attendees could implement to overcome these challenges. The session was also packed with career advancement plans, CV and interview preparation, and other resources to equip attendees with the tools they need to excel in the field. Overall, the series was a highly insightful and thought-provoking experience, leaving attendees feeling inspired and empowered to pursue their passions with newfound confidence."],
+      description: ["The interactive sessions were specifically designed to tackle the prevalent disinterest and discouragement experienced by girls in the IT field. With some amazing keynote speakers, the session expertly highlighted the factors that contribute to women's disinterest in IT and provided practical solutions that attendees could implement to overcome these challenges. The session was also packed with career advancement plans, CV and interview preparation, and other resources to equip attendees with the tools they need to excel in the field. Overall, the series was a highly insightful and thought-provoking experience, leaving attendees feeling inspired and empowered to pursue their passions with new found confidence."],
       image: "/webinar2.jpg",
       gallery: [
         "/webinar3.jpg",
         "/webinar2.jpg",
         "/webinar4.jpg",
-        "/webinar2.jpg",
         "/webinar3.jpg",
+        "/webinar4.jpg",
       ],
     },
   ];
