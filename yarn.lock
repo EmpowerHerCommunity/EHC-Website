@@ -1112,6 +1112,11 @@
     "@babel/runtime" "^7.8.7"
     "csstype" "^3.0.2"
 
+"dotenv@^16.0.3":
+  "integrity" "sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
+  "version" "16.0.3"
+
 "duplexer2@^0.1.2":
   "integrity" "sha1-ixLauHjA1p4+eJEFFmKjL8a93ME= sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA=="
   "resolved" "https://registry.npmjs.org/duplexer2/-/duplexer2-0.1.4.tgz"

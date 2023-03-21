@@ -1,12 +1,13 @@
 import React from 'react'
 
-function Slug() {
+const Slug = () => {
   return (
-    <div>slug page</div>
+    <div>Slug</div>
   )
 }
 
 export default Slug
+
 
 
 // import fs from "fs";

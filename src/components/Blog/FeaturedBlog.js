@@ -12,11 +12,11 @@ const FeaturedBlog = ({ blogs }) => {
 
         <div className="lg:w-7/12 md:w-6/12 lg:block md:block hidden">
           <ul className="flex justify-between items-center lg:w-11/12">
-            <li className="hover:border-b border-primary hover:scale-105">REACT</li>
-            <li className="hover:border-b border-primary hover:scale-105">CSS</li>
-            <li className="hover:border-b border-primary hover:scale-105">PRODUCT</li>
+            <li className="hover:border-b border-primary hover:scale-105">WEB</li>
+            <li className="hover:border-b border-primary hover:scale-105">DEVOPS</li>
+            <li className="hover:border-b border-primary hover:scale-105">MOBILE</li>
             <li className="hover:border-b border-primary hover:scale-105">DESIGN</li>
-            <li className="hover:border-b border-primary hover:scale-105">LIFESTYLE</li>
+            <li className="hover:border-b border-primary hover:scale-105">TESTING</li>
           </ul>
         </div>
 
