@@ -42,7 +42,7 @@ const Team = () => {
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-left'>
-              <img src="/team-images/precious.png" alt="Precious Oriarewo image" className="w-[80%]" />
+              <img src="/presh.png" alt="Precious Oriarewo image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Precious Oriarewo
