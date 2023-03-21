@@ -77,7 +77,7 @@ const NewsLetter = () => {
               <input type="email" name="" className="w-2/3 flex-auto py-3 px-4" placeholder='Enter email address' value={email} onChange={(e) => setEmail(e.target.value)} />
               <button
               type='submit'
-              className={(isLoading ? 'cursor-progress ' : '') + 'bg-primary text-white w-1/3 flex-auto'}
+              className={(isLoading ? 'cursor-progress ' : '') + 'bg-primary text-white w-1/3 flex-auto '}
               disabled={isLoading}
               >
                  Subscribe

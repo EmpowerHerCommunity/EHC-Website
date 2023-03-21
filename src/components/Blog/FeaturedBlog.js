@@ -10,13 +10,13 @@ const FeaturedBlog = ({ blogs }) => {
           </button>
         </div>
 
-        <div className="lg:w-5/12 md:w-6/12 lg:block md:block hidden">
+        <div className="lg:w-7/12 md:w-6/12 lg:block md:block hidden">
           <ul className="flex justify-between items-center lg:w-11/12">
-            <li>REACT</li>
-            <li>CSS</li>
-            <li>PRODUCT</li>
-            <li>DESIGN</li>
-            <li>LIFESTYLE</li>
+            <li className="hover:border-b border-primary hover:scale-105">REACT</li>
+            <li className="hover:border-b border-primary hover:scale-105">CSS</li>
+            <li className="hover:border-b border-primary hover:scale-105">PRODUCT</li>
+            <li className="hover:border-b border-primary hover:scale-105">DESIGN</li>
+            <li className="hover:border-b border-primary hover:scale-105">LIFESTYLE</li>
           </ul>
         </div>
 
