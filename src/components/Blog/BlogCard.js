@@ -9,7 +9,7 @@ const BlogCard = ({ blogs }) => {
   return (
     <>
       <section className="cursor-pointer">
-        <section className="container px-5 mx-auto grid lg:grid-cols-2 grid-col-1 w-12/12">
+        <section className="container px-5 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
           {blogs &&
             blogs.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
@@ -23,13 +23,13 @@ const BlogCard = ({ blogs }) => {
                       />
                       <section className="flex">
                         <h2 className="text-sm font-medium mb-1">
-                          {new Date(blog.created).toLocaleDateString()}
+                         <span className="text-base font-semibold">Date:</span>  {new Date(blog.created).toLocaleDateString()}
                         </h2>
                       </section>
                       <h1 className="lg:text-lg text-lg font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
-                      <p className="text-sm leading-relaxed w-11/12 h-20">
+                      <p className="text-sm leading-relaxed w-11/12 h-28">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
