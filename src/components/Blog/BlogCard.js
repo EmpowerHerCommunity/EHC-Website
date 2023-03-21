@@ -29,7 +29,7 @@ const BlogCard = ({ blogs }) => {
                       <h1 className="lg:text-lg text-lg font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
-                      <p className="text-sm leading-relaxed w-11/12 h-24">
+                      <p className="text-sm leading-relaxed w-11/12 h-20">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
