@@ -13,7 +13,6 @@ const UpcomingEvents = () => {
         const response = await fetch(URL);
         const data = await response.json();
         setFetchedEvents(data);
-        console.log(data)
         setIsFetching(false);
       } catch (error) {
         console.log("Failed to fetch events data: ", error);

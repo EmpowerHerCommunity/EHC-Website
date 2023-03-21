@@ -4,12 +4,12 @@ import BlogCard from "../Blog/BlogCard";
 import BlogNewsletter from "../Blog/BlogNewsletter";
 import FeaturedBlog from "../Blog/FeaturedBlog";
 
-const post = ({ posts }) => {
+const post = ({ blogs }) => {
   return (
     <>
       <NavBar />
-      <FeaturedBlog posts = {posts}/>
-      <BlogCard posts = {posts}/>
+      <FeaturedBlog blogs = {blogs}/>
+      <BlogCard blogs = {blogs}/>
       <BlogNewsletter />
       <Footer />
     </>
