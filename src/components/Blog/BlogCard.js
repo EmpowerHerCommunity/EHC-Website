@@ -3,15 +3,12 @@ import { sortByDate } from "../../../utils";
 import BlogNewsletter from "./BlogNewsletter";
 
 const BlogCard = ({ blogs }) => {
-    // Sort the blogs array by date
-  blogs &&  blogs.sort(sortByDate)
-
+  const sortedBlogs = blogs?.sort(sortByDate);
   return (
     <>
       <section className="cursor-pointer">
         <section className="container px-5 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
-          {blogs &&
-            blogs.map((blog) => (
+        { sortedBlogs && sortedBlogs.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
                 <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
                   <Link href={`/blog/${blog.slug}`}>
