@@ -1,59 +1,61 @@
-import fs from "fs";
-import path from "path";
+// import fs from "fs";
+// import path from "path";
 import matter from "gray-matter";
-import {useEffect, useState} from "react"
-import Post from "../../src/components/Post.js/Post"
+import { useEffect, useState } from "react";
+import Post from "../../src/components/Post.js/Post";
 import { sortByDate } from "../../utils/index";
 
 export default function Blog({ posts }) {
+  const [blogs, setBlogs] = useState(null);
+  const [isFetching, setIsFetching] = useState(true);
+  const [error, setError] = useState(null);
 
-  const [blog, setBlog] = useState(null)
-  const [error, setError] = useState(null)
+  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
-
-  const URL="https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/"
-  useEffect(()=>{
-    const blogFetch = async () =>{
-      try{
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
         const response = await fetch(URL);
         const data = await response.json();
-        console.log(data)
-        setBlog(data)
-      }
-      catch(error){
-        setError(error)
-        console.log(error)
+        setBlogs(data.results);
+        setIsFetching(false);
+      } catch (error) {
+        setError(error);
+        console.log("Failed to fetch events data: ", error);
       }
     }
-    blogFetch()
-  }, [])
+    if (isFetching) {
+      fetchBlogs();
+    }
+  }, [isFetching]);
+
+  console.log(blogs);
 
   return (
     <section className="overflow-hidden">
-         <Post posts={posts}/>
+      <Post blogs={blogs} />
     </section>
   );
 }
-export async function getStaticProps() {
-  //get files from the post directory
-  const files = fs.readdirSync(path.join("posts"));
-  const posts = files.map((fileName) => {
-    //create slug
-    const slug = fileName.replace(".md", "");
-    //get post
-    const markDownaPosts = fs.readFileSync(path.join("posts", fileName), "utf-8");
-    const { data } = matter(markDownaPosts);
-     return {
-      slug,
-      data,
-     }
-  }
-    );
+// export async function getStaticProps() {
+//   //get files from the post directory
+//   const files = fs.readdirSync(path.join("posts"));
+//   const posts = files.map((fileName) => {
+//     //create slug
+//     const slug = fileName.replace(".md", "");
+//     //get post
+//     const markDownaPosts = fs.readFileSync(path.join("posts", fileName), "utf-8");
+//     const { data } = matter(markDownaPosts);
+//      return {
+//       slug,
+//       data,
+//      }
+//   }
+//     );
 
-  return {
-    props: {
-      posts: posts.sort(sortByDate),
-    },
-  };
-}
-
+//   return {
+//     props: {
+//       posts: posts.sort(sortByDate),
+//     },
+//   };
+// }

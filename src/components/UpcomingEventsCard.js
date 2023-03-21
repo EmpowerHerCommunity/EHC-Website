@@ -23,7 +23,7 @@ const UpcomingEventsCard = ({ events }) => {
                   alt={event.name}
                 />
               </div>
-              <h2 className="md:text-lg text-lg font-bold">{event.name}</h2>
+              <h2 className="md:text-xl text-xl font-bold pt-4">{event.name}</h2>
               <p className="text-base text-black text-opacity-60 leading-tight my-4">
                 {event.description}
               </p>
