@@ -8,7 +8,7 @@ const post = ({ blogs }) => {
   return (
     <>
       <NavBar />
-      <FeaturedBlog blogs = {blogs}/>
+      <FeaturedBlog/>
       <BlogCard blogs = {blogs}/>
       <BlogNewsletter />
       <Footer />
