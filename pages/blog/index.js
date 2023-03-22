@@ -1,4 +1,3 @@
-import matter from "gray-matter";
 import { useEffect, useState } from "react";
 import Post from "../../src/components/Post.js/Post";
 export default function Blog() {
