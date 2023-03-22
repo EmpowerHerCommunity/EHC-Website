@@ -4,11 +4,14 @@ import BlogNewsletter from "./BlogNewsletter";
 
 const BlogCard = ({ blogs }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
+  const options = { day: "numeric", month: "long", year: "numeric" };
+
   return (
     <>
       <section className="cursor-pointer">
         <section className="container px-5 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
-        { sortedBlogs && sortedBlogs.map((blog) => (
+          {sortedBlogs &&
+            sortedBlogs.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
                 <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
                   <Link href={`/blog/${blog.slug}`}>
@@ -20,7 +23,11 @@ const BlogCard = ({ blogs }) => {
                       />
                       <section className="flex">
                         <h2 className="text-sm font-medium mb-1">
-                         <span className="text-base font-semibold">Date:</span>  {new Date(blog.created).toLocaleDateString()}
+                          <span className="text-base font-semibold">Date:</span>{" "}
+                          {new Date(blog.created).toLocaleDateString(
+                            "en-US",
+                            options
+                          )}
                         </h2>
                       </section>
                       <h1 className="lg:text-lg text-lg font-bold mt-1 mb-1">
