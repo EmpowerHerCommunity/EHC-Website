@@ -31,15 +31,15 @@ const Partnership = () => {
             </div>
 
             <div className=' flex items-center justify-center border-2 border-primary bg-white  h-64 w-full'>
-             <Image src='/sponsor/check.jpg' width='58px' height='51px' alt='check' data-aos='fade-up-right' />
+             <Image src='/sponsor/GetEquityBlue.png'  className="filter grayscale brightness-50" width='200px' height='44px' alt='getequity' data-aos='fade-up-right' />
             </div>
 
             <div className=' flex items-center justify-center border-2 border-primary bg-black  h-64 w-full'>
-             <Image src='/sponsor/NTIT.png' width='58px' height='51px' alt='get equity' data-aos='fade-up-right' />
+             <Image src='/sponsor/NTIT.png' width='58px' height='51px' alt='NTIT' data-aos='fade-up-right' />
             </div>
 
             <div className=' flex items-center justify-center border-2 border-primary bg-white  h-64 w-full'>
-             <Image src='/sponsor/check.jpg' width='58px' height='51px' alt='get equity' data-aos='fade-up-right' />
+             <Image src='/sponsor/GetEquityBlue.png'  className="filter grayscale brightness-50" width='200px' height='44px' alt='GETEQUITY' data-aos='fade-up-right' />
             </div>
 
             <div className=' flex items-center justify-center border-2 border-primary bg-black  h-64 w-full'>

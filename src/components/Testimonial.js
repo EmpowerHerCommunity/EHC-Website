@@ -19,9 +19,7 @@ const Testimonial = () => {
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:
-        "My Experience at EHC Mentorship Academy 1 and BootCamp Cohort 2 is one I will never forget. Starting as a front-end development newbie without any prior knowledge to being able to create user-friendly websites and communicate ideas. Facilitators and team members were always available to meet with whatever difficult situation you face. I'm grateful I have this community to help in my tech journey.",
-    },
+      testimonial:"EHC BootCamp 2.0 was an unforgettable experience for me as a front-end development newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. Facilitators and team members were always available to help with any challenges. I'm grateful for this supportive community on my tech journey."    },
     {
       id: 3,
       image: "/Jessica.png",
@@ -29,7 +27,7 @@ const Testimonial = () => {
       role: "Frontend developer",
       height: "400px",
       testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but also very supportive. I also found a tech family that I can rely on for advice, guidance, and friendship. I am grateful for the opportunity to have been a part of such an amazing community and I look forward to staying connected with this family.",
+        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community and I look forward to staying connected with this community.",
     },
   ];
   const [prevIndex, setPrevIndex] = useState(2);
@@ -127,7 +125,7 @@ const Testimonial = () => {
                         >
                           <div className="flex items-stretch h-full">
                             <div className="p-5 flex-auto">
-                              <p className="text-lg lg:text-base">
+                              <p className="text-base lg:text-lg leading-8">
                                 {testimonial.testimonial}
                               </p>
                               <p className="text-2xl font-normal leading-6 mt-5 text-primary">

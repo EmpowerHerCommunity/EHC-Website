@@ -25,7 +25,7 @@ const PastEventsCard = ({ event, i }) => {
                         </div>
                 }
                 <div className={((i % 2 === 0) ? "lg:flex-row-reverse" : "lg:flex-row") + ' flex flex-col justify-between items-start gap-14'} >
-                    <div data-aos='fade-left' className='lg:flex-auto w-full lg:w-6/12'>
+                    <div data-aos='fade-left' className='lg:flex-auto w-full lg:w-6/12' id="past">
                         <div>
                             <div className="relative mb-14 pt-4 max-w-max">
                                 <h2 className='md:text-5xl text-4xl font-bold max-w-max'>
@@ -37,7 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='text-justify md:text-lg text-lg leading-7 md:my-8 my-4' key={'event-card-' + i}>
+                                            <p className='text-justify md:text-lg text-xl leading-8 md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
