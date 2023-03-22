@@ -8,7 +8,7 @@ const HeroEvents = () => {
   }, []);
 
   return (
-    <section className="bg-primary bg-opacity-10 text-justify">
+    <section className="bg-primary bg-opacity-10 text-justify" id="events">
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className="grid md:grid-cols-2 py-4 md:py-16 md:px-24">
           <div
@@ -16,11 +16,11 @@ const HeroEvents = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-32 text-lg mt-8">
-              <li className="font-semibold my-1"> Events. </li>
-              <li className="font-semibold my-1"> Bootcamps. </li>
-              <li className="font-semibold my-1"> Webinars. </li>
-              <li className="font-semibold my-1"> Outreach. </li>
+            <ul className="ml-32 text-xl mt-8">
+              <li className="font-semibold my-1"><a href="#events">Events.</a> </li>
+              <li className="font-semibold my-1"><a href="#past">Bootcamps.</a> </li>
+              <li className="font-semibold my-1"><a href="#past">Webinars.</a> </li>
+              <li className="font-semibold my-1"><a href="#upcoming"> Upcoming events.</a> </li>
             </ul>
           </div>
           <div>
@@ -31,7 +31,7 @@ const HeroEvents = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-lg text-lg mb-4 md:leading-7"
+              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               Since our inception, we have provided a plethora of opportunities

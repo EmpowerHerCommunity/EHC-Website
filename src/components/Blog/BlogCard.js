@@ -10,7 +10,7 @@ const BlogCard = ({ blogs }) => {
     <>
       <section className="cursor-pointer">
         <section className="container px-5 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
-          {sortedBlogs &&
+          {sortedBlogs && 
             sortedBlogs.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
                 <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
@@ -33,7 +33,7 @@ const BlogCard = ({ blogs }) => {
                       <h1 className="lg:text-lg text-lg font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
-                      <p className="text-sm leading-relaxed w-11/12 h-28">
+                      <p className="text-sm leading-relaxed w-11/12 h-24">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
