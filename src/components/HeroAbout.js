@@ -8,7 +8,7 @@ const HeroAbout = () => {
   }, []);
 
   return (
-    <section className="bg-primary bg-opacity-10 text-justify">
+    <section className="bg-primary bg-opacity-10 text-justify" id="about">
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className="grid md:grid-cols-2 py-4 md:py-16 md:px-24">
           <div
@@ -16,11 +16,11 @@ const HeroAbout = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-20 mt-8 lg:text-lg text-base">
-              <li className="font-semibold my-1"> About Us. </li>
-              <li className="font-semibold my-1"> Our Vision. </li>
-              <li className="font-semibold my-1"> Our Mission. </li>
-              <li className="font-semibold my-1"> The Team. </li>
+            <ul className="ml-20 mt-8 text-xl cursor-pointer">
+              <li className="font-semibold my-1"> <a href="#about">About Us.</a> </li>
+              <li className="font-semibold my-1"><a href="#vision"> Our Vision.</a> </li>
+              <li className="font-semibold my-1"> <a href="#mission">Our Mission.</a> </li>
+              <li className="font-semibold my-1"> <a href="#team"> The Team.</a> </li>
             </ul>
           </div>
           <div>
@@ -31,29 +31,19 @@ const HeroAbout = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-lg text-lg mb-4 md:leading-7"
+              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
-              {/* is a female oriented tech community which focuses on training and
-              promoting women in the field of information technology. We aim to
-              promote and spread more awareness for opportunities in information
-              technology and incorporate as many women as possible. Having
-              started our journey in May 2019, we have not backed down in
-              helping women transition smoothly into the Information Technology
-              industry. We have kickstarted the tech careers of more than 1,500
-              women all across the globe. Our aim is to train 10,000 women by
-              the end of 2025. */}
               <span className="text-primary text-opacity-60">
-                {" "}
                 Empower Her Community
               </span>{" "}
-             is a community of 5,000+ women dedicated to fostering
+             is a female oriented tech community of 5,000+ women dedicated to fostering
               gender diversity in tech. We strive to make the industry more
               accessible by providing training, mentorship, and raising
               awareness of opportunities for women in tech.
             </p>
             <p
-              className="font-normal md:text-lg text-lg mb-4 md:leading-7"
+              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               Since its founding in May 2021, our community has trained over

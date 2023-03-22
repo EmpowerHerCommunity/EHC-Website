@@ -29,7 +29,7 @@ const UpcomingEvents = () => {
   }, []);
 
   return (
-    <section className="">
+    <section className="" id="upcoming">
       <div className="container xl:max-w-screen-xl mx-auto px-4 lg:py-24 py-20">
         <h2 className="md:text-3xl text-3xl font-bold max-w-max">
           Upcoming events
