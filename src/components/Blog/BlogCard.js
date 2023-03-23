@@ -84,7 +84,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                         className="h-48 rounded-lg w-full object-cover object-center mb-6"
                         alt="content"
                       />
-                      <section className=" text-slug flex items-center justify-between lg:w-64 w-72 lg:text-lg text-xl">
+                      <section className=" text-slug flex items-center justify-between lg:w-64 w-80 lg:text-lg text-2xl">
                         <div className=" font-medium mb-1">
                           {new Date(blog.created).toLocaleDateString(
                             "en-US",
@@ -101,7 +101,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                               )} minute read`}
                         </div>
                       </section>
-                      <h1 className="lg:text-2xl text-2xl font-bold mt-1 mb-1">
+                      <h1 className="lg:text-2xl text-3xl font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
                       <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-40">
@@ -113,11 +113,11 @@ const BlogCard = ({ blogs, isFetching  }) => {
                           alt="author avatar"
                           className="rounded-full w-9 h-9"
                         />
-                        <p className="font-semibold text-xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
+                        <p className="font-semibold text-2xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                           {blog.author}
                         </p>
                       </section>
-                      <aside className="flex items-center flex-wrap mb-2 mt-4 text-xl lg:text-lg">
+                      <aside className="flex items-center flex-wrap mb-2 mt-4 text-2xl lg:text-lg">
                         {blog.tags.map((tag) => (
                           <button
                             className="rounded-2xl border border-black py-1 px-4 ml-2"
