@@ -82,7 +82,7 @@ const Slug = () => {
                 <figure className="-mt-1">
                   <img
                     src={blog.cover_photo}
-                    className="w-full lg:h-96"
+                    className="w-full h-auto"
                   />
                 </figure>
 
