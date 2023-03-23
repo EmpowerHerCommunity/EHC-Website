@@ -19,14 +19,14 @@ const HeroHome = () => {
               <div className='lg:text-base text-base w-96 h-6 uppercase tracking-widest font-light'>
                 A female-oriented tech community
               </div>
-              <div className='md:text-7xl text-6xl text-primary font-bold'>
+              <div className='md:text-7xl text-6xl text-primary font-bold lg:py-0 py-2'>
                 Empower Her Community
               </div>
               <div className=' md:text-xl text-2xl lg:text-xl md:my-8 my-4 w-96 md:h-20 h-24'>
                 We are a female community seeing to the growth and progress of all women in tech worldwide
               </div>
               <div>
-                <div className="flex lg:gap-4 gap-8">
+                <div className="flex lg:gap-4 gap-12">
                   <button className='bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm'>
                     <Link href='https://paystack.com/pay/empowerhercommunity'>
                       <a target='_blank'>
