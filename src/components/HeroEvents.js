@@ -16,7 +16,7 @@ const HeroEvents = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-32 text-2xl lg:text-xl mt-8">
+            <ul className="ml-32 text-2xl lg:text-2xl mt-8">
               <li className="font-semibold my-1"><a href="#events">Events.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Bootcamps.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Webinars.</a> </li>
@@ -31,7 +31,7 @@ const HeroEvents = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
+              className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               Since our inception, we have provided a plethora of opportunities
