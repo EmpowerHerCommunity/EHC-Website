@@ -84,13 +84,16 @@ const BlogCard = ({ blogs, isFetching  }) => {
                         className="h-48 rounded-lg w-full object-cover object-center mb-6"
                         alt="content"
                       />
-                      <section className=" text-slug flex items-center justify-between lg:w-64 w-80 lg:text-lg text-2xl">
+
+                      <section className=" text-slug flex items-center justify-between lg:w-64 w-96 lg:text-lg text-2xl">
                         <div className=" font-medium mb-1">
                           {new Date(blog.created).toLocaleDateString(
                             "en-US",
                             options
                           )}
                         </div>
+
+                        <div className="border-black h-1 w-1 bg-black rounded-full"></div>
                         <div className="-mt-1">
                           {`${calculateReadingTime(blog.description)}` > 1
                             ? `${calculateReadingTime(

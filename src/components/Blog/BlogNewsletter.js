@@ -4,8 +4,8 @@ const BlogNewsletter = () => {
   return (
     <div className="flex justify-center items-center my-14">
       <div className="m-auto p-8 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg md:w-8/12">
-        <p className="text-center text-xl font-semibold">STAY UPDATED</p>
-        <h3 className="text-center mt-2 p-3 text-3xl font-bold">
+        <p className="text-center text-3xl font-semibold">STAY UPDATED</p>
+        <h3 className="text-center mt-2 p-3 text-4xl font-semibold">
           Get Community Updates and Opportunities.
         </h3>
         <div className="flex items-center justify-center pt-5">

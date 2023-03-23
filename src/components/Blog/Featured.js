@@ -9,7 +9,7 @@ function Featured() {
       </figure>
       <div className="lg:absolute static bottom-32 left-0 lg:left-16 text-black lg:text-light">
         <figcaption className="lg:w-7/12 w-full">
-          <h1 className="mb-4 lg:text-5xl text-3xl pt-4 font-semibold">
+          <h1 className="mb-4 lg:text-5xl text-4xl pt-4 font-semibold">
             Why CSS Units Matter to Your Responsive Website Designs
           </h1>
           <p className="lg:text-xl text-2xl">
@@ -26,12 +26,9 @@ function Featured() {
           />
           <p className="lg:text-xl text-2xl ml-6 font-semibold">Victoria Akpan</p>
         </section>
-        <aside className="py-2">
-          <button className="rounded-2xl border border-white py-1 px-4 ml-2 text-xl">
+        <aside className="py-2 w-full">
+          <button className="rounded-2xl border  border-black lg:border-white py-1 px-4 ml-2 text-2xl">
             Web Development
-          </button>
-          <button className="rounded-2xl border border-white py-1 px-4 ml-2 text-xl">
-            Mobile Development
           </button>
         </aside>
       </div>
