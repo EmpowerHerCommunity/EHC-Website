@@ -51,7 +51,7 @@ const Slug = () => {
             .filter((blog) => blog.slug === routeId)
             .map((blog) => (
               <article key={blog.slug} className="py-6">
-                <section className=" text-slug flex items-center justify-between w-64 text-lg">
+                <section className=" text-slug flex items-center justify-between w-64 lg:text-xl text-2xl">
                   <div className=" font-medium mb-1">
                     {new Date(blog.created).toLocaleDateString(
                       "en-US",
@@ -65,7 +65,7 @@ const Slug = () => {
                   </div>
                 </section>
                 <figcaption>
-                  <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
+                  <h1 className="lg:text-4xl text-4xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
                   <p className="md:text-lg text-xl lg:text-lg lg:w-9/12">{blog.introduction}</p>
                 </figcaption>
 
