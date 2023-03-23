@@ -22,7 +22,7 @@ const NavBar = () => {
         <ul
           className={`${
             active ? "block" : "hidden"
-          } lg:inline-flex lg:flex-row lg:w-5/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-center lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
+          } lg:inline-flex lg:flex-row lg:w-5/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
         >
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/">Home</Link>
