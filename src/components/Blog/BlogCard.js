@@ -104,7 +104,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                               )} minute read`}
                         </div>
                       </section>
-                      <h1 className="lg:text-2xl text-3xl font-bold mt-1 mb-1">
+                      <h1 className="lg:text-2xl text-3xl font-bold mt-1 py-2">
                         {blog.title}
                       </h1>
                       <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-40">
