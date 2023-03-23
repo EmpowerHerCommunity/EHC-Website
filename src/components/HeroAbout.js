@@ -16,7 +16,7 @@ const HeroAbout = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-20 mt-8 text-2xl lg:text-xl cursor-pointer">
+            <ul className="ml-20 mt-8 text-2xl lg:text-2xl cursor-pointer">
               <li className="font-semibold my-1"> <a href="#about">About Us.</a> </li>
               <li className="font-semibold my-1"><a href="#vision"> Our Vision.</a> </li>
               <li className="font-semibold my-1"> <a href="#mission">Our Mission.</a> </li>
@@ -43,7 +43,7 @@ const HeroAbout = () => {
               awareness of opportunities for women in tech.
             </p>
             <p
-              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
+              className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               Since its founding in May 2021, our community has trained over

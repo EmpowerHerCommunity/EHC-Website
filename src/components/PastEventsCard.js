@@ -37,7 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='text-justify md:text-lg text-xl leading-8 md:my-8 my-4' key={'event-card-' + i}>
+                                            <p className='text-justify md:text-xl text-2xl leading-8 md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
@@ -47,10 +47,10 @@ const PastEventsCard = ({ event, i }) => {
                             </div>
                             <div>
                                 <div className="flex gap-4">
-                                    <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-md hover:scale-105'>
+                                    <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm hover:scale-105'>
                                         <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
                                             <a target='_blank'>
-                                                <span className="text-white text-lg"> Join Us Today </span>
+                                                <span className="text-white text-2xl"> Join Us Today </span>
                                             </a>
                                         </Link>
                                     </button>
