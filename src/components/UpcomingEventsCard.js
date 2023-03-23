@@ -29,7 +29,7 @@ const UpcomingEventsCard = ({ events }) => {
               </p>
               <div className="flex items-center gap-2 my-3 text-xl">
                 <BsCalendarFill className="text-primary" />
-                <span className="">{event.date || "To Be Announced"}</span>
+                <span className="ml-2">{event.date || "To Be Announced"}</span>
               </div>
               <div className="flex my-4">
                 <button className="bg-primary bg-opacity-80 py-3 px-4 border rounded-sm border-primary hover:border-transparent w-44">
