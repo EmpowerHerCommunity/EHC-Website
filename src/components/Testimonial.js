@@ -19,7 +19,7 @@ const Testimonial = () => {
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:"EHC BootCamp 2.0 was an unforgettable experience for me as a front-end development newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. Facilitators and team members were always available to help with any challenges. I'm grateful for this supportive community on my tech journey."    },
+      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
     {
       id: 3,
       image: "/Jessica.png",
@@ -27,7 +27,7 @@ const Testimonial = () => {
       role: "Frontend developer",
       height: "400px",
       testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community and I look forward to staying connected with this community.",
+        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
     },
   ];
   const [prevIndex, setPrevIndex] = useState(2);
@@ -125,7 +125,7 @@ const Testimonial = () => {
                         >
                           <div className="flex items-stretch h-full">
                             <div className="p-5 flex-auto">
-                              <p className="text-lg lg:text-xl leading-8">
+                              <p className="text-xl lg:text-xl leading-8">
                                 {testimonial.testimonial}
                               </p>
                               <p className="text-2xl font-normal leading-6 mt-5 text-primary">
