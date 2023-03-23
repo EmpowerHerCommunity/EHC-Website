@@ -24,7 +24,7 @@ const UpcomingEventsCard = ({ events }) => {
                 />
               </div>
               <h2 className="md:text-xl text-xl font-bold pt-4">{event.name}</h2>
-              <p className="text-base text-black text-opacity-60 leading-tight my-4">
+              <p className="text-lg text-black text-opacity-60 leading-tight my-4">
                 {event.description}
               </p>
               <div className="flex items-center gap-2 my-3">
