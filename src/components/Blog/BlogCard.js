@@ -62,7 +62,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
               placeholder="Search"
               value={filteredBlog}
               onChange={(e)=>setFilteredBlog(e.target.value)}
-              className="border rounded-full h-10 px-3 placeholder:text-lg placeholder:px-1 text-sm lg:w-80  w-full"
+              className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm lg:w-80  w-full"
             />
        
           </div>
@@ -84,7 +84,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                         className="h-48 rounded-lg w-full object-cover object-center mb-6"
                         alt="content"
                       />
-                      <section className=" text-slug flex items-center justify-between lg:w-64 w-64 lg:text-lg text-lg">
+                      <section className=" text-slug flex items-center justify-between lg:w-64 w-72 lg:text-lg text-xl">
                         <div className=" font-medium mb-1">
                           {new Date(blog.created).toLocaleDateString(
                             "en-US",
@@ -104,7 +104,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                       <h1 className="lg:text-2xl text-2xl font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
-                      <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-44">
+                      <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-40">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
