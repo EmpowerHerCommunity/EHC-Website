@@ -29,7 +29,7 @@ const Events = () => {
                 <Image src='/web.jpg' width='300px' height='300px'  />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify lg:w-9/12 w-12/12 h-40'>
+              <p className='text-white font-normal md:text-xl text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 h-40'>
                An interactive session aimed at addressing the disinterest and discouragement that girls often experience in the field of IT.<br />
                 <Link href='/aboutUs'>
                   <a>
@@ -43,7 +43,7 @@ const Events = () => {
                 <Image src='/volunteers.JPEG' width='300px' height='300px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify lg:w-9/12 w-12/12 '>
+              <p className='text-white font-normal md:text-xl text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 '>
                  Empower Her Community Bootcamp was a game-changing initiative that provided women with a month-long, free-of-charge training program.<br />
                 <Link href='/aboutUs'>
                   <a>
@@ -57,7 +57,7 @@ const Events = () => {
                 <Image src='/nontechb.jpg' width='300px' height='300px' />
               </div>
               <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Non Technical Bootcamp</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify w-12/12 lg:w-9/12 h-40'>
+              <p className='text-white font-normal md:text-xl text-2xl tracking-wider text-justify w-12/12 lg:w-9/12 h-40'>
                 Empower Her Community in collaboration with Non-Tech In Tech organized a 2 months bootcamp to train women in non technical roles.<br />
                 <Link href='/aboutUs'>
                   <a>
