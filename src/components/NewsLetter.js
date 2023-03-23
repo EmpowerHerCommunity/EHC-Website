@@ -65,7 +65,7 @@ const NewsLetter = () => {
       </div>)}
       <div className='container xl:max-w-screen-xl mx-auto py-10'>
         <div className="flex flex-wrap gap-6 text-dark">
-          <h2 className="md:text-4xl sm:text-5xl lg:text-6xl text-5xl w-full lg:w-1/2 lg:flex-auto" data-aos='fade-right'>
+          <h2 className="md:text-4xl sm:text-5xl lg:text-6xl text-5xl w-full lg:w-1/2 lg:flex-auto mb-1" data-aos='fade-right'>
             Join our NewsLetter
           </h2>
           <div className="w-full lg:w-5/12 lg:flex-auto">
@@ -74,10 +74,10 @@ const NewsLetter = () => {
             </p>
             {email}
             <form onSubmit={(e) => subscribe(e)} className="flex gap-2 mt-2" data-aos='fade-left'>
-              <input type="email" name="" className="w-2/3 flex-auto py-3 px-4" placeholder='Enter email address' value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" name="" className="placeholder:text-2xl w-2/3 flex-auto py-3 px-4" placeholder='Enter email address' value={email} onChange={(e) => setEmail(e.target.value)} />
               <button
               type='submit'
-              className={(isLoading ? 'cursor-progress ' : '') + 'bg-primary text-white w-1/3 flex-auto '}
+              className={(isLoading ? 'cursor-progress ' : '') + 'bg-primary text-white w-1/3 flex-auto text-2xl'}
               disabled={isLoading}
               >
                  Subscribe
