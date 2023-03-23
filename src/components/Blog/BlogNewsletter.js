@@ -18,7 +18,7 @@ const BlogNewsletter = () => {
             <div className="flex items-center justify-center pt-4 lg:p-0 lg:absolute lg:inset-y-0 lg:right-0">
               <button
                 type="submit"
-                className="flex items-center text-2xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white hover:scale-105 bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-12 h-14"
+                className="flex items-center lg:text-2xl text-3xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white hover:scale-105 bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-12 h-14"
               >
                 <Link href="https://empowerhercommunity.substack.com/embed">
                   <a> Subscribe</a>
