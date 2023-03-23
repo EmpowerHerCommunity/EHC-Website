@@ -45,7 +45,7 @@ const Slug = () => {
   return (
     <section className="container mx-auto">
       <NavBar />
-      <div className="prose lg:prose-md max-w-screen-xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
+      <div className="prose lg:prose-lg prose-lg max-w-screen-xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
         {blogs &&
           blogs
             .filter((blog) => blog.slug === routeId)
@@ -66,7 +66,7 @@ const Slug = () => {
                 </section>
                 <figcaption>
                   <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
-                  <p className="md:text-lg text-base lg:text-lg lg:w-9/12">{blog.introduction}</p>
+                  <p className="md:text-lg text-xl lg:text-lg lg:w-9/12">{blog.introduction}</p>
                 </figcaption>
 
                 <section className="flex items-center -mt-8 py-0 ">
@@ -76,7 +76,7 @@ const Slug = () => {
                       className="rounded-full h-10 w-10"
                     />
                   </figure>
-                  <figcaption className="text-lg ml-6">{blog.author}</figcaption>
+                  <figcaption className="text-xl ml-6">{blog.author}</figcaption>
                 </section>
 
                 <figure className="-mt-1">
