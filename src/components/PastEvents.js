@@ -40,7 +40,7 @@ const PastEvents = () => {
     {
       title: "Non Technical Bootcamp",
       description: [
-        "Empower Her Community Non Technical Bootcamp was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women and was completely free of charge. The program was a huge success, and we are proud to have helped so many women develop new skills and knowledge in the tech industry.",
+        "Empower Her Community with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women and was completely free of charge. The program was a huge success, and we are proud to have helped so many women develop new skills and knowledge in the tech industry.",
       ],
       image: "/nontechb.jpg",
       gallery: [
