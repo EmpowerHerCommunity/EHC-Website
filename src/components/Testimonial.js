@@ -12,7 +12,7 @@ const Testimonial = () => {
       name: "Falomo Sharon",
       role: "Frontend developer",
       testimonial:
-        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators for questions and then giving us assignments. I started this Bootcamp not being able to make a responsive website now I make great responsive websites you should definitely join this Bootcamp.",
+        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators and the assignments too. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
     {
       id: 2,
@@ -125,7 +125,7 @@ const Testimonial = () => {
                         >
                           <div className="flex items-stretch h-full">
                             <div className="p-5 flex-auto">
-                              <p className="text-base lg:text-lg leading-8">
+                              <p className="text-lg lg:text-xl leading-8">
                                 {testimonial.testimonial}
                               </p>
                               <p className="text-2xl font-normal leading-6 mt-5 text-primary">
