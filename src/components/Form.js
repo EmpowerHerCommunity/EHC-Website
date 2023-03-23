@@ -55,7 +55,7 @@ const Form = () => {
               name="name"
               required
               id='name'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your name'
               value={mail.name}
               onChange={(e) => setMail({ ...mail, name: e.target.value })}
@@ -68,7 +68,7 @@ const Form = () => {
               name='email'
               required
               id='email'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your email address'
               value={mail.email}
               onChange={(e) => setMail({ ...mail, email: e.target.value })}
@@ -84,7 +84,7 @@ const Form = () => {
               name="mobile number"
               required
               id='mobile-number'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your mobile number'
               value={mail.number}
               onChange={(e) => setMail({ ...mail, number: e.target.value })}
@@ -98,7 +98,7 @@ const Form = () => {
               name='nationality'
               required
               id='nationality'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your country'
               value={mail.nationality}
               onChange={(e) => setMail({ ...mail, nationality: e.target.value })}
@@ -115,7 +115,7 @@ const Form = () => {
               id="message"
               cols="30"
               rows="10"
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               value={mail.message}
               onChange={(e) => setMail({ ...mail, message: e.target.value })}
               placeholder='Hello there...'></textarea>

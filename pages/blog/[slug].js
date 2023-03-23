@@ -45,13 +45,13 @@ const Slug = () => {
   return (
     <section className="container mx-auto">
       <NavBar />
-      <div className="prose lg:prose-xl prose-xl max-w-screen-xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
+      <div className="prose prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
         {blogs &&
           blogs
             .filter((blog) => blog.slug === routeId)
             .map((blog) => (
               <article key={blog.slug} className="py-6">
-                <section className=" text-slug flex items-center justify-between w-96 lg:text-xl text-2xl">
+                <section className=" text-slug flex items-center justify-between lg:w-72 w-96  lg:text-xl text-2xl">
                   <div className=" font-medium mb-1">
                     {new Date(blog.created).toLocaleDateString(
                       "en-US",
@@ -68,7 +68,7 @@ const Slug = () => {
                 </section>
 
                 <figcaption>
-                  <h1 className="lg:text-4xl text-5xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
+                  <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
                   <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">{blog.introduction}</p>
                 </figcaption>
 
