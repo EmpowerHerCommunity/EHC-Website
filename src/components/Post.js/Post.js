@@ -2,14 +2,14 @@ import NavBar from "../NavBar";
 import Footer from "../Footer";
 import BlogCard from "../Blog/BlogCard";
 import BlogNewsletter from "../Blog/BlogNewsletter";
-import FeaturedBlog from "../Blog/FeaturedBlog";
+import Featured from "../Blog/Featured";
 
-const post = ({ blogs }) => {
+const post = ({ blogs, filteredBlogs, search, setSearch }) => {
   return (
     <>
       <NavBar />
-      <FeaturedBlog/>
-      <BlogCard blogs = {blogs}/>
+      <Featured/>
+      <BlogCard blogs = {blogs} filteredBlogs={filteredBlogs}/>
       <BlogNewsletter />
       <Footer />
     </>
