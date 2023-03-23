@@ -4,7 +4,7 @@ import searchImg from "../../../public/blog/searchicon.png";
 import Image from "next/image";
 import {useState} from "react";
 
-const BlogCard = ({ blogs, search, setSearch }) => {
+const BlogCard = ({ blogs, isFetching  }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
   const [filteredBlog, setFilteredBlog] = useState("")
 
@@ -28,9 +28,9 @@ const BlogCard = ({ blogs, search, setSearch }) => {
 
   return (
     <>
-    <section className="container mx-auto mt-8 cursor-pointer">
+    <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
       <header>
-        <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center text-sm font-semibold mx-8">
+        <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center items-center text-sm font-semibold mx-8">
           <div className="lg:block md:block hidden">
             <button className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn">
               ALL TOPICS
@@ -57,7 +57,7 @@ const BlogCard = ({ blogs, search, setSearch }) => {
             </ul>
           </div>
 
-          <div className="relative mt-5">
+          <div className="relative mt-0">
             <input
               placeholder="Search"
               value={filteredBlog}
@@ -70,8 +70,9 @@ const BlogCard = ({ blogs, search, setSearch }) => {
       </header>
     </section>
 
-      <section className="cursor-pointer">
+      <section className="cursor-pointer pt-3">
         <section className="container px-4 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
+          {isFetching && <h1 className="text-xl px-2">Just a minute the blogs are being fetched...</h1> }
           {filtered &&
             filtered.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
@@ -83,7 +84,7 @@ const BlogCard = ({ blogs, search, setSearch }) => {
                         className="h-48 rounded-lg w-full object-cover object-center mb-6"
                         alt="content"
                       />
-                      <section className=" text-slug flex items-center justify-between lg:w-56 w-64 lg:text-base text-lg">
+                      <section className=" text-slug flex items-center justify-between lg:w-64 w-64 lg:text-lg text-lg">
                         <div className=" font-medium mb-1">
                           {new Date(blog.created).toLocaleDateString(
                             "en-US",
@@ -100,10 +101,10 @@ const BlogCard = ({ blogs, search, setSearch }) => {
                               )} minute read`}
                         </div>
                       </section>
-                      <h1 className="lg:text-xl text-xl font-bold mt-1 mb-1">
+                      <h1 className="lg:text-2xl text-2xl font-bold mt-1 mb-1">
                         {blog.title}
                       </h1>
-                      <p className="text-lg leading-relaxed w-11/12 lg:h-36 h-36">
+                      <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-44">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
@@ -112,11 +113,11 @@ const BlogCard = ({ blogs, search, setSearch }) => {
                           alt="author avatar"
                           className="rounded-full w-9 h-9"
                         />
-                        <p className="font-semibold text-lg lg:text-base ml-2 md:mb-1 lg:mb-0">
+                        <p className="font-semibold text-xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                           {blog.author}
                         </p>
                       </section>
-                      <aside className="flex items-center flex-wrap mb-2 mt-4 text-lg lg:text-base">
+                      <aside className="flex items-center flex-wrap mb-2 mt-4 text-xl lg:text-lg">
                         {blog.tags.map((tag) => (
                           <button
                             className="rounded-2xl border border-black py-1 px-4 ml-2"

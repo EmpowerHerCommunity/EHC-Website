@@ -4,14 +4,6 @@ export default function Blog() {
   const [blogs, setBlogs] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
-  const [search, setSearch] = useState("")
-
-   // Filter blogs based on search term
-   const filteredBlogs = blogs?.filter(blog => {
-    return blog.title.includes(search) || blog.description.includes(search);
-  });
-
-
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
@@ -34,7 +26,7 @@ export default function Blog() {
 
   return (
     <section className="overflow-hidden">
-      <Post blogs={blogs} filteredBlogs={filteredBlogs} search={search} setSearch={setSearch}/>
+      <Post blogs={blogs} isFetching={isFetching}/>
     </section>
   );
 }
