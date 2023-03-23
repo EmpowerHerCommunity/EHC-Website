@@ -16,7 +16,7 @@ const HeroEvents = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-32 text-xl mt-8">
+            <ul className="ml-32 text-2xl lg:text-xl mt-8">
               <li className="font-semibold my-1"><a href="#events">Events.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Bootcamps.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Webinars.</a> </li>

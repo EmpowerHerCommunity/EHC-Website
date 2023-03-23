@@ -16,7 +16,7 @@ const HeroAbout = () => {
             data-aos="fade-right"
           >
             <img src="/contact-dots.svg" alt="" />
-            <ul className="ml-20 mt-8 text-xl cursor-pointer">
+            <ul className="ml-20 mt-8 text-2xl lg:text-xl cursor-pointer">
               <li className="font-semibold my-1"> <a href="#about">About Us.</a> </li>
               <li className="font-semibold my-1"><a href="#vision"> Our Vision.</a> </li>
               <li className="font-semibold my-1"> <a href="#mission">Our Mission.</a> </li>
