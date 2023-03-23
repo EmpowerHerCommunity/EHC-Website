@@ -31,7 +31,7 @@ const HeroAbout = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-lg text-xl mb-4 md:leading-8"
+              className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               <span className="text-primary text-opacity-60">
