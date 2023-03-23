@@ -26,10 +26,7 @@ const Footer = () => {
               and promoting women in the field of information
               technology, so as to help them advance in their career.
             </p>
-            <div className='flex gap-6 mb-4'>
-              {/* <span className='border-2 border-solid rounded-full p-2'>
-                <SiInstagram size='1.6rem' />
-              </span> */}
+            <div className='flex lg:gap-6 gap-10 mb-6'>
               <span className='border-2 border-solid rounded-full p-2'>
                 <Link href="https://www.instagram.com/empowerher_community/">
                   <a>
@@ -61,7 +58,7 @@ const Footer = () => {
             </div>
             <h4 className='text-lg'>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
           </div>
-          <div className='flex flex-wrap sm:flex-nowrap gap-8 w-full lg:w-auto text-lg' data-aos='zoom-in-down'>
+          <div className='flex flex-wrap sm:flex-nowrap gap-6 lg:gap-x-8 gap-x-16 w-full lg:w-auto text-lg' data-aos='zoom-in-down'>
             <ul className="min-w-max">
               <li className="mb-4">
                 <Link href='/'>
@@ -126,14 +123,7 @@ const Footer = () => {
               <li className="mb-4">
                 Contact Information
               </li>
-              {/* <li className="mb-4">
-                <Link href='tel:+2349050475524'>
-                  <a className='flex items-center gap-4'>
-                    <BsTelephone />
-                    +234 9050475524
-                  </a>
-                </Link>
-              </li> */}
+          
               <li className="mb-4">
                 <Link href='mailto:info@empowerher.community'>
                   <a className='flex items-center gap-4'>
