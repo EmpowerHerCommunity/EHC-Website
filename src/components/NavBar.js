@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div className="container mx-auto cursor-pointer px-2">
-      <nav className="flex lg:flex-row items-center py-10 lg:py-0 flex-col-reverse lg:justify-center px-5">
+      <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center px-5">
         <ul
           className={`${
             active ? "block" : "hidden"
@@ -76,7 +76,9 @@ const NavBar = () => {
             </Link>
           </button>
           <button className="lg:w-52 md:w-48 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">
-            Support Our Vision
+           <Link href="https://paystack.com/pay/empowerhercommunity">
+            <a>Support Our Vision</a>
+           </Link>
           </button>
         </div>
       </nav>

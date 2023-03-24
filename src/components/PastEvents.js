@@ -40,7 +40,7 @@ const PastEvents = () => {
     {
       title: "Non Technical Bootcamp",
       description: [
-        "Empower Her Community with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women and was completely free of charge. The program was a huge success, and we are proud to have helped so many women develop new skills and knowledge in the tech industry.",
+        "Empower Her Community with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women by helping them develop soft technical skills and knowledge in the tech industry.",
       ],
       image: "/nontechb.jpg",
       gallery: [
@@ -54,7 +54,7 @@ const PastEvents = () => {
     },
     {
       title: "Webinar",
-      description: ["The interactive sessions were specifically designed to tackle the prevalent disinterest and discouragement experienced by girls in the IT field. With some amazing keynote speakers, the session expertly highlighted the factors that contribute to women's disinterest in IT and provided practical solutions that attendees could implement to overcome these challenges. The session was also packed with career advancement plans, CV and interview preparation, and other resources to equip attendees with the tools they need to excel in the field. Overall, the series was a highly insightful and thought-provoking experience, leaving attendees feeling inspired and empowered to pursue their passions with new found confidence."],
+      description: ["The interactive sessions were specifically designed to tackle the prevalent disinterest and discouragement experienced by girls in the IT field. With some amazing keynote speakers, the session expertly highlighted the factors that contribute to women's disinterest in IT and provided practical solutions that attendees could implement to overcome these challenges. The session was also packed with career advancement plans, CV and interview preparation, and other resources to equip attendees with the tools they need to excel in the field."],
       image: "/webinar2.jpg",
       gallery: [
         "/webinar3.jpg",
