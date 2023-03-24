@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
+import Footer from "../../src/components/Footer";
 
 const Slug = () => {
   const router = useRouter();
