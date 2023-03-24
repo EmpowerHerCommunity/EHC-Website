@@ -76,7 +76,9 @@ const NavBar = () => {
             </Link>
           </button>
           <button className="lg:w-52 md:w-48 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">
-            Support Our Vision
+           <Link href="https://paystack.com/pay/empowerhercommunity">
+            <a>Support Our Vision</a>
+           </Link>
           </button>
         </div>
       </nav>
