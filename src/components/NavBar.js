@@ -69,7 +69,7 @@ const NavBar = () => {
             </svg>
           </button>} 
         </figure>
-        <div className="w-4/12 lg:flex hidden lg:flex-row flex-col justify-around items-center h-56 lg:h-0 lg-py-0 py-11">
+        <div className="w-4/12 md:w-5/12 lg:flex hidden lg:flex-row flex-col justify-around items-center h-56 lg:h-0 lg-py-0 py-11">
           <button className="lg:w-36 md:w-28 rounded-md h-12  text-primary font-medium border-primary border-2 font-mono hover:scale-105">
             <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform " >
             <a target="_blank"> Join Us</a> 
