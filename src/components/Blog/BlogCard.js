@@ -2,18 +2,34 @@ import Link from "next/link";
 import { sortByDate } from "../../../utils";
 import searchImg from "../../../public/blog/searchicon.png";
 import Image from "next/image";
-import {useState} from "react";
+import { useState } from "react";
 
-const BlogCard = ({ blogs, isFetching  }) => {
+const BlogCard = ({ blogs, isFetching }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
-  const [filteredBlog, setFilteredBlog] = useState("")
+  const [filteredBlog, setFilteredBlog] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const filtered = filteredBlog
-    ? sortedBlogs.filter((blog) =>
-          blog.introduction.includes(filteredBlog) || blog.title.includes(filteredBlog) || blog.author.includes(filteredBlog)
+    ? sortedBlogs.filter(
+        (blog) =>
+          blog.introduction
+            .toLowerCase()
+            .includes(filteredBlog.toLowerCase()) ||
+          blog.title.toLowerCase().includes(filteredBlog.toLowerCase()) ||
+          blog.author.toLowerCase().includes(filteredBlog.toLowerCase()) ||
+          blog.introduction
+            .toUpperCase()
+            .includes(filteredBlog.toUpperCase()) ||
+          blog.title.toUpperCase().includes(filteredBlog.toUpperCase()) ||
+          blog.author.toUpperCase().includes(filteredBlog.toUpperCase())
+      )
+    : selectedCategory
+    ? sortedBlogs.filter(
+        (blog) =>
+          blog.title.includes(selectedCategory) ||
+          blog.description.includes(selectedCategory)
       )
     : sortedBlogs;
-
 
   function calculateReadingTime(content) {
     const wordsPerMinute = 200;
@@ -26,53 +42,93 @@ const BlogCard = ({ blogs, isFetching  }) => {
   }
   const options = { day: "numeric", month: "long", year: "numeric" };
 
+  function handleCategoryClick(category) {
+    setSelectedCategory(category);
+    setFilteredBlog("");
+  }
+
+  function handleClick() {
+    setSelectedCategory("");
+    setFilteredBlog("");
+  }
+
   return (
     <>
-    <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
-      <header>
-        <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center items-center text-sm font-semibold mx-8">
-          <div className="lg:block md:block hidden">
-            <button className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn">
-              ALL TOPICS
-            </button>
-          </div>
+      <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
+        <header>
+          <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center items-center text-sm font-semibold mx-8">
+            <div className="lg:block md:block hidden">
+              <button
+                onClick={handleClick}
+                className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn"
+              >
+                ALL TOPICS
+              </button>
+            </div>
 
-          <div className="lg:w-7/12 md:w-6/12 lg:block md:block hidden">
-            <ul className="flex justify-between items-center lg:w-11/12">
-              <li className="hover:border-b border-primary hover:scale-105">
-                WEB
-              </li>
-              <li className="hover:border-b border-primary hover:scale-105">
-                DEVOPS
-              </li>
-              <li className="hover:border-b border-primary hover:scale-105">
-                MOBILE
-              </li>
-              <li className="hover:border-b border-primary hover:scale-105">
-                DESIGN
-              </li>
-              <li className="hover:border-b border-primary hover:scale-105">
-                TESTING
-              </li>
-            </ul>
-          </div>
+            <div className="lg:w-6/12 md:w-6/12 lg:block md:block hidden">
+              <ul
+                className="flex justify-between items-center lg:w-11/12 text-lg"
+                id="tags"
+              >
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "Tech"
+                  }`}
+                  onClick={() => handleCategoryClick("Tech")}
+                >
+                  Tech
+                </li>
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "Communities"
+                  }`}
+                  onClick={() => handleCategoryClick("Communities")}
+                >
+                  Communities
+                </li>
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "Web"
+                  }`}
+                  onClick={() => handleCategoryClick("Web")}
+                >
+                  Web
+                </li>
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "Design"
+                  }`}
+                  onClick={() => handleCategoryClick("Design")}
+                >
+                  Design
+                </li>
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "Devops"
+                  }`}
+                  onClick={() => handleCategoryClick("Devops")}
+                >
+                  Devops
+                </li>
+              </ul>
+            </div>
 
-          <div className="relative mt-0">
-            <input
-              placeholder="Search"
-              value={filteredBlog}
-              onChange={(e)=>setFilteredBlog(e.target.value)}
-              className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm lg:w-80  w-full"
-            />
-       
-          </div>
-        </nav>
-      </header>
-    </section>
+            <div className="relative mt-0">
+              <input
+                placeholder="Search"
+                value={filteredBlog}
+                onChange={(e) => setFilteredBlog(e.target.value)}
+                className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm lg:w-80  w-full"
+              />
+            </div>
+          </nav>
+        </header>
+      </section>
 
       <section className="cursor-pointer pt-3">
         <section className="container px-4 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
-          {isFetching && <h1 className="text-xl px-2">Just a minute the blogs are being fetched...</h1> }
+          {isFetching && <h1 className="text-lg px-2">Fetching Blogs... </h1>}
           {filtered &&
             filtered.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
@@ -107,7 +163,7 @@ const BlogCard = ({ blogs, isFetching  }) => {
                       <h1 className="lg:text-2xl text-3xl font-bold mt-1 py-2">
                         {blog.title}
                       </h1>
-                      <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:h-36 h-40">
+                      <p className="lg:text-lg text-xl leading-relaxed w-11/12">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
