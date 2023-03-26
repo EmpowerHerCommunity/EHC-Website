@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Featured() {
   return (
-    <article className="flex flex-col container mx-auto px-6 lg:py-10 py-4 relative">
+    <article className="lg:flex hidden  flex-col container mx-auto px-6 lg:py-10 py-4 relative">
       <figure>
         <img src="/cover1.png" alt="article cover" className="w-full lg:h-auto h-56" />
       </figure>

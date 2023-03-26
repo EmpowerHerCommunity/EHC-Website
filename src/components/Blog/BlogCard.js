@@ -52,6 +52,7 @@ const BlogCard = ({ blogs, isFetching }) => {
     setFilteredBlog("");
   }
 
+ 
   return (
     <>
       <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
@@ -128,7 +129,6 @@ const BlogCard = ({ blogs, isFetching }) => {
 
       <section className="cursor-pointer pt-3">
         <section className="container px-4 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
-          {isFetching && <h1 className="text-lg px-2">Fetching Blogs... </h1>}
           {filtered &&
             filtered.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
@@ -163,15 +163,18 @@ const BlogCard = ({ blogs, isFetching }) => {
                       <h1 className="lg:text-2xl text-3xl font-bold mt-1 py-2">
                         {blog.title}
                       </h1>
-                      <p className="lg:text-lg text-xl leading-relaxed w-11/12">
+                      <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:block hidden">
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
+                      <figure className="h-16 w-16 rounded-full">
                         <img
                           src={blog.author_image}
                           alt="author avatar"
-                          className="rounded-full w-9 h-9"
-                        />
+                          className="h-full w-full object-contain rounded-full"
+                          />
+                        </figure>
+                     
                         <p className="font-semibold text-2xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                           {blog.author}
                         </p>
