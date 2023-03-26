@@ -20,7 +20,7 @@ const Description = () => {
                 <div className="absolute top-0 left-0">
                   <Image src='/hero-about-up.png' width='130px' height='130px' />
                 </div>
-                <div className="absolute bottom-0 right-0">
+                <div className="absolute bottom-0 lg:right-0 md:right-40 right-0">
                   <Image src='/hero-about-down.png' width='130px' height='130px' />
                 </div>
                 <Image src='/download.jpg' width='500px' height='500px' />
