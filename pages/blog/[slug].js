@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
+import BlogCard from "../../src/components/Blog/BlogCard";
 
 const Slug = () => {
   const router = useRouter();
@@ -21,6 +22,11 @@ const Slug = () => {
     const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
     return readingTime;
   }
+
+  const copyUrlToClipboard = () => {
+    Clipboard.writeText(window.location.href);
+  };
+  
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
@@ -44,9 +50,9 @@ const Slug = () => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <section className="container mx-auto">
+    <section className="">
       <NavBar />
-      <div className="prose prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
+      <div className="prose prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
         {blogs &&
           blogs
             .filter((blog) => blog.slug === routeId)
@@ -74,12 +80,13 @@ const Slug = () => {
                 </figcaption>
 
                 <section className="flex items-center -mt-10 py-0 ">
-                  <figure className="">
-                    <img
-                      src={blog.author_image}
-                      className="rounded-full h-10 w-10"
-                    />
-                  </figure>
+                <figure className="h-16 w-16 rounded-full">
+                        <img
+                          src={blog.author_image}
+                          alt="author avatar"
+                          className="h-full w-full object-contain rounded-full"
+                          />
+                        </figure>
                   <figcaption className="text-2xl ml-6">{blog.author}</figcaption>
                 </section>
 
@@ -98,6 +105,10 @@ const Slug = () => {
               </article>
             ))}
       </div>
+      <section >
+        <h3 className="text-3xl px-6 lg:px-12">More EHC articles</h3>
+        <Footer/>
+      </section>
     </section>
   );
 };
