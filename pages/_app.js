@@ -12,6 +12,9 @@ import createEmotionCache from '../src/createEmotionCache';
 // of the user in the browser.
   
 const clientSideEmotionCache = createEmotionCache();
+
+// animate on scroll
+import 'aos/dist/aos.css';
   
 export default function MyApp(props) {
     const { Component, emotionCache = 
@@ -21,7 +24,7 @@ export default function MyApp(props) {
         <CacheProvider value={emotionCache}>
             <Head>
                 <meta name="viewport" 
-                    content="initial-scale=1, width=device-width" />
+                    content="width=device-width initial-scale=0.65" />
             </Head>
             <ThemeProvider theme={theme}>
                   
@@ -30,7 +33,7 @@ export default function MyApp(props) {
                 build upon. */}
                   
                 <CssBaseline />
-                <Component {...pageProps} />
+                <Component {...pageProps}></Component>
             </ThemeProvider>
         </CacheProvider>
     );

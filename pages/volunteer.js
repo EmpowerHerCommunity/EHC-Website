@@ -6,13 +6,13 @@ import Footer from '../src/components/Footer';
 
 const Volunteer = () => {
   return (
-    <div>
-        
-        Pearl this is your part of the job: <b>Volunteer Page</b>. Do not bother with the NavBar and Footer pages yet. 
-        <NavBar />
-        <Hero />
-        <Cards />
-        <Footer />
+    <div className='overflow-hidden'>
+      <NavBar />
+      <main className="main overflow-hidden bg-primary bg-opacity-10">
+      <Hero />
+      <Cards />
+      </main>
+      <Footer />
     </div>
   )
 }
