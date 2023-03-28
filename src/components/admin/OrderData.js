@@ -1,11 +1,10 @@
-import { Cog6ToothIcon, ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
+// import { Cog6ToothIcon, ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 export const orders = [
     {
       "id": 1,
       "name": "John Doe",
       "email": "john.doe@example.com",
       "status": "pending",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "30 jul 2020"
     },
     {
@@ -13,7 +12,6 @@ export const orders = [
       "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5' />,
       "date": "01 Dec 2020"
     },
     {
@@ -21,7 +19,6 @@ export const orders = [
       "name": "Bob Johnson",
       "email": "bob.johnson@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "04 Aug 2020"
     },
     {
@@ -29,7 +26,6 @@ export const orders = [
       "name": "Amanda killer",
       "email": "Amander.killer@example.com",
       "status": "pending",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "30 Aug 2020"
     },
     {
@@ -37,7 +33,6 @@ export const orders = [
       "name": "Bailey akinsobu",
       "email": "Bailey.akinsobu@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "25 Aug 2020"
     },
     {
@@ -45,7 +40,6 @@ export const orders = [
       "name": "Newman tim",
       "email": "newman.tim@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "15 Nov 2020"
     },
     {
@@ -53,7 +47,6 @@ export const orders = [
       "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5' />,
       "date": "01 Dec 2020"
     },
     {
@@ -61,7 +54,6 @@ export const orders = [
       "name": "Bob Johnson",
       "email": "bob.johnson@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "04 Aug 2020"
     },
     {
@@ -69,7 +61,6 @@ export const orders = [
       "name": "Amanda killer",
       "email": "Amander.killer@example.com",
       "status": "pending",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "30 Aug 2020"
     },
     {
@@ -77,7 +68,6 @@ export const orders = [
       "name": "Bailey akinsobu",
       "email": "Bailey.akinsobu@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "25 Aug 2020"
     },
     {
@@ -85,7 +75,6 @@ export const orders = [
       "name": "Newman tim",
       "email": "newman.tim@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "15 Nov 2020"
     },
     {
@@ -93,7 +82,6 @@ export const orders = [
       "name": "Newman tim",
       "email": "newman.tim@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "15 Nov 2020"
     },
     {
@@ -101,7 +89,6 @@ export const orders = [
       "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5' />,
       "date": "01 Dec 2020"
     },
     {
@@ -109,7 +96,6 @@ export const orders = [
       "name": "Bob Johnson",
       "email": "bob.johnson@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "04 Aug 2020"
     },
     {
@@ -117,7 +103,6 @@ export const orders = [
       "name": "Amanda killer",
       "email": "Amander.killer@example.com",
       "status": "pending",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "30 Aug 2020"
     },
     {
@@ -125,7 +110,6 @@ export const orders = [
       "name": "Bailey akinsobu",
       "email": "Bailey.akinsobu@example.com",
       "status": "delivered",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "25 Aug 2020"
     },
     {
@@ -133,7 +117,6 @@ export const orders = [
       "name": "Newman tim",
       "email": "newman.tim@example.com",
       "status": "completed",
-      "action": <Cog6ToothIcon className=' w-5'/>,
       "date": "15 Nov 2020"
     }
 ]

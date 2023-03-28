@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['empowerherapi.herokuapp.com'],
+    domains: [''],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
