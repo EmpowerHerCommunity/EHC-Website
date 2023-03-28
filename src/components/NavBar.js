@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div className="container mx-auto cursor-pointer px-2">
-      <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-2">
+      <nav className="flex lg:flex-row items-center py-10 lg:py-1 flex-col-reverse lg:justify-center lg:px-5 px-2">
         <ul
           className={`${
             active ? "block" : "hidden"

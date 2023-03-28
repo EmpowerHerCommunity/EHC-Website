@@ -3,6 +3,7 @@ import { sortByDate } from "../../../utils";
 import searchImg from "../../../public/blog/searchicon.png";
 import Image from "next/image";
 import { useState } from "react";
+import Featured from "./Featured";
 
 const BlogCard = ({ blogs, isFetching }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
@@ -52,13 +53,12 @@ const BlogCard = ({ blogs, isFetching }) => {
     setFilteredBlog("");
   }
 
- 
   return (
     <>
       <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
-        <header>
+        <header className="">
           <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center items-center text-sm font-semibold mx-8">
-            <div className="lg:block md:block hidden">
+            <div className="lg:block md:hidden hidden">
               <button
                 onClick={handleClick}
                 className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn"
@@ -67,18 +67,26 @@ const BlogCard = ({ blogs, isFetching }) => {
               </button>
             </div>
 
-            <div className="lg:w-6/12 md:w-6/12 lg:block md:block hidden">
+            <div className="lg:w-6/12 md:w-6/12 lg:block md:hidden hidden">
               <ul
                 className="flex justify-between items-center lg:w-11/12 text-lg"
                 id="tags"
               >
                 <li
                   className={`hover:border-b border-primary hover:scale-105 ${
+                    selectedCategory === "web"
+                  }`}
+                  onClick={() => handleCategoryClick("web")}
+                >
+                  Web
+                </li>
+                <li
+                  className={`hover:border-b border-primary hover:scale-105 ${
                     selectedCategory === "Tech"
                   }`}
                   onClick={() => handleCategoryClick("Tech")}
                 >
-                  Tech
+                   lifestyle
                 </li>
                 <li
                   className={`hover:border-b border-primary hover:scale-105 ${
@@ -88,14 +96,7 @@ const BlogCard = ({ blogs, isFetching }) => {
                 >
                   Communities
                 </li>
-                <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
-                    selectedCategory === "Web"
-                  }`}
-                  onClick={() => handleCategoryClick("Web")}
-                >
-                  Web
-                </li>
+
                 <li
                   className={`hover:border-b border-primary hover:scale-105 ${
                     selectedCategory === "Design"
@@ -115,15 +116,24 @@ const BlogCard = ({ blogs, isFetching }) => {
               </ul>
             </div>
 
-            <div className="relative mt-0">
+            <div className="relative mt-0 md:hidden hidden lg:block">
               <input
                 placeholder="Search"
                 value={filteredBlog}
                 onChange={(e) => setFilteredBlog(e.target.value)}
-                className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm lg:w-80  w-full"
+                className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm lg:w-80 "
               />
             </div>
           </nav>
+
+          <div className="relative mt-0 lg:hidden block">
+            <input
+              placeholder="Search"
+              value={filteredBlog}
+              onChange={(e) => setFilteredBlog(e.target.value)}
+              className="border rounded-full h-10 px-3 placeholder:text-xl placeholder:px-1 text-sm w-11/12 ml-5 "
+            />
+          </div>
         </header>
       </section>
 
@@ -167,14 +177,14 @@ const BlogCard = ({ blogs, isFetching }) => {
                         {blog.introduction}
                       </p>
                       <section className="flex items-center flex-wrap mt-3 rounded-full">
-                      <figure className="h-16 w-16 rounded-full">
-                        <img
-                          src={blog.author_image}
-                          alt="author avatar"
-                          className="h-full w-full object-contain rounded-full"
+                        <figure className="h-16 w-16 rounded-full">
+                          <img
+                            src={blog.author_image}
+                            alt="author avatar"
+                            className="h-full w-full object-contain rounded-full"
                           />
                         </figure>
-                     
+
                         <p className="font-semibold text-2xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                           {blog.author}
                         </p>

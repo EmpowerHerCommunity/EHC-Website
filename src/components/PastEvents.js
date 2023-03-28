@@ -25,9 +25,9 @@ const PastEvents = () => {
     {
       title: "Bootcamp 2.0",
       description: [
-        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Product Management, Cybersecurity, Data Science, Digital Marketing, Product Design, and Blockchain. The program was completely free and provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
+        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Cloud Engineering, Data Science, Digital Marketing, Product Design, and Blockchain. The program was virtual and it provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
       ],
-      image: "/web.jpg",
+      image: "/2.0.jpg",
       gallery: [
         "/nit15.jpg",
         "/nit14.jpg",

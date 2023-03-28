@@ -1,46 +1,45 @@
-import { HomeIcon, CreditCardIcon, UserIcon, ChartPieIcon, ClipboardDocumentIcon } from "@heroicons/react/24/solid";
-
+import {MdOutlineArticle,MdOutlineVolunteerActivism, MdSupervisedUserCircle, MdEmojiEvents} from "react-icons/md"
 export const SideBarData = [
     {
         key:1,
-        title: "Dashboard",
+        title: "Users",
         path: "/home",
-        icon: <HomeIcon />,
+        icon: <MdSupervisedUserCircle />,
         cName:"nav-text"
     },
     {
         key:2,
-        title: "Order",
+        title: "Events",
         path: "/",
-        icon: <CreditCardIcon />,
+        icon: <MdEmojiEvents />,
         cName:"nav-text"
     },
     {
         key:3,
-        title: "Statistics",
+        title: "Blog Posts",
         path: "/statistics",
-        icon: <ChartPieIcon/>,
+        icon: <MdOutlineArticle/>,
         cName:"nav-text"
     },
     {
         key:4,
-        title: "Product",
+        title: "Featured Blogs",
         path: "/product",
-        icon: <UserIcon />,
+        icon: <MdOutlineArticle />,
         cName:"nav-text"
     },
     {
         key:5,
-        title: "stock",
+        title: "Volunteers",
         path: "/billing",
-        icon: <UserIcon />,
+        icon: <MdOutlineVolunteerActivism />,
         cName:"nav-text"
     },
     {
-        key:6,
-        title: "offer",
-        path: "/offer",
-        icon: <ClipboardDocumentIcon />,
+        key:1,
+        title: "Log Out",
+        path: "/home",
+        icon: <MdSupervisedUserCircle />,
         cName:"nav-text"
     },
 ]

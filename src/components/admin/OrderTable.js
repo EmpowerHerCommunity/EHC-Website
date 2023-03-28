@@ -46,37 +46,35 @@ const OrderTable = () => {
 
   return (
     <>
-    <div className='rounded-lg shadow overflow-scroll md:overflow-visible'> 
+    <div className='rounded-lg'> 
       <table className='pl-9 w-full'>
-        <thead className='border-b-2 text-left bg-gray-200 shadow-lg '>
-          <tr >
-            <th data-column="id" className=" p-3 text-sm font-semibold tracking-wide rounded-l-lg" onClick={handleSort}>
+        <thead className='text-left text-lg'>
+          <tr  className='text-lg font-semibold'>
+            <th data-column="id" className="py-6 font-semibold tracking-wide rounded-l-lg" onClick={handleSort}>
               ID
               {sortConfig.column === 'id' && sortConfig.direction === 'asc' && <span>↑</span>}
               {sortConfig.column === 'id' && sortConfig.direction === 'desc' && <span>↓</span>}
             </th>
-            <th data-column="name"  className="text-sm font-semibold tracking-wide" onClick={handleSort}>
+            <th data-column="name" className="font-semibold tracking-wide" onClick={handleSort}>
               Name
             </th>
-            <th className="text-sm font-semibold tracking-wide"  data-column="email">
+            <th className="font-semibold tracking-wide"  data-column="email">
               Email
             </th>
-            <th className="text-sm font-semibold tracking-wide" data-column="date">
+            <th className="font-semibold tracking-wide" data-column="date">
               Date
             </th>
-            <th className="text-sm font-semibold tracking-wide" >Status</th>
-            <th className='rounded-r-lg text-sm font-semibold tracking-wide'>Action</th>
+            <th className="font-semibold tracking-wide" >Status</th>
           </tr>
         </thead>
-        <tbody className=' divide-y divide-gray-100 '>
+        <tbody className=' divide-y divide-gray-100 cursor-pointer '>
           {slicedData.map((order) => (
-            <tr key={order.id} className="border mb-4 bg-white rounded-l-lg py-2 hover:bg-blue-700  ">
-              <td className="p-4 text-sm text-gray-700 whitespace-nowrap mb-4 rounded-l-lg hover:bg-blue-700 hover:text-white">{order.id}</td>
-              <td className="p-4 text-sm text-gray-700 whitespace-nowrap hover:text-white">{order.name}</td>
-              <td className="p-4 text-sm text-gray-700 whitespace-nowrap hover:text-white">{order.email}</td>
-              <td className="p-4 text-sm text-gray-700 whitespace-nowrap hover:text-white">{order.date}</td>
-              <td className={`p-4 text-sm text-gray-700 whitespace-nowrap hover:text-white ${ order.status === "pending" ? 'text-red-500': order.status === "completed" ? 'text-gray-400' : "text-green-300" }`}>{order.status}</td>
-              <td className="p-4 text-sm text-gray-700 whitespace-nowrap hover:text-white">{order.action}</td>
+            <tr key={order.id} className=" h-16 mb-4 text-base bg-white rounded-l-lg py-2 hover:shadow-lg hover:scale-100 hover:text-slate-100 hover:bg-primary">
+              <td className="whitespace-nowrap mb-4 rounded-l-l">{order.id}</td>
+              <td className="whitespace-nowrap">{order.name}</td>
+              <td className=" whitespace-nowrap">{order.email}</td>
+              <td className="whitespace-nowrap">{order.date}</td>
+              <td className={`whitespace-nowrap ${ order.status === "pending" ? 'text-red-500': order.status === "completed" ? 'text-gray-400' : "text-green-300" }`}>{order.status}</td>
             </tr>
           ))}
         </tbody>
