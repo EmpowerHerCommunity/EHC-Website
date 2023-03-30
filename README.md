@@ -28,9 +28,7 @@ Great Programmers are not always easy to acquire and when we sure do come across
 - Jessica Joseph
 - Sharon Falomo
 - Nancy Olatuja
-- Khadijat Ibidapo
-
-
+- Juliet Ofoegbu
 
 <!-- ROADMAP -->
 
