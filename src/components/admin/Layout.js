@@ -28,7 +28,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Transition
+      {/* <Transition
         as={Fragment}
         show={showNav}
         enter="transform transition duration-[400ms]"
@@ -37,16 +37,16 @@ export default function Layout({ children }) {
         leave="transform duration-[400ms] transition ease-in-out"
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
-      >
-        <SideBar showNav={showNav} />
-      </Transition>
-      <main
+      > */}
+        <SideBar />
+      {/* </Transition> */}
+      {/* <main
         className={`pt-16 transition-all duration-[400ms] ${
           showNav && !isMobile ? "pl-56" : ""
         }`}
       >
         <div className="px-4 md:px-16">{children}</div>
-      </main>
+      </main> */}
     </>
   );
 }
