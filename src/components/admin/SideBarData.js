@@ -3,42 +3,42 @@ export const SideBarData = [
     {
         key:1,
         title: "Users",
-        path: "/home",
+        path: "/admin",
         icon: <MdSupervisedUserCircle />,
         cName:"nav-text"
     },
     {
         key:2,
         title: "Events",
-        path: "/",
+        path: "/admin/events",
         icon: <MdEmojiEvents />,
         cName:"nav-text"
     },
     {
         key:3,
         title: "Blog Posts",
-        path: "/statistics",
+        path: "/admin/posts",
         icon: <MdOutlineArticle/>,
         cName:"nav-text"
     },
     {
         key:4,
         title: "Featured Blogs",
-        path: "/product",
+        path: "/admin/featured",
         icon: <MdOutlineArticle />,
         cName:"nav-text"
     },
     {
         key:5,
         title: "Volunteers",
-        path: "/billing",
+        path: "/volunteer",
         icon: <MdOutlineVolunteerActivism />,
         cName:"nav-text"
     },
     {
-        key:1,
+        key:7,
         title: "Log Out",
-        path: "/home",
+        path: "/",
         icon: <MdSupervisedUserCircle />,
         cName:"nav-text"
     },
