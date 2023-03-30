@@ -10,7 +10,6 @@ import Testimonial from '../src/components/Testimonial';
 import Footer from '../src/components/Footer';
 import PopUp from '../src/components/Popup';
 
-
 export default function Home() {
   const [popup, setPopup] = useState(false);
   

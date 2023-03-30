@@ -25,7 +25,7 @@ const PastEventsCard = ({ event, i }) => {
                         </div>
                 }
                 <div className={((i % 2 === 0) ? "lg:flex-row-reverse" : "lg:flex-row") + ' flex flex-col justify-between items-start gap-14'} >
-                    <div data-aos='fade-left' className='lg:flex-auto w-full lg:w-6/12'>
+                    <div data-aos='fade-left' className='lg:flex-auto w-full lg:w-6/12' id="past">
                         <div>
                             <div className="relative mb-14 pt-4 max-w-max">
                                 <h2 className='md:text-5xl text-4xl font-bold max-w-max'>
@@ -37,7 +37,7 @@ const PastEventsCard = ({ event, i }) => {
                                 {
                                     event.description.map(desc => {
                                         return (
-                                            <p className='md:text-lg text-xl leading-7 md:my-8 my-4' key={'event-card-' + i}>
+                                            <p className='text-justify md:text-xl text-2xl leading-8 md:my-8 my-4' key={'event-card-' + i}>
                                                 {desc}
                                             </p>
 
@@ -47,10 +47,10 @@ const PastEventsCard = ({ event, i }) => {
                             </div>
                             <div>
                                 <div className="flex gap-4">
-                                    <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44'>
+                                    <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm hover:scale-105'>
                                         <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
                                             <a target='_blank'>
-                                                <span className="text-white text-lg"> Join Us Today </span>
+                                                <span className="text-white text-2xl"> Join Us Today </span>
                                             </a>
                                         </Link>
                                     </button>
@@ -63,17 +63,17 @@ const PastEventsCard = ({ event, i }) => {
                             <div className="flex absolute top-0 left-0">
                                 <Image src='/border-tl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute top-0 right-0">
+                            <div className="flex absolute top-0 right-28">
                                 <Image src='/border-tr.png' width='106px' height='106px' alt='' />
                             </div>
                             <div className="flex absolute bottom-0 left-0">
                                 <Image src='/border-bl.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className="flex absolute bottom-0 right-0">
+                            <div className="flex absolute bottom-0 right-28">
                                 <Image src='/border-br.png' width='106px' height='106px' alt='' />
                             </div>
-                            <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-full max-w-max' data-aos='fade-right'>
-                                <Image src={event.image} width='732px' height='744px' alt={event.title} />
+                            <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-10/12 max-w-max' data-aos='fade-right'>
+                                <Image src={event.image} width='400px' height='400px' alt={event.title} />
                             </div>
                         </div>
                         <EventsGallery images={event.gallery} galleryI={i} />

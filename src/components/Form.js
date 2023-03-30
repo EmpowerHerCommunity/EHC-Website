@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useEffect, useState, useRef } from 'react';
 import AOS from 'aos';
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
 
@@ -9,48 +9,56 @@ const Form = () => {
     AOS.refresh();
   }, []);
 
-  const [state, handleSubmit] = useForm("xyyolabb");
-  const [form, setForm] = useState({
+  
+  const [mail, setMail] = useState({
     name: "",
     email: "",
-    number: "",
-    nationality: "",
-    message: ""
+    number:"",
+    nationality:"",
+    message: "",
   });
-  const updateForm = (key, value) => {
-    setForm(prevState => { return { ...prevState, [key]: value } })
-  }
-  useEffect(() => {
-    if (state.succeeded && !state.submitting) {
-      console.log("Thanks for joining!");
-      setForm({
-        name: "",
-        email: "",
-        number: "",
-        nationality: "",
-        message: ""
-      });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      submit.current &&
+      mail.name !== "" &&
+      mail.email !== "" &&
+      mail.number !== "" &&
+      mail.message !== ""&&
+      mail.message !== ""
+    ) {
+      emailjs.sendForm(
+        "service_or1toa8",
+        "template_8w0a1ed",
+        submit.current,
+        "VzAh-kzQKj2SeXc8v"
+      );
+      alert("mail sent successfully");
+    } else {
+      alert("invalid details, please try again.");
     }
-  }, [state.submitting]);
+  };
+
+  const submit = useRef(null);
+
   return (
     <div className='m-4'>
-      <form className="form text-dark" onSubmit={() => handleSubmit}>
+      <form className="form text-dark" 
+         onSubmit={handleSubmit}
+         ref={submit}>
         <div className="flex flex-wrap sm:flex-nowrap gap-4">
           <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-right'>
             <label htmlFor="name" className="uppercase text-lg">name</label>
             <input
               type="text"
               name="name"
+              required
               id='name'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your name'
-              value={form.name}
-              onChange={(e) => updateForm("name", e.target.value)}
-            />
-            <ValidationError
-              prefix="Name"
-              field="name"
-              errors={state.errors}
+              value={mail.name}
+              onChange={(e) => setMail({ ...mail, name: e.target.value })}
             />
           </div>
           <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-left'>
@@ -58,17 +66,14 @@ const Form = () => {
             <input
               type="email"
               name='email'
+              required
               id='email'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your email address'
-              value={form.email}
-              onChange={(e) => updateForm("email", e.target.value)}
+              value={mail.email}
+              onChange={(e) => setMail({ ...mail, email: e.target.value })}
             />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
+  
           </div>
         </div>
         <div className="flex flex-wrap sm:flex-nowrap gap-4" data-aos='fade-right'>
@@ -77,34 +82,28 @@ const Form = () => {
             <input
               type="text"
               name="mobile number"
+              required
               id='mobile-number'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your mobile number'
-              value={form.number}
-              onChange={(e) => updateForm("number", e.target.value)}
+              value={mail.number}
+              onChange={(e) => setMail({ ...mail, number: e.target.value })}
             />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
+    
           </div>
           <div className="input-group w-full py-2 sm:flex-1" data-aos='fade-left'>
             <label htmlFor="nationality" className="uppercase text-lg">Nationality</label>
             <input 
               type="text"
               name='nationality'
+              required
               id='nationality'
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder='Enter your country'
-              value={form.nationality}
-              onChange={(e) => updateForm("nationality", e.target.value)}
+              value={mail.nationality}
+              onChange={(e) => setMail({ ...mail, nationality: e.target.value })}
             />
-            <ValidationError
-              prefix="Nationality"
-              field="nationality"
-              errors={state.errors}
-            />
+      
           </div>
         </div>
         <div className="" data-aos='fade-right'>
@@ -112,22 +111,19 @@ const Form = () => {
             <label htmlFor="" className="uppercase text-xl">message</label>
             <textarea
               name="message"
+              required
               id="message"
               cols="30"
               rows="10"
-              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2"
-              value={form.message}
-              onChange={(e) => updateForm("message", e.target.value)}
+              className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
+              value={mail.message}
+              onChange={(e) => setMail({ ...mail, message: e.target.value })}
               placeholder='Hello there...'></textarea>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
+    
           </div>
         </div>
         <div className="input-group w-full py-2" data-aos='zoom-in'>
-          <button className="bg-primary text-white text-4xl w-full p-3" type="submit" disabled={state.submitting}>Submit 🙂</button>
+          <button className="bg-primary text-white text-4xl w-full p-3" type="submit">Submit 🙂</button>
         </div>
       </form>
     </div>

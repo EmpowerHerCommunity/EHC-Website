@@ -1,10 +1,11 @@
-import React from 'react';
+import {useState, useRef} from 'react';
 import NavBar from '../src/components/NavBar';
 import Form from '../src/components/Form';
 import ContactUs from '../src/components/ContactUs';
 import Footer from '../src/components/Footer';
 
 const Contact = () => {
+
   return (
     <div className='overflow-hidden'>
       <NavBar />

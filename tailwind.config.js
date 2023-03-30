@@ -20,13 +20,13 @@ module.exports = {
       },
       width:{
         nav:"28rem"
-      },     
+      },  
        height:{
         feature:"28rem",
         sm:"40rem",
       },
       fontFamily:{
-        fontFamily: ['Archivo', 'sans-serif']
+        font: ['Poppins', 'sans-serif']
       },
     },
   },

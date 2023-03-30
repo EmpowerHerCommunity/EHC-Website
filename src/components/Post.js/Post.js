@@ -2,14 +2,14 @@ import NavBar from "../NavBar";
 import Footer from "../Footer";
 import BlogCard from "../Blog/BlogCard";
 import BlogNewsletter from "../Blog/BlogNewsletter";
-import FeaturedBlog from "../Blog/FeaturedBlog";
+import Featured from "../Blog/Featured";
 
-const post = ({ posts }) => {
+const post = ({ blogs, isFetching}) => {
   return (
     <>
       <NavBar />
-      <FeaturedBlog posts = {posts}/>
-      <BlogCard posts = {posts}/>
+      <Featured className="lg:block hidden"/>
+      <BlogCard blogs = {blogs} isFetching={isFetching} />
       <BlogNewsletter />
       <Footer />
     </>

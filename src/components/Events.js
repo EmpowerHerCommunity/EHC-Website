@@ -12,57 +12,56 @@ const Events = () => {
   }, []);
 
   return (
-    <section className="bg-primary py-20">
+    <section className="bg-primary bg-opacity-10 text-black py-20 ">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src='/white-dots-up.png' width='135px' height='135px' />
+          <Image src='/group2.png' width='135px' height='135px' />
         </div>
-        <div className=''>
+        <div className='pl-11 lg:pt-7 pt-20'>
 
           <div className="relative mb-8 max-w-max mx-auto">
-            <h2 className='text-white font-normal md:text-5xl text-4xl text-center font-bold'>Events</h2>
+            <h2 className='font-normal md:text-5xl text-4xl text-center font-bold'>Events</h2>
             <hr className="border-0 h-1 w-4/5 absolute bottom-0 left-0 bg-yellow" />
           </div>
-          <div className='md:grid grid-cols-3 gap-4'>
-            <div data-aos='fade-up' className='mb-8 text-center md:text-left'>
+          <div className='flex lg:flex-row flex-col  justify-between w-12/12 '>
+            <div data-aos='fade-up' className='mb-8 text-center md:text-left lg:w-4/12 w-11/12'>
               <div data-aos='fade-down'>
-                <Image src='/webinar.jpeg' width='422px' height='270px' />
+                <Image src='/web.jpg' width='300px' height='300px'  />
               </div>
-              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify'>
-                A webinar to address the disinterest of girls in information technology and enlighten women on the need to transition into the technology space. <br />
+              <h2 className='lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium'>Webinar</h2>
+              <p className=' font-normal md:text-lg text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 h-40'>
+               An interactive session aimed at addressing the disinterest and discouragement that girls often experience in the field of IT.<br />
                 <Link href='/aboutUs'>
                   <a>
-                    <span className='read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg'>READ MORE...</span>
+                    <span className='read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg text-primary'>READ MORE...</span>
                   </a>
                 </Link>
               </p>
             </div>
-            <div data-aos='fade-up' className='mb-8 text-center md:text-left'>
+            <div data-aos='fade-up' className='mb-8 text-center md:text-left lg:w-4/12 w-11/12'>
               <div data-aos='fade-down'>
-                <Image src='/events2.jpg' width='422px' height='270px' />
+                <Image src='/volunteers.JPEG' width='300px' height='300px' />
               </div>
-              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify'>
-                The Empower Her Community Bootcamp was a free bootcamp for women between the ages of 18-40 years. The bootcamp ran for a course of 1 month.<br />
+              <h2 className='lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium'>Bootcamp 1.0</h2>
+              <p className='font-normal md:text-lg text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 '>
+                 Empower Her Community Bootcamp was a game-changing initiative that provided women with a month-long, free-of-charge training program.<br />
                 <Link href='/aboutUs'>
                   <a>
-                    <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+                    <span className='read-more font-normal text-lg leading-6 md:flex justify-end mt-6 text-primary'>READ MORE...</span>
                   </a>
                 </Link>
               </p>
             </div>
-            <div data-aos='fade-up' className='text-center md:text-left'>
+            <div data-aos='fade-up' className='mb-8 text-center md:text-left lg:w-4/12 w-11/12'>
               <div data-aos='fade-down'>
-                <Image src='/nontech.jpg' width='422px' height='270px' />
+                <Image src='/nontechb.jpg' width='300px' height='300px' />
               </div>
-              <h2 className='text-white text-3xl leading-10 mb-2 mt-4 font-medium'>Non Technical Bootcamp</h2>
-              <p className='text-white font-normal md:text-lg text-xl tracking-wider text-justify'>
-                {/* We had a three-day outreach in different universities in Nigeria and Ghana. We aim to promote the assimilation of information technology. <br /> */}
+              <h2 className='lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium'>Non Technical Bootcamp</h2>
+              <p className='font-normal md:text-lg text-2xl tracking-wider text-justify w-12/12 lg:w-9/12 h-40'>
                 Empower Her Community in collaboration with Non-Tech In Tech organized a 2 months bootcamp to train women in non technical roles.<br />
                 <Link href='/aboutUs'>
                   <a>
-                    <span className='read-more font-normal text-lg  leading-6 md:flex justify-end mt-6'>READ MORE...</span>
+                    <span className='read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary'>READ MORE...</span>
                   </a>
                 </Link>
               </p>

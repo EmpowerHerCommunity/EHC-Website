@@ -1,30 +1,19 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import md from "markdown-it"
-import Navbar from "../../src/components/NavBar";
-import Image from "next/image";
-import BlogNewsletter from "../../src/components/Blog/BlogNewsletter";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import md from "markdown-it";
+import NavBar from "../../src/components/NavBar";
+import Footer from "../../src/components/Footer";
 import BlogCard from "../../src/components/Blog/BlogCard";
+import Image from "next/image";
 
+const Slug = () => {
+  const router = useRouter();
+  const routeId = router.query.slug;
+  console.log(routeId);
+  const [blogs, setBlogs] = useState(null);
+  const [isFetching, setIsFetching] = useState(true);
+  const [error, setError] = useState(null);
 
-export default function SlugPage({
-  data: {
-    title,
-    date,
-    read,
-    header,
-    introduction,
-    description,
-    authorImage,
-    author,
-    tagOne,
-    tagTwo,
-  },
-  slug,
-  content,
-}) {
-  
   function calculateReadingTime(content) {
     const wordsPerMinute = 200;
     const wordCount = content?.trim().split(/\s+/).length;
@@ -34,129 +23,124 @@ export default function SlugPage({
     const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
     return readingTime;
   }
-  const readTime = calculateReadingTime(content); // call the function and store the result in a variable
 
-  
+  const copyUrlToClipboard = () => {
+    Clipboard.writeText(window.location.href);
+  };
+
+  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
+
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setBlogs(data.results);
+        setIsFetching(false);
+      } catch (error) {
+        setError(error);
+        console.log("Failed to fetch events data: ", error);
+      }
+    }
+    if (isFetching) {
+      fetchBlogs();
+    }
+  }, [isFetching]);
+
+  const options = { day: "numeric", month: "long", year: "numeric" };
+
   return (
-    <section className="container mx-auto font-fontFamily" >
-      <Navbar />
-      <section>
-        <article className="pt-3">
-          <figcaption className="lg:w-12/12 w-12/12 flex flex-col h-96 px-10 justify-center lg:pl-32 text-black">
-            <hgroup className="flex justify-between w-56 items-center text-sm text-slug">
-              <h4>{date}</h4>
-              <div className="h-2 w-2 bg-black rounded-full border"></div>
-              <h4>{readTime > 1 ? `${readTime} minutes read` : `${readTime} minute read`}</h4>
-            </hgroup>
-            <hgroup className="lg:w-8/12">
-              <h1 className="text-sm lg:text-3xl py-4 font-semibold">{title}</h1>
-              <p className="text-sm lg:text-base">{description}</p>
-            </hgroup>
-            <div className=" flex justify-between w-40  items-center py-4">
-              <img
-                src={authorImage}
-                alt="author avatar"
-                className="rounded-full w-9 h-9"
-              />
-              <p className="font-semibold text-sm text-slug">{author}</p>
-            </div>
-            <div className="flex justify-between w-52 text-sm">
-              <button className="w-24 h-8 rounded-full border border-black font-semibold bg-white text-black">
-                {tagOne}
-              </button>
-              <button className="w-24 h-8 rounded-full border border-black font-semibold bg-white text-black">
-                {tagTwo}
-              </button>
-            </div>
-          </figcaption>
+    <section className=" ">
+      <NavBar />
+      <div className="prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
+        {blogs &&
+          blogs
+            .filter((blog) => blog.slug === routeId)
+            .map((blog) => (
+              <article key={blog.slug} className="py-6">
+                <section className=" text-slug flex items-center justify-between lg:w-72 w-96 ml-20  lg:text-xl text-2xl">
+                  <div className=" font-medium mb-1">
+                    {new Date(blog.created).toLocaleDateString(
+                      "en-US",
+                      options
+                    )}
+                  </div>
+                  <div className="border-black h-1 w-1 bg-black rounded-full"></div>
 
-          <figure className="px-8">
-              <img
-                src={header}
-                alt="artcle cover image"
-                className="object-cover w-full rounded-md h-96"
-              />
-          </figure>
-          <div className="flex justify-between pt-14 lg:pl-32 w-12/12">
+                  <div className="-mt-1">
+                    {`${calculateReadingTime(blog.description)}` > 1
+                      ? `${calculateReadingTime(blog.description)} minutes read`
+                      : `${calculateReadingTime(blog.description)} minute read`}
+                  </div>
+                </section>
 
-                <figcaption className="w-10/12 text-justify">
-                  <p>{introduction}</p>
+                <figcaption className="ml-20">
+                  <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">
+                    {blog.title}
+                  </h1>
+                  <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">
+                    {blog.introduction}
+                  </p>
                 </figcaption>
 
-                <div className=" w-1/12 flex flex-col h-52 justify-between items-center cursor-pointer">
-                  <figure className="border border-black h-9 w-9 flex justify-center items-center">
-                    <Image
-                      src="/blog/facebook.svg"
-                      alt="facebook"
-                      width={16}
-                      height={16}
+                <section className="flex items-center -mt-10 py-0 ml-20">
+                  <figure className="h-16 w-16 rounded-full">
+                    <img
+                      src={blog.author_image}
+                      alt="author avatar"
+                      className="h-full w-full object-contain rounded-full"
                     />
                   </figure>
-                  <figure className="border border-black h-9 w-9 flex justify-center items-center">
-                    <Image
-                      src="/blog/twitter.svg"
-                      alt="twitter"
-                      width={16}
-                      height={16}
-                    />
-                  </figure>
-                  <figure className="border border-black h-9 w-9 flex justify-center items-center">
-                    <Image
-                      src="/blog/linkedin.svg"
-                      alt="linkedin"
-                      width={16}
-                      height={16}
-                    />
-                  </figure>
-                  <figure className="border border-black h-9 w-9 flex justify-center items-center">
-                    <Image
-                      src="/blog/copy.svg"
-                      alt="copy"
-                      width={16}
-                      height={16}
-                    />
-                  </figure>
-                </div>
-              </div>
+                  <figcaption className="text-2xl ml-6">
+                    {blog.author}
+                  </figcaption>
+                </section>
 
-              <div className="content pb-10 w-10/12 lg:pl-32 ">
-                <div dangerouslySetInnerHTML={{__html: md().render(content)}} className="prose lg:prose-md max-w-screen-lg"/>
-              </div>
-        </article>
+                <figure className="-mt-1">
+                  <img src={blog.cover_photo} className="w-full h-auto" />
+                </figure>
+
+                <section className="flex justify-between  ml-20">
+                <div className="flex w-10/12">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: md().render(blog.description),
+                    }}
+                  />
+                 
+                </div>
+                <figure className="flex flex-col h-64 justify-between w-1/12 mt-20 cursor-pointer">
+                      <img
+                        src="/blog/facebook.svg"
+                        alt="facebook"
+                        className="h-11 w-11 border border-black p-2"
+                      />
+                      <img
+                        src="/blog/linkedin.svg"
+                        alt="linkedIn"
+                        className="h-11 w-11 border border-black p-2"
+                      />
+                      <img
+                        src="/blog/twitter.svg"
+                        alt="twitter"
+                        className="h-11 w-11 border border-black p-2"
+                      />
+                      <img
+                        src="/blog/copy.svg"
+                        alt="copy"
+                        className="h-11 w-11 border border-black p-2"
+                      />
+                  </figure>
+                  </section>
+              </article>
+            ))}
+      </div>
+      <section>
+        <h3 className="text-3xl px-6 lg:px-12">More EHC articles</h3>
+        <Footer />
       </section>
-      <>
-      <BlogNewsletter />
-       {/* <BlogCard/> */}
-      </>
     </section>
   );
-}
+};
 
-export async function getStaticPaths() {
-  //retrieve slugs by getting our post  
-  const files = fs.readdirSync(path.join("posts"));
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace(".md", ""),
-    },
-  }));
-  console.log(paths);
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params: { slug } }) {
-  //getting specific blog of the slug
-  const markDown = fs.readFileSync(path.join("posts", slug + ".md"), "utf-8");
-  //destructuring the object markDown
-  const { data, content } = matter(markDown);
-  return {
-    props: {
-      data,
-      slug,
-      content,
-    },
-  };
-}
+export default Slug;
