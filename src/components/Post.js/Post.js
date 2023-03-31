@@ -8,7 +8,7 @@ const post = ({ blogs, isFetching}) => {
   return (
     <>
       <NavBar />
-      <Featured className="lg:block hidden"/>
+      <Featured/>
       <BlogCard blogs = {blogs} isFetching={isFetching} />
       <BlogNewsletter />
       <Footer />
