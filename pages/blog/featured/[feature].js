@@ -1,16 +1,11 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import md from "markdown-it";
-import NavBar from "../../src/components/NavBar";
-import Footer from "../../src/components/Footer";
-import BlogCard from "../../src/components/Blog/BlogCard";
-import Image from "next/image";
+import NavBar from "../../../src/components/NavBar";
+import Footer from "../../../src/components/Footer";
+
 
 const Slug = () => {
-  const router = useRouter();
-  const routeId = router.query.slug;
-  console.log(routeId);
-  const [blogs, setBlogs] = useState(null);
+  const [blog, setBlog] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
 
@@ -24,14 +19,15 @@ const Slug = () => {
     return readingTime;
   }
 
-  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
+
+  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?mode=featured";
 
   useEffect(() => {
     async function fetchBlogs() {
       try {
         const response = await fetch(URL);
         const data = await response.json();
-        setBlogs(data.results);
+        setBlog(data.results);
         setIsFetching(false);
       } catch (error) {
         setError(error);
@@ -49,10 +45,8 @@ const Slug = () => {
     <section className=" ">
       <NavBar />
       <div className="prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
-        {blogs &&
-          blogs
-            .filter((blog) => blog.slug === routeId)
-            .map((blog) => (
+        {blog &&
+         blog.map((blog) => (
               <article key={blog.slug} className="py-6">
                 <section className=" text-slug flex items-center justify-between lg:w-72 w-96 ml-20  lg:text-xl text-2xl">
                   <div className=" font-medium mb-1">
@@ -132,7 +126,6 @@ const Slug = () => {
             ))}
       </div>
       <section>
-        <h3 className="text-3xl px-6 lg:px-12">More EHC articles</h3>
         <Footer />
       </section>
     </section>
