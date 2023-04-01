@@ -1,33 +1,61 @@
 import { forwardRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { SideBarData } from "./SideBarData";
+import {
+  MdOutlineArticle,
+  MdOutlineVolunteerActivism,
+  MdSupervisedUserCircle,
+  MdEmojiEvents,
+} from "react-icons/md";
 
-const SideBar = forwardRef(({ showNav }, ref) => {
+const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
   const router = useRouter();
-
   return (
     <div ref={ref} className="fixed w-56 h-full bg-primary shadow-sm">
-      <div className="flex justify-center mt-6 mb-6">
-        <h1 className="w-32 font-bold text-3xl text-white">Admin </h1>
+      <div className="flex justify-center mt-10 mb-14">
+        <h1 className="font-bold w-32 text-3xl text-white">Admin </h1>
       </div>
 
-      <div className="flex flex-col h-96 justify-between">
-        {SideBarData.map((item) => {
-          return (
-              <Link href={item.path} key={item.key} >
-                <div className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors text-white hover:bg-slate-100 hover:text-primary ${router.pathname == `${item.path}` }`}>
-                  <div className="mr-2 h-5 w-5 ">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-lg">{item.title}</p>
-                  </div>
-                </div>
-              </Link>
-          )
-        })}
-      </div>
+      <nav className="flex flex-col  items-center  text-white font-medium">
+        <div
+          className={` py-3 rounded text-center cursor-pointer mb-3 items-start flex flex-col h-96 justify-between transition-colors text-white}`}
+        >
+          <figure onClick={()=>handleDisplay("events")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdEmojiEvents />
+            </div>
+            <div>
+              <p className="text-lg">Events</p>
+            </div>
+          </figure>
+
+          <figure onClick={()=>handleDisplay("posts")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdOutlineArticle />
+            </div>
+            <div>
+              <p className="text-lg">Blog Posts</p>
+            </div>
+          </figure>
+
+          <figure onClick={()=>handleDisplay("featured")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdEmojiEvents />
+            </div>
+            <div>
+              <p className="text-lg">Featured Blogs</p>
+            </div>
+          </figure>
+
+          <figure className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdSupervisedUserCircle />
+            </div>
+            <div>
+              <p className="text-lg">Log Out</p>
+            </div>
+          </figure>
+        </div>
+      </nav>
     </div>
   );
 });

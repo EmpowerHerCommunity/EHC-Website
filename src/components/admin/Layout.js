@@ -2,7 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import SideBar from "./SideBar";
 import { Transition } from "@headlessui/react";
 
-export default function Layout({ children }) {
+export default function Layout({ children, display, handleDisplay}) {
   const [showNav, setShowNav] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -38,7 +38,7 @@ export default function Layout({ children }) {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       > */}
-        <SideBar />
+        <SideBar display={display} handleDisplay={handleDisplay} />
       {/* </Transition> */}
       {/* <main
         className={`pt-16 transition-all duration-[400ms] ${
