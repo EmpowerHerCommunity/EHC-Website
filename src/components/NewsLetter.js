@@ -14,7 +14,6 @@ const NewsLetter = () => {
 
   return (
     <section className="bg-primary bg-opacity-10 p-8">
-     
       <div className="container xl:max-w-screen-xl mx-auto py-10">
         <div className="flex flex-wrap gap-6 text-dark">
           <h2
