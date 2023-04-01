@@ -1,8 +1,7 @@
 import Mainbod from "../../src/components/admin/Mainbod";
 import { useEffect, useState } from "react";
 function Admin() {
-  const URL =
-    "https://empowerher.pythonanywhere.com/api/v1/indexapi/adminapi/login/";
+  const URL ="https://empowerher.pythonanywhere.com/api/v1/indexapi/adminapi/profile";
 
   const [login, setLogin] = useState(false);
   const [profile, setProfile] = useState(null);

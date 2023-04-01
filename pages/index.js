@@ -14,7 +14,9 @@ export default function Home() {
   const [popup, setPopup] = useState(false);
   
   useEffect(() => {
-    setPopup(true);
+    setTimeout(()=>{
+      setPopup(true);
+    }, 15000)
   }, []);
 
   const closePopup = () => {
