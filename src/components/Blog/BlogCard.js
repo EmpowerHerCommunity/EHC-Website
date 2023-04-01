@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Featured from "./Featured";
 
-const BlogCard = ({ blogs, isFetching }) => {
+const BlogCard = ({ blogs }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
   const [filteredBlog, setFilteredBlog] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -143,7 +143,7 @@ const BlogCard = ({ blogs, isFetching }) => {
             filtered.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
                 <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
-                  <Link href={`/blog/${blog.slug}`}>
+                  <Link href={`/blog/${blog.slug}/${blog.id}`}>
                     <div>
                       <img
                         src={blog.cover_photo}
