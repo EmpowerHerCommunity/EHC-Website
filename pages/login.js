@@ -7,11 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 const login = () => {
   const router = useRouter();
-
   const URL = "https://empowerher.pythonanywhere.com/api/v1/adminapi/login/";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [token, setToken] = useState("");
+
 
   async function handleLogin() {
     try {
@@ -19,6 +20,7 @@ const login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          'X-CSRFToken': 'Zt9no1wuUPTBoy8BukNZYLQcD9NZOYj2zW9loe9fGbdSIzuyxWvbKN2e4RdHSz69'
         },
         body: JSON.stringify({
           email,
@@ -40,6 +42,9 @@ const login = () => {
           progress: undefined,
           theme: "light",
         });
+        const tk = data.token;
+        console.log(tk)
+        setToken(tk)
         // Redirect to user profile page
         setTimeout(() => {
           router.push("/admin");
@@ -73,6 +78,7 @@ const login = () => {
         theme: "light",
       });
     }
+    console.log(token)
   }
   
   function handleSubmit(event) {
