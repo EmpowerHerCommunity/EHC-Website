@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
+import Delete from "../Delete/Delete";
 
 const FeaturedDashboard = () => {
     const [fetchedEvents, setFetchedEvents] = useState(null);
     const [isFetching, setIsFetching] = useState(true);
     const [error, setError] = useState(true);
+    const [del, setDel] = useState(false);
+
+  const handleDel = () => {
+    setDel(!del);
+  };
 
     const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?mode=featured";
    
@@ -25,6 +31,7 @@ const FeaturedDashboard = () => {
 
   return (
     <>
+    {del ? <Delete handleDel={handleDel}/> : 
       <div className="rounded-lg">
         <table className="w-full mt-8">
           <thead className="text-left text-lg overflow-scroll w-screen">
@@ -56,13 +63,13 @@ const FeaturedDashboard = () => {
                 <td className="w-3/12">{data.title}</td>
                 <td className="w-6/12">{data.introduction}</td>
                 <td className="">{data.author}</td>
-                <td><button className="w-16 rounded-md border bg-slate-50 text-primary h-10">Add</button></td>
-               <td><button className="w-16 rounded-md border bg-primary text-white h-10">Delete</button></td>
+               <td><button onClick={handleDel} className="w-16 rounded-md border bg-primary text-white h-10">Delete</button></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      }
     </>
   );
 };

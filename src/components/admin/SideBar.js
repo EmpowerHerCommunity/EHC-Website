@@ -9,6 +9,7 @@ import {
 
 const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
   const router = useRouter();
+
   return (
     <div ref={ref} className="fixed w-56 h-full bg-primary shadow-sm">
       <div className="flex justify-center mt-10 mb-14">
@@ -25,6 +26,14 @@ const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
             </div>
             <div>
               <p className="text-lg">Events</p>
+            </div>
+          </figure>
+          <figure onClick={()=>handleDisplay("create")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdOutlineVolunteerActivism />
+            </div>
+            <div>
+              <p className="text-lg">Create Event</p>
             </div>
           </figure>
 
@@ -45,6 +54,14 @@ const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
               <p className="text-lg">Featured Blogs</p>
             </div>
           </figure>
+          <figure onClick={()=>handleDisplay("publish")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <div className=" h-5 w-6 ">
+              <MdOutlineArticle />
+            </div>
+            <div>
+              <p className="text-lg">Publish</p>
+            </div>
+          </figure>
 
           <figure className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
@@ -59,7 +76,5 @@ const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
     </div>
   );
 });
-
-SideBar.displayName = "SideBar";
 
 export default SideBar;
