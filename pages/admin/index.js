@@ -1,5 +1,7 @@
 import Mainbod from "../../src/components/admin/Mainbod";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+
 function Admin() {
   const URL =
     "https://empowerher.pythonanywhere.com/api/v1/indexapi/adminapi/profile";
@@ -28,7 +30,7 @@ function Admin() {
         <Mainbod />
       </section>
       <section className="xl:hidden h-screen text-2xl px-4 flex justify-center items-center">
-        <h1>This page is unavailable for your screen size</h1>
+      <h1>Sorry, this page is not available on your current screen size. Please go back to the <Link href='/'><a  className="underline text-primary">home page</a></Link> to continue browsing.</h1>
       </section>
     </>
   );
