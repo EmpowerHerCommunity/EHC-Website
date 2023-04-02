@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 import Layout from "./Layout";
 
 function Mainbod() {
@@ -16,7 +16,7 @@ function Mainbod() {
       </div>
       <div className="  shadow-sm w-10/12">
         <div className="py-10 px-4">
-          <h1 className="text-4xl">Dashboard</h1>
+          <h1 className="text-4xl">Dashboard: {display === "events" ? "Events" : display === "featured" ? "Featured Blogs" : display === "posts" ? "Blog Posts" : display === "create" ? "Create Event": display === "publish" ? "Publish New Blog" : ""} </h1>
         </div>
         <div className="px-6">
           <Dashboard display={display} handleDisplay={handleDisplay} />
