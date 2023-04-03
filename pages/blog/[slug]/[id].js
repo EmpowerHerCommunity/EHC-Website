@@ -1,6 +1,7 @@
 import md from "markdown-it";
 import NavBar from "../../../src/components/NavBar";
 import Footer from "../../../src/components/Footer";
+import Head from "next/head";
 
 const Slug = ({ blog }) => {
 
@@ -18,10 +19,15 @@ const Slug = ({ blog }) => {
 
   return (
     <section className="">
+       <Head>
+        <title>{blog.title}</title>
+        <meta name="description" content={blog.introduction}/>
+        <meta property="blog:image" content={blog.cover_photo}/>
+      </Head>
       <NavBar />
-      <div className="prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
+      <div className="prose flex justify-between lg:prose-p:prose-xl prose-p:prose-2xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
         <article className="py-6">
-          <section className=" text-slug flex items-center justify-between lg:w-72 w-96 ml-20  lg:text-xl text-2xl">
+          <section className=" text-slug flex items-center justify-between lg:w-72 w-96 ml-0 lg:ml-20  lg:text-xl text-2xl">
             <div className=" font-medium mb-1">
               {new Date(blog.created).toLocaleDateString("en-US", options)}
             </div>
@@ -34,7 +40,7 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <figcaption className="ml-20">
+          <figcaption className="ml-0 lg:ml-20">
             <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">
               {blog.title}
             </h1>
@@ -43,7 +49,7 @@ const Slug = ({ blog }) => {
             </p>
           </figcaption>
 
-          <section className="flex items-center -mt-10 py-0 ml-20">
+          <section className="flex items-center -mt-10 py-0 lg:ml-20 ml-0">
             <figure className="h-16 w-16 rounded-full">
               <img
                 src={blog.author_image}
@@ -58,36 +64,14 @@ const Slug = ({ blog }) => {
             <img src={blog.cover_photo} className="w-full h-auto" />
           </figure>
 
-          <section className="flex justify-between  ml-20">
-            <div className="flex w-10/12">
-              <div
+          <section className="flex justify-between lg:ml-20 ml-0">
+            <div className="flex w-12/12">
+              <div className=""
                 dangerouslySetInnerHTML={{
                   __html: md().render(blog.description),
                 }}
               />
             </div>
-            <figure className="flex flex-col h-64 justify-between w-1/12 mt-20 cursor-pointer">
-              <img
-                src="/blog/facebook.svg"
-                alt="facebook"
-                className="h-11 w-11 border border-black p-2"
-              />
-              <img
-                src="/blog/linkedin.svg"
-                alt="linkedIn"
-                className="h-11 w-11 border border-black p-2"
-              />
-              <img
-                src="/blog/twitter.svg"
-                alt="twitter"
-                className="h-11 w-11 border border-black p-2"
-              />
-              <img
-                src="/blog/copy.svg"
-                alt="copy"
-                className="h-11 w-11 border border-black p-2"
-              />
-            </figure>
           </section>
         </article>
       </div>
