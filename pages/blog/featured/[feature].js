@@ -25,7 +25,7 @@ const Slug = ({ blogs }) => {
           <Head>
             <title>{blog.title}</title>
             <meta name="description" content={blog.introduction} />
-            <meta property="blog:image" content={blog.cover_photo} />
+            <meta property="og:image" content={blog.cover_photo} />
           </Head>
           <div className="prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-10">
             <article key={blog.slug} className="py-6">
