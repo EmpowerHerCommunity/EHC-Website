@@ -12,11 +12,11 @@ const UpcomingEventsCard = ({ events }) => {
   }, []);
 
   return (
-    <div className="shadow h-full" data-aos="zoom-out">
-      <div className={" flex flex-col justify-between items-start gap-0"}>
-         <div className="w-full py-3 px-5">
+    <div className="h-full flex" data-aos="zoom-out" >
+      <div className="">
+         <div className="grid lg:grid-cols-2 grid-col-1 place-items-center gap-20 py-3 px-5">
           {events.results && events.results.map((event) => (
-            <div className="" key={event.id}>
+            <div key={event.id} className="px-2 py-2 shadow-sm rounded-md">
               <div className="w-full">
                 <img
                   src={event.image}

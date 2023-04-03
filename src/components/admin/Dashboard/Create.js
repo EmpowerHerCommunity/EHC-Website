@@ -6,7 +6,7 @@ const Create = () => {
   const [image, setImage] = useState(null);
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,6 +41,16 @@ const Create = () => {
       })
   };
 
+    const upload = ({ target: { files = [] } }) => {
+      if (!files[0].type.match('image.*')) {
+         return;
+      }
+      if (!files.length) {
+         return;
+      }
+      setImage(files[0]);
+   }
+   
   return (
     <form className="flex flex-col w-full mt-7" onSubmit={handleSubmit}>
       <div className="w-12/12 flex justify-between h-16">
@@ -51,9 +61,8 @@ const Create = () => {
           <input
             type="file"
             required
-            value={image}
             onChange={(e) => {
-              setImage(e.target.value);
+              upload(e)
             }}
           ></input>
         </div>

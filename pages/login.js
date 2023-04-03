@@ -20,8 +20,7 @@ const login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-CSRFToken":
-            "Zt9no1wuUPTBoy8BukNZYLQcD9NZOYj2zW9loe9fGbdSIzuyxWvbKN2e4RdHSz69",
+          "X-CSRFToken":"Zt9no1wuUPTBoy8BukNZYLQcD9NZOYj2zW9loe9fGbdSIzuyxWvbKN2e4RdHSz69",
         },
         body: JSON.stringify({
           email,
@@ -32,6 +31,8 @@ const login = () => {
       if (response.ok) {
         // Login successful, store user data in session storage
         const data = await response.json();
+        console.log(data.access)
+        setToken(data.access)
         // sessionStorage.setItem('user', JSON.stringify(data));
         toast.warning("Successfully Logged in", {
           position: "top-right",
@@ -42,13 +43,10 @@ const login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-        });
-        const tk = data.token;
-        console.log(tk);
-        setToken(tk);
+        })     
         // Redirect to user profile page
         setTimeout(() => {
-          router.push("/admin");
+          // router.push("/admin");
         }, 1500);
       } else {
         // Login failed, display error message
