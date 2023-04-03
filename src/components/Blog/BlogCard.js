@@ -147,7 +147,7 @@ const BlogCard = ({ blogs }) => {
                     <div>
                       <img
                         src={blog.cover_photo}
-                        className="h-48 rounded-lg w-full object-cover object-center mb-6"
+                        className="h-48 rounded-xl w-full object-cover object-center mb-6"
                         alt="content"
                       />
 
