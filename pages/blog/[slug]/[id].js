@@ -22,7 +22,7 @@ const Slug = ({ blog }) => {
        <Head>
         <title>{blog.title}</title>
         <meta name="description" content={blog.introduction}/>
-        <meta property="blog:image" content={blog.cover_photo}/>
+        <meta property="og:image" content={blog.cover_photo} />
       </Head>
       <NavBar />
       <div className="prose flex justify-between lg:prose-p:prose-xl prose-p:prose-2xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
