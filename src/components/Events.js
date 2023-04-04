@@ -21,7 +21,7 @@ const Events = () => {
             <h2 className='font-normal md:text-5xl text-4xl text-center font-bold'>Events</h2>
             <hr className="border-0 h-1 w-4/5 absolute bottom-0 left-0 bg-yellow" />
           </div>
-          <div className='flex lg:flex-row flex-col  justify-between w-12/12 '>
+          <div className='lg:flex xl:flex-row grid md:grid-cols-2 grid-col-1  justify-between w-12/12 '>
             <div data-aos='fade-up' className='mb-8 text-center md:text-left lg:w-4/12 w-11/12'>
               <div data-aos='fade-down'>
                 <Image src='/web.jpg' width='300px' height='300px'  />
