@@ -3,7 +3,6 @@ import AOS from "aos";
 import UpcomingEventsCard from "./UpcomingEventsCard";
 
 const UpcomingEvents = () => {
-
   const [fetchedEvents, setFetchedEvents] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/";
@@ -35,9 +34,7 @@ const UpcomingEvents = () => {
           Upcoming events
         </h2>
         <div className="">
-              <UpcomingEventsCard
-                events={fetchedEvents}
-              />
+          <UpcomingEventsCard events={fetchedEvents} />
         </div>
       </div>
     </section>

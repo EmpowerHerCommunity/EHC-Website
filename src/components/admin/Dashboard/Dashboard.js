@@ -17,7 +17,7 @@ const Dashboard = ({ display }) => {
         <Create />
       ) : display === "publish" ? (
         <Publish />
-      ) : null}
+      ) : <EventDashboard/>}
     </>
   );
 };

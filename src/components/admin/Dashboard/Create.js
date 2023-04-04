@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const Create = () => {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null)
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
-  
+  const router = useRouter()
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
@@ -15,6 +18,7 @@ const Create = () => {
     data.append("name", event);
     data.append("description", description);
     data.append("date", date);
+    
     try {
       const response = await fetch(
         "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/",
@@ -40,8 +44,11 @@ const Create = () => {
         });
         const responseData = await response.json();
         console.log(responseData);
+        setTimeout(()=>{
+          router.push("/admin")
+        }, 1500)
       } else {
-        toast.warning("Kindly try again", {
+        toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -53,7 +60,7 @@ const Create = () => {
         });
       }
     } catch (error) {
-      toast.warning("A network error occurred", {
+      toast.error("A network error occurred", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const Publish = () => {
   const [mode, setMode] = useState("normal");
@@ -11,6 +12,7 @@ const Publish = () => {
   const [description, setDescription] = useState("");
   const [authorImage, setAuthorImage] = useState("");
   const [tags, setTags] = useState("");
+  const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,8 +54,11 @@ const Publish = () => {
           });
           const responseData = await response.json();
           console.log(responseData);
+          setTimeout(()=>{
+            router.push("/admin")
+          }, 1500)
         } else {
-          toast.warning("Kindly try again", {
+          toast.error("Kindly try again", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -65,7 +70,7 @@ const Publish = () => {
           });
         }
       } catch (error) {
-        toast.warning("A network error occurred", {
+        toast.error("A network error occurred", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
