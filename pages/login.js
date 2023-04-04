@@ -32,7 +32,6 @@ const login = () => {
         // Login successful, store user data in session storage
         const data = await response.json();
         setToken(data.data.access)
-        // sessionStorage.setItem('user', JSON.stringify(data));
         toast.warning("Successfully Logged in", {
           position: "top-right",
           autoClose: 5000,
