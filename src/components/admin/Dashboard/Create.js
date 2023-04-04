@@ -75,16 +75,6 @@ const Create = () => {
     }
     setImage(files[0]);
   };
-
-    const upload = ({ target: { files = [] } }) => {
-      if (!files[0].type.match('image.*')) {
-         return;
-      }
-      if (!files.length) {
-         return;
-      }
-      setImage(files[0]);
-   }
    
   return (
     <form
