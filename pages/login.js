@@ -46,7 +46,7 @@ const login = () => {
         // Redirect to user profile page
 
         setTimeout(() => {
-          // router.push("/admin");
+          router.push("/admin");
         }, 1500);
       } else {
         // Login failed, display error message

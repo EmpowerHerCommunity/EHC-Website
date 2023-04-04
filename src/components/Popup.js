@@ -11,7 +11,7 @@ import LineNineB from '../../public/popup/Line 9 (1).svg'
 function PopUp({ closePopup }) {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 p-2 flex items-center justify-center z-50 bg-black/25">
-      <div className="grid grid-col-1 py-5 lg:px-4 px-4 xl:w-4/12 w-full bg-white rounded-md">
+      <div className="grid grid-col-1 py-5 lg:px-4 px-4 xl:w-4/12 w-9/12 md:w-6/12 bg-white rounded-md">
         {/* <section className="flex justify-center mx-10 items-start mt-8 relative">
           <figure className="md:block hidden absolute top-0 left-0">
             <Image src={PopUpBlock} alt="block" width={100} height={100} objectFit="cover" className="lg:block hidden" />
@@ -69,7 +69,7 @@ function PopUp({ closePopup }) {
             </p>
           </div>
           <button className="pt-7 pb-4">
-          <a href="https://paystack.com/pay/empowerhercommunity" target="_blank" rel="noopener noreferrer" className="w-96 px-5 py-4 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer">
+          <a href="https://paystack.com/pay/empowerhercommunity" target="_blank" rel="noopener noreferrer" className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer">
             Donate Now
           </a>
           </button>
