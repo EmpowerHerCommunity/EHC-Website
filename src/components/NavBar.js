@@ -22,7 +22,7 @@ const NavBar = () => {
         <ul
           className={`${
             active ? "block" : "hidden"
-          } lg:inline-flex lg:flex-row lg:w-5/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
+          } lg:inline-flex lg:flex-row xl:w-5/12 md:w-6/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
         >
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/">Home</Link>
@@ -43,7 +43,7 @@ const NavBar = () => {
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
-        <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 lg:w-3/12 lg:justify-center items-center">
+        <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 xl:w-3/12 lg:w-2/12 lg:justify-center items-center">
           <Link href="/">
             <a className="border-none">
               <Image src="/logo.png" width="91px" height="90px" />
