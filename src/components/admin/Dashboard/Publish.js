@@ -12,34 +12,60 @@ const Publish = () => {
   const [authorImage, setAuthorImage] = useState("");
   const [tags, setTags] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      mode: mode,
-      cover_photo: cover,
-      author: author,
-      title: title,
-      introduction: introduction,
-      description: description,
-      authorImage: authorImage,
-      tags: tags,
-    };
-    const PostData = async () => {
+    const data = new FormData();
+    data.append("mode", mode);
+    data.append("cover_photo", cover);
+    data.append("author", author);
+    data.append("title", title);
+    data.append("introduction", introduction);
+    data.append("description", description);
+    data.append("author_image", authorImage);
+     // Append tags to the FormData object
+  for (let i = 0; i < tags.length; i++) {
+    data.append("tags[]", tags[i]);
+  }
+    
       try {
         const response = await fetch(
           "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/",
           {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
-              accept: "application/json",
               "X-CSRFToken":
-                "LREWStnMGUAvgu1nm3wDPBfcltDRcMRnlkEUSG0xsgUMAvnkpFePBDreMb3zgnEu",
+                "tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS",
             },
-            body: JSON.stringify(data),
+            body: data,
           }
         );
-        toast.warning("Blog successfully added", {
+        if (response.ok) {
+          toast.warning("Event successfully added", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          const responseData = await response.json();
+          console.log(responseData);
+        } else {
+          toast.warning("Kindly try again", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      } catch (error) {
+        toast.warning("A network error occurred", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -49,12 +75,29 @@ const Publish = () => {
           progress: undefined,
           theme: "light",
         });
-      } catch (error) {
-        alert(error.message);
       }
-    };
-    PostData();
   };
+
+  const upload = ({ target: { files = [] } }) => {
+    if (!files[0]) {
+      return;
+    }
+    if (!files[0].type.match("image.*")) {
+      return;
+    }
+    setCover(files[0]);
+  };
+  
+  const uploadAuthor = ({ target: { files = [] } }) => {
+    if (!files[0]) {
+      return;
+    }
+    if (!files[0].type.match("image.*")) {
+      return;
+    }
+    setAuthorImage(files[0]);
+  };
+
   return (
     <form className="flex flex-col w-full mt-7" onSubmit={handleSubmit}>
       <div className="w-12/12 flex justify-between h-16">
@@ -79,9 +122,8 @@ const Publish = () => {
         <div className="w-9/12">
           <input
             type="file"
-            value={cover}
             onChange={(e) => {
-              setCover(e.target.value);
+              upload(e);
             }}
           ></input>
         </div>
@@ -153,9 +195,8 @@ const Publish = () => {
         <div className="w-9/12">
           <input
             type="file"
-            value={authorImage}
             onChange={(e) => {
-              setAuthorImage(e.target.value);
+              uploadAuthor(e);
             }}
           ></input>
         </div>

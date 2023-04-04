@@ -31,9 +31,7 @@ const login = () => {
       if (response.ok) {
         // Login successful, store user data in session storage
         const data = await response.json();
-        console.log(data.access)
-        setToken(data.access)
-        // sessionStorage.setItem('user', JSON.stringify(data));
+        setToken(data.data.access)
         toast.warning("Successfully Logged in", {
           position: "top-right",
           autoClose: 5000,
@@ -46,7 +44,7 @@ const login = () => {
         })     
         // Redirect to user profile page
         setTimeout(() => {
-          // router.push("/admin");
+          router.push("/admin");
         }, 1500);
       } else {
         // Login failed, display error message
@@ -77,7 +75,6 @@ const login = () => {
         theme: "light",
       });
     }
-    console.log(token);
   }
 
   function handleSubmit(event) {

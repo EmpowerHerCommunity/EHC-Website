@@ -4,7 +4,7 @@ import FeaturedDashboard from "./FeaturedDashboard";
 import Create from "./Create";
 import Publish from "./Publish";
 
-const Dashboard = ({ display, handleDisplay }) => {
+const Dashboard = ({ display }) => {
   return (
     <>
       {display === "events" ? (
