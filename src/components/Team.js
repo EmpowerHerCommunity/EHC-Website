@@ -86,7 +86,7 @@ const Team = () => {
               Tracy Obakhena
             </p>
             <p className="text-[#737373] text-lg">
-              Programs Manager
+             Lead, Programs Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a href="https://mobile.twitter.com/whoisourlight" className="" target="_blank" rel="noopener noreferrer">

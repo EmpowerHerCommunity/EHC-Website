@@ -46,8 +46,8 @@ const HeroAbout = () => {
               className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
-              Since its founding in May 2021, our community has trained over
-              3,000 women and mentored more than 1,000 others. We have also
+              Since its founding in May 2021, our community has kickstarted the career of over
+              3,000 women and mentored over 1,000 others. We have also
               connected many members to employment opportunities through
               internships and referrals, with some landing positions at top
               companies.

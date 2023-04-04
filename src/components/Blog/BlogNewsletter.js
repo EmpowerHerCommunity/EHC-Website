@@ -11,7 +11,7 @@ const BlogNewsletter = () => {
 
   return (
     <div className="flex justify-center items-center my-12">
-      <div className="m-auto p-8 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg md:w-8/12">
+      <div className="m-auto p-7 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg w-8/12">
         <p className="text-center text-3xl lg:text-4xl font-medium" data-aos="fade-left">Join our Newsletter</p>
         <h3 className="text-center mt-2 p-3 text-4xl font-semibold" data-aos="fade-right">
           Get Community Updates and Opportunities.
@@ -29,7 +29,7 @@ const BlogNewsletter = () => {
                 className="hover:scale-105 animate-bounce cursor-pointer flex items-center lg:text-2xl text-3xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white  bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-16 h-16"
               >
                 <Link href="https://empowerhercommunity.substack.com/embed">
-                  <a> Subscribe</a>
+                  <a target="_blank"> Subscribe</a>
                 </Link>
               </button>
             </div>
