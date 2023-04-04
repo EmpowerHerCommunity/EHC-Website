@@ -11,9 +11,9 @@ const BlogNewsletter = () => {
 
   return (
     <div className="flex justify-center items-center my-12">
-      <div className="m-auto p-7 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg w-8/12">
-        <p className="text-center text-3xl lg:text-4xl font-medium" data-aos="fade-left">Join our Newsletter</p>
-        <h3 className="text-center mt-2 p-3 text-4xl font-semibold" data-aos="fade-right">
+      <div className=" m-auto p-7 bg-white lg:border-2 border-gray-900 rounded-lg lg:shadow-lg lg:w-8/12 w-11/12">
+        <p className=" lg:block hidden text-center text-3xl lg:text-4xl font-medium" data-aos="fade-left">Join our Newsletter</p>
+        <h3 className="text-center mt-2 p-3 lg:text-4xl text-3xl font-semibold" data-aos="fade-right">
           Get Community Updates and Opportunities.
         </h3>
         <div className="flex items-center justify-center pt-5">
