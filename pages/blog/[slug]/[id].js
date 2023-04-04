@@ -25,9 +25,9 @@ const Slug = ({ blog }) => {
         <meta property="og:image" content={blog.cover_photo} />
       </Head>
       <NavBar />
-      <div className="prose flex justify-between lg:prose-p:prose-xl prose-p:prose-2xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-6 lg:pt-14">
+      <div className="prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-5 lg:pt-12">
         <article className="py-6">
-          <section className=" text-slug flex items-center justify-between lg:w-72 w-96 ml-0 lg:ml-20  lg:text-xl text-2xl">
+          <section className=" text-slug flex items-center justify-between lg:w-80 w-80 ml-0 lg:ml-20  lg:text-xl text-xl">
             <div className=" font-medium mb-1">
               {new Date(blog.created).toLocaleDateString("en-US", options)}
             </div>
@@ -40,11 +40,11 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <figcaption className="ml-0 lg:ml-20">
-            <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">
+          <figcaption className="ml-0 lg:ml-20 mt-2">
+            <h1 className="lg:text-5xl text-4xl lg:w-12/12 font-semibold">
               {blog.title}
             </h1>
-            <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">
+            <p className="md:text-xl text-black -mt-3 text-xl lg:text-lg lg:w-9/12">
               {blog.introduction}
             </p>
           </figcaption>
@@ -57,11 +57,11 @@ const Slug = ({ blog }) => {
                 className="h-full w-full object-contain rounded-full"
               />
             </figure>
-            <figcaption className="text-2xl ml-6">{blog.author}</figcaption>
+            <figcaption className="text-2xl text-black font-medium ml-6">{blog.author}</figcaption>
           </section>
 
           <figure className="-mt-1">
-            <img src={blog.cover_photo} className="w-full h-auto" />
+            <img src={blog.cover_photo} className="w-full h-96" />
           </figure>
 
           <section className="flex justify-between lg:ml-20 ml-0">

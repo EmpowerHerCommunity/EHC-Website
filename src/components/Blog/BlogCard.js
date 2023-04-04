@@ -138,7 +138,7 @@ const BlogCard = ({ blogs }) => {
       </section>
 
       <section className="cursor-pointer pt-3">
-        <section className="container px-4 mx-auto grid lg:grid-cols-3 grid-col-1 w-12/12">
+        <section className="container px-4 mx-auto grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 w-12/12">
           {filtered &&
             filtered.map((blog) => (
               <article className="w-12/12 p-4 mb-4" key={blog.id}>
