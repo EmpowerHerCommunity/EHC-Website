@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { sortByDate } from "../../../utils";
-import searchImg from "../../../public/blog/searchicon.png";
-import Image from "next/image";
-import { useState } from "react";
-import Featured from "./Featured";
+import { useState, useEffect } from "react";
+import AOS from "aos";
 
 const BlogCard = ({ blogs, next, previous }) => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+    AOS.refresh();
+  }, []);
+
   const sortedBlogs = blogs?.sort(sortByDate);
   const [filteredBlog, setFilteredBlog] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -61,7 +65,7 @@ const BlogCard = ({ blogs, next, previous }) => {
             <div className="lg:block md:hidden hidden">
               <button
                 onClick={handleClick}
-                className="w-28 h-10 rounded-full border border-black font-semibold bg-blogBtn"
+                className="w-28 h-10 hover:bg-light hover:text-primary rounded-full border font-semibold bg-blogBtn"
               >
                 ALL TOPICS
               </button>
