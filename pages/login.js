@@ -44,7 +44,6 @@ const login = () => {
           theme: "light",
         })     
         // Redirect to user profile page
-
         setTimeout(() => {
           router.push("/admin");
         }, 1500);
