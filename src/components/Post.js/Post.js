@@ -6,7 +6,7 @@ import Featured from "../Blog/Featured";
 
 const post = ({ blogs, isFetching }) => {
   return (
-    <section className="container mx-auto">
+    <section>
       <NavBar />
       <Featured/>
       <BlogCard blogs = {blogs} isFetching={isFetching} />
