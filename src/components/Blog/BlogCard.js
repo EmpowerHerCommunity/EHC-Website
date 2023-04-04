@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Featured from "./Featured";
 
-const BlogCard = ({ blogs }) => {
+const BlogCard = ({ blogs, next, previous }) => {
   const sortedBlogs = blogs?.sort(sortByDate);
   const [filteredBlog, setFilteredBlog] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -86,7 +86,7 @@ const BlogCard = ({ blogs }) => {
                   }`}
                   onClick={() => handleCategoryClick("Tech")}
                 >
-                   lifestyle
+                  lifestyle
                 </li>
                 <li
                   className={`hover:border-b border-primary hover:scale-105 ${
@@ -204,6 +204,23 @@ const BlogCard = ({ blogs }) => {
                 </div>
               </article>
             ))}
+        </section>
+        <section className="flex justify-end mt-10 px-10">
+
+          <div className = "w-80 flex justify-between">
+
+        <button
+          className="hover:scale-110 bg-light text-primary w-36 h-12 rounded-md text-xl font-medium"
+        >
+          Previous
+        </button>
+
+        <button
+          className="hover:scale-110 bg-primary text-white w-36 h-12 rounded-md text-xl font-medium"
+        >
+          Next
+        </button>
+        </div>
         </section>
       </section>
     </>

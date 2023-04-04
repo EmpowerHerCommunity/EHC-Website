@@ -49,8 +49,7 @@ const login = () => {
       } else {
         // Login failed, display error message
         setError(error);
-        console.log(error);
-        toast.warning("Incorrect Email or Password", {
+        toast.error("Incorrect Email or Password", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -63,8 +62,7 @@ const login = () => {
       }
     } catch (error) {
       // Network error occurred, display error message
-      console.log(error);
-      toast.warning("Network error occurred", {
+      toast.error("Network error occurred", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

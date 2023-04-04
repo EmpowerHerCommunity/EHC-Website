@@ -21,10 +21,11 @@ const UpcomingEventsCard = ({ events }) => {
                 <img
                   src={event.image}
                   alt={event.name}
+                  className="w-96"
                 />
               </div>
               <h2 className="md:text-2xl text-xl font-bold pt-4">{event.name}</h2>
-              <p className="text-2xl lg:text-xl text-black text-opacity-60 leading-tight my-4">
+              <p className="text-2xl lg:text-xl text-black text-opacity-60 leading-tight my-4 w-96">
                 {event.description}
               </p>
               <div className="flex items-center gap-2 my-3 text-xl">

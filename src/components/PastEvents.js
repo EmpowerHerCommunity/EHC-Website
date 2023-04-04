@@ -23,6 +23,18 @@ const PastEvents = () => {
     },
 
     {
+      title: "Mentorship Academy",
+      description: ["On November 15th, 2021, the Empower Her Community unveiled their Mentorship Academy, designed to connect women who are just starting out in their careers with seasoned experts in their respective fields. The program offered one-on-one coaching and hands-on engagement to help participants build valuable skills and advance their careers."],
+      image: "/mentorship.jpg",
+      gallery: [
+        "/mentor3.jpg",
+        "/mentor.jpg",
+        "/mentor.jpg",
+        "/mentorship.jpg",
+      ],
+    },
+
+    {
       title: "Bootcamp 2.0",
       description: [
         "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Cloud Engineering, Data Science, Digital Marketing, Product Design, and Blockchain. The program was virtual and it provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
@@ -37,6 +49,7 @@ const PastEvents = () => {
         "/nit14.jpg",
       ],
     },
+   
     {
       title: "Non Technical Bootcamp",
       description: [
@@ -64,6 +77,7 @@ const PastEvents = () => {
         "/webinar4.jpg",
       ],
     },
+   
   ];
 
   useEffect(() => {
