@@ -31,10 +31,10 @@ const UpcomingEvents = () => {
   return (
     <section className="" id="upcoming">
       <div className="container xl:max-w-screen-xl mx-auto px-4 lg:py-24 py-20">
-        <h2 className="md:text-4xl text-3xl font-bold max-w-max">
+        <h2 className=" mb-10 md:text-4xl text-3xl font-bold max-w-max">
           Upcoming events
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
+        <div className="">
               <UpcomingEventsCard
                 events={fetchedEvents}
               />

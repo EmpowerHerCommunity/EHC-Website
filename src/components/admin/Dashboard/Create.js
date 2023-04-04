@@ -8,24 +8,26 @@ const Create = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      image: image,
-      name: event,
-      description: description,
-      date: date,
-    };
-    fetch("https://empowerher.pythonanywhere.com/api/v1/indexapi/events/", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': 'tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS'
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
+    const data = new FormData();
+    data.append("image", image);
+    data.append("name", event);
+    data.append("description", description);
+    data.append("date", date);
+    try {
+      const response = await fetch(
+        "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/",
+        {
+          method: "POST",
+          headers: {
+            "X-CSRFToken":
+              "tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS",
+          },
+          body: data,
+        }
+      );
+      if (response.ok) {
         toast.warning("Event successfully added", {
           position: "top-right",
           autoClose: 5000,
@@ -36,13 +38,50 @@ const Create = () => {
           progress: undefined,
           theme: "light",
         });
-      }).catch(error => {
-        alert('Error creating new event');
-      })
+        const responseData = await response.json();
+        console.log(responseData);
+      } else {
+        toast.warning("Kindly try again", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    } catch (error) {
+      toast.warning("A network error occurred", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
+  const upload = ({ target: { files = [] } }) => {
+    if (!files[0]) {
+      return;
+    }
+    if (!files[0].type.match("image.*")) {
+      return;
+    }
+    setImage(files[0]);
   };
 
   return (
-    <form className="flex flex-col w-full mt-7" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col w-full mt-7"
+      onSubmit={handleSubmit}
+      encType="multipart/form-data"
+    >
       <div className="w-12/12 flex justify-between h-16">
         <div className="w-3/12">
           <label className="text-xl">Image</label>
@@ -51,9 +90,8 @@ const Create = () => {
           <input
             type="file"
             required
-            value={image}
             onChange={(e) => {
-              setImage(e.target.value);
+              upload(e);
             }}
           ></input>
         </div>
