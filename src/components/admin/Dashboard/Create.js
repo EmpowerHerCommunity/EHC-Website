@@ -6,8 +6,8 @@ const Create = () => {
   const [image, setImage] = useState(null);
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-
+  const [date, setDate] = useState(null);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
