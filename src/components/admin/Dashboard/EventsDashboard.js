@@ -5,7 +5,6 @@ const EventDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
-  const [edit, setEdit] = useState(false);
   const [del, setDel] = useState(false);
 
   const handleDel = () => {
@@ -22,7 +21,7 @@ const EventDashboard = () => {
         setFetchedEvents(data.results);
         setIsFetching(false);
       } catch (error) {
-        console.log("Failed to fetch events data: ", error);
+        setError("Failed to fetch events data");
       }
     }
     if (isFetching) {
@@ -32,6 +31,7 @@ const EventDashboard = () => {
 
   return (
     <>
+      {error && <p className="text-lg">{error}</p>}
       {del ? (
         <Delete handleDel={handleDel} />
       ) : (

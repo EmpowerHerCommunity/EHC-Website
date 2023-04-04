@@ -18,15 +18,13 @@ const BlogNewsletter = () => {
             <div className="flex items-center justify-center pt-4">
               <button
                 type="submit"
-                className="cursor-pointer flex items-center lg:text-3xl text-3xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white hover:scale-105 bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-14 h-16"
+                className=" hover:scale-105 cursor-pointer flex items-center lg:text-2xl text-3xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white  bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-16 h-16"
               >
                 <Link href="https://empowerhercommunity.substack.com/embed">
                   <a> Subscribe</a>
                 </Link>
-                {" "}
               </button>
             </div>
-          {/* </div> */}
         </div>
       </div>
     </div>
