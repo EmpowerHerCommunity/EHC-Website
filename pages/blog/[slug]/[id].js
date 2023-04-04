@@ -18,7 +18,7 @@ const Slug = ({ blog }) => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <section className="">
+    <section className="mx-auto container">
        <Head>
         <title>{blog.title}</title>
         <meta name="description" content={blog.introduction}/>

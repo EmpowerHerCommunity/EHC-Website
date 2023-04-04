@@ -32,24 +32,24 @@ const NewsLetter = () => {
               className="flex gap-2 mt-2"
               data-aos="fade-left"
             >
-              <input
+              {/* <input
                 type="email"
                 name=""
                 className="placeholder:text-2xl w-2/3 flex-auto py-3 px-4"
                 placeholder="Enter email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-              />
+              /> */}
               <button
                 type="submit"
                 className={
                   (isLoading ? "cursor-progress " : "") +
-                  "bg-primary text-white w-1/3 flex-auto text-2xl"
+                  "bg-primary text-white w-1/3 h-14 rounded-md flex-auto text-2xl"
                 }
                 disabled={isLoading}
               >
                 <Link href="https://empowerhercommunity.substack.com/embed">
-                  <a>Subscribe</a>
+                  <a target="_blank">Subscribe</a>
                 </Link>
               </button>
             </form>

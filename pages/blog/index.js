@@ -4,7 +4,7 @@ import Head from "next/head";
 export default function Blog({ blogs }) {
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden container mx-auto ">
        <Head>
         <title>Empower Her Community Website</title>
         <meta

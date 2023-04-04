@@ -58,10 +58,10 @@ const BlogCard = ({ blogs, next, previous }) => {
   }
 
   return (
-    <>
-      <section className="container mx-auto lg:mt-4 mt-7 cursor-pointer">
+    <div className="container mx-auto">
+      <section className="lg:mt-4 mt-7 cursor-pointer">
         <header className="">
-          <nav className="lg:flex md:flex md:justify-between md:items-center lg:justify-between lg:items-center items-center text-sm font-semibold mx-8">
+          <nav className="lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold mx-8">
             <div className="lg:block md:hidden hidden">
               <button
                 onClick={handleClick}
@@ -209,7 +209,7 @@ const BlogCard = ({ blogs, next, previous }) => {
               </article>
             ))}
         </section>
-        <section className="flex justify-end mt-10 px-10">
+        <section className=" container mx-auto flex justify-end mt-10 px-10">
 
           <div className = "w-80 flex justify-between">
 
@@ -227,7 +227,7 @@ const BlogCard = ({ blogs, next, previous }) => {
         </div>
         </section>
       </section>
-    </>
+    </div>
   );
 };
 

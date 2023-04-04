@@ -6,13 +6,13 @@ import Featured from "../Blog/Featured";
 
 const post = ({ blogs, isFetching }) => {
   return (
-    <>
+    <section className="container mx-auto">
       <NavBar />
       <Featured/>
       <BlogCard blogs = {blogs} isFetching={isFetching} />
       <BlogNewsletter />
       <Footer />
-    </>
+    </section>
   );
 };
 

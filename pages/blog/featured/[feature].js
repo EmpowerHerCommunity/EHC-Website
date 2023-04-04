@@ -18,7 +18,7 @@ const Slug = ({ blogs }) => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <section className=" ">
+    <section className="mx-auto container">
       <NavBar />
       {blogs.results.map((blog) => (
         <>
