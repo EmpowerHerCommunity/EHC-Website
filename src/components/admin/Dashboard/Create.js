@@ -4,12 +4,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 const Create = () => {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("")
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState(null);
-
+  const [date, setDate] = useState("");
   const router = useRouter()
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
@@ -81,7 +81,7 @@ const Create = () => {
     }
     setImage(files[0]);
   };
-
+   
   return (
     <form
       className="flex flex-col w-full mt-7"
