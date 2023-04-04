@@ -23,27 +23,28 @@ const NewsLetter = () => {
             Join our NewsLetter
           </h2>
           <div className="w-full lg:w-5/12 lg:flex-auto">
-            <p className="text-2xl md:text-2xl" data-aos="fade-right">
+            <p className="text-2xl md:text-xl" data-aos="fade-right">
               Subscribe to our news letter to receive updates
             </p>
             {email}
             <form
-              className="flex mt-2"
+              onSubmit={(e) => subscribe(e)}
+              className="flex gap-2 mt-2"
               data-aos="fade-left"
             >
-              {/* <input
+              <input
                 type="email"
                 name=""
                 className="placeholder:text-2xl w-2/3 flex-auto py-3 px-4"
                 placeholder="Enter email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-              /> */}
+              />
               <button
                 type="submit"
                 className={
                   (isLoading ? "cursor-progress " : "") +
-                  "bg-primary text-white w-1/3 flex-auto text-2xl h-12 rounded-md"
+                  "bg-primary text-white w-1/3 flex-auto text-2xl"
                 }
                 disabled={isLoading}
               >

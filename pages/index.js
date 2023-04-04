@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(()=>{
       setPopup(true);
-    }, 15000)
+    }, 12000)
   }, []);
 
   const closePopup = () => {

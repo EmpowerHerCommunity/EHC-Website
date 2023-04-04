@@ -31,8 +31,7 @@ const login = () => {
       if (response.ok) {
         // Login successful, store user data in session storage
         const data = await response.json();
-        console.log(data.access)
-        setToken(data.access)
+        setToken(data.data.access)
         // sessionStorage.setItem('user', JSON.stringify(data));
         toast.warning("Successfully Logged in", {
           position: "top-right",
@@ -45,6 +44,7 @@ const login = () => {
           theme: "light",
         })     
         // Redirect to user profile page
+
         setTimeout(() => {
           // router.push("/admin");
         }, 1500);
@@ -77,7 +77,6 @@ const login = () => {
         theme: "light",
       });
     }
-    console.log(token);
   }
 
   function handleSubmit(event) {
