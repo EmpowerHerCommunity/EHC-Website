@@ -8,8 +8,8 @@ const Create = () => {
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
-  const router = useRouter()
 
+  const router = useRouter()
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
@@ -17,6 +17,7 @@ const Create = () => {
     data.append("name", event);
     data.append("description", description);
     data.append("date", date);
+    
     try {
       const response = await fetch(
         "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/",
