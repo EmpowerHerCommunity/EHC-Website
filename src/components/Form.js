@@ -163,7 +163,7 @@ const Form = () => {
         </div>
         <div className="input-group w-full py-2" data-aos="zoom-in">
           <button
-            className="bg-primary text-white text-4xl w-full p-3"
+            className="bg-primary text-white text-4xl w-full p-3 rounded-md"
             type="submit"
           >
             Submit 🙂

@@ -35,7 +35,7 @@ const Description = () => {
               Empower Her Community is a tech-based community focused on training and promoting women in the field of information technology for free. We aim to spread awareness for opportunities in information technology and incorporate as many women as possible.
               </p>
               <div className='leading-6 mt-2 mb-12'>
-                <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 hover:scale-105 rounded-sm'>
+                <button className='rounded-md bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 hover:scale-105'>
                   <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
                     <a target='_blank'>
                       <span className="text-white text-2xl"> Join Us Today </span>
