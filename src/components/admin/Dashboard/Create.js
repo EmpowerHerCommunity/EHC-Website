@@ -4,10 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 const Create = () => {
-  const [image, setImage] = useState("")
+  const [image, setImage] = useState(null)
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(null);
   const router = useRouter()
 
   const handleSubmit = async (e) => {

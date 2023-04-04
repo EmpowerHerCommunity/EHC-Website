@@ -3,9 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AOS from 'aos';
 
-
 const Events = () => {
-
   useEffect(() => {
     AOS.init({ duration: 2500 });
     AOS.refresh();
