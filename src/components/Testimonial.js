@@ -14,23 +14,8 @@ const Testimonial = () => {
       testimonial:
         "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators and the assignments too. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
-
     {
       id: 2,
-      image: "/sam.png",
-      name: "Olamide Sanusi ",
-      role: "Data analyst",
-      testimonial:
-        "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable. She even makes herself available outside of class hours to answer questions and provide guidance as needed.",
-    },
-    {
-      id: 3,
-      image: "/Nancy.png",
-      name: "Nancy Olatuja",
-      role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
-    {
-      id: 4,
       image: "/Jessica.png",
       name: "Jessica Joseph",
       role: "Frontend developer",
@@ -38,6 +23,30 @@ const Testimonial = () => {
       testimonial:
         "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
     },
+
+    {
+      id: 3,
+      image: "/sam.png",
+      name: "Olamide Sanusi ",
+      role: "Data analyst",
+      testimonial:
+        "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable. She even makes herself available outside of class hours to answer questions and provide guidance as needed.",
+    },
+    {
+      id: 4,
+      image: "/Nancy.png",
+      name: "Nancy Olatuja",
+      role: "Frontend developer",
+      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+    // {
+    //   id: 5,
+    //   image: "/jennifer.png",
+    //   name: "Jennifer Njoku",
+    //   role: "Cyber Security Specialist",
+    //   height: "400px",
+    //   testimonial:
+    //     "My experience at Bootcamp 3.0 has been truly exceptional. With the help of my facilitators, I was able to publish my first article on cybersecurity on Medium, which was a thrilling experience. In addition, I was introduced to the Cisco packet tracer, which I am currently mastering for my networking practical.",
+    // },
   ];
   const [prevIndex, setPrevIndex] = useState(2);
   const [nextIndex, setNextIndex] = useState(1);

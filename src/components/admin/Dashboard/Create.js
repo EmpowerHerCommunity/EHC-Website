@@ -8,8 +8,8 @@ const Create = () => {
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
-  const router = useRouter()
 
+  const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +31,7 @@ const Create = () => {
           body: data,
         }
       );
+
       if (response.ok) {
         toast.warning("Event successfully added", {
           position: "top-right",
@@ -42,23 +43,8 @@ const Create = () => {
           progress: undefined,
           theme: "light",
         });
-        const responseData = await response.json();
-        console.log(responseData);
-        setTimeout(()=>{
-          router.push("/admin")
-        }, 1500)
-      } else {
-        toast.error("Kindly try again", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
       }
+  
     } catch (error) {
       toast.error("A network error occurred", {
         position: "top-right",
@@ -71,6 +57,7 @@ const Create = () => {
         theme: "light",
       });
     }
+    router.push("/events")
   };
 
   const upload = ({ target: { files = [] } }) => {

@@ -22,12 +22,25 @@ function Featured() {
   }, []);
   console.log(featuredBlog);
 
+  function calculateReadingTime(content) {
+    const wordsPerMinute = 200;
+    const wordCount = content?.trim().split(/\s+/).length;
+    const readingTimeInMinutes = wordCount / wordsPerMinute;
+    const minutes = Math.floor(readingTimeInMinutes);
+    const seconds = Math.floor((readingTimeInMinutes - minutes) * 60);
+    const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
+    return readingTime;
+  }
+
+  const options = { day: "numeric", month: "long", year: "numeric" };
+
   return (
     <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 lg:py-10 py-4 relative">
       {featuredBlog &&
         featuredBlog.results.map((feature) => (
           <Link href={`/blog/featured/${feature.slug}`}>
             <div key={feature.id}>
+             
               <figure>
                 <img
                   src={feature.cover_photo}
@@ -37,6 +50,18 @@ function Featured() {
               </figure>
               <div className="lg:absolute static max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
                 <figcaption className="lg:w-7/12 w-full">
+                <section className=" text-light font-semibold flex items-center justify-between lg:w-80 w-80 ml-0 lg:text-xl text-xl">
+                <div className=" mb-1">
+                  {new Date(feature.created).toLocaleDateString("en-US", options)}
+                </div>
+                <div className="border-white h-1 w-1 bg-white rounded-full"></div>
+
+                <div className="-mt-1">
+                  {`${calculateReadingTime(feature.description)}` > 1
+                    ? `${calculateReadingTime(feature.description)} minutes read`
+                    : `${calculateReadingTime(feature.description)} minute read`}
+                </div>
+              </section>
                   <h1 className="mb-4 lg:text-5xl text-3xl pt-4 font-semibold">
                     {feature.title}
                   </h1>

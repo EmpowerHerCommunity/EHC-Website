@@ -23,9 +23,9 @@ const NewsLetter = () => {
             Join our NewsLetter
           </h2>
           <div className="w-full lg:w-5/12 lg:flex-auto">
-            <p className="text-2xl md:text-xl" data-aos="fade-right">
+            {/* <p className="text-2xl md:text-xl" data-aos="fade-right">
               Subscribe to our news letter to receive updates
-            </p>
+            </p> */}
             {email}
             <form
               onSubmit={(e) => subscribe(e)}

@@ -1,14 +1,41 @@
 import { useState, useEffect } from "react";
-import Delete from "../Delete/Delete";
 
 const FeaturedDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
-  const [del, setDel] = useState(false);
 
-  const handleDel = () => {
-    setDel(!del);
+
+  const handleDelete = (slug) => {
+    try {
+      const deleteFunction = async () => {
+        const res = await fetch(
+          `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/`, {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken':
+                'tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS',
+            },
+            body: "",
+          }
+        );
+      };
+      deleteFunction();
+      // window.location.reload();
+    } 
+    catch (error) {
+      toast.error("Kindly try again", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   };
 
   const URL =
@@ -33,10 +60,6 @@ const FeaturedDashboard = () => {
   return (
     <>
       {error && <p className="text-lg">{error}</p>}
-
-      {del ? (
-        <Delete handleDel={handleDel} />
-      ) : (
         <div className="rounded-lg">
           <table className="w-full mt-8">
             <thead className="text-left text-lg overflow-scroll w-screen">
@@ -67,7 +90,7 @@ const FeaturedDashboard = () => {
                     <td className="">{data.author}</td>
                     <td>
                       <button
-                        onClick={handleDel}
+                        onClick={()=>handleDelete(data.slug)}
                         className="w-16 rounded-md border bg-primary text-white h-10"
                       >
                         Delete
@@ -78,7 +101,6 @@ const FeaturedDashboard = () => {
             </tbody>
           </table>
         </div>
-      )}
     </>
   );
 };
