@@ -42,7 +42,7 @@ const Publish = () => {
           }
         );
         if (response.ok) {
-          toast.warning("Event successfully added", {
+          toast.warning("Blog successfully added", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -55,8 +55,8 @@ const Publish = () => {
           const responseData = await response.json();
           console.log(responseData);
           setTimeout(()=>{
-            router.push("/admin")
-          }, 1500)
+            window.location.reload();
+          }, 1200)
         } else {
           toast.error("Kindly try again", {
             position: "top-right",

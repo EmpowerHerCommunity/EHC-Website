@@ -12,14 +12,14 @@ const UpcomingEventsCard = ({ events }) => {
   return (
     <div className="h-full flex" data-aos="zoom-out" >
       <div className="">
-         <div className="grid lg:grid-cols-2 grid-col-1 place-items-center gap-20 py-3 px-5">
+         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-col-1 place-items-center gap-40 py-3 px-5">
           {events.results && events.results.map((event) => (
             <div key={event.id} className="px-2 py-2 shadow-sm rounded-md">
               <div className="w-full">
                 <img
                   src={event.image}
                   alt={event.name}
-                  className="w-96"
+                  className="w-80 h-80"
                 />
               </div>
               <h2 className="md:text-2xl text-xl font-bold pt-4">{event.name}</h2>

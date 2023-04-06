@@ -23,7 +23,7 @@ export default function Blog({ blogs, currentPage, totalPages }) {
 export async function getServerSideProps({ query }) {
 
   const currentPage = 1 // get the current page from the query parameters or default to page 1
-  const pageSize = 21; // set the number of items per page
+  const pageSize = 9; // set the number of items per page
 
   const response = await fetch(
     `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
