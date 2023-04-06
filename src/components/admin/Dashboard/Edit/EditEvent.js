@@ -9,50 +9,26 @@ const EditEvent = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
   const router = useRouter()
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const eventId = // retrieve the id of the event to edit from the URL params
-//       const response = await fetch(`https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${eventId}/`);
-//       const data = await response.json();
-//       setEvent(data.name);
-//       setDescription(data.description);
-//       setDate(data.date);
-//       // do the same for the image using the FileReader API
-//     };
-//     fetchData();
-//   }, []);
-
-// const handlePut = async (e) => {
-//     e.preventDefault();
-//     const eventId = // retrieve the id of the event to edit from the URL params
-//     const data = new FormData();
-//     data.append("image", image);
-//     data.append("name", event);
-//     data.append("description", description);
-//     data.append("date", date);
-//     try {
-//       const response = await fetch(
-//         `https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${eventId}/`,
-//         {
-//           method: "PUT",
-//           headers: {
-//             "X-CSRFToken":
-//               "tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS",
-//           },
-//           body: data,
-//         }
-//       );
-//       if (response.ok) {
-//         // handle success
-//       } else {
-//         // handle error
-//       }
-//     } catch (error) {
-//       // handle network error
-//     }
-//   };
   
+  const handleDelete = (id) => {
+    const deleteFunction = async () => {
+      const res = await fetch(
+        `https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${id}/`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken":
+              "tIfyN0JlDcvqynbWN9REaTvroq5nhScL3bfwNdm6pyPHSoxTQLzQWVHtP8v5ltZS",
+          },
+          body: "",
+        }
+      );
+    };
+    deleteFunction();
+    window.location.reload();
+  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

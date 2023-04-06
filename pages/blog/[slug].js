@@ -1,6 +1,6 @@
 import md from "markdown-it";
-import NavBar from "../../../src/components/NavBar";
-import Footer from "../../../src/components/Footer";
+import NavBar from "../../src/components/NavBar";
+import Footer from "../../src/components/Footer";
 import Head from "next/head";
 
 const Slug = ({ blog }) => {
@@ -17,15 +17,16 @@ const Slug = ({ blog }) => {
 
   const options = { day: "numeric", month: "long", year: "numeric" };
 
+  
   return (
-    <section className="mx-auto container">
+    <section className="">
        <Head>
         <title>{blog.title}</title>
         <meta name="description" content={blog.introduction}/>
         <meta property="og:image" content={blog.cover_photo} />
       </Head>
       <NavBar />
-      <div className="prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-5 lg:pt-12">
+      <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-5 lg:pt-12">
         <article className="py-6">
           <section className=" text-slug flex items-center justify-between lg:w-80 w-80 ml-0 lg:ml-20  lg:text-xl text-xl">
             <div className=" font-medium mb-1">
@@ -83,10 +84,10 @@ const Slug = ({ blog }) => {
 export default Slug;
 
 export async function getServerSideProps({ params }) {
-  const { slug, id } = params;
+  const { slug } = params;
 
   const response = await fetch(
-    `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/${id}/`
+    `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/`
   );
 
   const data = await response.json();
