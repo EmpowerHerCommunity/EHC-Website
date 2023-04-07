@@ -17,12 +17,12 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container mx-auto cursor-pointer px-2">
-      <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-2">
+    <div className="container mx-auto lg:mx-auto cursor-pointer px-1">
+      <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-1">
         <ul
           className={`${
             active ? "block" : "hidden"
-          } lg:inline-flex lg:flex-row xl:w-5/12 md:w-6/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
+          } lg:inline-flex lg:flex-row xl:w-5/12 md:w-12/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
         >
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/">Home</Link>
@@ -49,7 +49,7 @@ const NavBar = () => {
               <Image src="/logo.png" width="91px" height="90px" />
             </a>
           </Link>
-         {active ? <h1 className="text-4xl flex items-center lg:hidden mr-3" onClick={handleClick}>X</h1> : <button
+         {active ? <h1 className="text-4xl flex items-center lg:hidden" onClick={handleClick}>X</h1> : <button
             className=" rounded lg:hidden text-white ml-auto hover:text-white active:bg-white outline-none"
             onClick={handleClick}
           >

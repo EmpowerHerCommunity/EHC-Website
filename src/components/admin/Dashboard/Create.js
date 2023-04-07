@@ -43,6 +43,7 @@ const Create = () => {
           progress: undefined,
           theme: "light",
         });
+        window.location.reload();
       }
   
     } catch (error) {
@@ -57,7 +58,6 @@ const Create = () => {
         theme: "light",
       });
     }
-    router.push("/events")
   };
 
   const upload = ({ target: { files = [] } }) => {

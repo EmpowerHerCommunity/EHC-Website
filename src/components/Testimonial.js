@@ -16,13 +16,11 @@ const Testimonial = () => {
     },
     {
       id: 2,
-      image: "/Jessica.png",
-      name: "Jessica Joseph",
+      image: "/Nancy.png",
+      name: "Nancy Olatuja",
       role: "Frontend developer",
-      height: "400px",
-      testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
-    },
+      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+
 
     {
       id: 3,
@@ -34,10 +32,14 @@ const Testimonial = () => {
     },
     {
       id: 4,
-      image: "/Nancy.png",
-      name: "Nancy Olatuja",
+      image: "/Jessica.png",
+      name: "Jessica Joseph",
       role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+      height: "400px",
+      testimonial:
+        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
+    },
+
     // {
     //   id: 5,
     //   image: "/jennifer.png",
