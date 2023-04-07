@@ -26,9 +26,9 @@ const Slug = ({ blog }) => {
         <meta property="og:image" content={blog.cover_photo} />
       </Head>
       <NavBar />
-      <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl text-justify px-10 lg:px-16 pt-5 lg:pt-12">
+      <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl  text-justify px-4 lg:px-10 pt-5 lg:pt-12">
         <article className="py-6">
-          <section className=" text-slug flex items-center justify-between lg:w-80 w-80 ml-0 lg:ml-20  lg:text-xl text-xl">
+          <section className=" text-slug flex items-center justify-between lg:w-72 w-64 ml-0 lg:ml-20  lg:text-xl text-xl">
             <div className=" font-medium mb-1">
               {new Date(blog.created).toLocaleDateString("en-US", options)}
             </div>
