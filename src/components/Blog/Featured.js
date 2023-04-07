@@ -50,7 +50,7 @@ function Featured() {
               </figure>
               <div className="lg:absolute static max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
                 <figcaption className="lg:w-7/12 w-full">
-                <section className=" text-light font-semibold flex items-center justify-between lg:w-80 w-80 ml-0 lg:text-xl text-xl">
+                <section className=" text-light font-semibold flex items-center justify-between lg:w-80 lg:mt-10 mt-0 xl:mt-0 w-80 ml-0 lg:text-xl text-xl">
                 <div className=" mb-1">
                   {new Date(feature.created).toLocaleDateString("en-US", options)}
                 </div>

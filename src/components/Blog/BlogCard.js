@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { sortByDate } from "../../../utils";
 import { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 
 const BlogCard = ({ blogs, currentPage, totalPages }) => {
@@ -45,7 +47,7 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
         const data = await response.json();
         setNewBlog(data.results);
       } catch (error) {
-        alert(error.message);
+        toast.warning(error.message);
       }
     };
     fetchNext();
@@ -83,7 +85,7 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
     <div className="">
       <section className="lg:mt-4 mt-7 cursor-pointer">
         <header className="">
-          <nav className="lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold mx-8">
+          <nav className="mx-auto container lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold">
             <div className="lg:block md:hidden hidden">
               <button
                 onClick={handleClick}
@@ -152,7 +154,7 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
             </div>
           </nav>
 
-          <div className="relative mt-0 lg:hidden block">
+          <div className="relative mt-0 lg:hidden block  mx-auto container">
             <input
               placeholder="Search"
               value={search}
@@ -178,7 +180,7 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
                           alt="content"
                         />
 
-                        <section className=" text-slug flex items-center justify-between lg:w-64 w-96 lg:text-lg text-2xl">
+                        <section className=" text-slug flex items-center justify-between lg:w-64 md:w-72 w-64 lg:text-lg text-xl ">
                           <div className=" font-medium mb-1">
                             {new Date(blog.created).toLocaleDateString(
                               "en-US",
@@ -377,6 +379,19 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
             </button>
         </section>
       </section>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
