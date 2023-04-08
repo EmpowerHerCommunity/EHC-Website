@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 const EventDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
@@ -84,17 +85,20 @@ const EventDashboard = () => {
               fetchedEvents.map((data) => (
                 <tr
                   key={data.id}
-                  className=" h-16 w-full overflow-scroll mb-4 text-base bg-white rounded-l-lg py-2 hover:shadow-2xl hover:scale-100"
+                  className=" h-16 w-full overflow-scroll mb-4 text-base bg-white rounded-l-lg py-2 hover:shadow-lg"
                 >
                   <td className="">{data.name}</td>
                   <td className="w-6/12">{data.description}</td>
                   <td className="">{data.date}</td>
 
                   <td>
-                    <button className="w-14 rounded-md border bg-light text-primary h-10">
-                      Edit
-                    </button>
+                    <Link href={`/admin/events/${data.id}`}>
+                      <button className="w-14 rounded-md border bg-light text-primary h-10">
+                        Edit
+                      </button>
+                    </Link>
                   </td>
+
                   <td>
                     <button
                       onClick={() => {
