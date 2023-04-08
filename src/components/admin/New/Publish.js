@@ -148,6 +148,19 @@ const Publish = () => {
           ></input>
         </div>
       </div>
+      <div className="w-12/12 flex justify-between h-20">
+        <div className="w-3/12">
+          <label className="text-xl">Author Image</label>
+        </div>
+        <div className="w-9/12">
+          <input
+            type="file"
+            onChange={(e) => {
+              uploadAuthor(e);
+            }}
+          ></input>
+        </div>
+      </div>
       <div className="w-12/12 flex justify-between h-24">
         <div className="w-3/12">
           <label className="text-xl">Title</label>
@@ -193,19 +206,7 @@ const Publish = () => {
           ></textarea>
         </div>
       </div>
-      <div className="w-12/12 flex justify-between h-20">
-        <div className="w-3/12">
-          <label className="text-xl">Author Image</label>
-        </div>
-        <div className="w-9/12">
-          <input
-            type="file"
-            onChange={(e) => {
-              uploadAuthor(e);
-            }}
-          ></input>
-        </div>
-      </div>
+     
       <div className="w-12/12 flex justify-between h-16">
         <div className="w-3/12">
           <label className="text-xl">Tags</label>
