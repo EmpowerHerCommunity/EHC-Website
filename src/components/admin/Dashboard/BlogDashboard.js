@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const BlogDashboard = () => {
@@ -57,9 +58,11 @@ const BlogDashboard = () => {
                   <td className="w-6/12">{data.introduction}</td>
                   <td className="">{data.author}</td>
                   <td>
+                    <Link href={`/admin/blog/${data.slug}`}>
                     <button className="w-16 rounded-md border bg-primary text-white h-10">
                       Edit
                     </button>
+                    </Link>
                   </td>
                 </tr>
               ))}

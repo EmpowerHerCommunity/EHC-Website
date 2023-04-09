@@ -1,8 +1,8 @@
 import EventDashboard from "./EventsDashboard";
 import BlogDashboard from "./BlogDashboard";
 import FeaturedDashboard from "./FeaturedDashboard";
-import Create from "./Create";
-import Publish from "./Publish";
+import Create from "../New/Create";
+import Publish from "../New/Publish";
 
 const Dashboard = ({ display }) => {
   return (
