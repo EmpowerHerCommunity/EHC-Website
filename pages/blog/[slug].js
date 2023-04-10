@@ -4,7 +4,6 @@ import Footer from "../../src/components/Footer";
 import Head from "next/head";
 import SEO from "@bradgarropy/next-seo"
 
-
 const Slug = ({ blog }) => {
 
   function calculateReadingTime(content) {
@@ -22,11 +21,10 @@ const Slug = ({ blog }) => {
   
   return (
     <section className="">
-       {/* <Head>
-        <title>{blog.title}</title>
-        <meta name="description" content={blog.introduction}/>
-        <meta property="og:image" content={blog.cover_photo} />
-      </Head> */}
+       <Head>
+        <meta name="twitter:card" content={blog.introduction}></meta>
+        <meta property="og:image" content={blog.cover_photo}/>
+      </Head>
 
       <SEO
       title={blog.title}
@@ -37,7 +35,7 @@ const Slug = ({ blog }) => {
       twitter={{
         image: blog.cover_photo,
         site: "@empowerhercommunity",
-        card: "summary_large_image",
+        card: "summary",
     }}
     facebook={{
       image: blog.cover_photo,
