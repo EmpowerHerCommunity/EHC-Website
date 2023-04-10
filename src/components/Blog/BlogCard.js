@@ -339,13 +339,13 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             {blog.introduction}
                           </p>
                           <section className="flex items-center flex-wrap mt-3 rounded-full">
-                            <figure className="h-16 w-16 rounded-full">
+                            <div className="h-16 w-16 rounded-full">
                               <img
                                 src={blog.author_image}
                                 alt="author avatar"
                                 className="h-full w-full object-contain rounded-full"
                               />
-                            </figure>
+                            </div>
 
                             <p className="font-semibold text-2xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                               {blog.author}

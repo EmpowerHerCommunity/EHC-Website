@@ -11,9 +11,9 @@ const BlogDashboard = () => {
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
-    const token = localStorage.getItem("accessToken")
+    const token = localStorage.getItem("accessToken");
     if (!token) {
       router.push("/login");
     }

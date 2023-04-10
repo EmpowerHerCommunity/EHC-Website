@@ -5,20 +5,19 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 const Create = () => {
-
   const [image, setImage] = useState(null);
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
 
-  const router = useRouter()
+  const router = useRouter();
 
-    useEffect(() => {
-      const token = localStorage.getItem("accessToken")
-      if (!token) {
-        router.push("/login");
-      }
-    }, []);
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
