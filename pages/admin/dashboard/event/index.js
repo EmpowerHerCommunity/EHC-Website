@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import SideBar from "../../../../src/components/admin/SideBar";
 
 const EventDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
@@ -59,11 +60,14 @@ const EventDashboard = () => {
   }, [isFetching]);
 
   return (
-    <>
+    <div className="flex ">
+      <div className="w-2/12">
+        <SideBar />
+      </div>
       {error && <p className="text-lg">{error}</p>}
-      <div className="rounded-lg">
-        <h1 className="text-2xl"></h1>
-        <table className="w-full mt-8">
+      <div className="rounded-lg w-10/12 pl-5 mt-11">
+        <h1 className="text-4xl">Dashboard: Events</h1>
+        <table className="w-full mt-16">
           <thead className="text-left text-lg overflow-scroll w-screen">
             <tr className="text-lg font-semibold">
               <th data-column="name" className="font-semibold">
@@ -92,7 +96,7 @@ const EventDashboard = () => {
                   <td className="">{data.date}</td>
 
                   <td>
-                    <Link href={`/admin/events/${data.id}`}>
+                    <Link href={`/admin/dashboard/event/${data.id}`}>
                       <button className="w-14 rounded-md border bg-light text-primary h-10">
                         Edit
                       </button>
@@ -126,7 +130,7 @@ const EventDashboard = () => {
           theme="light"
         />
       </div>
-    </>
+    </div>
   );
 };
 

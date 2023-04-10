@@ -1,5 +1,7 @@
-import { forwardRef } from "react";
 import { useRouter } from "next/router";
+import { deleteCookie } from 'cookies-next';
+import Link from "next/link";
+
 import {
   MdOutlineArticle,
   MdOutlineVolunteerActivism,
@@ -7,11 +9,16 @@ import {
   MdEmojiEvents,
 } from "react-icons/md";
 
-const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
+const SideBar = () => {
   const router = useRouter();
+  const handleLogOut = ()=>{
+    localStorage.clear()
+    deleteCookie("acessToken")
+    router.push("/login")
+  }
 
   return (
-    <div ref={ref} className="fixed w-56 h-full bg-primary shadow-sm">
+    <div className="fixed w-56 h-full bg-primary shadow-sm">
       <div className="flex justify-center mt-10 mb-14">
         <h1 className="font-bold w-32 text-3xl text-white">Admin </h1>
       </div>
@@ -20,61 +27,61 @@ const SideBar = forwardRef(({ showNav, display, handleDisplay }, ref) => {
         <div
           className={` py-3 rounded text-center cursor-pointer mb-3 items-start flex flex-col h-96 justify-between transition-colors text-white}`}
         >
-          <figure onClick={()=>handleDisplay("events")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdEmojiEvents />
             </div>
-            <div>
-              <p className="text-lg">Events</p>
+            <Link href="/admin/dashboard/event">
+              <button className="text-lg">Events</button>
+          </Link>
             </div>
-          </figure>
-          <figure onClick={()=>handleDisplay("create")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdOutlineVolunteerActivism />
             </div>
-            <div>
-              <p className="text-lg">Create Event</p>
-            </div>
-          </figure>
+            <Link href="/admin/dashboard/create">
+              <button className="text-lg">Create Event</button>
+              </Link>
+          </div>
 
-          <figure onClick={()=>handleDisplay("posts")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdOutlineArticle />
             </div>
-            <div>
-              <p className="text-lg">Blog Posts</p>
-            </div>
-          </figure>
+            <Link href="/admin/dashboard/blog">
+              <button className="text-lg">Blog Posts</button>
+              </Link>
+          </div>
 
-          <figure onClick={()=>handleDisplay("featured")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div  className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdEmojiEvents />
             </div>
-            <div>
-              <p className="text-lg">Featured Blogs</p>
-            </div>
-          </figure>
-          <figure onClick={()=>handleDisplay("publish")} className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+            <Link href="/admin/dashboard/featured">
+              <button className="text-lg">Featured Blogs</button>
+            </Link>
+          </div>
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdOutlineArticle />
             </div>
-            <div>
-              <p className="text-lg">Publish</p>
-            </div>
-          </figure>
+            <Link href="/admin/dashboard/publish">
+              <button className="text-lg">Publish</button>
+            </Link>
+          </div>
 
-          <figure className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdSupervisedUserCircle />
             </div>
             <div>
-              <p className="text-lg">Log Out</p>
+              <button className="text-lg" onClick={handleLogOut}>Log Out</button>
             </div>
-          </figure>
+          </div>
         </div>
       </nav>
     </div>
   );
-});
+  };
 
 export default SideBar;

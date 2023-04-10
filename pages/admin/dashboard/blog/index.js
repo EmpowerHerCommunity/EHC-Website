@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import SideBar from "../../../../src/components/admin/SideBar";
 
 const BlogDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
-  const [edit, setEdit] = useState(false)
+  const [edit, setEdit] = useState(false);
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
@@ -26,11 +27,14 @@ const BlogDashboard = () => {
   }, [isFetching]);
 
   return (
-    <>
+    <div className="flex ">
+      <div className="w-2/12">
+        <SideBar />
+      </div>
       {error && <p className="text-lg">{error}</p>}
-
-      <div className="rounded-lg">
-        <table className="w-full mt-8">
+      <div className="rounded-lg w-10/12 pl-5 mt-11">
+        <h1 className="text-4xl">Dashboard: Blogs</h1>
+        <table className="w-full mt-16">
           <thead className="text-left text-lg overflow-scroll w-screen">
             <tr className="text-lg font-semibold">
               <th data-column="name" className="font-semibold">
@@ -58,10 +62,10 @@ const BlogDashboard = () => {
                   <td className="w-6/12">{data.introduction}</td>
                   <td className="">{data.author}</td>
                   <td>
-                    <Link href={`/admin/blog/${data.slug}`}>
-                    <button className="w-16 rounded-md border bg-primary text-white h-10">
-                      Edit
-                    </button>
+                    <Link href={`/admin/dashboard/blog/${data.slug}`}>
+                      <button className="w-16 rounded-md border bg-primary text-white h-10">
+                        Edit
+                      </button>
                     </Link>
                   </td>
                 </tr>
@@ -69,7 +73,7 @@ const BlogDashboard = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 
