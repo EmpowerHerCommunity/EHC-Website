@@ -2,6 +2,7 @@ import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
 import SEO from "@bradgarropy/next-seo";
+import Head from "next/head";
 
 const Slug = ({ blog }) => {
   function calculateReadingTime(content) {
@@ -21,7 +22,7 @@ const Slug = ({ blog }) => {
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
+
       <SEO
         title={blog.title}
         icon={blog.cover_photo}
