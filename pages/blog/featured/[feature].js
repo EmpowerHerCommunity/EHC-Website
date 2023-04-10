@@ -22,6 +22,9 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
+          <Head>
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
           <SEO
             title={blog.title}
             icon={blog.cover_photo}

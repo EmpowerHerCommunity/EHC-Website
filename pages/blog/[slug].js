@@ -1,10 +1,9 @@
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
-import SEO from "@bradgarropy/next-seo"
+import SEO from "@bradgarropy/next-seo";
 
 const Slug = ({ blog }) => {
-
   function calculateReadingTime(content) {
     const wordsPerMinute = 200;
     const wordCount = content?.trim().split(/\s+/).length;
@@ -17,26 +16,29 @@ const Slug = ({ blog }) => {
 
   const options = { day: "numeric", month: "long", year: "numeric" };
 
-  
   return (
     <section className="">
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
       <SEO
-    title={blog.title}
-    icon={blog.cover_photo}
-    description={blog.introduction}
-    keywords={["EHC", "Community", "Empower her community", "EHC blog"]} 
-    twitter={{
-      card: "summary_large_image",
-      site: "@empowerhercommunity",
-      title: blog.title,
-      description: blog.introduction,
-      image: blog.cover_photo,
-    }}
-    facebook={{
-      type: "article",
-      image: blog.cover_photo,
-    }}
-  />
+        title={blog.title}
+        icon={blog.cover_photo}
+        description={blog.introduction}
+        keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
+        twitter={{
+          card: "summary_large_image",
+          site: "@empowerhercommunity",
+          title: blog.title,
+          description: blog.introduction,
+          image: blog.cover_photo,
+        }}
+        facebook={{
+          type: "article",
+          image: blog.cover_photo,
+        }}
+      />
 
       <NavBar />
       <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl  text-justify px-4 lg:px-10 pt-5 lg:pt-8">
@@ -71,7 +73,9 @@ const Slug = ({ blog }) => {
                 className="h-16 w-16 object-contain rounded-full"
               />
             </div>
-            <div className="text-2xl text-black font-medium ml-6">{blog.author}</div>
+            <div className="text-2xl text-black font-medium ml-6">
+              {blog.author}
+            </div>
           </section>
 
           <div className="-mt-1">
@@ -80,7 +84,8 @@ const Slug = ({ blog }) => {
 
           <section className="flex justify-between lg:ml-20 ml-0">
             <div className="flex w-12/12">
-              <div className=""
+              <div
+                className=""
                 dangerouslySetInnerHTML={{
                   __html: md().render(blog.description),
                 }}
@@ -89,7 +94,7 @@ const Slug = ({ blog }) => {
           </section>
         </article>
       </div>
-        <Footer />
+      <Footer />
     </section>
   );
 };
