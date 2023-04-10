@@ -22,19 +22,24 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
+          <Head>
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
           <SEO
             title={blog.title}
             icon={blog.cover_photo}
             description={blog.introduction}
             keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
             twitter={{
-              image: blog.cover_photo,
-              site: "@empowerhercommunity",
               card: "summary_large_image",
+              site: "@empowerhercommunity",
+              title: blog.title,
+              description: blog.introduction,
+              image: blog.cover_photo,
             }}
             facebook={{
-              image: blog.cover_photo,
               type: "article",
+              image: blog.cover_photo,
             }}
           />
           <div className="mx-auto container prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-4 lg:px-12 pt-6 lg:pt-8">
