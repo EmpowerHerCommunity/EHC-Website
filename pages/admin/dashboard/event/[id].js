@@ -10,6 +10,13 @@ const eventEdit = () => {
   const router = useRouter();
   const routeId = router.query.id;
 
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setResult((prevState) => ({
@@ -65,7 +72,10 @@ const eventEdit = () => {
 
   return (
     <>
-      <form className="hidden xl:flex mx-auto container flex-col mt-7" onSubmit={handleSubmit}>
+      <form
+        className="hidden xl:flex mx-auto container flex-col mt-7"
+        onSubmit={handleSubmit}
+      >
         <div className="w-12/12 flex justify-between h-16">
           <div className="w-3/12">
             <label className="text-xl">Image</label>

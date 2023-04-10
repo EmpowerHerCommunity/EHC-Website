@@ -11,6 +11,13 @@ const blogEdit = () => {
   const router = useRouter();
   const routeId = router.query.slug;
 
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setResult((prevState) => ({

@@ -1,17 +1,24 @@
 import SideBar from "../../../../src/components/admin/SideBar";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 const Create = () => {
+
   const [image, setImage] = useState(null);
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
 
-  const router = useRouter();
+  const router = useRouter()
+
+    useEffect(() => {
+      const token = localStorage.getItem("accessToken")
+      if (!token) {
+        router.push("/login");
+      }
+    }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +34,7 @@ const Create = () => {
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            Authorization: `Bearer ${getCookie("accessToken")}`,
           },
           body: data,
         }

@@ -1,10 +1,20 @@
 import SideBar from "../../../../src/components/admin/SideBar";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const FeaturedDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   const handleDelete = (slug) => {
     try {

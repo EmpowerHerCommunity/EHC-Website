@@ -3,11 +3,22 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import SideBar from "../../../../src/components/admin/SideBar";
+import { useRouter } from "next/router";
 
 const EventDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   const handleDelete = (id) => {
     try {

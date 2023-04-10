@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import SideBar from "../../../../src/components/admin/SideBar";
+import { useRouter } from "next/router";
 
 const BlogDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
@@ -9,6 +10,14 @@ const BlogDashboard = () => {
   const [edit, setEdit] = useState(false);
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
+
+  const router = useRouter()
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   useEffect(() => {
     async function fetchEvents() {
