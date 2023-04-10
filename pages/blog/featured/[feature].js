@@ -3,7 +3,7 @@ import md from "markdown-it";
 import NavBar from "../../../src/components/NavBar";
 import Footer from "../../../src/components/Footer";
 import Head from "next/head";
-import SEO from "@bradgarropy/next-seo"
+import SEO from "@bradgarropy/next-seo";
 
 const Slug = ({ blogs }) => {
   function calculateReadingTime(content) {
@@ -23,17 +23,15 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
-          {/* <Head>
-            <title>{blog.title}</title>
-            <meta name="description" content={blog.introduction} />
+          <Head>
+            <meta name="twitter:card" content={blog.introduction}></meta>
             <meta property="og:image" content={blog.cover_photo} />
-          </Head> */}
+          </Head>
 
           <SEO
             title={blog.title}
             icon={blog.cover_photo}
             description={blog.introduction}
-            canonical="https://www.canonical.ie/"
             keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
             twitter={{
               image: blog.cover_photo,
@@ -69,12 +67,12 @@ const Slug = ({ blogs }) => {
                 </p>
               </div>
 
-              <section className="flex items-center -mt-10 py-0 lg:ml-20 ml-0">
-                <div className="h-16 w-16 rounded-full">
+              <section className="flex items-center -mt-5 py-0 lg:ml-20 ml-0">
+                <div className=" rounded-full">
                   <img
                     src={blog.author_image}
                     alt="author avatar"
-                    className="h-full w-full object-contain rounded-full"
+                    className="h-16 w-16 object-contain rounded-full"
                   />
                 </div>
                 <div className="text-2xl ml-6">{blog.author}</div>
