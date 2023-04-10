@@ -3,6 +3,7 @@ import md from "markdown-it";
 import NavBar from "../../../src/components/NavBar";
 import Footer from "../../../src/components/Footer";
 import Head from "next/head";
+import SEO from "@bradgarropy/next-seo"
 
 const Slug = ({ blogs }) => {
   function calculateReadingTime(content) {
@@ -22,14 +23,30 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
-          <Head>
+          {/* <Head>
             <title>{blog.title}</title>
             <meta name="description" content={blog.introduction} />
             <meta property="og:image" content={blog.cover_photo} />
-          </Head>
+          </Head> */}
+
+          <SEO
+            title={blog.title}
+            icon={blog.cover_photo}
+            description={blog.introduction}
+            canonical="https://www.canonical.ie/"
+            keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
+            twitter={{
+              image: blog.cover_photo,
+              site: "@empowerhercommunity",
+              card: "summary_large_image",
+            }}
+            facebook={{
+              image: blog.cover_photo,
+              type: blog.introduction,
+            }}
+          />
           <div className="mx-auto container prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-4 lg:px-12 pt-6 lg:pt-10">
             <article key={blog.slug} className="py-6">
-              
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">
                   {new Date(blog.created).toLocaleDateString("en-US", options)}
@@ -43,29 +60,29 @@ const Slug = ({ blogs }) => {
                 </div>
               </section>
 
-              <figcaption className="lg:ml-20 ml-0">
+              <div className="lg:ml-20 ml-0">
                 <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">
                   {blog.title}
                 </h1>
                 <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">
                   {blog.introduction}
                 </p>
-              </figcaption>
+              </div>
 
               <section className="flex items-center -mt-10 py-0 lg:ml-20 ml-0">
-                <figure className="h-16 w-16 rounded-full">
+                <div className="h-16 w-16 rounded-full">
                   <img
                     src={blog.author_image}
                     alt="author avatar"
                     className="h-full w-full object-contain rounded-full"
                   />
-                </figure>
-                <figcaption className="text-2xl ml-6">{blog.author}</figcaption>
+                </div>
+                <div className="text-2xl ml-6">{blog.author}</div>
               </section>
 
-              <figure className="-mt-1">
+              <div className="-mt-1">
                 <img src={blog.cover_photo} className="w-full h-auto" />
-              </figure>
+              </div>
 
               <section className="flex justify-between lg:ml-20 ml-0">
                 <div className="flex w-12/12">
