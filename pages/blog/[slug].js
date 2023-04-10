@@ -4,7 +4,6 @@ import Footer from "../../src/components/Footer";
 import Head from "next/head";
 import SEO from "@bradgarropy/next-seo"
 
-
 const Slug = ({ blog }) => {
 
   function calculateReadingTime(content) {
@@ -22,22 +21,20 @@ const Slug = ({ blog }) => {
   
   return (
     <section className="">
-       {/* <Head>
-        <title>{blog.title}</title>
-        <meta name="description" content={blog.introduction}/>
-        <meta property="og:image" content={blog.cover_photo} />
-      </Head> */}
+       <Head>
+        <meta name="twitter:card" content={blog.introduction}></meta>
+        <meta property="og:image" content={blog.cover_photo}/>
+      </Head>
 
       <SEO
       title={blog.title}
       icon={blog.cover_photo}
       description={blog.introduction}
-      canonical="https://www.canonical.ie/"
       keywords={["EHC", "Community", "Empower her community", "EHC blog"]} 
       twitter={{
         image: blog.cover_photo,
         site: "@empowerhercommunity",
-        card: "summary_large_image",
+        card: "summary",
     }}
     facebook={{
       image: blog.cover_photo,
@@ -70,12 +67,12 @@ const Slug = ({ blog }) => {
             </p>
           </div>
 
-          <section className="flex items-center -mt-10 py-0 lg:ml-20 ml-0">
-            <div className="h-16 w-16 rounded-full">
+          <section className="flex items-center -mt-5 py-0 lg:ml-20 ml-0">
+            <div className="rounded-full">
               <img
                 src={blog.author_image}
                 alt="author avatar"
-                className="h-full w-full object-contain rounded-full"
+                className="h-16 w-16 object-contain rounded-full"
               />
             </div>
             <div className="text-2xl text-black font-medium ml-6">{blog.author}</div>
