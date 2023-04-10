@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 
-const BlogCard = ({ blogs, currentPage, totalPages }) => {
+const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
 
   useEffect(() => {
     AOS.init({ duration: 2500 });
@@ -19,7 +19,6 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
   const [search, setSearch] = useState("")
   const [filtered, setFiltered] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("");
-
   const sortedBlogs = blogs?.sort(sortByDate);
   const sortednewBlogs = newBlog?.sort(sortByDate)
 
@@ -370,7 +369,8 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
             </section>
           )}
         </section>
-        <section className=" container mx-auto flex justify-end mt-10 px-10">
+      
+      {raw.count < 0 ?  <section className=" container mx-auto flex justify-end mt-10 px-10">
             <button
               onClick={next}
               className="animate-pulse hover:scale-110 bg-primary text-white w-40 h-12 rounded-md text-xl font-medium"
@@ -378,6 +378,7 @@ const BlogCard = ({ blogs, currentPage, totalPages }) => {
               See More
             </button>
         </section>
+        : "" }
       </section>
 
       <ToastContainer

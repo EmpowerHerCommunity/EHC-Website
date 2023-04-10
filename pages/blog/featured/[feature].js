@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import md from "markdown-it";
 import NavBar from "../../../src/components/NavBar";
 import Footer from "../../../src/components/Footer";
-import Head from "next/head";
 import SEO from "@bradgarropy/next-seo";
 
 const Slug = ({ blogs }) => {
@@ -23,11 +22,6 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
-          <Head>
-            <meta name="twitter:card" content={blog.introduction}></meta>
-            <meta property="og:image" content={blog.cover_photo} />
-          </Head>
-
           <SEO
             title={blog.title}
             icon={blog.cover_photo}
@@ -40,10 +34,10 @@ const Slug = ({ blogs }) => {
             }}
             facebook={{
               image: blog.cover_photo,
-              type: blog.introduction,
+              type: "article",
             }}
           />
-          <div className="mx-auto container prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-4 lg:px-12 pt-6 lg:pt-10">
+          <div className="mx-auto container prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-4 lg:px-12 pt-6 lg:pt-8">
             <article key={blog.slug} className="py-6">
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">

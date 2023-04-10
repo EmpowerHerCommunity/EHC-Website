@@ -1,7 +1,6 @@
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
-import Head from "next/head";
 import SEO from "@bradgarropy/next-seo"
 
 const Slug = ({ blog }) => {
@@ -21,29 +20,26 @@ const Slug = ({ blog }) => {
   
   return (
     <section className="">
-       <Head>
-        <meta name="twitter:card" content={blog.introduction}></meta>
-        <meta property="og:image" content={blog.cover_photo}/>
-      </Head>
-
       <SEO
-      title={blog.title}
-      icon={blog.cover_photo}
-      description={blog.introduction}
-      keywords={["EHC", "Community", "Empower her community", "EHC blog"]} 
-      twitter={{
-        image: blog.cover_photo,
-        site: "@empowerhercommunity",
-        card: "summary",
+    title={blog.title}
+    icon={blog.cover_photo}
+    description={blog.introduction}
+    keywords={["EHC", "Community", "Empower her community", "EHC blog"]} 
+    twitter={{
+      card: "summary_large_image",
+      site: "@empowerhercommunity",
+      title: blog.title,
+      description: blog.introduction,
+      image: blog.cover_photo,
     }}
     facebook={{
+      type: "article",
       image: blog.cover_photo,
-      type: blog.introduction,
-  }}
-    />
+    }}
+  />
 
       <NavBar />
-      <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl  text-justify px-4 lg:px-10 pt-5 lg:pt-12">
+      <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl  text-justify px-4 lg:px-10 pt-5 lg:pt-8">
         <article className="py-6">
           <section className=" text-slug flex items-center justify-between lg:w-72 w-64 ml-0 lg:ml-20  lg:text-xl text-xl">
             <div className=" font-medium mb-1">

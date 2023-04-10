@@ -2,7 +2,7 @@ import { useState } from "react";
 import Post from "../../src/components/Post.js/Post";
 import Head from "next/head";
 
-export default function Blog({ blogs, currentPage, totalPages }) {
+export default function Blog({ blogs, raw, currentPage, totalPages }) {
 
   return (
     <section className="overflow-hidden">
@@ -14,7 +14,7 @@ export default function Blog({ blogs, currentPage, totalPages }) {
         />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <Post blogs={blogs} currentPage={currentPage} totalPages={totalPages}/>
+      <Post blogs={blogs} currentPage={currentPage} totalPages={totalPages} raw={raw}/>
     </section>
   );
 }
@@ -35,6 +35,7 @@ export async function getServerSideProps({ query }) {
   return {
     props: {
       blogs: results,
+      raw:data,
       currentPage: currentPage,
       totalPages: Math.ceil(data.count / pageSize),
     },
