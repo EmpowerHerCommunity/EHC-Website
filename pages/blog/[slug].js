@@ -2,6 +2,8 @@ import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
 import Head from "next/head";
+import SEO from "@bradgarropy/next-seo"
+
 
 const Slug = ({ blog }) => {
 
@@ -20,11 +22,29 @@ const Slug = ({ blog }) => {
   
   return (
     <section className="">
-       <Head>
+       {/* <Head>
         <title>{blog.title}</title>
         <meta name="description" content={blog.introduction}/>
         <meta property="og:image" content={blog.cover_photo} />
-      </Head>
+      </Head> */}
+
+      <SEO
+      title={blog.title}
+      icon={blog.cover_photo}
+      description={blog.introduction}
+      canonical="https://www.canonical.ie/"
+      keywords={["EHC", "Community", "Empower her community", "EHC blog"]} 
+      twitter={{
+        image: blog.cover_photo,
+        site: "@empowerhercommunity",
+        card: "summary_large_image",
+    }}
+    facebook={{
+      image: blog.cover_photo,
+      type: blog.introduction,
+  }}
+    />
+
       <NavBar />
       <div className="mx-auto container prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-4xl max-w-screen-2xl  text-justify px-4 lg:px-10 pt-5 lg:pt-12">
         <article className="py-6">
@@ -41,29 +61,29 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <figcaption className="ml-0 lg:ml-20 mt-2">
+          <div className="ml-0 lg:ml-20 mt-2">
             <h1 className="lg:text-5xl text-4xl lg:w-12/12 font-semibold">
               {blog.title}
             </h1>
             <p className="md:text-xl text-black -mt-3 text-xl lg:text-lg lg:w-9/12">
               {blog.introduction}
             </p>
-          </figcaption>
+          </div>
 
           <section className="flex items-center -mt-10 py-0 lg:ml-20 ml-0">
-            <figure className="h-16 w-16 rounded-full">
+            <div className="h-16 w-16 rounded-full">
               <img
                 src={blog.author_image}
                 alt="author avatar"
                 className="h-full w-full object-contain rounded-full"
               />
-            </figure>
-            <figcaption className="text-2xl text-black font-medium ml-6">{blog.author}</figcaption>
+            </div>
+            <div className="text-2xl text-black font-medium ml-6">{blog.author}</div>
           </section>
 
-          <figure className="-mt-1">
+          <div className="-mt-1">
             <img src={blog.cover_photo} className="w-full h-96" />
-          </figure>
+          </div>
 
           <section className="flex justify-between lg:ml-20 ml-0">
             <div className="flex w-12/12">

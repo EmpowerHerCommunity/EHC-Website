@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import NavBar from "../src/components/NavBar";
 import Footer from "../src/components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import {setCookie} from "cookies-next"
 
 const login = () => {
   const router = useRouter();
@@ -12,7 +14,6 @@ const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [token, setToken] = useState("");
 
   async function handleLogin() {
     try {
@@ -20,7 +21,6 @@ const login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-CSRFToken":"Zt9no1wuUPTBoy8BukNZYLQcD9NZOYj2zW9loe9fGbdSIzuyxWvbKN2e4RdHSz69",
         },
         body: JSON.stringify({
           email,
@@ -31,7 +31,9 @@ const login = () => {
       if (response.ok) {
         // Login successful, store user data in session storage
         const data = await response.json();
-        setToken(data.data.access)
+        setCookie("accessToken", data.data.Token)
+        Cookies.set("accessToken", data.data.access, { expires: 20 });
+        localStorage.setItem("accessToken", data.data.access)
         toast.warning("Successfully Logged in", {
           position: "top-right",
           autoClose: 5000,
@@ -46,6 +48,7 @@ const login = () => {
         setTimeout(() => {
           router.push("/admin");
         }, 1500);
+
       } else {
         // Login failed, display error message
         setError(error);

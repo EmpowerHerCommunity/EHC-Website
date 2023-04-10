@@ -51,7 +51,7 @@ const blogEdit = () => {
     formData.append("author_image", selectedAuthor); 
     formData.append("tags[]", result?.tags);
 
-
+ 
     try {
       const response = await fetch(
         `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${routeId}/`,

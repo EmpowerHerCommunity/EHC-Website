@@ -41,15 +41,15 @@ function Featured() {
           <Link href={`/blog/featured/${feature.slug}`}>
             <div key={feature.id}>
              
-              <figure>
+              <div>
                 <img
                   src={feature.cover_photo}
                   alt="article cover"
                   className="w-full lg:h-auto h-56"
                 />
-              </figure>
+              </div>
               <div className="lg:absolute static max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
-                <figcaption className="lg:w-7/12 w-full">
+                <div className="lg:w-7/12 w-full">
                 <section className=" text-light font-semibold flex items-center justify-between lg:w-80 lg:mt-10 mt-0 xl:mt-0 w-80 ml-0 lg:text-xl text-xl">
                 <div className=" mb-1">
                   {new Date(feature.created).toLocaleDateString("en-US", options)}
@@ -66,7 +66,7 @@ function Featured() {
                     {feature.title}
                   </h1>
                   <p className="lg:text-xl text-2xl">{feature.introduction}</p>
-                </figcaption>
+                </div>
                 <section className="py-4 flex items-center">
                   <img
                     src={feature.author_image}
