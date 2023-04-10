@@ -370,7 +370,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           )}
         </section>
       
-      {raw.count < 0 ?  <section className=" container mx-auto flex justify-end mt-10 px-10">
+      {raw.next !== null ?  <section className=" container mx-auto flex justify-end mt-10 px-10">
             <button
               onClick={next}
               className="animate-pulse hover:scale-110 bg-primary text-white w-40 h-12 rounded-md text-xl font-medium"
