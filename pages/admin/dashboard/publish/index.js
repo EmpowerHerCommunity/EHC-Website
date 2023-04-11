@@ -203,6 +203,7 @@ const Publish = () => {
                 className="border h-16 rounded-md w-full"
                 value={title}
                 maxLength="55"
+
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}

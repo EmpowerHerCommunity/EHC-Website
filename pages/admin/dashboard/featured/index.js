@@ -11,7 +11,7 @@ const FeaturedDashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem("accessToken");
+    const token = localStorage.getItem("accessToken")
     if (!token) {
       router.push("/login");
     }
