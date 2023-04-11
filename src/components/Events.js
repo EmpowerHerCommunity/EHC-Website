@@ -13,7 +13,7 @@ const Events = () => {
     <section className="bg-primary bg-opacity-10 text-black py-20 ">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src="/group2.png" width="135px" height="135px" />
+          <Image src="/group2.png" width={135} height={135} />
         </div>
         <div className="pl-11 lg:pt-7 pt-20">
           <div className="relative mb-8 max-w-max mx-auto">
@@ -28,7 +28,7 @@ const Events = () => {
               className="mb-8 text-center md:text-left lg:w-4/12 w-11/12"
             >
               <div data-aos="fade-down">
-                <Image src="/webinar4.jpg" width="300px" height="300px" className="rounded-md" />
+                <Image src="/webinar4.jpg" width={300} height={300} className="rounded-md" />
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
                 Webinar
@@ -37,12 +37,8 @@ const Events = () => {
                 An interactive session aimed at addressing the disinterest and
                 discouragement that girls often experience in the field of IT.
                 <br />
-                <Link href="/aboutUs">
-                  <a>
-                    <span className="read-more font-normal md:text-lg leading-6 md:flex justify-end mt-6 text-lg text-primary">
+                <Link href="/aboutUs" className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary">
                       READ MORE...
-                    </span>
-                  </a>
                 </Link>
               </p>
             </div>
@@ -51,7 +47,7 @@ const Events = () => {
               className="mb-8 text-center md:text-left lg:w-4/12 w-11/12"
             >
               <div data-aos="fade-down">
-                <Image src="/volunteers.JPEG" width="300px" height="300px" className="rounded-md" />
+                <Image src="/volunteers.JPEG" width={300} height={300} className="rounded-md" />
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
                 Bootcamp 1.0
@@ -61,12 +57,8 @@ const Events = () => {
                 that provided women with a month-long, free-of-charge training
                 program.
                 <br />
-                <Link href="/aboutUs">
-                  <a>
-                    <span className="read-more font-normal text-lg leading-6 md:flex justify-end mt-6 text-primary">
+                <Link href="/aboutUs" className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary">
                       READ MORE...
-                    </span>
-                  </a>
                 </Link>
               </p>
             </div>
@@ -75,7 +67,7 @@ const Events = () => {
               className="mb-8 text-center md:text-left lg:w-4/12 w-11/12"
             >
               <div data-aos="fade-down">
-                <Image src="/mentorship.jpg" width="300px" height="300px" className="rounded-md" />
+                <Image src="/mentorship.jpg" width={300} height={300} className="rounded-md" />
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
                 Mentorship Academy
@@ -83,12 +75,9 @@ const Events = () => {
               <p className="font-normal md:text-lg text-2xl tracking-wider text-justify w-12/12 lg:w-9/12 h-40">
                 The Mentorship Academy is designed to connect women who are just
                 starting out in their careers with seasoned experts.
-                <Link href="/aboutUs">
-                  <a>
-                    <span className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary">
+                <br/>
+                <Link href="/aboutUs" className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary">
                       READ MORE...
-                    </span>
-                  </a>
                 </Link>
               </p>
             </div>

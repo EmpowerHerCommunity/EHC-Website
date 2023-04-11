@@ -13,7 +13,7 @@ const UpcomingEventsCard = ({ events }) => {
     <div className="h-full flex" data-aos="zoom-out">
       <div className="">
         {events.count === 0 ? (
-          <p className="text-xl">There are no upcoming events presently</p>
+          <p className="text-2xl">There are no upcoming events presently</p>
         ) : (
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-col-1 place-items-center gap-40 py-3 px-5">
             {events.results &&
@@ -40,11 +40,10 @@ const UpcomingEventsCard = ({ events }) => {
                   </div>
                   <div className="flex my-4">
                     <button className="bg-primary bg-opacity-80 py-3 px-4 border rounded-sm border-primary hover:border-transparent w-44">
-                      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform">
+                      <Link legacyBehavior href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform">
                         <a target="_blank">
                           <span className="text-white text-2xl">
-                            {" "}
-                            Read More{" "}
+                            Read More
                           </span>
                         </a>
                       </Link>

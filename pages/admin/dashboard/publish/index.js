@@ -122,7 +122,7 @@ const Publish = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the{" "}
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="underline text-primary">home page</a>
           </Link>{" "}
           to continue browsing.
@@ -203,6 +203,7 @@ const Publish = () => {
                 type="text"
                 className="border h-16 rounded-md w-full"
                 value={title}
+                maxLength="55"
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}
@@ -218,6 +219,7 @@ const Publish = () => {
                 type="text"
                 className="border h-16 rounded-md w-full"
                 value={introduction}
+                maxLength="185"
                 onChange={(e) => {
                   setIntroduction(e.target.value);
                 }}

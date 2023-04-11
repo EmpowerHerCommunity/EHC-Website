@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const BlogDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(null);
 
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
@@ -26,7 +26,7 @@ const BlogDashboard = () => {
         setFetchedEvents(data.results);
         setIsFetching(false);
       } catch (error) {
-        setError(error.message)
+        setError(error.message);
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
@@ -50,9 +50,9 @@ const BlogDashboard = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the{" "}
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="underline text-primary">home page</a>
-          </Link>{" "}
+          </Link>
           to continue browsing.
         </h1>
       </section>
@@ -92,10 +92,12 @@ const BlogDashboard = () => {
                     <td className="w-6/12">{data.introduction}</td>
                     <td className="">{data.author}</td>
                     <td>
-                      <Link href={`/admin/dashboard/blog/${data.slug}`}>
-                        <button className="w-16 rounded-md border bg-primary text-white h-10">
-                          Edit
-                        </button>
+                      <Link href={`/admin/dashboard/blog/${data.slug}`} legacyBehavior>
+                        <a>
+                          <button className="w-16 rounded-md border bg-primary text-white h-10">
+                            Edit
+                          </button>
+                        </a>
                       </Link>
                     </td>
                   </tr>
