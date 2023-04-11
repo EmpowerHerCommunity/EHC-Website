@@ -17,7 +17,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container mx-auto lg:mx-auto cursor-pointer px-1">
+    <div className="lg:container overflow-hidden lg:mx-auto cursor-pointer px-4">
       <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-1">
         <ul
           className={`${

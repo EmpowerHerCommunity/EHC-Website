@@ -179,7 +179,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                           alt="content"
                         />
 
-                        <section className=" text-slug flex items-center justify-between lg:w-64 md:w-72 w-64 lg:text-lg text-xl ">
+                        <section className=" text-slug flex items-center justify-between lg:w-64 md:w-80 w-80 lg:text-lg text-2xl ">
                           <div className=" font-medium mb-1">
                             {new Date(blog.created).toLocaleDateString(
                               "en-US",

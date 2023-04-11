@@ -30,10 +30,10 @@ const Form = () => {
     ) {
       try {
         await emailjs.sendForm(
-          "service_or1toa8",
-          "template_8w0a1ed",
+          "service_sqhbqh5",
+          "template_ayka0t2",
           submit.current,
-          "VzAh-kzQKj2SeXc8v"
+          "v_22EFbmmIAh7jydz"
         );
         toast.warning("mail sent successfully", {
           position: "top-right",
@@ -75,7 +75,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              name="name"
+              name="from_name"
               required
               id="name"
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
@@ -93,7 +93,7 @@ const Form = () => {
             </label>
             <input
               type="email"
-              name="email"
+              name="from_email"
               required
               id="email"
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
@@ -113,7 +113,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              name="mobile number"
+              name="from_mobileNumber"
               required
               id="mobile-number"
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
@@ -131,7 +131,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              name="nationality"
+              name="from_nationality"
               required
               id="nationality"
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
@@ -149,7 +149,7 @@ const Form = () => {
               message
             </label>
             <textarea
-              name="message"
+              name="from_message"
               required
               id="message"
               cols="30"
