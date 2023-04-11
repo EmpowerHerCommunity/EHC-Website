@@ -18,7 +18,7 @@ function Admin() {
 
   return (
     <>
-      <section className="xl:block hidden">
+      <section className="xl:block hidden 2xl:mx-auto 2xl:container">
         <Mainbod />
       </section>
       <section className="xl:hidden h-screen lg:text-2xl md:text-xl text-xl px-4 flex justify-center text-center items-center">

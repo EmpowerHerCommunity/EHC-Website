@@ -9,7 +9,7 @@ const Create = () => {
   const [event, setEvent] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(null);
-
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -28,19 +28,21 @@ const Create = () => {
     data.append("date", date);
 
     try {
+      setLoading(true);
       const response = await fetch(
         "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/",
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${getCookie("accessToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
           body: data,
         }
       );
 
       if (response.ok) {
-        toast.warning("Event successfully added", {
+        setLoading(false);
+        toast.info("Event successfully added", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -51,8 +53,10 @@ const Create = () => {
           theme: "light",
         });
         window.location.reload();
+        router.push("/admin/dashboard/event")
       }
     } catch (error) {
+      setLoading(false);
       toast.error("A network error occurred", {
         position: "top-right",
         autoClose: 5000,
@@ -77,12 +81,12 @@ const Create = () => {
   };
 
   return (
-    <div className="flex ">
+    <div className="flex 2xl:mx-auto 2xl:container">
       <div className="w-2/12">
         <SideBar />
       </div>
       <form
-        className="flex flex-col px-5 mt-10 w-10/12"
+        className="flex flex-col px-6 mt-10 w-10/12"
         onSubmit={handleSubmit}
         encType="multipart/form-data"
       >
@@ -150,9 +154,15 @@ const Create = () => {
           </div>
         </div>
         <div className="flex justify-end">
-          <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
-            Post
-          </button>
+          {loading ? (
+            <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
+              Updating...
+            </button>
+          ) : (
+            <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
+              Update
+            </button>
+          )}
         </div>
         <ToastContainer
           position="top-right"
