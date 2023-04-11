@@ -1,10 +1,21 @@
 import SideBar from "../../../../src/components/admin/SideBar";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const FeaturedDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+    if (!token) {
+      router.push("/login");
+    }
+  }, []);
 
   const handleDelete = (slug) => {
     try {
@@ -58,8 +69,20 @@ const FeaturedDashboard = () => {
   }, [isFetching]);
 
   return (
-    <div className="flex ">
-      <div className="w-2/12">
+    <>
+    <section className="xl:hidden h-screen lg:text-2xl md:text-xl text-xl px-4 flex justify-center text-center items-center">
+      <h1>
+        Sorry, this page is not available on your current screen size. Please
+        go back to the{" "}
+        <Link href="/">
+          <a className="underline text-primary">home page</a>
+        </Link>{" "}
+        to continue browsing.
+      </h1>
+    </section>
+
+    <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">     
+     <div className="w-2/12">
         <SideBar />
       </div>
       {error && <p className="text-lg">{error}</p>}
@@ -106,6 +129,7 @@ const FeaturedDashboard = () => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 

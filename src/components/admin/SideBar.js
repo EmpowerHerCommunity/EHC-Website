@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { deleteCookie } from 'cookies-next';
 import Link from "next/link";
 
 import {
@@ -11,11 +10,11 @@ import {
 
 const SideBar = () => {
   const router = useRouter();
-  const handleLogOut = ()=>{
-    localStorage.clear()
-    deleteCookie("acessToken")
-    router.push("/login")
-  }
+  const handleLogOut = () => {
+    localStorage.removeItem("accessToken");
+    // document.cookie = `accessToken=""; httpOnly; path=/`;
+    router.push("/login");
+  };
 
   return (
     <div className="fixed w-56 h-full bg-primary shadow-sm">
@@ -33,15 +32,15 @@ const SideBar = () => {
             </div>
             <Link href="/admin/dashboard/event">
               <button className="text-lg">Events</button>
-          </Link>
-            </div>
+            </Link>
+          </div>
           <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdOutlineVolunteerActivism />
             </div>
             <Link href="/admin/dashboard/create">
               <button className="text-lg">Create Event</button>
-              </Link>
+            </Link>
           </div>
 
           <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
@@ -50,10 +49,10 @@ const SideBar = () => {
             </div>
             <Link href="/admin/dashboard/blog">
               <button className="text-lg">Blog Posts</button>
-              </Link>
+            </Link>
           </div>
 
-          <div  className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">
               <MdEmojiEvents />
             </div>
@@ -75,13 +74,15 @@ const SideBar = () => {
               <MdSupervisedUserCircle />
             </div>
             <div>
-              <button className="text-lg" onClick={handleLogOut}>Log Out</button>
+              <button className="text-lg" onClick={handleLogOut}>
+                Log Out
+              </button>
             </div>
           </div>
         </div>
       </nav>
     </div>
   );
-  };
+};
 
 export default SideBar;
