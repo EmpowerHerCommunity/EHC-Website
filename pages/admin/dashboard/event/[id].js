@@ -122,7 +122,7 @@ const eventEdit = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the{" "}
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="underline text-primary">home page</a>
           </Link>{" "}
           to continue browsing.

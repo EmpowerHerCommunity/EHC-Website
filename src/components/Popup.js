@@ -7,6 +7,7 @@ import LineTen from '../../public/popup/Line 10.svg';
 import LineEight from '../../public/popup/Line 8.svg';
 import LineNine from '../../public/popup/Line 9.svg';
 import LineNineB from '../../public/popup/Line 9 (1).svg'
+import Link from "next/link";
 
 function PopUp({ closePopup }) {
   return (
@@ -37,9 +38,9 @@ function PopUp({ closePopup }) {
             </p>
           </div>
           <button className="pt-7 pb-4">
-          <a href="https://paystack.com/pay/empowerhercommunity" target="_blank" rel="noopener noreferrer" className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer">
-            Donate Now
-          </a>
+          <Link legacyBehavior href="https://paystack.com/pay/empowerhercommunity"  >
+           <a target="_blank" className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer" >Donate Now</a> 
+          </Link>
           </button>
         </section>
       </div>

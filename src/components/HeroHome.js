@@ -28,14 +28,14 @@ const HeroHome = () => {
               <div>
                 <div className="flex lg:gap-4 gap-12">
                   <button className='bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm'>
-                    <Link href='https://paystack.com/pay/empowerhercommunity'>
+                    <Link href='https://paystack.com/pay/empowerhercommunity' legacyBehavior>
                       <a target='_blank'>
                         <span className="text-primary text-2xl">  Support Us </span>
                       </a>
                     </Link>
                   </button>
                   <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm'>
-                    <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
+                    <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform' legacyBehavior>
                       <a target='_blank'>
                         <span className="text-white text-2xl"> Join Us Today </span>
                       </a>
@@ -43,13 +43,13 @@ const HeroHome = () => {
                   </button>
                 </div>
                 <div className='mt-14'>
-                  <Image src='/group2.png' width='137px' height='137px' alt='' />
+                  <Image src='/group2.png' width={137} height={137} alt='' />
                 </div>
               </div>
             </article>
           </div>
           <div className='hidden md:block bg-slate-100 rounded-r-lg h-3/4' data-aos='fade-right'>
-            <Image src='/herogirl.png' width='548px' height='539px' alt='' />
+            <Image src='/herogirl.png' width={548} height={548} alt='' />
           </div>
         </div>
       </div>

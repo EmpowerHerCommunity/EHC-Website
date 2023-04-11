@@ -48,7 +48,7 @@ const NewsLetter = () => {
                 }
                 disabled={isLoading}
               >
-                <Link href="https://empowerhercommunity.substack.com/embed">
+                <Link href="https://empowerhercommunity.substack.com/embed" legacyBehavior>
                   <a target="_blank">Subscribe</a>
                 </Link>
               </button>

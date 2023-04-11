@@ -28,7 +28,7 @@ const BlogNewsletter = () => {
                 type="submit"
                 className="hover:scale-105 cursor-pointer flex items-center lg:text-2xl text-3xl px-16 border border-transparent rounded-full shadow-sm font-medium text-white  bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary lg:py-2 lg:h-16 h-16"
               >
-                <Link href="https://empowerhercommunity.substack.com/embed">
+                <Link href="https://empowerhercommunity.substack.com/embed" legacyBehavior>
                   <a target="_blank"> Subscribe</a>
                 </Link>
               </button>

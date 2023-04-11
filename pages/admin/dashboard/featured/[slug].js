@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import SideBar from "../../../../src/components/admin/SideBar";
 
-const blogEdit = () => {
+const FeatureEdit = () => {
   const [result, setResult] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [selectedAuthor, setSelectedAuthor] = useState(null);
@@ -135,8 +135,8 @@ const blogEdit = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the
-          <Link href="/" legacyBehavior>
-            <a className="underline text-primary">home page</a>
+          <Link href="/" className="underline text-primary">
+            home page
           </Link>
           to continue browsing.
         </h1>
@@ -207,7 +207,6 @@ const blogEdit = () => {
                   required
                   className="border w-full h-14 rounded-md px-2 py-2"
                   value={result?.introduction}
-                  maxLength="185"
                   name="introduction"
                   onChange={handleInputChange}
                 ></textarea>
@@ -308,4 +307,4 @@ const blogEdit = () => {
   );
 };
 
-export default blogEdit;
+export default FeatureEdit
