@@ -65,7 +65,6 @@ const Publish = () => {
         });
         const responseData = await response.json();
         setTimeout(() => {
-          window.location.reload();
           router.push("/admin/dashboard/blog")
         }, 500);
       } else {

@@ -52,7 +52,6 @@ const Create = () => {
           progress: undefined,
           theme: "light",
         });
-        window.location.reload();
         router.push("/admin/dashboard/event")
       }
     } catch (error) {
