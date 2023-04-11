@@ -18,10 +18,10 @@ const PastEventsCard = ({ event, i }) => {
                 {
                     (i % 2 === 0) ?
                         <div className='absolute bottom-[40px] right-0'>
-                            <Image src='/purple-dots-down.png' width='137px' height='137px' alt='' />
+                            <Image src='/purple-dots-down.png' width={137} height={137} alt='' />
                         </div> :
                         <div className='absolute top-full left-0 transform -translate-y-1/2'>
-                            <Image src='/group2.png' width='137px' height='137px' alt='' />
+                            <Image src='/group2.png' width={137} height={137} alt='' />
                         </div>
                 }
                 <div className={((i % 2 === 0) ? "lg:flex-row-reverse" : "lg:flex-row") + ' flex flex-col justify-between items-start gap-14'} >
@@ -48,7 +48,7 @@ const PastEventsCard = ({ event, i }) => {
                             <div>
                                 <div className="flex gap-4">
                                     <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent lg:w-44 w-52 rounded-md hover:scale-105'>
-                                        <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'>
+                                        <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform'legacyBehavior>
                                             <a target='_blank'>
                                                 <span className="text-white text-2xl"> Join Us Today </span>
                                             </a>
@@ -61,19 +61,19 @@ const PastEventsCard = ({ event, i }) => {
                     <div className='lg:flex-auto w-full lg:w-5/12' data-aos='fade-right'>
                         <div className="relative p-4">
                             <div className="flex absolute top-0 left-0">
-                                <Image src='/border-tl.png' width='106px' height='106px' alt='' />
+                                <Image src='/border-tl.png' width={106}  height={106} alt='' />
                             </div>
                             <div className="flex absolute top-0 right-28">
-                                <Image src='/border-tr.png' width='106px' height='106px' alt='' />
+                                <Image src='/border-tr.png' width={106}  height={106}  alt='' />
                             </div>
                             <div className="flex absolute bottom-0 left-0">
-                                <Image src='/border-bl.png' width='106px' height='106px' alt='' />
+                                <Image src='/border-bl.png' width={106}  height={106}  alt='' />
                             </div>
                             <div className="flex absolute bottom-0 right-28">
-                                <Image src='/border-br.png' width='106px' height='106px' alt='' />
+                                <Image src='/border-br.png' width={106}  height={106}  alt='' />
                             </div>
                             <div className='relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-10/12 max-w-max' data-aos='fade-right'>
-                                <Image src={event.image} width='400px' height='400px' alt={event.title} />
+                                <Image src={event.image} width={400} height={400} alt={event.title} />
                             </div>
                         </div>
                         <EventsGallery images={event.gallery} galleryI={i} />

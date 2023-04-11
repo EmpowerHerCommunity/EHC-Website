@@ -73,7 +73,7 @@ const Testimonial = () => {
     <section className="py-12 text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src="/group2.png" width="115px" height="115px" />
+          <Image src="/group2.png" width={115} height={115} />
         </div>
         <div className="">
           <div className="relative mb-14  max-w-max mx-auto lg:pt-4 pt-36">
@@ -158,8 +158,8 @@ const Testimonial = () => {
                             <div className="flex-none flex items-end w-44 sm:w-fit">
                               <Image
                                 src={testimonial.image}
-                                width="190px"
-                                height="300px"
+                                width={190}
+                                height={300}
                                 alt="attendee"
                               />
                             </div>

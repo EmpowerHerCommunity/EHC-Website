@@ -20,7 +20,6 @@ function Featured() {
     FetchBlogs();
     console.log(featuredBlog);
   }, []);
-  console.log(featuredBlog);
 
   function calculateReadingTime(content) {
     const wordsPerMinute = 200;
@@ -36,6 +35,7 @@ function Featured() {
 
   return (
     <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 lg:py-10 py-4 relative">
+      {error && <p>{error.message}</p> }
       {featuredBlog &&
         featuredBlog.results.map((feature) => (
           <Link href={`/blog/featured/${feature.slug}`}>

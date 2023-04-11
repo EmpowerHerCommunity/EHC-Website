@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import NavBar from "../src/components/NavBar";
 import Footer from "../src/components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
-import {setCookie} from "cookies-next"
 
 const login = () => {
   const router = useRouter();
@@ -31,9 +29,8 @@ const login = () => {
       if (response.ok) {
         // Login successful, store user data in session storage
         const data = await response.json();
-        setCookie("accessToken", data.data.Token)
-        Cookies.set("accessToken", data.data.access, { expires: 20 });
-        localStorage.setItem("accessToken", data.data.access)
+        localStorage.setItem("accessToken", data.data.access);
+
         toast.warning("Successfully Logged in", {
           position: "top-right",
           autoClose: 5000,
@@ -45,9 +42,7 @@ const login = () => {
           theme: "light",
         })     
         // Redirect to user profile page
-        setTimeout(() => {
           router.push("/admin");
-        }, 1500);
 
       } else {
         // Login failed, display error message
@@ -154,7 +149,7 @@ const login = () => {
         />
       </div>
       <section className="xl:hidden h-screen lg:text-2xl md:text-xl text-xl px-4 flex justify-center text-center items-center">
-        <h1>Sorry, this page is not available on your current screen size. Please go back to the <Link href='/'><a  className="underline text-primary">home page</a></Link> to continue browsing.</h1>
+        <h1>Sorry, this page is not available on your current screen size. Please go back to the <Link href='/' className="underline text-primary">home page</Link> to continue browsing.</h1>
       </section>
     </>
   );

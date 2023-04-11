@@ -22,8 +22,8 @@ const Hero = () => {
                 <Image
                   src="/hero-volunteer.png"
                   className="object-cover object-center"
-                  width="270px"
-                  height="270px"
+                  width={270}
+                  height={270}
                   alt="cup"
                 />
               </figure>
@@ -38,32 +38,32 @@ const Hero = () => {
                   />
                 </figure>
 
-                <figure className="relative bottom-56 left-52">
+                <div className="relative bottom-56 left-52">
                   <Image
                     src="/volunteers/right9.svg"
                     alt="line"
                     width={120}
                     height={120}
                   />
-                </figure>
+                </div>
               </div>
               <div className=" absolute lg:block hidden">
-                <figure className="relative bottom-72 right-6">
+                <div className="relative bottom-72 right-6">
                   <Image
                     src="/volunteers/left10.svg"
                     alt="line"
                     width={120}
                     height={120}
                   />
-                </figure>
-                <figure className="relative bottom-56 right-6">
+                </div>
+                <div className="relative bottom-56 right-6">
                   <Image
                     src="/volunteers/left11.svg"
                     alt="line"
                     width={120}
                     height={120}
                   />
-                </figure>
+                </div>
               </div>
             </div>
 

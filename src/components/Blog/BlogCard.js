@@ -179,7 +179,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                           alt="content"
                         />
 
-                        <section className=" text-slug flex items-center justify-between lg:w-64 md:w-72 w-64 lg:text-lg text-xl ">
+                        <section className=" text-slug flex items-center justify-between lg:w-64 md:w-80 w-80 lg:text-lg text-2xl ">
                           <div className=" font-medium mb-1">
                             {new Date(blog.created).toLocaleDateString(
                               "en-US",
@@ -339,13 +339,13 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             {blog.introduction}
                           </p>
                           <section className="flex items-center flex-wrap mt-3 rounded-full">
-                            <figure className="h-16 w-16 rounded-full">
+                            <div className="h-16 w-16 rounded-full">
                               <img
                                 src={blog.author_image}
                                 alt="author avatar"
                                 className="h-full w-full object-contain rounded-full"
                               />
-                            </figure>
+                            </div>
 
                             <p className="font-semibold text-2xl lg:text-xl ml-2 md:mb-1 lg:mb-0">
                               {blog.author}
@@ -370,7 +370,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           )}
         </section>
       
-      {raw.count < 0 ?  <section className=" container mx-auto flex justify-end mt-10 px-10">
+      {raw.next !== null ?  <section className=" container mx-auto flex justify-end mt-10 px-10">
             <button
               onClick={next}
               className="animate-pulse hover:scale-110 bg-primary text-white w-40 h-12 rounded-md text-xl font-medium"

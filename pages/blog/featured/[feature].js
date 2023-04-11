@@ -3,6 +3,7 @@ import md from "markdown-it";
 import NavBar from "../../../src/components/NavBar";
 import Footer from "../../../src/components/Footer";
 import SEO from "@bradgarropy/next-seo";
+import Head from "next/head";
 
 const Slug = ({ blogs }) => {
   function calculateReadingTime(content) {
@@ -22,23 +23,28 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
+          <Head>
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
           <SEO
             title={blog.title}
             icon={blog.cover_photo}
             description={blog.introduction}
             keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
             twitter={{
-              image: blog.cover_photo,
-              site: "@empowerhercommunity",
               card: "summary_large_image",
+              site: "@empowerhercommunity",
+              title: blog.title,
+              description: blog.introduction,
+              image: blog.cover_photo,
             }}
             facebook={{
-              image: blog.cover_photo,
               type: "article",
+              image: blog.cover_photo,
             }}
           />
-          <div className="mx-auto container prose flex justify-between prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-4 lg:px-12 pt-6 lg:pt-8">
-            <article key={blog.slug} className="py-6">
+          <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
+            <article key={blog.slug} className="container mx-auto py-6">
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">
                   {new Date(blog.created).toLocaleDateString("en-US", options)}
@@ -53,10 +59,10 @@ const Slug = ({ blogs }) => {
               </section>
 
               <div className="lg:ml-20 ml-0">
-                <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">
+                <h1 className="lg:text-4xl text-3xl lg:w-12/12 mt-4 font-semibold">
                   {blog.title}
                 </h1>
-                <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">
+                <p className="md:text-xl leading-10 text-2xl lg:text-xl lg:w-9/12 w-11/12">
                   {blog.introduction}
                 </p>
               </div>
@@ -77,8 +83,9 @@ const Slug = ({ blogs }) => {
               </div>
 
               <section className="flex justify-between lg:ml-20 ml-0">
-                <div className="flex w-12/12">
+                <div className="flex w-11/12">
                   <div
+                    className="w-full md:w-full"
                     dangerouslySetInnerHTML={{
                       __html: md().render(blog.description),
                     }}
