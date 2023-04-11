@@ -36,7 +36,7 @@ const Publish = () => {
     data.append("author_image", authorImage);
     // Append tags to the FormData object
     for (let i = 0; i < tags.length; i++) {
-      data.append("tags[]", tags[i]);
+      data.append("tags", tags[i]);
     }
 
     try {
