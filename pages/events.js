@@ -9,13 +9,26 @@ import Head from 'next/head';
 const events = () => {
   return (
     <div className="overflow-hidden">
-        <Head>
-        <title>Empower Her Community Website</title>
+      <Head>
+        <meta name="title" property="og:title" content="Empower Her Community" />
+        <link rel="icon" href="/logo.png" />
+        <meta name="image" property="og:image" content="/preview.png"/>
+        <meta name="twitter:title" content="Empower Her Community" />
+        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta name="twitter:image" content="/preview.png" />
+        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          property="og:url"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="description"
-          content="Since our inception, we have provided a plethora of opportunities for women around the globe to benefit from our interactive sessions, webinars, and bootcamps. These initiatives have empowered countless women, enabling them to gain valuable insights, learn new skills, and connect with like-minded individuals."
+          property="og:description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
         />
-        <link rel="icon" href="/logo.png" />
+        <meta name="twitter:image:alt" content="logo" />
       </Head>
       <NavBar />
       <main className="main overflow-hidden">
