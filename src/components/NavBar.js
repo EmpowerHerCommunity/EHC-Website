@@ -17,12 +17,12 @@ const NavBar = () => {
   };
 
   return (
-    <div className="lg:container overflow-hidden lg:mx-auto cursor-pointer px-4">
-      <nav className="flex lg:flex-row items-center py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-1">
+    <div className="overflow-hidden  cursor-pointer px-4  lg:bg-white lg:bg-opacity-0 bg-primary bg-opacity-10 ">
+      <nav className="flex lg:flex-row items-center lg:mx-auto  lg:container py-10 lg:py-2 flex-col-reverse lg:justify-center lg:px-5 px-1">
         <ul
           className={`${
             active ? "block" : "hidden"
-          } lg:inline-flex lg:flex-row xl:w-5/12 lg:w-96 md:w-12/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-medium `}
+          }  lg:inline-flex lg:flex-row xl:w-5/12 lg:w-96 md:w-12/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-semibold `}
         >
           <li className="hover:border-b-2 border-primary hover:scale-x-110">
             <Link href="/">Home</Link>
@@ -49,7 +49,7 @@ const NavBar = () => {
               <Image src="/logo.png" width={91} height={91} />
             </a>
           </Link>
-         {active ? <h1 className="text-4xl flex items-center lg:hidden" onClick={handleClick}>X</h1> : <button
+         {active ? <h1 className="text-4xl flex items-center lg:hidden font-medium" onClick={handleClick}>X</h1> : <button
             className=" rounded lg:hidden text-white ml-auto hover:text-white active:bg-white outline-none"
             onClick={handleClick}
           >
