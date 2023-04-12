@@ -23,13 +23,14 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
-         <Head>
+           <Head>
         <meta name="title" property="og:title" content={blog.title} />
         <meta name="image" property="og:image" content={blog.cover_photo} />
         <meta name="twitter:title" content={blog.title} />
         <meta name="twitter:description" content={blog.introduction} />
         <meta name="twitter:image" content={blog.cover_photo} />
-
+        <meta name="author" property="og:article:author" content={blog.author} />
+        <meta name="description" property="og:article:section" content={blog.introduction} />
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
@@ -43,24 +44,6 @@ const Slug = ({ blogs }) => {
         />
         <meta name="twitter:image:alt" content={blog.title} />
       </Head>
-
-          {/* <SEO
-            title={blog.title}
-            icon={blog.cover_photo}
-            description={blog.introduction}
-            keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
-            twitter={{
-              card: "summary_large_image",
-              site: "@empowerhercommunity",
-              title: blog.title,
-              description: blog.introduction,
-              image: blog.cover_photo,
-            }}
-            facebook={{
-              type: "article",
-              image: blog.cover_photo,
-            }}
-          /> */}
           <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
             <article key={blog.slug} className="container mx-auto py-6">
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">

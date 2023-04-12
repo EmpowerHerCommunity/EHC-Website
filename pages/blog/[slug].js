@@ -25,7 +25,8 @@ const Slug = ({ blog }) => {
         <meta name="twitter:title" content={blog.title} />
         <meta name="twitter:description" content={blog.introduction} />
         <meta name="twitter:image" content={blog.cover_photo} />
-
+        <meta name="author" property="og:article:author" content={blog.author} />
+        <meta name="description" property="og:article:section" content={blog.introduction} />
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
