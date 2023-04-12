@@ -46,7 +46,7 @@ const NavBar = () => {
         <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 xl:w-3/12 lg:w-2/12 lg:justify-center items-center">
           <Link href="/" legacyBehavior >
             <a className="border-none">
-              <Image src="/logo.png" width={91} height={91} />
+              <Image src="/logo.png" width={91} height={91} alt="logo" />
             </a>
           </Link>
          {active ? <h1 className="text-4xl flex items-center lg:hidden font-medium" onClick={handleClick}>X</h1> : <button

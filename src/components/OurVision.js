@@ -24,10 +24,10 @@ const OurVision = () => {
             </p>
           </div>
           <div data-aos='fade-right'>
-            <img src='/woman.jpg' alt='' className='w-full' />
+            <img src='/woman.jpg' alt='woman' className='w-full' />
           </div>
           <div className='md:mt-0 mt-4 md:block hidden' data-aos='fade-left'>
-            <img src='/women.jpg' alt='' />
+            <img src='/women.jpg' alt='woman' />
           </div>
           <div data-aos='zoom-out' className='' id='mission'>
             <div className='purple mt-8 md:mb-8 mb-2'>

@@ -43,13 +43,13 @@ const HeroHome = () => {
                   </button>
                 </div>
                 <div className='mt-14'>
-                  <Image src='/group2.png' width={137} height={137} alt='' />
+                  <Image src='/group2.png' width={137} height={137} alt='group' />
                 </div>
               </div>
             </article>
           </div>
           <div className='hidden md:block bg-slate-100 rounded-r-lg h-3/4' data-aos='fade-right'>
-            <Image src='/herogirl.png' width={548} height={548} alt='' />
+            <Image src='/herogirl.png' width={548} height={548} alt='girl' />
           </div>
         </div>
       </div>

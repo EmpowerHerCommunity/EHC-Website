@@ -15,7 +15,7 @@ const HeroAbout = () => {
             className=" hero-about-list text-dark font-normal md:text-lg text-3xl  leading-7"
             data-aos="fade-right"
           >
-            <img src="/contact-dots.svg" alt="" />
+            <img src="/contact-dots.svg" alt="dots" />
             <ul className="ml-20 mt-8 text-2xl lg:text-2xl cursor-pointer">
               <li className="font-semibold my-1"> <a href="#about">About Us.</a> </li>
               <li className="font-semibold my-1"><a href="#vision"> Our Vision.</a> </li>
@@ -27,7 +27,7 @@ const HeroAbout = () => {
             <h2 className="md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative">
               About Us
               <span>
-                <img src="/line2.png" alt="" />
+                <img src="/line2.png" alt="line" />
               </span>
             </h2>
             <p

@@ -133,7 +133,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mt-8 text-right">
-                <Image src='/footer-dots.png' width={110} height={110} alt='' />
+                <Image src='/footer-dots.png' width={110} height={110} alt='dot' />
               </li>
             </ul>
           </div>
