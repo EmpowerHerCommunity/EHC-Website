@@ -30,7 +30,8 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
         <meta
           property="og:url"
-          content={window.location.pathname + window.location.search}
+         content="https://empower-her-community.vercel.app/"
+
         />
         <meta property="og:image" content="/logo.png" />
       </Head>
