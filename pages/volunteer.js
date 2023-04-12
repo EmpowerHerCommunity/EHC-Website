@@ -25,7 +25,7 @@ const Volunteer = () => {
         <meta
           name="description"
           property="og:description"
-          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
+          content="We are a female community seeing to the growth and progress of all women in tech"
         />
         <meta name="twitter:image:alt" content="logo" />
       </Head>
