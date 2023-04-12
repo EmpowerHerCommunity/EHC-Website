@@ -23,10 +23,27 @@ const Slug = ({ blogs }) => {
       <NavBar />
       {blogs.results.map((blog) => (
         <>
-          <Head>
-            <meta name="twitter:card" content="summary_large_image" />
-          </Head>
-          <SEO
+         <Head>
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={blog.cover_photo}
+        />
+        <meta
+          property="og:url"
+          content={window.location.pathname + window.location.search}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:description"
+          content={blog.introduction}
+        />
+        <meta property="og:site_name" content="Empower Her Community" />
+        <meta name="twitter:image:alt" content="Alt text for image" />
+      </Head>
+          {/* <SEO
             title={blog.title}
             icon={blog.cover_photo}
             description={blog.introduction}
@@ -42,7 +59,7 @@ const Slug = ({ blogs }) => {
               type: "article",
               image: blog.cover_photo,
             }}
-          />
+          /> */}
           <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
             <article key={blog.slug} className="container mx-auto py-6">
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">

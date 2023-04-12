@@ -20,10 +20,27 @@ const Slug = ({ blog }) => {
   return (
     <section className="">
       <Head>
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={blog.cover_photo}
+        />
+        <meta
+          property="og:url"
+          content={window.location.pathname + window.location.search}
+        />
         <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:description"
+          content={blog.introduction}
+        />
+        <meta property="og:site_name" content="Empower Her Community" />
+        <meta name="twitter:image:alt" content="Alt text for image" />
       </Head>
 
-      <SEO
+      {/* <SEO
         title={blog.title}
         icon={blog.cover_photo}
         description={blog.introduction}
@@ -39,7 +56,7 @@ const Slug = ({ blog }) => {
           type: "article",
           image: blog.cover_photo,
         }}
-      />
+      /> */}
 
       <NavBar />
       <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
