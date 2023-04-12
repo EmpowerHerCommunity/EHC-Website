@@ -10,13 +10,26 @@ import Head from "next/head";
 const aboutUs = () => {
   return (
     <div className="overflow-hidden">
-      <Head>
-        <title>Empower Her Community Website</title>
+       <Head>
+        <meta name="title" property="og:title" content="Empower Her Community" />
+        <link rel="icon" href="/logo.png" />
+        <meta name="image" property="og:image" content="/preview.png"/>
+        <meta name="twitter:title" content="Empower Her Community" />
+        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta name="twitter:image" content="/preview.png" />
+        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          property="og:url"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="description"
-          content="Empower Her Community is a female oriented tech community of 5,000+ women dedicated to fostering gender diversity in tech. We strive to make the industry more accessible by providing training, mentorship, and raising awareness of opportunities for women in tech."
+          property="og:description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
         />
-        <link rel="icon" href="/logo.png" />
+        <meta name="twitter:image:alt" content="logo" />
       </Head>
       <NavBar />
       <main className="main overflow-hidden">

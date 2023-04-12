@@ -9,12 +9,25 @@ const Volunteer = () => {
   return (
     <div className="overflow-hidden">
       <Head>
-        <title>Empower Her Community Website</title>
+        <meta name="title" property="og:title" content="Empower Her Community" />
+        <link rel="icon" href="/logo.png" />
+        <meta name="image" property="og:image" content="/preview.png"/>
+        <meta name="twitter:title" content="Empower Her Community" />
+        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta name="twitter:image" content="/preview.png" />
+        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          property="og:url"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="description"
-          content="You can volunteer to work with us. All it takes is being motivated, having an interest for women in tech and having experience in a related field."
+          property="og:description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
         />
-        <link rel="icon" href="/logo.png" />
+        <meta name="twitter:image:alt" content="logo" />
       </Head>
       <NavBar />
       <main className="main overflow-hidden bg-primary bg-opacity-10">
