@@ -24,12 +24,12 @@ const Slug = ({ blogs }) => {
       {blogs.results.map((blog) => (
         <>
          <Head>
-        <meta property="og:title" content={blog.title} />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content={blog.cover_photo}
-        />
+        <meta name="title" property="og:title" content={blog.title} />
+        <meta name="image" property="og:image" content={blog.cover_photo} />
+        <meta name="twitter:title" content={blog.title} />
+        <meta name="twitter:description" content={blog.introduction} />
+        <meta name="twitter:image" content={blog.cover_photo} />
+
         <meta
           property="og:url"
           content={window.location.pathname + window.location.search}
@@ -37,12 +37,13 @@ const Slug = ({ blogs }) => {
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
+          name="description"
           property="og:description"
           content={blog.introduction}
         />
-        <meta property="og:site_name" content="Empower Her Community" />
-        <meta name="twitter:image:alt" content="Alt text for image" />
+        <meta name="twitter:image:alt" content={blog.title} />
       </Head>
+
           {/* <SEO
             title={blog.title}
             icon={blog.cover_photo}
