@@ -28,7 +28,7 @@ const Slug = ({ blog }) => {
 
         <meta
           property="og:url"
-          content={window.location.pathname + window.location.search}
+          content="https://empower-her-community.vercel.app/"
         />
         <meta name="twitter:card" content="summary_large_image" />
 
