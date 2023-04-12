@@ -1,7 +1,6 @@
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
-import SEO from "@bradgarropy/next-seo";
 import Head from "next/head";
 
 const Slug = ({ blog }) => {

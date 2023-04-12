@@ -5,6 +5,7 @@ import Footer from "../src/components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import Head from "next/head";
 
 const login = () => {
   const router = useRouter();
@@ -80,6 +81,27 @@ const login = () => {
 
   return (
     <>
+      <Head>
+        <meta name="title" property="og:title" content="Empower Her Community" />
+        <link rel="icon" href="/logo.png" />
+        <meta name="image" property="og:image" content="/preview.png"/>
+        <meta name="twitter:title" content="Empower Her Community" />
+        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta name="twitter:image" content="/preview.png" />
+        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          property="og:url"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="description"
+          property="og:description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
+        />
+        <meta name="twitter:image:alt" content="logo" />
+      </Head>
       <div className="overflow-hidden xl:block hidden">
         <NavBar />
         <main className="main">
