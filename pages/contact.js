@@ -34,7 +34,7 @@ const Contact = () => {
       <main className="main bg-light">
         <div className="container xl:max-w-screen-xl px-4 mx-auto py-24 relative">
           <div className=''> 
-          <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] ml-4" />
+          <img src="/contact-dots.svg" alt="dot" className="absolute top-[20px] left-[5px] sm:left-[-5px] ml-4" />
           </div>
           <div className="flex flex-col-reverse lg:flex-row gap-14 lg:gap-36 relative mt-16">
             <div className="w-full lg:w-6/12 lg:flex-auto">

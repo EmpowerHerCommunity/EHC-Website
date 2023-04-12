@@ -47,7 +47,7 @@ const Events = () => {
               className="mb-8 text-center md:text-left lg:w-4/12 w-11/12"
             >
               <div data-aos="fade-down">
-                <Image src="/volunteers.JPEG" width={300} height={300} className="rounded-md" />
+                <Image src="/volunteers.JPEG" width={300} alt="volunteer" height={300} className="rounded-md" />
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
                 Bootcamp 1.0
@@ -67,7 +67,7 @@ const Events = () => {
               className="mb-8 text-center md:text-left lg:w-4/12 w-11/12"
             >
               <div data-aos="fade-down">
-                <Image src="/mentorship.jpg" width={300} height={300} className="rounded-md" />
+                <Image src="/mentorship.jpg" alt="mentorship flyer" width={300} height={300} className="rounded-md" />
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
                 Mentorship Academy

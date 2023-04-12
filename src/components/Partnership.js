@@ -13,7 +13,7 @@ const Partnership = () => {
     <section className="" id="partnership">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative py-20">
         <div className="absolute top-[30px] right-0 ml-4">
-          <Image src='/purple-dots-down.png' width={105} height={105} />
+          <Image src='/purple-dots-down.png' alt="dot" width={105} height={105} />
         </div>
         <div className='container mx-auto'>
           <div className="relative mb-12 max-w-max mx-auto">

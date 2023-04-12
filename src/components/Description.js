@@ -18,12 +18,12 @@ const Description = () => {
             <div data-aos='fade-down'>
               <div className="relative px-10 py-14 z-5">
                 <div className="absolute top-0 left-0">
-                  <Image src='/hero-about-up.png' width={130} height={130} />
+                  <Image src='/hero-about-up.png' alt="dot" width={130} height={130} />
                 </div>
                 <div className="absolute bottom-0 lg:right-0 md:right-40 right-0">
-                  <Image src='/hero-about-down.png' width={130} height={130} />
+                  <Image src='/hero-about-down.png' alt="dot" width={130} height={130} />
                 </div>
-                <Image src='/download.jpg' width={500} height={500} />
+                <Image src='/download.jpg' alt="women" width={500} height={500} />
               </div>
             </div>
             <div>
@@ -45,21 +45,21 @@ const Description = () => {
               </div>
               <div className='flex items-end lg:gap-20 gap-20' data-aos='fade-up-right'>
                 <div>
-                  <Image src='/1.png' width={36} height={36} />
+                  <Image src='/1.png' alt="training icon" width={36} height={36} />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     3000+ <br />
                     <span className='text-xl md:text-xl text-dark font-normal'>Trained</span>
                   </p>
                 </div>
                 <div>
-                  <Image src='/2.png' width={50} height={44} />
+                  <Image src='/2.png' alt="mentoring icon" width={50} height={44} />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     1000+ <br />
                     <span className='text-xl md:text-xl text-dark font-normal'>Mentored</span>
                   </p>
                 </div>
                 <div>
-                  <Image src='/3.png' width={36} height={36} />
+                  <Image src='/3.png' alt="members icon" width={36} height={36} />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     5000+ <br />
                     <span className='text-xl md:text-xl text-dark font-normal'> Members</span>

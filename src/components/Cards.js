@@ -18,7 +18,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/1.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/1.png" alt="volunteers" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>
@@ -38,7 +38,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/2.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/2.png" alt="volunteer" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>
@@ -60,7 +60,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/3.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/3.png" alt="volunteer" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>
@@ -82,7 +82,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/4.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/4.png" alt="volunteer" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>
@@ -104,7 +104,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/5.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/5.png" alt="volunteer" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>
@@ -126,7 +126,7 @@ const Cards = () => {
 						<div className='flex overflow-hidden' data-aos='fade-up'>
 							<div className='relative w-full shadow-2x1 overflow-hidden rounded-sm'>
 								<div className="h-96 w-full">
-									<img src="volunteers/6.png" alt="" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
+									<img src="volunteers/6.png" alt="volunteer" className='mix-blend-overlay relative inset-0 w-full h-full object-cover' />
 								</div>
 								<div className='flex justify-start bg-black bg-opacity-70 text-white text-left absolute top-0 right-0 bottom-0 left-0 p-5'>
 									<div className='flex flex-col gap-4 justify-end lg:max-w-[280px] max-w-[400px]'>

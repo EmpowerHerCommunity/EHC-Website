@@ -91,7 +91,7 @@ const EventsGallery = ({images, galleryI}) => {
                                         <div className={" w-full h-full"}>
                                             <div className="flex items-stretch h-full">
                                                 <div className="flex-none flex overflow-hidden rounded-xl w-fit">
-                                                    <Image src={image} width={100} height={100} alt='' />
+                                                    <Image src={image} width={100} height={100} alt='event images' />
                                                 </div>
                                             </div>
                                         </div>
