@@ -18,7 +18,7 @@ const Slug = ({ blog }) => {
 
   return (
     <section className="">
-      <Head>
+        <Head>
         <meta charSet="UTF-8" />
         <title>"Empower Her Community"</title>
         <meta name="title" property="og:title" content={blog.title} />
@@ -32,7 +32,6 @@ const Slug = ({ blog }) => {
           content={blog.author}
         />
         <meta
-          name="description"
           property="og:description"
           content={blog.introduction}
         />
@@ -49,7 +48,7 @@ const Slug = ({ blog }) => {
         />
         <meta
           property="og:image:secure_url"
-          content="https://empower-her-community.vercel.app/preview.png"
+          content={blog.cover_photo}
         />
         <meta
           property="og:url"
