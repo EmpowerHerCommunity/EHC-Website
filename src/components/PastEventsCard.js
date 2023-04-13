@@ -18,10 +18,10 @@ const PastEventsCard = ({ event, i }) => {
                 {
                     (i % 2 === 0) ?
                         <div className='absolute bottom-[40px] right-0'>
-                            <Image src='/purple-dots-down.png' width={137} height={137} alt='' />
+                            <Image src='/purple-dots-down.png' width={137} height={137} alt='dots' />
                         </div> :
                         <div className='absolute top-full left-0 transform -translate-y-1/2'>
-                            <Image src='/group2.png' width={137} height={137} alt='' />
+                            <Image src='/group2.png' width={137} height={137} alt='women' />
                         </div>
                 }
                 <div className={((i % 2 === 0) ? "lg:flex-row-reverse" : "lg:flex-row") + ' flex flex-col justify-between items-start gap-14'} >
