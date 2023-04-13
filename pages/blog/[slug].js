@@ -31,18 +31,18 @@ const Slug = ({ blog }) => {
           property="og:article:author"
           content={blog.author}
         />
-        <meta name="description" content={blog.introduction} />
+        <meta
+          name="description"
+          property="og:description"
+          content={blog.introduction}
+        />
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
         />
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta
-          name="description"
-          property="og:description"
-          content={blog.introduction}
-        />
+        <meta name="description" content={blog.introduction} />
         <meta
           property="og:site_name"
           content="https://empower-her-community.vercel.app/"
