@@ -25,25 +25,37 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <Head>
-        <meta name="title" property="og:title" content="Empower Her Community" />
-        <link rel="icon" href="/logo.png" />
-        <meta name="image" property="og:image" content="/preview.png"/>
-        <meta name="twitter:title" content="Empower Her Community" />
-        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
-        <meta name="twitter:image" content="/preview.png" />
-        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta charSet="UTF-8" />
+        <title>"Empower Her Community"</title>
         <meta
-          property="og:url"
-          content="https://empower-her-community.vercel.app/"
+          name="title"
+          property="og:title"
+          content="Empower Her Community"
         />
-        <meta name="twitter:card" content="summary_large_image" />
-
+        <link rel="icon" href="/logo.png" />
         <meta
-          name="description"
-          property="og:description"
+          name="image"
+          property="og:image"
+          content="https://empower-her-community.vercel.app/preview.png"
+        />
+        <meta name="twitter:title" content="Empower Her Community" />
+        <meta
+          name="twitter:description"
           content="We are a female community seeing to the growth and progress of all women in tech worldwide"
         />
-        <meta name="twitter:image:alt" content="logo" />
+        <meta name="twitter:image" content="/preview.png" />
+        <meta
+          name="description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
+        />
+        <meta
+          property="og:site_name"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://empower-her-community.vercel.app/preview.png"
+        />
       </Head>
 
       {popup && <PopUp closePopup={closePopup}></PopUp>}
