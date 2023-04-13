@@ -35,11 +35,7 @@ const Slug = ({ blogs }) => {
               property="og:article:author"
               content={blog.author}
             />
-            <meta
-              name="description"
-              property="og:article:section"
-              content={blog.introduction}
-            />
+            <meta property="og:description" content={blog.introduction} />
             <meta
               property="og:url"
               content="https://empower-her-community.vercel.app/"
@@ -51,10 +47,7 @@ const Slug = ({ blogs }) => {
               property="og:site_name"
               content="https://empower-her-community.vercel.app/"
             />
-            <meta
-              property="og:image:secure_url"
-              content="https://empower-her-community.vercel.app/preview.png"
-            />
+            <meta property="og:image:secure_url" content={blog.cover_photo} />
             <meta
               property="og:url"
               content="https://empower-her-community.vercel.app/"
