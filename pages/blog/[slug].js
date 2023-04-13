@@ -50,10 +50,6 @@ const Slug = ({ blog }) => {
           property="og:image:secure_url"
           content={blog.cover_photo}
         />
-        <meta
-          property="og:url"
-          content="https://empower-her-community.vercel.app/"
-        />
         <meta name="twitter:image:alt" content={blog.title} />
       </Head>
 
