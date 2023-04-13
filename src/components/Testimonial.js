@@ -16,11 +16,13 @@ const Testimonial = () => {
     },
     {
       id: 2,
-      image: "/Nancy.png",
-      name: "Nancy Olatuja",
-      role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
-
+      image: "",
+      name: "Osawaru Erica",
+      role: "Data Scientist",
+      testimonial:
+        "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
+    },
+   
 
     {
       id: 3,
@@ -32,6 +34,13 @@ const Testimonial = () => {
     },
     {
       id: 4,
+      image: "/Nancy.png",
+      name: "Nancy Olatuja",
+      role: "Frontend developer",
+      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+
+    {
+      id: 5,
       image: "/Jessica.png",
       name: "Jessica Joseph",
       role: "Frontend developer",

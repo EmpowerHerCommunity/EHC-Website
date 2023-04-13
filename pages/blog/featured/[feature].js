@@ -35,30 +35,18 @@ const Slug = ({ blogs }) => {
               property="og:article:author"
               content={blog.author}
             />
-            <meta
-              name="description"
-              property="og:article:section"
-              content={blog.introduction}
-            />
-            <meta
-              property="og:url"
-              content="https://empower-her-community.vercel.app/"
-            />
+            <meta property="og:description" content={blog.introduction} />
+            <meta property="og:url" content="https://empower-her-community.vercel.app/"/>
+
             <meta name="twitter:card" content="summary_large_image" />
 
             <meta name="description" content={blog.introduction} />
             <meta
               property="og:site_name"
-              content="https://empower-her-community.vercel.app/"
+              content="Empower Her Community"
             />
-            <meta
-              property="og:image:secure_url"
-              content="https://empower-her-community.vercel.app/preview.png"
-            />
-            <meta
-              property="og:url"
-              content="https://empower-her-community.vercel.app/"
-            />
+            <meta property="og:image:secure_url" content={blog.cover_photo} />
+
             <meta name="twitter:image:alt" content={blog.title} />
           </Head>
           <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">

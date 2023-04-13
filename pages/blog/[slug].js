@@ -15,10 +15,10 @@ const Slug = ({ blog }) => {
   }
 
   const options = { day: "numeric", month: "long", year: "numeric" };
-
+  const siteUrl = `https://empower-her-community.vercel.app/${blog.slug}`
   return (
     <section className="">
-      <Head>
+        <Head>
         <meta charSet="UTF-8" />
         <title>"Empower Her Community"</title>
         <meta name="title" property="og:title" content={blog.title} />
@@ -31,29 +31,24 @@ const Slug = ({ blog }) => {
           property="og:article:author"
           content={blog.author}
         />
-        <meta name="description" content={blog.introduction} />
         <meta
-          property="og:url"
-          content="https://empower-her-community.vercel.app/"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-
-        <meta
-          name="description"
           property="og:description"
           content={blog.introduction}
         />
         <meta
+          property="og:url"
+          content={siteUrl}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="description" content={blog.introduction} />
+        <meta
           property="og:site_name"
-          content="https://empower-her-community.vercel.app/"
+          content="Empower Her Community"
         />
         <meta
           property="og:image:secure_url"
-          content="https://empower-her-community.vercel.app/preview.png"
-        />
-        <meta
-          property="og:url"
-          content="https://empower-her-community.vercel.app/"
+          content={blog.cover_photo}
         />
         <meta name="twitter:image:alt" content={blog.title} />
       </Head>

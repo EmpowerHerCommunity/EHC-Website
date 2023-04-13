@@ -13,16 +13,16 @@ const Team = () => {
   return (
     <section className="" id='team'>
       <div className='container xl:max-w-screen-xl mx-auto py-5 px-4 text-dark relative'>
-        <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
+        <img src="/contact-dots.svg" alt="dots" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
         <h2 className="md:text-5xl text-4xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
           Meet The Team
-          <img src="/sun.png" alt="" className="absolute top-[-10px] right-[-25px] w-14" />
+          <img src="/sun.png" alt="dots" className="absolute top-[-10px] right-[-25px] w-14" />
           {/* <img src="/sun.png" alt="" className="absolute top-[-5px] right-[0px]" /> */}
         </h2>
         <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10">
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-right'>
-              <img src="/team-images/beth.png" alt="Elizabeth Okaome image" className="w-[80%]" />
+              <img src="/founder.png" alt="Elizabeth Okaome image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Elizabeth Okaome
@@ -80,7 +80,7 @@ const Team = () => {
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-left'>
-              <img src="/team-images/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
+              <img src="/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Tracy Obakhena
