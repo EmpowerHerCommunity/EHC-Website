@@ -27,14 +27,14 @@ const HeroHome = () => {
               </div>
               <div>
                 <div className="flex lg:gap-4 gap-12">
-                  <button className='bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm'>
+                  <button className='bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-md'>
                     <Link href='https://paystack.com/pay/empowerhercommunity' legacyBehavior>
                       <a target='_blank'>
                         <span className="text-primary text-2xl">  Support Us </span>
                       </a>
                     </Link>
                   </button>
-                  <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-sm'>
+                  <button className='bg-primary py-3 px-4 border border-primary hover:border-transparent w-44 rounded-md'>
                     <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform' legacyBehavior>
                       <a target='_blank'>
                         <span className="text-white text-2xl"> Join Us Today </span>

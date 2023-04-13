@@ -23,11 +23,13 @@ const OurVision = () => {
               We aim at promoting the inclusin of women regardless of their age, background or financial status into the tech industry.
             </p>
           </div>
-          <div data-aos='fade-right'>
-            <img src='/woman.jpg' alt='woman' className='w-full' />
+          <div data-aos='fade-right' >
+          <Image src='/woman.jpg' alt='woman' width={600} height={600} className='md:block hidden'/>
+
           </div>
-          <div className='md:mt-0 mt-4 md:block hidden' data-aos='fade-left'>
-            <img src='/women.jpg' alt='woman' />
+          <div className='md:mt-0 mt-4 md:block ' data-aos='fade-left'>
+          <Image src='/group.jpg' alt='woman' width={600} height={600} />
+
           </div>
           <div data-aos='zoom-out' className='' id='mission'>
             <div className='purple mt-8 md:mb-8 mb-2'>
