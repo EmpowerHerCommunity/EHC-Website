@@ -19,23 +19,41 @@ const Slug = ({ blog }) => {
   return (
     <section className="">
       <Head>
+        <meta charSet="UTF-8" />
+        <title>"Empower Her Community"</title>
         <meta name="title" property="og:title" content={blog.title} />
         <meta name="image" property="og:image" content={blog.cover_photo} />
         <meta name="twitter:title" content={blog.title} />
         <meta name="twitter:description" content={blog.introduction} />
         <meta name="twitter:image" content={blog.cover_photo} />
-        <meta name="author" property="og:article:author" content={blog.author} />
-        <meta name="description" property="og:article:section" content={blog.introduction} />
+        <meta
+          name="author"
+          property="og:article:author"
+          content={blog.author}
+        />
+        <meta
+          name="description"
+          property="og:description"
+          content={blog.introduction}
+        />
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
         />
         <meta name="twitter:card" content="summary_large_image" />
 
+        <meta name="description" content={blog.introduction} />
         <meta
-          name="description"
-          property="og:description"
-          content={blog.introduction}
+          property="og:site_name"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://empower-her-community.vercel.app/preview.png"
+        />
+        <meta
+          property="og:url"
+          content="https://empower-her-community.vercel.app/"
         />
         <meta name="twitter:image:alt" content={blog.title} />
       </Head>

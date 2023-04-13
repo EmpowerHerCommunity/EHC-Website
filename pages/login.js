@@ -41,10 +41,9 @@ const login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-        })     
+        });
         // Redirect to user profile page
-          router.push("/admin");
-
+        router.push("/admin");
       } else {
         // Login failed, display error message
         setError(error);
@@ -82,13 +81,37 @@ const login = () => {
   return (
     <>
       <Head>
-        <meta name="title" property="og:title" content="Empower Her Community" />
+        <title>"Empower Her Community"</title>
+        <meta
+          name="title"
+          property="og:title"
+          content="Empower Her Community"
+        />
         <link rel="icon" href="/logo.png" />
-        <meta name="image" property="og:image" content="/preview.png"/>
+        <meta
+          name="image"
+          property="og:image"
+          content="https://empower-her-community.vercel.app/preview.png"
+        />
         <meta name="twitter:title" content="Empower Her Community" />
-        <meta name="twitter:description" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          name="twitter:description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
+        />
         <meta name="twitter:image" content="/preview.png" />
-        <meta name="description" property="og:article:section" content="We are a female community seeing to the growth and progress of all women in tech worldwide" />
+        <meta
+          name="description"
+          content="We are a female community seeing to the growth and progress of all women in tech worldwide"
+        />
+        <meta
+          property="og:site_name"
+          content="https://empower-her-community.vercel.app/"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://empower-her-community.vercel.app/preview.png"
+        />
+
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
@@ -171,7 +194,14 @@ const login = () => {
         />
       </div>
       <section className="xl:hidden h-screen lg:text-2xl md:text-xl text-xl px-4 flex justify-center text-center items-center">
-        <h1>Sorry, this page is not available on your current screen size. Please go back to the <Link href='/' className="underline text-primary">home page</Link> to continue browsing.</h1>
+        <h1>
+          Sorry, this page is not available on your current screen size. Please
+          go back to the{" "}
+          <Link href="/" className="underline text-primary">
+            home page
+          </Link>{" "}
+          to continue browsing.
+        </h1>
       </section>
     </>
   );
