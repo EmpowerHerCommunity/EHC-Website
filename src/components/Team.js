@@ -22,7 +22,7 @@ const Team = () => {
         <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10">
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-right'>
-              <img src="/team-images/beth.png" alt="Elizabeth Okaome image" className="w-[80%]" />
+              <img src="/founder.png" alt="Elizabeth Okaome image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Elizabeth Okaome
@@ -80,7 +80,7 @@ const Team = () => {
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-left'>
-              <img src="/team-images/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
+              <img src="/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Tracy Obakhena

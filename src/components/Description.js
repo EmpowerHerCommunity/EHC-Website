@@ -23,7 +23,7 @@ const Description = () => {
                 <div className="absolute bottom-0 lg:right-0 md:right-40 right-0">
                   <Image src='/hero-about-down.png' alt="dot" width={130} height={130} />
                 </div>
-                <Image src='/download.jpg' alt="women" width={500} height={500} />
+                <Image src='/volunteers.JPEG' alt="women" width={500} height={500} />
               </div>
             </div>
             <div>

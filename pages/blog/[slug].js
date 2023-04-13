@@ -15,7 +15,7 @@ const Slug = ({ blog }) => {
   }
 
   const options = { day: "numeric", month: "long", year: "numeric" };
-
+  const siteUrl = `https://empower-her-community.vercel.app/${blog.slug}`
   return (
     <section className="">
         <Head>
@@ -37,14 +37,14 @@ const Slug = ({ blog }) => {
         />
         <meta
           property="og:url"
-          content="https://empower-her-community.vercel.app/"
+          content={siteUrl}
         />
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta name="description" content={blog.introduction} />
         <meta
           property="og:site_name"
-          content="https://empower-her-community.vercel.app/"
+          content="Empower Her Community"
         />
         <meta
           property="og:image:secure_url"

@@ -56,7 +56,7 @@ const PastEvents = () => {
       description: [
         "Empower Her Community in partnership with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women by helping them develop soft technical skills and knowledge in the tech industry.",
       ],
-      image: "/nontechb.jpg",
+      image: "/events3.jpeg",
       gallery: [
         "/nit8.jpg",
         "/nit11.jpg",

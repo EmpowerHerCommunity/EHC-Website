@@ -58,7 +58,7 @@ const blogEdit = () => {
     formData.append("introduction", result?.introduction);
     formData.append("author", result?.author);
     formData.append("author_image", selectedAuthor);
-    formData.append("tags[]", result?.tags);
+    formData.append("tags", result?.tags);
 
     try {
       setLoading(true);
