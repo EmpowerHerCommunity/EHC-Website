@@ -58,7 +58,10 @@ const blogEdit = () => {
     formData.append("introduction", result?.introduction);
     formData.append("author", result?.author);
     formData.append("author_image", selectedAuthor);
-    formData.append("tags", result?.tags);
+    formData.append("tags", [
+      "660baf3f-e46f-417b-8bfe-8630505b2fe3",
+      "5afdcf88-3aa2-4993-9ca3-0980c7f73cb9",
+    ]);
 
     try {
       setLoading(true);
@@ -84,11 +87,11 @@ const blogEdit = () => {
         progress: undefined,
         theme: "light",
       });
-      setTimeout(()=>{
-        router.push("/admin/dashboard/blog")
-      }, 500)
+      setTimeout(() => {
+        router.push("/admin/dashboard/blog");
+      }, 500);
     } catch (error) {
-      setLoading(false)
+      setLoading(false);
       toast.error("Kindly try again", {
         position: "top-right",
         autoClose: 5000,
@@ -113,7 +116,7 @@ const blogEdit = () => {
         setResult(data);
         setLoading(false);
       } catch (error) {
-        setLoading(false)
+        setLoading(false);
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,

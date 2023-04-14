@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import AOS from "aos";
+import { useRouter } from "next/router";
+
 
 const NavBar = () => {
   useEffect(() => {
@@ -10,6 +12,7 @@ const NavBar = () => {
     AOS.refresh();
   }, []);
 
+  const router = useRouter()
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -17,29 +20,29 @@ const NavBar = () => {
   };
 
   return (
-    <div className="overflow-hidden  cursor-pointer px-4  lg:bg-white lg:bg-opacity-0 bg-primary bg-opacity-10 ">
+    <div className="overflow-hidden  cursor-pointer px-4  lg:bg-white lg:bg-opacity-0  bg-primary bg-opacity-10  ">
       <nav className="flex lg:flex-row items-center lg:mx-auto  lg:container py-10 lg:py-3 flex-col-reverse lg:justify-center lg:px-5 px-1">
         <ul
           className={`${
             active ? "block" : "hidden"
           }  lg:inline-flex lg:flex-row xl:w-5/12 lg:w-96 md:w-12/12 w-12/12 flex flex-col lg:h-0 h-96 justify-between lg:pt-0 pt-10 items-start lg:items-center lg:justify-between lg:text-lg text-2xl lg:font-normal font-semibold `}
         >
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/">Home</Link>
           </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/aboutUs" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/aboutUs">About Us</Link>
           </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/events" ? "border-b-2 border-primary" : ""}hover:font-medium hover:scale-x-110`}>
             <Link href="/events">Events</Link>
           </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/blog" ? "border-b-2 border-primary" : ""}hover:font-medium hover:scale-x-110`}>
             <Link href="/blog">Blog</Link>
           </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/volunteer" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/volunteer">Volunteer</Link>
           </li>
-          <li className="hover:border-b-2 border-primary hover:scale-x-110">
+          <li className={`${router.pathname === "/contact" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

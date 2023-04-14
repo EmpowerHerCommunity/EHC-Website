@@ -40,18 +40,20 @@ const NewsLetter = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               /> */}
+                <Link href="https://empowerhercommunity.substack.com/embed" legacyBehavior >
+                  <a target="_blank">
               <button
                 type="submit"
                 className={
                   (isLoading ? "cursor-progress " : "") +
-                  "bg-primary text-white w-1/3 h-14 rounded-md flex-auto text-2xl"
+                  "bg-primary text-white w-96 h-14 rounded-md flex-auto text-2xl hover:scale-105"
                 }
                 disabled={isLoading}
               >
-                <Link href="https://empowerhercommunity.substack.com/embed" legacyBehavior>
-                  <a target="_blank">Subscribe</a>
-                </Link>
+                    Subscribe
               </button>
+                    </a>
+                </Link>
             </form>
           </div>
         </div>

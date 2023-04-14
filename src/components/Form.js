@@ -3,12 +3,15 @@ import AOS from "aos";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { setLazyProp } from "next/dist/server/api-utils";
 
 const Form = () => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
     AOS.refresh();
   }, []);
+
+  const [loading, setIsLoading] = useState(false);
 
   const [mail, setMail] = useState({
     name: "",
@@ -29,6 +32,7 @@ const Form = () => {
       mail.message !== ""
     ) {
       try {
+        setIsLoading(true);
         await emailjs.sendForm(
           "service_sqhbqh5",
           "template_ayka0t2",
@@ -45,7 +49,9 @@ const Form = () => {
           progress: undefined,
           theme: "light",
         });
+        setIsLoading(false);
       } catch (error) {
+        setIsLoading(false);
         toast.error("Network error, please try again.", {
           position: "top-right",
           autoClose: 5000,
@@ -162,12 +168,21 @@ const Form = () => {
           </div>
         </div>
         <div className="input-group w-full py-2" data-aos="zoom-in">
-          <button
-            className="bg-primary text-white text-4xl w-full p-3 rounded-md"
-            type="submit"
-          >
-            Submit 🙂
-          </button>
+          {loading ? (
+            <button
+              className="bg-primary text-white text-4xl w-full p-3 rounded-md"
+              type="submit"
+            >
+              Sending... 🙂
+            </button>
+          ) : (
+            <button
+              className="bg-primary text-white text-4xl w-full p-3 rounded-md"
+              type="submit"
+            >
+              Submit 🙂
+            </button>
+          )}
         </div>
       </form>
       <ToastContainer
