@@ -33,10 +33,10 @@ const NavBar = () => {
           <li className={`${router.pathname === "/aboutUs" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/aboutUs">About Us</Link>
           </li>
-          <li className={`${router.pathname === "/events" ? "border-b-2 border-primary" : ""}hover:font-medium hover:scale-x-110`}>
+          <li className={`${router.pathname === "/events" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/events">Events</Link>
           </li>
-          <li className={`${router.pathname === "/blog" ? "border-b-2 border-primary" : ""}hover:font-medium hover:scale-x-110`}>
+          <li className={`${router.pathname === "/blog" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
             <Link href="/blog">Blog</Link>
           </li>
           <li className={`${router.pathname === "/volunteer" ? "border-b-2 border-primary" : ""} hover:font-medium hover:scale-x-110`}>
