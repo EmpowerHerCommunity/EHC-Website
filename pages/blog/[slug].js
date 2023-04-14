@@ -72,8 +72,8 @@ const Slug = ({ blog }) => {
       /> */}
 
       <NavBar />
-      <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
-        <article className="py-6 container mx-auto">
+      <div className=" prose flex justify-between mx-auto container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 w-11/12 lg:px-10 pt-5 lg:pt-8">
+        <article className="py-6">
           <section className=" text-slug flex items-center justify-between lg:w-72 w-80 ml-0 lg:ml-20  lg:text-xl text-2xl">
             <div className=" font-medium mb-1">
               {new Date(blog.created).toLocaleDateString("en-US", options)}
@@ -87,16 +87,16 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <div className="ml-0 lg:ml-20 mt-2">
-            <h1 className="lg:text-5xl text-4xl lg:w-12/12 font-semibold">
+          <div className="ml-0 lg:ml-20 mt-2 w-11/12">
+            <h1 className="lg:text-5xl text-4xl lg:w-full font-semibold">
               {blog.title}
             </h1>
-            <p className="md:text-2xl text-black -mt-3 text-2xl lg:text-lg lg:w-9/12 w-11/12 leading-10">
+            <p className="md:text-2xl text-black -mt-3 text-2xl lg:text-lg lg:w-10/12 w-full leading-10">
               {blog.introduction}
             </p>
           </div>
 
-          <section className="flex items-center -mt-5 py-0 lg:ml-20 ml-0">
+          <section className="flex items-center w-11/12 -mt-5 py-0 lg:ml-20 ml-0">
             <div className="rounded-full">
               <img
                 src={blog.author_image}
@@ -109,11 +109,11 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <div className="-mt-1">
-            <img src={blog.cover_photo} className="md:w-full w-11/12  h-96" />
+          <div className="-mt-1 sm:w-/12 md:w-11/12">
+            <img src={blog.cover_photo} className="md:w-full w-full h-96" />
           </div>
 
-          <section className="flex justify-between lg:ml-20 ml-0">
+          <section className="flex justify-between lg:ml-20 ml-0 w-11/12">
             <div className="flex">
               <div
                 className="w-11/12"

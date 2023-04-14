@@ -13,8 +13,10 @@ const Publish = () => {
   const [introduction, setIntroduction] = useState("");
   const [description, setDescription] = useState("");
   const [authorImage, setAuthorImage] = useState("");
-  const [tags, setTags] = useState("");
-  const [loading, setLoading] = useState(false)
+  const [tag, setTag] = useState("");
+  const [tags, setTags] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const router = useRouter();
   useEffect(() => {
@@ -35,12 +37,15 @@ const Publish = () => {
     data.append("description", description);
     data.append("author_image", authorImage);
     // Append tags to the FormData object
-    for (let i = 0; i < tags.length; i++) {
-      data.append("tags", tags[i]);
+    const tagObjects = tags.map((tag) => ({
+      tag:tag
+    }));
+    for (let i = 0; i < tagObjects.length; i++) {
+      data.append("tags", JSON.stringify(tagObjects[i]));
     }
 
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await fetch(
         "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/",
         {
@@ -52,7 +57,7 @@ const Publish = () => {
         }
       );
       if (response.ok) {
-        setLoading(false)
+        setLoading(false);
         toast.info("Blog successfully added", {
           position: "top-right",
           autoClose: 5000,
@@ -65,10 +70,10 @@ const Publish = () => {
         });
         const responseData = await response.json();
         setTimeout(() => {
-          router.push("/admin/dashboard/blog")
+          router.push("/admin/dashboard/blog");
         }, 500);
       } else {
-        setLoading(false)
+        setLoading(false);
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
@@ -81,8 +86,9 @@ const Publish = () => {
         });
       }
     } catch (error) {
-      setLoading(false)
-      toast.error("A network error occurred", {
+      setLoading(false);
+      setError(error.message);
+      toast.error(error, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -128,7 +134,7 @@ const Publish = () => {
         </h1>
       </section>
 
-      <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">     
+      <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">
         <div className="w-2/12">
           <SideBar />
         </div>
@@ -247,10 +253,13 @@ const Publish = () => {
               <label className="text-lg">Tags</label>
             </div>
             <div className="w-9/12">
+              <p>{tag}</p>
+
               <select
                 className="border w-44 h-10 rounded-md px-1"
+                value={tag}
                 onChange={(e) => {
-                  setTags(e.target.value);
+                  setTag(e.target.value);
                 }}
               >
                 <option value="Web Development">Web Development</option>
@@ -259,15 +268,15 @@ const Publish = () => {
             </div>
           </div>
           <div className="flex justify-end">
-          {loading ? (
-            <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
-              Publishing...
-            </button>
-          ) : (
-            <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
-              Publish
-            </button>
-          )}
+            {loading ? (
+              <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
+                Publishing...
+              </button>
+            ) : (
+              <button className="bg-primary w-32 rounded-md text-light text-xl h-11">
+                Publish
+              </button>
+            )}
           </div>
           <ToastContainer
             position="top-right"

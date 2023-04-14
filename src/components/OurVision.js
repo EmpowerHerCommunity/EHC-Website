@@ -24,7 +24,7 @@ const OurVision = () => {
             </p>
           </div>
           <div data-aos='fade-right' >
-          <Image src='/woman.jpg' alt='woman' width={600} height={600} className='md:block hidden'/>
+          <Image src='/woman.jpg' alt='woman' width={600} height={300} className='md:block hidden'/>
 
           </div>
           <div className='md:mt-0 mt-4 md:block ' data-aos='fade-left'>

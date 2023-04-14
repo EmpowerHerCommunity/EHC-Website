@@ -49,8 +49,9 @@ const Slug = ({ blogs }) => {
 
             <meta name="twitter:image:alt" content={blog.title} />
           </Head>
-          <div className=" prose flex justify-between lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl  text-justify px-6 lg:px-10 pt-5 lg:pt-8">
-            <article key={blog.slug} className="container mx-auto py-6">
+
+          <div className=" prose flex justify-between mx-auto container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl text-justify px-6 lg:px-10 pt-5 lg:pt-8">
+            <article key={blog.slug} className="py-6">
               <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">
                   {new Date(blog.created).toLocaleDateString("en-US", options)}

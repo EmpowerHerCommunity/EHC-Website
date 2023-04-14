@@ -117,11 +117,13 @@ const EventDashboard = () => {
                     <td className="">{data.date}</td>
 
                     <td>
-                        <button className="w-14 rounded-md border bg-light text-primary h-10">
                       <Link href={`/admin/dashboard/event/${data.id}`} legacyBehavior>
+                        <a>
+                        <button className="w-14 rounded-md border bg-light text-primary h-10">
                           Edit
-                      </Link>
                         </button>
+                        </a>
+                      </Link>
                     </td>
 
                     <td>

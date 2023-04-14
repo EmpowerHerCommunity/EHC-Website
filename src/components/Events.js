@@ -40,11 +40,10 @@ const Events = () => {
               </h2>
               <p className=" font-normal md:text-lg text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 h-40">
                 The initiative offered training in a range of skills, including
-                Web Development, Data Science, Cloud Engineering, Digital
-                Marketing, Product Design, and Blockchain.
+               Data Science, Cloud Engineering...
                 <br />
                 <Link
-                  href="/aboutUs"
+                  href="/events"
                   className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary"
                 >
                   READ MORE...
@@ -69,12 +68,11 @@ const Events = () => {
                 Mentorship Academy
               </h2>
               <p className="font-normal md:text-lg text-2xl tracking-wider text-justify w-12/12 lg:w-9/12 h-40">
-                The Mentorship Academy is designed to connect women who are just
-                starting out in their careers with seasoned experts in their
-                respective fields.
+                The Mentorship Academy is designed to connect women with
+                seasoned experts....
                 <br />
                 <Link
-                  href="/aboutUs"
+                  href="/events"
                   className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary"
                 >
                   READ MORE...
@@ -99,11 +97,10 @@ const Events = () => {
               </h2>
               <p className="font-normal md:text-lg text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 ">
                 Empower Her Community in partnership with Non Tech In Tech
-                organized a non Technical Bootcamp that focused on the
-                non-technical aspects of the tech industry.
+                organized a...
                 <br />
                 <Link
-                  href="/aboutUs"
+                  href="/events"
                   className="read-more font-normal text-lg  leading-6 md:flex justify-end mt-6 text-primary"
                 >
                   READ MORE...
