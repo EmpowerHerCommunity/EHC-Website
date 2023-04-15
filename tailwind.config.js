@@ -16,7 +16,8 @@ module.exports = {
         "footer":"#6600660D",
         "slug":"#444444",
         "event":"#6600660D",
-
+        "support":"#0F0F29",
+        "grey":"##FBFBF",
       },
       width:{
         nav:"28rem"
