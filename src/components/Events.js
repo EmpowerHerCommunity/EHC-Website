@@ -22,10 +22,10 @@ const Events = () => {
             </h2>
             <hr className="border-0 h-1 w-4/5 absolute bottom-0 left-0 bg-yellow" />
           </div>
-          <div className="lg:flex xl:flex-row grid md:grid-cols-2 grid-col-1  justify-between w-12/12 ">
+          <div className="lg:grid-cols-3 place-items-center grid md:grid-cols-2 grid-col-1  justify-between w-12/12 ">
             <div
               data-aos="fade-up"
-              className="mb-8 text-center flex items-center flex-col  md:text-left lg:w-4/12 w-11/12"
+              className="mb-8 text-center flex items-center flex-col  md:text-left w-11/12"
             >
               <div data-aos="fade-down">
                 <Image
@@ -53,7 +53,7 @@ const Events = () => {
 
             <div
               data-aos="fade-up"
-              className="mb-8 text-center flex items-center flex-col md:text-left lg:w-4/12 w-11/12"
+              className="mb-8 text-center flex items-center flex-col md:text-left  w-11/12"
             >
               <div data-aos="fade-down">
                 <Image
@@ -81,7 +81,7 @@ const Events = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="mb-8 text-center flex items-center flex-col md:text-left lg:w-4/12 w-11/12"
+              className="mb-8 text-center flex items-center flex-col md:text-left  w-11/12"
             >
               <div data-aos="fade-down">
                 <Image
@@ -92,8 +92,8 @@ const Events = () => {
                   className="rounded-md"
                 />
               </div>
-              <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
-                Bootcamp 3.0
+              <h2 className="lg:text-3xl text-center text-4xl leading-10 mb-2 mt-4 font-medium">
+                Non Technical Bootcamp 1.0
               </h2>
               <p className="font-normal md:text-lg text-2xl tracking-wider text-justify lg:w-9/12 w-12/12 ">
                 Empower Her Community in partnership with Non Tech In Tech
