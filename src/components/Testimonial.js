@@ -34,7 +34,7 @@ const Testimonial = () => {
 
       {
         id: 4,
-        image: "/erica2.png",
+        image: "/erica (2).png",
         name: "Osawaru Erica",
         role: "Data Scientist",
         testimonial:
