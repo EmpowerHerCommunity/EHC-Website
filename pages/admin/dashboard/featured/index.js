@@ -81,13 +81,13 @@ const FeaturedDashboard = () => {
         </h1>
       </section>
 
-      <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">
+      <div className="xl:flex hidden">
         <div className="w-2/12">
           <SideBar />
         </div>
-        {error && <p className="text-lg">{error}</p>}
-        <div className="rounded-lg w-10/12 pl-5 mt-11">
+        <div className="rounded-lg w-10/12 pl-5 mt-11 container mx-auto">
           <h1 className="text-4xl">Dashboard: Featured</h1>
+        {error && <p className="text-lg">{error}</p>}
           <table className="mt-16">
             <thead className="text-left text-lg overflow-scroll w-screen">
               <tr className="text-lg font-semibold">

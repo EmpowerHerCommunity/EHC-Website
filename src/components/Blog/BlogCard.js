@@ -84,7 +84,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
       <section className="lg:mt-4 mt-7 cursor-pointer">
         <header className="">
           <nav className="mx-auto container lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold">
-            <div className="lg:block md:hidden hidden">
+            <div className="xl:block md:hidden hidden">
               <button
                 onClick={handleClick}
                 className="w-28 h-10 hover:bg-light hover:text-primary rounded-full border font-semibold bg-blogBtn"
@@ -93,7 +93,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
               </button>
             </div>
 
-            <div className="lg:w-7/12 md:w-6/12 lg:block md:hidden hidden">
+            <div className="lg:w-7/12 md:w-6/12 xl:block md:hidden hidden">
               <ul
                 className="flex justify-between items-center lg:w-12/12 text-lg"
                 id="tags"
@@ -142,7 +142,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
               </ul>
             </div>
 
-            <div className="relative mt-0 md:hidden hidden lg:block">
+            <div className="relative mt-0 md:hidden hidden xl:block">
               <input
                 placeholder="Search"
                 value={search}
@@ -152,7 +152,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
             </div>
           </nav>
 
-          <div className="relative mt-0 lg:hidden block  mx-auto container">
+          <div className="relative mt-0 xl:hidden lg:block block  mx-auto container">
             <input
               placeholder="Search"
               value={search}

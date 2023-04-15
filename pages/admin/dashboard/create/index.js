@@ -80,12 +80,12 @@ const Create = () => {
   };
 
   return (
-    <div className="flex 2xl:mx-auto 2xl:container">
+    <div className="flex">
       <div className="w-2/12">
         <SideBar />
       </div>
       <form
-        className="flex flex-col px-6 mt-10 w-10/12"
+        className="flex flex-col px-6 mt-10 w-10/12 mx-auto container"
         onSubmit={handleSubmit}
         encType="multipart/form-data"
       >

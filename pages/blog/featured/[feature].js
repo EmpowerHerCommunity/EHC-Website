@@ -18,7 +18,7 @@ const Slug = ({ blogs }) => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <section>
+    <section className="">
       <NavBar />
       {blogs.results.map((blog) => (
         <>
@@ -50,9 +50,9 @@ const Slug = ({ blogs }) => {
             <meta name="twitter:image:alt" content={blog.title} />
           </Head>
 
-          <div className=" prose flex justify-between mx-auto container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl  prose-h2:text-3xl max-w-screen-2xl text-justify px-6 lg:px-10 pt-5 lg:pt-8">
+          <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl max-w-screen-md lg:max-w-screen-2xl text-justify px-10  lg:px-10 pt-5 lg:pt-8">
             <article key={blog.slug} className="py-6">
-              <section className=" text-slug flex items-center justify-between lg:w-72 w-96 lg:ml-20 ml-0 lg:text-xl text-2xl">
+              <section className="text-slug flex flex-wrap items-center justify-between lg:w-72 w-80 lg:ml-20 ml-0 lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">
                   {new Date(blog.created).toLocaleDateString("en-US", options)}
                 </div>
@@ -66,10 +66,10 @@ const Slug = ({ blogs }) => {
               </section>
 
               <div className="lg:ml-20 ml-0">
-                <h1 className="lg:text-4xl text-3xl lg:w-12/12 mt-4 font-semibold">
+                <h1 className="lg:text-4xl text-3xl mt-4 font-semibold">
                   {blog.title}
                 </h1>
-                <p className="md:text-xl leading-10 text-2xl lg:text-xl lg:w-9/12 w-11/12">
+                <p className="md:text-xl leading-10 text-2xl lg:text-xl">
                   {blog.introduction}
                 </p>
               </div>
@@ -89,10 +89,10 @@ const Slug = ({ blogs }) => {
                 <img src={blog.cover_photo} className="w-full h-auto" />
               </div>
 
-              <section className="flex justify-between lg:ml-20 ml-0">
-                <div className="flex w-11/12">
+              <section className="flex justify-between lg:ml-20 ml-0 w-full">
+                <div className="flex w-full">
                   <div
-                    className="w-full md:w-full"
+                    className="overflow-x-hidden"
                     dangerouslySetInnerHTML={{
                       __html: md().render(blog.description),
                     }}

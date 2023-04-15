@@ -4,13 +4,11 @@ import SideBar from "./SideBar";
 function Mainbod() {
 
   return (
-    <section className="flex justify-between">
-      <div className="w-2/12">
+    <section className="flex justify-between overflow-x-hidden w-full h-screen">
+      <div className="">
         <SideBar />
       </div>
-      <div className="  shadow-sm w-10/12">
-        <div className="py-10 px-4">
-        </div>
+      <div className="shadow-sm w-10/12">
         <div className="px-6">
           <Dashboard  />
         </div>
