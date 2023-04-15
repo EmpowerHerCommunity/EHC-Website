@@ -14,7 +14,6 @@ const Publish = () => {
   const [description, setDescription] = useState("");
   const [authorImage, setAuthorImage] = useState("");
   const [tag, setTag] = useState("");
-  const [tags, setTags] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -37,12 +36,13 @@ const Publish = () => {
     data.append("description", description);
     data.append("author_image", authorImage);
     // Append tags to the FormData object
-    const tagObjects = tags.map((tag) => ({
-      tag:tag
-    }));
-    for (let i = 0; i < tagObjects.length; i++) {
-      data.append("tags", JSON.stringify(tagObjects[i]));
-    }
+  
+    data.append("tags[]", {
+      id: 'new-tag-id', // replace with your new tag ID
+      created: new Date().toISOString(),
+      modified: new Date().toISOString(),
+      tag: tag,
+    })
 
     try {
       setLoading(true);
@@ -134,12 +134,12 @@ const Publish = () => {
         </h1>
       </section>
 
-      <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">
+      <div className="xl:flex hidden">
         <div className="w-2/12">
           <SideBar />
         </div>
         <form
-          className=" w-10/12 px-6 flex flex-col mt-10"
+          className=" w-10/12 px-6 flex flex-col mt-10 container mx-auto"
           onSubmit={handleSubmit}
         >
           <h1 className="text-4xl">Publish</h1>

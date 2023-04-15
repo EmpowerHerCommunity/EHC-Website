@@ -17,7 +17,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="fixed w-56 h-full bg-primary shadow-sm">
+    <div className="fixed w-56 h-full bg-primary shadow-sm mx-auto container">
       <div className="flex justify-center mt-10 mb-14">
         <h1 className="font-bold w-32 text-3xl text-white">Admin </h1>
       </div>
@@ -26,48 +26,48 @@ const SideBar = () => {
         <div
           className={` py-3 rounded text-center cursor-pointer mb-3 items-start flex flex-col h-96 justify-between transition-colors text-white}`}
         >
-          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
-            <div className=" h-5 w-6 ">
-              <MdEmojiEvents />
-            </div>
-            <Link href="/admin/dashboard/event">
+          <Link href="/admin/dashboard/event" legacyBehavior>
+            <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+              <div className=" h-5 w-6 ">
+                <MdEmojiEvents />
+              </div>
               <button className="text-lg">Events</button>
-            </Link>
-          </div>
-          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
-            <div className=" h-5 w-6 ">
-              <MdOutlineVolunteerActivism />
             </div>
-            <Link href="/admin/dashboard/create">
+          </Link>
+          <Link href="/admin/dashboard/create" legacyBehavior>
+            <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+              <div className=" h-5 w-6 ">
+                <MdOutlineVolunteerActivism />
+              </div>
               <button className="text-lg">Create Event</button>
-            </Link>
-          </div>
-
-          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
-            <div className=" h-5 w-6 ">
-              <MdOutlineArticle />
             </div>
-            <Link href="/admin/dashboard/blog">
+          </Link>
+
+          <Link href="/admin/dashboard/blog" legacyBehavior>
+            <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+              <div className=" h-5 w-6 ">
+                <MdOutlineArticle />
+              </div>
               <button className="text-lg">Blog Posts</button>
-            </Link>
-          </div>
+            </div>
+          </Link>
 
-          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
-            <div className=" h-5 w-6 ">
-              <MdEmojiEvents />
-            </div>
-            <Link href="/admin/dashboard/featured">
+          <Link href="/admin/dashboard/featured" legacyBehavior>
+            <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+              <div className=" h-5 w-6 ">
+                <MdEmojiEvents />
+              </div>
               <button className="text-lg">Featured Blogs</button>
-            </Link>
-          </div>
-          <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
-            <div className=" h-5 w-6 ">
-              <MdOutlineArticle />
             </div>
-            <Link href="/admin/dashboard/publish">
+          </Link>
+          <Link href="/admin/dashboard/publish" legacyBehavior>
+            <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
+              <div className=" h-5 w-6 ">
+                <MdOutlineArticle />
+              </div>
               <button className="text-lg">Publish</button>
-            </Link>
-          </div>
+            </div>
+          </Link>
 
           <div className="flex py-2 px-3 items-center hover:border hover:rounded-md hover:bg-white hover:text-primary  ">
             <div className=" h-5 w-6 ">

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import SideBar from "../../../../src/components/admin/SideBar";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BlogDashboard = () => {
   const [fetchedEvents, setFetchedEvents] = useState(null);
@@ -49,7 +51,7 @@ const BlogDashboard = () => {
       <section className="xl:hidden h-screen lg:text-2xl md:text-xl text-xl px-4 flex justify-center text-center items-center">
         <h1>
           Sorry, this page is not available on your current screen size. Please
-          go back to the{" "}
+          go back to the
           <Link href="/" legacyBehavior>
             <a className="underline text-primary">home page</a>
           </Link>
@@ -57,13 +59,13 @@ const BlogDashboard = () => {
         </h1>
       </section>
 
-      <div className="xl:flex hidden 2xl:mx-auto 2xl:container ">
+      <div className="xl:flex hidden ">
         <div className="w-2/12">
           <SideBar />
         </div>
-        {error && <p className="text-lg">{error}</p>}
-        <div className="rounded-lg w-10/12 pl-5 mt-11">
+        <div className="rounded-lg w-10/12 pl-5 mt-11 container mx-auto">
           <h1 className="text-4xl">Dashboard: Blogs</h1>
+        {error && <p className="text-lg">{error}</p>}
           <table className="w-full mt-16">
             <thead className="text-left text-lg overflow-scroll w-screen">
               <tr className="text-lg font-semibold">
@@ -106,6 +108,18 @@ const BlogDashboard = () => {
           </table>
         </div>
       </div>
+      <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
     </>
   );
 };
