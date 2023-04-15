@@ -74,7 +74,7 @@ const Slug = ({ blog }) => {
       <NavBar />
       <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl max-w-screen-md lg:max-w-screen-2xl text-justify px-10 lg:px-10 pt-5 lg:pt-8">
         <article className="py-6">
-          <section className=" text-slug flex items-center justify-between lg:w-72 w-80 ml-0 lg:ml-20  lg:text-xl text-2xl">
+          <section className=" text-slug flex items-center justify-between lg:w-72 w-80 ml-0 lg:ml-12  lg:text-xl text-2xl">
             <div className=" font-medium mb-1">
               {new Date(blog.created).toLocaleDateString("en-US", options)}
             </div>
@@ -87,7 +87,7 @@ const Slug = ({ blog }) => {
             </div>
           </section>
 
-          <div className="lg:ml-20 ml-0">
+          <div className="lg:ml-12 ml-0 mt-5">
             <h1 className="lg:text-4xl text-4xl lg:w-full font-semibold">
               {blog.title}
             </h1>
@@ -96,12 +96,12 @@ const Slug = ({ blog }) => {
             </p>
           </div>
 
-          <section className="flex items-center w-11/12 -mt-5 py-0 lg:ml-20 ml-0">
+          <section className="flex items-center w-11/12 -mt-5 py-0 lg:ml-12 ml-0">
             <div className="rounded-full">
               <img
                 src={blog.author_image}
                 alt="author avatar"
-                className="h-16 w-16 object-contain rounded-full"
+                className="h-24 w-24 object-contain rounded-full"
               />
             </div>
             <div className="text-2xl text-black font-medium ml-6">
@@ -113,7 +113,7 @@ const Slug = ({ blog }) => {
             <img src={blog.cover_photo} className="w-full h-auto" />
           </div>
 
-          <section className="flex justify-between lg:ml-20 ml-0 w-full">
+          <section className="flex justify-between lg:ml-12 ml-0 lg:w-11/12">
           <div className="flex w-full">
               <div
                     className="overflow-x-hidden"
