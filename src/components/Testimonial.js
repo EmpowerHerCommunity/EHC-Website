@@ -14,31 +14,32 @@ const Testimonial = () => {
       testimonial:
         "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators and the assignments too. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
+    
+    
     {
       id: 2,
-      image: "/erica.png",
-      name: "Osawaru Erica",
-      role: "Data Scientist",
-      testimonial:
-        "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
-    },
-   
-
-    {
-      id: 3,
       image: "/sam.png",
       name: "Olamide Sanusi ",
       role: "Data analyst",
       testimonial:
-        "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable. She even makes herself available outside of class hours to answer questions and provide guidance as needed.",
+      "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable. She even makes herself available outside of class hours to answer questions and provide guidance as needed.",
     },
+  
     {
-      id: 4,
+      id: 3,
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
       testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
 
+      {
+        id: 4,
+        image: "/erica2.png",
+        name: "Osawaru Erica",
+        role: "Data Scientist",
+        testimonial:
+          "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
+      },
     {
       id: 5,
       image: "/Jessica.png",
