@@ -64,10 +64,9 @@ const PastEventsCard = ({ event, i }) => {
                     legacyBehavior
                   >
                     <a target="_blank">
-                      <button className="bg-primary py-3 px-4 border border-primary hover:border-transparent lg:w-52 w-52 rounded-md hover:scale-105">
-                        <span className="text-white text-2xl">
-                          {" "}
-                          Join Us Today{" "}
+                      <button className="bg-primary py-3 px-4 border text-white border-primary hover:border-transparent lg:w-52 w-52 rounded-md hover:text-primary hover:bg-transparent hover:border-primary hover:border-opacity-5 hover:shadow-sm">
+                        <span className="text-2xl">
+                          Join Us Today
                         </span>
                       </button>
                     </a>
