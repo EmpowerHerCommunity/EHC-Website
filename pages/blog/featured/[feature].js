@@ -18,7 +18,7 @@ const Slug = ({ blogs }) => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <section className="">
+    <section className="overflow-y-hidden">
       <NavBar />
       {blogs.results.map((blog) => (
         <>
@@ -50,9 +50,10 @@ const Slug = ({ blogs }) => {
             <meta name="twitter:image:alt" content={blog.title} />
           </Head>
 
-          <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl max-w-screen-md lg:max-w-screen-2xl text-justify px-10  lg:px-10 pt-5 lg:pt-8">
-            <article key={blog.slug} className="py-6">
-              <section className="text-slug flex flex-wrap items-center justify-between lg:w-72 w-80 lg:ml-12 ml-0 lg:text-xl text-2xl">
+          <div className="prose mt-5 justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-5 lg:pt-8">
+            <article key={blog.slug}>
+            <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
+            <section className=" text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
                 <div className=" font-medium mb-1">
                   {new Date(blog.created).toLocaleDateString("en-US", options)}
                 </div>
@@ -65,7 +66,7 @@ const Slug = ({ blogs }) => {
                 </div>
               </section>
 
-              <div className="lg:ml-12 ml-0">
+              <div className="max-w-5xl">
                 <h1 className="lg:text-4xl text-3xl mt-4 font-semibold">
                   {blog.title}
                 </h1>
@@ -74,7 +75,7 @@ const Slug = ({ blogs }) => {
                 </p>
               </div>
 
-              <section className="flex items-center -mt-5 py-0 lg:ml-12 ml-0">
+              <section className="flex items-center -mt-10">
                 <div className=" rounded-full">
                   <img
                     src={blog.author_image}
@@ -84,12 +85,13 @@ const Slug = ({ blogs }) => {
                 </div>
                 <div className="text-2xl ml-6">{blog.author}</div>
               </section>
+              </div>
 
               <div className="-mt-1">
                 <img src={blog.cover_photo} className="w-full h-auto" />
               </div>
 
-              <section className="flex justify-between lg:ml-12 ml-0 lg:w-11/12">
+              <section className="flex justify-between lg:ml-10 max-w-5xl overflow-x-hidden">
                 <div className="flex w-full">
                   <div
                     className="overflow-x-hidden"

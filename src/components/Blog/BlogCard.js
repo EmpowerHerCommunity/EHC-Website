@@ -83,7 +83,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
     <div className="">
       <section className="lg:mt-4 mt-7 cursor-pointer">
         <header className="">
-          <nav className="mx-auto container lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold">
+          <nav className="mx-auto container px-6 lg:flex md:flex md:justify-between lg:justify-between  items-center text-sm font-semibold">
             <div className="xl:block md:hidden hidden">
               <button
                 onClick={handleClick}
@@ -99,7 +99,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                 id="tags"
               >
                 <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
+                  className={`hover:border-b-2 border-primary ${
                     selectedCategory === "Tech Lifestyle"
                   }`}
                   onClick={() => handleCategoryClick("Tech Lifestyle")}
@@ -107,7 +107,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                   Tech Lifestyle
                 </li>
                 <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
+                  className={`hover:border-b-2 border-primary ${
                     selectedCategory === "Career moves"
                   }`}
                   onClick={() => handleCategoryClick("Career moves")}
@@ -116,7 +116,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                 </li>
 
                 <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
+                  className={`hover:border-b-2 border-primary ${
                     selectedCategory === "A day in the Life"
                   }`}
                   onClick={() => handleCategoryClick("A day in the Life")}
@@ -124,7 +124,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                   A day in the Life
                 </li>
                 <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
+                  className={`hover:border-b-2 border-primary ${
                     selectedCategory === "Communities"
                   }`}
                   onClick={() => handleCategoryClick("Communities")}
@@ -132,8 +132,8 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                   Communities
                 </li>
                 <li
-                  className={`hover:border-b border-primary hover:scale-105 ${
-                    selectedCategory === "Information corner"
+                  className={`hover:border-b-2 border-primary  ${
+                    selectedCategory === "Information corner" 
                   }`}
                   onClick={() => handleCategoryClick("Information corner")}
                 >
@@ -167,7 +167,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
         {pagination === "blogs" && (
           <section className="container px-4 mx-auto grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 w-12/12">
             {filtered !== null
-              ? filtered.map((blog) => (
+              ? filtered?.map((blog) => (
                   <article className="w-12/12 p-4 mb-4" key={blog.id}>
                     <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
                       <Link href={`/blog/${blog.slug}/`}>
@@ -200,7 +200,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                           <h1 className="lg:text-2xl text-3xl font-bold mt-1 py-2">
                             {blog.title}
                           </h1>
-                          <p className="lg:text-lg text-xl leading-relaxed w-11/12 lg:block hidden">
+                          <p className="lg:text-lg text-xl leading-relaxed mx-w-sm lg:block hidden">
                             {blog.introduction}
                           </p>
                           <section className="flex items-center flex-wrap mt-3 rounded-full">
@@ -218,7 +218,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                           </section>
                           
                           <aside className="flex items-center flex-wrap mb-2 mt-4 text-2xl lg:text-lg">
-                            {blog.tags.map((tag) => (
+                            {blog?.tags.map((tag) => (
                               <button
                                 className="rounded-2xl border border-black py-1 px-4 ml-2"
                               >

@@ -15,10 +15,10 @@ const Slug = ({ blog }) => {
   }
 
   const options = { day: "numeric", month: "long", year: "numeric" };
-  const siteUrl = `https://empower-her-community.vercel.app/${blog.slug}`
+  const siteUrl = `https://empower-her-community.vercel.app/${blog.slug}`;
   return (
-    <section className="">
-        <Head>
+    <section className="overflow-y-hidden">
+      <Head>
         <meta charSet="UTF-8" />
         <title>"Empower Her Community"</title>
         <meta name="title" property="og:title" content={blog.title} />
@@ -31,72 +31,42 @@ const Slug = ({ blog }) => {
           property="og:article:author"
           content={blog.author}
         />
-        <meta
-          property="og:description"
-          content={blog.introduction}
-        />
-        <meta
-          property="og:url"
-          content={siteUrl}
-        />
+        <meta property="og:description" content={blog.introduction} />
+        <meta property="og:url" content={siteUrl} />
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta name="description" content={blog.introduction} />
-        <meta
-          property="og:site_name"
-          content="Empower Her Community"
-        />
-        <meta
-          property="og:image:secure_url"
-          content={blog.cover_photo}
-        />
+        <meta property="og:site_name" content="Empower Her Community" />
+        <meta property="og:image:secure_url" content={blog.cover_photo} />
         <meta name="twitter:image:alt" content={blog.title} />
       </Head>
 
-      {/* <SEO
-        title={blog.title}
-        icon={blog.cover_photo}
-        description={blog.introduction}
-        keywords={["EHC", "Community", "Empower her community", "EHC blog"]}
-        twitter={{
-          card: "summary_large_image",
-          site: "@empowerhercommunity",
-          title: blog.title,
-          description: blog.introduction,
-          image: blog.cover_photo,
-        }}
-        facebook={{
-          type: "article",
-          image: blog.cover_photo,
-        }}
-      /> */}
-
       <NavBar />
-      <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl max-w-screen-md lg:max-w-screen-2xl text-justify px-10 lg:px-10 pt-5 lg:pt-8">
-        <article className="py-6">
-          <section className=" text-slug flex items-center justify-between lg:w-72 w-80 ml-0 lg:ml-12  lg:text-xl text-2xl">
-            <div className=" font-medium mb-1">
-              {new Date(blog.created).toLocaleDateString("en-US", options)}
+      <div className="prose mt-5 justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-5 lg:pt-8">
+        <article className="">
+          <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
+            <section className="text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
+              <div className=" font-medium">
+                {new Date(blog.created).toLocaleDateString("en-US", options)}
+              </div>
+              <div className="border-black h-1 w-1 bg-black rounded-full"></div>
+
+              <div className="">
+                {`${calculateReadingTime(blog.description)}` > 1
+                  ? `${calculateReadingTime(blog.description)} minutes read`
+                  : `${calculateReadingTime(blog.description)} minute read`}
+              </div>
+            </section>
+
+            <div className="max-w-5xl">
+              <h1 className="lg:text-4xl mt-4 text-4xl font-semibold">
+                {blog.title}
+              </h1>
+              <p className="md:text-xl -mt-5 leading-9 text-2xl lg:text-xl">
+                {blog.introduction}
+              </p>
             </div>
-            <div className="border-black h-1 w-1 bg-black rounded-full"></div>
-
-            <div className="-mt-1">
-              {`${calculateReadingTime(blog.description)}` > 1
-                ? `${calculateReadingTime(blog.description)} minutes read`
-                : `${calculateReadingTime(blog.description)} minute read`}
-            </div>
-          </section>
-
-          <div className="lg:ml-12 ml-0 mt-5">
-            <h1 className="lg:text-4xl text-4xl lg:w-full font-semibold">
-              {blog.title}
-            </h1>
-            <p className="md:text-xl leading-10 text-2xl lg:text-xl">
-              {blog.introduction}
-            </p>
-          </div>
-
-          <section className="flex items-center w-11/12 -mt-5 py-0 lg:ml-12 ml-0">
+          <section className="flex items-center -mt-10">
             <div className="rounded-full">
               <img
                 src={blog.author_image}
@@ -108,16 +78,17 @@ const Slug = ({ blog }) => {
               {blog.author}
             </div>
           </section>
-
-          <div className="-mt-1  md:w-11/12">
-            <img src={blog.cover_photo} className="w-full h-auto" />
           </div>
 
-          <section className="flex justify-between lg:ml-12 ml-0 lg:w-11/12">
-          <div className="flex w-full">
+          <div className="max-w-6xl -mt-5">
+            <img src={blog.cover_photo} className="w-full" />
+          </div>
+
+          <section className="flex justify-between lg:ml-10 max-w-5xl overflow-x-hidden">
+            <div className="flex w-full">
               <div
-                    className="overflow-x-hidden"
-                    dangerouslySetInnerHTML={{
+                className="overflow-x-hidden"
+                dangerouslySetInnerHTML={{
                   __html: md().render(blog.description),
                 }}
               />

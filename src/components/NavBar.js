@@ -19,8 +19,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="overflow-hidden  cursor-pointer px-4  lg:bg-white lg:bg-opacity-0  bg-primary bg-opacity-10  ">
-      <nav className="flex lg:flex-row items-center lg:mx-auto  lg:container py-10 lg:py-3 flex-col-reverse lg:justify-center lg:px-5 px-1">
+    <div className="overflow-hidden px-5 cursor-pointer lg:bg-white lg:bg-opacity-0  bg-primary bg-opacity-10  ">
+      <nav className="flex lg:flex-row items-center container mx-auto  py-10 lg:py-3 flex-col-reverse lg:justify-center">
         <ul
           className={`${
             active ? "block" : "hidden"
@@ -28,29 +28,37 @@ const NavBar = () => {
         >
           <li
             className={`${
-              router.pathname === "/" ? "border-b-2 border-primary" : ""
-            } hover:font-medium hover:scale-x-110`}
+              router.pathname === "/"
+                ? "border-b-2 border-primary  "
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/">Home</Link>
           </li>
           <li
             className={`${
-              router.pathname === "/aboutUs" ? "border-b-2 border-primary" : ""
-            } hover:font-medium hover:scale-x-110`}
+              router.pathname === "/aboutUs"
+                ? "border-b-2 border-primary"
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/aboutUs">About Us</Link>
           </li>
           <li
             className={`${
-              router.pathname === "/events" ? "border-b-2 border-primary" : ""
-            } hover:font-medium hover:scale-x-110`}
+              router.pathname === "/events"
+                ? "border-b-2 border-primary"
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/events">Events</Link>
           </li>
           <li
             className={`${
-              router.pathname === "/blog" ? "border-b-2 border-primary" : ""
-            } hover:font-medium hover:scale-x-110`}
+              router.pathname === "/blog"
+                ? "border-b-2 border-primary"
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/blog">Blog</Link>
           </li>
@@ -58,15 +66,17 @@ const NavBar = () => {
             className={`${
               router.pathname === "/volunteer"
                 ? "border-b-2 border-primary"
-                : ""
-            } hover:font-medium hover:scale-x-110`}
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/volunteer">Volunteer</Link>
           </li>
           <li
             className={`${
-              router.pathname === "/contact" ? "border-b-2 border-primary" : ""
-            } hover:font-medium hover:scale-x-110`}
+              router.pathname === "/contact"
+                ? "border-b-2 border-primary"
+                : "hover:font-light"
+            } hover:font-medium`}
           >
             <Link href="/contact">Contact</Link>
           </li>
@@ -107,23 +117,27 @@ const NavBar = () => {
           )}
         </figure>
         <div className="w-4/12 md:w-5/12 lg:flex hidden lg:flex-row flex-col justify-around items-center h-56 lg:h-0 lg-py-0 py-11">
-          <button className="lg:w-36 md:w-28 rounded-md h-12  text-primary font-medium border-primary border-2 font-mono hover:scale-105">
-            <Link
-              legacyBehavior
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform "
-              className="border-none"
-            >
-              <a target="_blank"> Join Us</a>
-            </Link>
-          </button>
-          <button className="lg:w-52 md:w-48 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">
-            <Link
-              legacyBehavior
-              href="https://paystack.com/pay/empowerhercommunity"
-            >
-              <a target="_blank">Support Our Vision</a>
-            </Link>
-          </button>
+          <Link
+            legacyBehavior
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform "
+            className="border-none"
+          >
+            <a target="_blank">
+              <button className="lg:w-36 md:w-28 rounded-md h-12  text-primary font-medium border-primary border-2 font-mono hover:scale-105">
+                Join Us
+              </button>
+            </a>
+          </Link>
+          <Link
+            legacyBehavior
+            href="https://paystack.com/pay/empowerhercommunity"
+          >
+            <a target="_blank">
+              <button className="lg:w-52 md:w-48 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">
+                Support Our Vision
+              </button>
+            </a>
+          </Link>
         </div>
       </nav>
     </div>
