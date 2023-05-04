@@ -95,7 +95,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
 
             <div className="lg:w-7/12 md:w-6/12 xl:block md:hidden hidden">
               <ul
-                className="flex justify-between items-center lg:w-12/12 text-lg"
+                className="flex justify-between items-center font-normal lg:w-12/12 text-lg"
                 id="tags"
               >
                 <li
