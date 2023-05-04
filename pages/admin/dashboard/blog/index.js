@@ -10,6 +10,7 @@ const BlogDashboard = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
 
+
   const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
 
   const router = useRouter();
@@ -28,7 +29,7 @@ const BlogDashboard = () => {
         setFetchedEvents(data.results);
         setIsFetching(false);
       } catch (error) {
-        setError(error.message);
+        setError(error.message)
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
