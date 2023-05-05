@@ -59,7 +59,7 @@ const eventEdit = () => {
       );
       const data = await response.json();
       setLoading(false)
-      toast.info("event updated", {
+      toast.success("event updated", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

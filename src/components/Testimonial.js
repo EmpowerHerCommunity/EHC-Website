@@ -12,7 +12,7 @@ const Testimonial = () => {
       name: "Falomo Sharon",
       role: "Frontend developer",
       testimonial:
-        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators and the assignments too. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
+        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
     
     
@@ -22,7 +22,7 @@ const Testimonial = () => {
       name: "Olamide Sanusi ",
       role: "Data analyst",
       testimonial:
-      "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable. She even makes herself available outside of class hours to answer questions and provide guidance as needed.",
+      "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable.",
     },
   
     {
@@ -30,7 +30,7 @@ const Testimonial = () => {
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
 
       {
         id: 4,
@@ -47,7 +47,7 @@ const Testimonial = () => {
       role: "Frontend developer",
       height: "400px",
       testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
+        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn and connect with some of the best instructors in the industry, who were not only knowledgeable but very supportive.",
     },
 
     // {
@@ -87,7 +87,7 @@ const Testimonial = () => {
         </div>
         <div className="">
           <div className="relative mb-14  max-w-max mx-auto lg:pt-4 pt-36">
-            <h2 className="hero-h2 font-normal md:text-5xl text-4xl font-bold max-w-max">
+            <h2 className="hero-h2 md:text-5xl text-4xl font-bold max-w-max">
               Testimonials
             </h2>
             <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />

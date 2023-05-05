@@ -3,7 +3,7 @@ import AOS from "aos";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { setLazyProp } from "next/dist/server/api-utils";
+import { useRouter } from "next/router";
 
 const Form = () => {
   useEffect(() => {
@@ -12,6 +12,7 @@ const Form = () => {
   }, []);
 
   const [loading, setIsLoading] = useState(false);
+  const router = useRouter()
 
   const [mail, setMail] = useState({
     name: "",
@@ -39,7 +40,7 @@ const Form = () => {
           submit.current,
           "v_22EFbmmIAh7jydz"
         );
-        toast.warning("mail sent successfully", {
+        toast.success("mail sent successfully", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -50,6 +51,8 @@ const Form = () => {
           theme: "light",
         });
         setIsLoading(false);
+        router.reload(); // This will refresh the page after the form is submitted
+
       } catch (error) {
         setIsLoading(false);
         toast.error("Network error, please try again.", {
@@ -173,7 +176,7 @@ const Form = () => {
               className="bg-primary text-white text-4xl w-full p-3 rounded-md"
               type="submit"
             >
-              Sending... 🙂
+              Sending...🙂
             </button>
           ) : (
             <button

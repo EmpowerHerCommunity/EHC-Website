@@ -77,7 +77,7 @@ const blogEdit = () => {
       );
       const data = await response.json();
       setLoading(false);
-      toast.info("Blog updated", {
+      toast.success("Blog updated", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
