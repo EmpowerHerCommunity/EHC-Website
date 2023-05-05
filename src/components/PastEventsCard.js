@@ -39,7 +39,7 @@ const PastEventsCard = ({ event, i }) => {
             id="past"
           >
             <div>
-              <div className="relative mb-14 pt-4 max-w-max">
+              <div className="relative mb-14 pt-4 max-w-max" id={event.title}>
                 <h2 className="md:text-5xl text-4xl font-bold max-w-max">
                   {event.title}
                 </h2>
@@ -49,7 +49,7 @@ const PastEventsCard = ({ event, i }) => {
                 {event.description.map((desc) => {
                   return (
                     <p
-                      className="text-justify md:text-xl text-2xl leading-8 md:my-8 my-4"
+                      className="text-justify md:text-xl text-2xl leading-9 md:my-8 my-4"
                       key={"event-card-" + i}
                     >
                       {desc}

@@ -29,28 +29,28 @@ const Footer = () => {
             <div className='flex lg:gap-6 gap-10 mb-6'>
               <span className='border-2 border-solid rounded-full p-2'>
                 <Link href="https://www.instagram.com/empowerher_community/" legacyBehavior>
-                  <a>
+                  <a target='_blank'>
                     <SiInstagram size='1.6rem' />
                   </a>
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
                 <Link href="https://twitter.com/empowerhercom?s=20" legacyBehavior>
-                  <a>
+                <a target='_blank'>
                     <SiTwitter size='1.6rem' />
                   </a>
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
                 <Link href="https://www.facebook.com/empowerhercom/" legacyBehavior>
-                  <a>
+                <a target='_blank'>
                     <SiFacebook size='1.6rem' />
                   </a>
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
                 <Link href="https://www.linkedin.com/company/empower-her-community/" legacyBehavior>
-                  <a>
+                <a target='_blank'>
                     <SiLinkedin size='1.6rem' />
                   </a>
                 </Link>

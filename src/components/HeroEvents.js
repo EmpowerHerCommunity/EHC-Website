@@ -31,7 +31,7 @@ const HeroEvents = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
+              className="font-normal md:text-xl text-2xl mb-4 leading-9"
               data-aos="fade-left"
             >
               Since our inception, we have provided a plethora of opportunities

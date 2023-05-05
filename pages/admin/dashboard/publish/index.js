@@ -58,7 +58,7 @@ const Publish = () => {
       );
       if (response.ok) {
         setLoading(false);
-        toast.info("Blog successfully added", {
+        toast.success("Blog successfully added", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

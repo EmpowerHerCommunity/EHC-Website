@@ -45,7 +45,7 @@ const Description = () => {
                 className="relative mb-8 max-w-max lg:pt-20"
                 data-aos="fade-right"
               >
-                <h2 className="hero-h2 font-normal text-dark md:text-5xl text-4xl font-bold max-w-max">
+                <h2 className="hero-h2 text-dark md:text-5xl text-4xl font-bold max-w-max">
                   Who Are We?
                 </h2>
                 <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
