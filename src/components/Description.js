@@ -73,7 +73,7 @@ const Description = () => {
                 </Link>
               </div>
               <div
-                className="flex items-end lg:gap-20 gap-20"
+                className="flex items-end lg:gap-20 gap-14" 
                 data-aos="fade-up-right"
               >
                 <div>

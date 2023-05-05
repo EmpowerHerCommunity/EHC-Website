@@ -132,7 +132,7 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
-              <li className="mt-8 text-right">
+              <li className="mt-8 text-right hidden lg:block">
                 <Image src='/footer-dots.png' width={110} height={110} alt='dot' />
               </li>
             </ul>

@@ -169,7 +169,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
             {filtered !== null
               ? filtered?.map((blog) => (
                   <article className="w-12/12 p-4 mb-4" key={blog.id}>
-                    <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
+                    <div className=" h-full px-3 py-2 rounded-lg shadow-md hover:shadow-xl hover:shadow-blogshd">
                       <Link href={`/blog/${blog.slug}/`}>
                         <div>
                           <img
