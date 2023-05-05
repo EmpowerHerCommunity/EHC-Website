@@ -132,7 +132,7 @@ const NavBar = () => {
             legacyBehavior
             href="/support"
           >
-            <a target="_blank">
+            <a >
               <button className="lg:w-52 md:w-48 rounded-md h-12 border bg-primary font-medium text-white font-mono hover:scale-105">
                 Support Our Vision
               </button>
