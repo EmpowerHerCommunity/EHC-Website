@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import styles from "../../styles/Home.module.css";
+// import styles from "../../styles/Home.module.css";
 import Image from "next/image";
 
 const Hero = () => {
