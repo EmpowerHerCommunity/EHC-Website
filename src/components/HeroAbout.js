@@ -31,7 +31,7 @@ const HeroAbout = () => {
               </span>
             </h2>
             <p
-              className="font-normal md:text-xl leading-9 text-2xl mb-4 md:leading-8"
+              className="font-normal md:text-xl px-2 leading-9 text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               <span className="text-primary text-opacity-60">
@@ -43,7 +43,7 @@ const HeroAbout = () => {
               awareness of opportunities for women in tech.
             </p>
             <p
-              className="font-normal md:text-xl leading-9 text-2xl mb-4 md:leading-8"
+              className="font-normal px-2 md:text-xl leading-9 text-2xl mb-4 md:leading-8"
               data-aos="fade-left"
             >
               Since its founding in May 2021, our community has kickstarted the career of over
