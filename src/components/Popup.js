@@ -39,7 +39,8 @@ function PopUp({ closePopup }) {
           </div>
           <button className="pt-7 pb-4">
           <Link legacyBehavior href="/support"  >
-           <a className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer" >Donate Now</a> 
+           <a target="_blank" 
+           className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer" >Donate Now</a> 
           </Link>
           </button>
         </section>

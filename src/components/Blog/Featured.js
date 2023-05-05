@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import AOS from "aos";
 
-function Featured() {
+function Featured() {  
   const [featuredBlog, setFeaturedBlog] = useState(null);
   const [error, setError] = useState(null);
+
+  const Hero = () => {
+    useEffect(() => {
+      AOS.init({ duration: 2500 });
+      AOS.refresh();
+    }, []);
+  }
 
   useEffect(() => {
     const FetchBlogs = async () => {
@@ -41,7 +49,7 @@ function Featured() {
           <Link href={`/blog/featured/${feature.slug}`}>
             <div key={feature.id}>
              
-              <div>
+              <div  data-aos="fade-right">
                 <img
                   src={feature.cover_photo}
                   alt="article cover"
