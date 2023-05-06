@@ -16,6 +16,12 @@ module.exports = {
         "footer":"#6600660D",
         "slug":"#444444",
         "event":"#6600660D",
+        "payment":"#0F0F29",
+        "grey":"#FBFBF",
+        "blogshd":"#c9b6ce",
+        'support': '#DDDDDD',
+        'supportb': '#FBFBFB',
+
 
       },
       width:{

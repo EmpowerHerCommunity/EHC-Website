@@ -8,14 +8,9 @@ import { CacheProvider } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
   
-// Client-side cache shared for the whole session 
-// of the user in the browser.
-  
 const clientSideEmotionCache = createEmotionCache();
-
 // animate on scroll
 import 'aos/dist/aos.css';
-  
 export default function MyApp(props) {
     const { Component, emotionCache = 
         clientSideEmotionCache, pageProps } = props;
@@ -26,19 +21,13 @@ export default function MyApp(props) {
                 <meta name="viewport" 
                     content="width=device-width initial-scale=0.65" />
             </Head>
-            <ThemeProvider theme={theme}>
-                  
-                {/* CssBaseline kickstart an elegant, 
-                consistent, and simple baseline to
-                build upon. */}
-                  
+            <ThemeProvider theme={theme}>  
                 <CssBaseline />
                 <Component {...pageProps}></Component>
             </ThemeProvider>
         </CacheProvider>
     );
-}
-  
+} 
 MyApp.propTypes = {
     Component: PropTypes.elementType.isRequired,
     emotionCache: PropTypes.object,

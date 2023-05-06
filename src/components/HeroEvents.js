@@ -12,10 +12,10 @@ const HeroEvents = () => {
       <div className="container xl:max-w-screen-xl mx-auto px-4">
         <div className="grid md:grid-cols-2 py-4 md:py-16 md:px-24">
           <div
-            className=" hero-about-list text-dark font-normal md:text-lg text-3xl  leading-7"
+            className=" hero-about-list text-dark font-normal md:text-lg text-3xl leading-7"
             data-aos="fade-right"
           >
-            <img src="/contact-dots.svg" alt="" />
+            <img src="/contact-dots.svg" alt="dot" />
             <ul className="ml-32 text-2xl lg:text-2xl mt-8">
               <li className="font-semibold my-1"><a href="#events">Events.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Bootcamps.</a> </li>
@@ -27,11 +27,11 @@ const HeroEvents = () => {
             <h2 className="md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative">
               Events
               <span>
-                <img src="/line2.png" alt="" />
+                <img src="/line2.png" alt="line" />
               </span>
             </h2>
             <p
-              className="font-normal md:text-xl text-2xl mb-4 md:leading-8"
+              className="font-normal md:text-xl px-2 text-2xl mb-4 leading-9"
               data-aos="fade-left"
             >
               Since our inception, we have provided a plethora of opportunities

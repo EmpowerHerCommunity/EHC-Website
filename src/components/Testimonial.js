@@ -12,23 +12,44 @@ const Testimonial = () => {
       name: "Falomo Sharon",
       role: "Frontend developer",
       testimonial:
-        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. Especially meeting our facilitators and the assignments too. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
+        "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
+    
+    
     {
       id: 2,
+      image: "/sam.png",
+      name: "Olamide Sanusi ",
+      role: "Data analyst",
+      testimonial:
+      "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable.",
+    },
+
+      {
+        id: 4,
+        image: "/erica (2).png",
+        name: "Osawaru Erica",
+        role: "Data Scientist",
+        testimonial:
+          "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
+      },
+   
+    {
+      id: 3,
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience as a frontend newbie. Despite having no prior knowledge, I learned to create user-friendly websites and communicate ideas. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
-    {
-      id: 3,
-      image: "/Jessica.png",
-      name: "Jessica Joseph",
-      role: "Frontend developer",
-      height: "400px",
-      testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn from some of the best instructors in the industry, who were not only knowledgeable but very supportive. I also found a tech family, EHC is such an amazing community for women in technology.",
-    },
+      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+
+    // {
+    //   id: 5,
+    //   image: "/jennifer.png",
+    //   name: "Jennifer Njoku",
+    //   role: "Cyber Security Specialist",
+    //   height: "400px",
+    //   testimonial:
+    //     "My experience at Bootcamp 3.0 has been truly exceptional. With the help of my facilitators, I was able to publish my first article on cybersecurity on Medium, which was a thrilling experience. In addition, I was introduced to the Cisco packet tracer, which I am currently mastering for my networking practical.",
+    // },
   ];
   const [prevIndex, setPrevIndex] = useState(2);
   const [nextIndex, setNextIndex] = useState(1);
@@ -53,11 +74,11 @@ const Testimonial = () => {
     <section className="py-12 text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src="/group2.png" width="115px" height="115px" />
+          <Image src="/group2.png" width={115} height={115} />
         </div>
         <div className="">
           <div className="relative mb-14  max-w-max mx-auto lg:pt-4 pt-36">
-            <h2 className="hero-h2 font-normal md:text-5xl text-4xl font-bold max-w-max">
+            <h2 className="hero-h2 md:text-5xl text-4xl font-bold max-w-max">
               Testimonials
             </h2>
             <hr className="border-0 h-1 w-3/5 absolute bottom-0 left-0 bg-yellow" />
@@ -138,8 +159,8 @@ const Testimonial = () => {
                             <div className="flex-none flex items-end w-44 sm:w-fit">
                               <Image
                                 src={testimonial.image}
-                                width="190px"
-                                height="300px"
+                                width={190}
+                                height={300}
                                 alt="attendee"
                               />
                             </div>

@@ -9,7 +9,7 @@ const PastEvents = () => {
       description: [
         "Empower Her Community Bootcamp 1.0 was a game-changing initiative that provided women with a month-long, free-of-charge training program. Our dedicated facilitators, who were all volunteers, generously contributed their time and expertise to ensure that participants received the highest quality training in Digital Marketing, Web Development, Graphics Design, Data Science, 3D Design, Modeling, and Printing. The bootcamp was an incredible success, and we are proud to have empowered so many women to develop new skills and enhance their knowledge.",
       ],
-      image: "/volunteers.JPEG",
+      image: "/events1.jpg",
 
       gallery: [
         "/volunteers.JPEG",
@@ -23,11 +23,24 @@ const PastEvents = () => {
     },
 
     {
+      title: "Mentorship Academy",
+      description: ["On November 15th, 2021, the Empower Her Community unveiled their Mentorship Academy, designed to connect women who are just starting out in their careers with seasoned experts in their respective fields. The program offered one-on-one coaching and hands-on engagement to help participants build valuable skills and advance their careers."],
+      image: "/mentorship.jpg",
+      gallery: [
+        "/mentor3.jpg",
+        "/mentor.jpg",
+        "/mentor.jpg",
+        "/mentor4.jpg",
+        "/mentor2.jpg",
+      ],
+    },
+
+    {
       title: "Bootcamp 2.0",
       description: [
-        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Product Management, Cybersecurity, Data Science, Digital Marketing, Product Design, and Blockchain. The program was completely free and provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
+        "Empower Her Community Bootcamp 2.0 was an even more comprehensive training program designed specifically for women. This two-month long initiative offered training in a range of skills, including Frontend and Backend Web Development, Cloud Engineering, Data Science, Digital Marketing, Product Design, and Blockchain. The program was virtual and it provided participants with access to a team of experienced and dedicated facilitators who were committed to ensuring the success of each participant.",
       ],
-      image: "/web.jpg",
+      image: "/2.0.jpg",
       gallery: [
         "/nit15.jpg",
         "/nit14.jpg",
@@ -37,12 +50,13 @@ const PastEvents = () => {
         "/nit14.jpg",
       ],
     },
+   
     {
       title: "Non Technical Bootcamp",
       description: [
-        "Empower Her Community with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women by helping them develop soft technical skills and knowledge in the tech industry.",
+        "Empower Her Community in partnership with Non Tech In Tech organized a non Technical Bootcamp which was a two-month-long program that focused on the non-technical aspects of the tech industry. The program offered training in Technical Writing, UX Writing, Product Marketing, Customer Success, Community Management, and Product Management. It was designed specifically to empower women by helping them develop soft technical skills and knowledge in the tech industry.",
       ],
-      image: "/nontechb.jpg",
+      image: "/events3.jpeg",
       gallery: [
         "/nit8.jpg",
         "/nit11.jpg",
@@ -64,6 +78,7 @@ const PastEvents = () => {
         "/webinar4.jpg",
       ],
     },
+   
   ];
 
   useEffect(() => {

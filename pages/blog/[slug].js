@@ -1,17 +1,9 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
 import md from "markdown-it";
 import NavBar from "../../src/components/NavBar";
 import Footer from "../../src/components/Footer";
+import Head from "next/head";
 
-const Slug = () => {
-  const router = useRouter();
-  const routeId = router.query.slug;
-  console.log(routeId);
-  const [blogs, setBlogs] = useState(null);
-  const [isFetching, setIsFetching] = useState(true);
-  const [error, setError] = useState(null);
-
+const Slug = ({ blog }) => {
   function calculateReadingTime(content) {
     const wordsPerMinute = 200;
     const wordCount = content?.trim().split(/\s+/).length;
@@ -22,84 +14,111 @@ const Slug = () => {
     return readingTime;
   }
 
-  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
-
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const response = await fetch(URL);
-        const data = await response.json();
-        setBlogs(data.results);
-        setIsFetching(false);
-      } catch (error) {
-        setError(error);
-        console.log("Failed to fetch events data: ", error);
-      }
-    }
-    if (isFetching) {
-      fetchBlogs();
-    }
-  }, [isFetching]);
-
   const options = { day: "numeric", month: "long", year: "numeric" };
-
+  const siteUrl = `https://empower-her-community.vercel.app/${blog.slug}`;
   return (
-    <section className="container mx-auto">
+    <section className="overflow-y-hidden">
+      <Head>
+            <meta charSet="UTF-8" />
+            <title>"Empower Her Community"</title>
+            <meta name="title" property="og:title" content={blog.title} />
+            <meta name="image" property="og:image" content={blog.cover_photo} />
+            <meta name="twitter:title" content={blog.title} />
+            <meta name="twitter:description" content={blog.introduction} />
+            <meta name="twitter:image" content={blog.cover_photo} />
+            <meta
+              name="author"
+              property="og:article:author"
+              content={blog.author}
+            />
+            <meta property="og:description" content={blog.introduction} />
+            <meta property="og:url" content="https://empower-her-community.vercel.app/"/>
+
+            <meta name="twitter:card" content="summary_large_image" />
+
+            <meta name="description" content={blog.introduction} />
+            <meta
+              property="og:site_name"
+              content="Empower Her Community"
+            />
+            <meta property="og:image:secure_url" content={blog.cover_photo} />
+
+            <meta name="twitter:image:alt" content={blog.title} />
+          </Head>
+          
       <NavBar />
-      <div className="prose prose-h2:prose-2xl prose-h3:prose-xl prose-h4:prose-xl prose-p:prose-2xl lg:prose-p:prose-xl  max-w-screen-2xl text-justify px-14 lg:px-28 pt-6 lg:pt-14">
-        {blogs &&
-          blogs
-            .filter((blog) => blog.slug === routeId)
-            .map((blog) => (
-              <article key={blog.slug} className="py-6">
-                <section className=" text-slug flex items-center justify-between lg:w-72 w-96  lg:text-xl text-2xl">
-                  <div className=" font-medium mb-1">
-                    {new Date(blog.created).toLocaleDateString(
-                      "en-US",
-                      options
-                    )}
-                  </div>
-                  <div className="border-black h-1 w-1 bg-black rounded-full"></div>
+      <div className="prose mt-5 justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-5 lg:pt-8">
+        <article className="">
+          <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
+            <section className="text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
+              <div className=" font-medium">
+                {new Date(blog.created).toLocaleDateString("en-US", options)}
+              </div>
+              <div className="border-black h-1 w-1 bg-black rounded-full"></div>
 
-                  <div className="-mt-1">
-                    {`${calculateReadingTime(blog.description)}` > 1
-                      ? `${calculateReadingTime(blog.description)} minutes read`
-                      : `${calculateReadingTime(blog.description)} minute read`}
-                  </div>
-                </section>
+              <div className="">
+                {`${calculateReadingTime(blog.description)}` > 1
+                  ? `${calculateReadingTime(blog.description)} minutes read`
+                  : `${calculateReadingTime(blog.description)} minute read`}
+              </div>
+            </section>
 
-                <figcaption>
-                  <h1 className="lg:text-4xl text-3xl md-96 lg:w-12/12 font-semibold">{blog.title}</h1>
-                  <p className="md:text-lg text-2xl lg:text-lg lg:w-9/12">{blog.introduction}</p>
-                </figcaption>
+            <div className="max-w-5xl">
+              <h1 className="lg:text-4xl mt-4 text-4xl font-semibold">
+                {blog.title}
+              </h1>
+              <p className="md:text-xl -mt-5 leading-9 text-2xl lg:text-xl">
+                {blog.introduction}
+              </p>
+            </div>
+          <section className="flex items-center -mt-10">
+            <div className="rounded-full">
+              <img
+                src={blog.author_image}
+                alt="author avatar"
+                className="h-24 w-24 object-contain rounded-full"
+              />
+            </div>
+            <div className="text-2xl text-black font-medium ml-6">
+              {blog.author}
+            </div>
+          </section>
+          </div>
 
-                <section className="flex items-center -mt-10 py-0 ">
-                  <figure className="">
-                    <img
-                      src={blog.author_image}
-                      className="rounded-full h-10 w-10"
-                    />
-                  </figure>
-                  <figcaption className="text-2xl ml-6">{blog.author}</figcaption>
-                </section>
+          <div className="max-w-6xl -mt-5">
+            <img src={blog.cover_photo} className="w-full" />
+          </div>
 
-                <figure className="-mt-1">
-                  <img
-                    src={blog.cover_photo}
-                    className="w-full h-auto"
-                  />
-                </figure>
-
-                <div 
-                  dangerouslySetInnerHTML={{
-                    __html: md().render(blog.description),
-                  }}
-                />
-              </article>
-            ))}
+          <section className="flex justify-between lg:ml-10 max-w-5xl overflow-x-hidden">
+            <div className="flex w-full">
+              <div
+                className="overflow-x-hidden"
+                dangerouslySetInnerHTML={{
+                  __html: md().render(blog.description),
+                }}
+              />
+            </div>
+          </section>
+        </article>
       </div>
+      <Footer />
     </section>
   );
 };
 
 export default Slug;
+
+export async function getServerSideProps({ params }) {
+  const { slug } = params;
+
+  const response = await fetch(
+    `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/`
+  );
+
+  const data = await response.json();
+  return {
+    props: {
+      blog: data,
+    },
+  };
+}

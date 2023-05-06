@@ -13,16 +13,16 @@ const Team = () => {
   return (
     <section className="" id='team'>
       <div className='container xl:max-w-screen-xl mx-auto py-5 px-4 text-dark relative'>
-        <img src="/contact-dots.svg" alt="" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
+        <img src="/contact-dots.svg" alt="dots" className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" />
         <h2 className="md:text-5xl text-4xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
           Meet The Team
-          <img src="/sun.png" alt="" className="absolute top-[-10px] right-[-25px] w-14" />
+          <img src="/sun.png" alt="dots" className="absolute top-[-10px] right-[-25px] w-14" />
           {/* <img src="/sun.png" alt="" className="absolute top-[-5px] right-[0px]" /> */}
         </h2>
         <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10">
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-right'>
-              <img src="/team-images/beth.png" alt="Elizabeth Okaome image" className="w-[80%]" />
+              <img src="/founder.png" alt="Elizabeth Okaome image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Elizabeth Okaome
@@ -60,6 +60,25 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
+              <img src="/team-images/anita.png" alt="Anita Kimemenihia image" className="w-[80%]" />
+            </div>
+            <p className="md:text-lg text-xl">
+              Anita Kimemenihia
+            </p>
+            <p className="text-[#737373] text-lg">
+              Lead, Communications
+            </p>
+            <div className="flex justify-center items-center gap-6 mt-2">
+              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/twitter.png" alt="" className="" />
+              </a>
+              <a href="https://twitter.com/Restless_kim?s=09" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/linkedin.png" alt="" className="" />
+              </a>
+            </div>
+          </div>
+          <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-right'>
               <img src="/team-images/peace.png" alt="Peace Ngozi Okafor image" className="w-[85%]" />
             </div>
@@ -80,13 +99,13 @@ const Team = () => {
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-up-left'>
-              <img src="/team-images/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
+              <img src="/tracy.png" alt="Tracy Obakhena image" className="w-[80%]" />
             </div>
             <p className="md:text-lg text-xl">
               Tracy Obakhena
             </p>
             <p className="text-[#737373] text-lg">
-              Programs Manager
+             Lead, Programs Manager
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a href="https://mobile.twitter.com/whoisourlight" className="" target="_blank" rel="noopener noreferrer">
@@ -147,10 +166,10 @@ const Team = () => {
               Lead, Communications
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="https://twitter.com/Restless_kim?s=09" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/Restless_kim?s=09" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>

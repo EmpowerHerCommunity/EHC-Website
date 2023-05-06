@@ -18,14 +18,13 @@
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "dotenv": "^16.0.3",
-    "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "marked": "^4.2.12",
-    "next": "^12.1.6",
+    "next": "^13.3.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
-    "react-multi-carousel": "^2.8.0"
+    "react-multi-carousel": "^2.8.0",
+    "react-toastify": "^9.1.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
