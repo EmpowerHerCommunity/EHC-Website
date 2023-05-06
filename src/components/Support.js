@@ -9,7 +9,7 @@ const Support = () => {
   }, []);
 
   return (
-    <section className="mx-auto mb-5 container flex items-center px-4 flex-col justify-center mt-14">
+    <section className="mx-auto mb-5 container flex items-center px-4 flex-col justify-center mt-8">
       <div
         className="flex flex-col justify-center items-center first-letter:first-line"
         data-aos="zoom-in"

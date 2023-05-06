@@ -37,7 +37,7 @@ const HeroAbout = () => {
               <span className="text-primary text-opacity-60">
                 Empower Her Community
               </span>{" "}
-             is a female oriented tech community of 5,000+ women dedicated to fostering
+             is a female oriented tech community of 6,000+ women dedicated to fostering
               gender diversity in tech. We strive to make the industry more
               accessible by providing training, mentorship, and raising
               awareness of opportunities for women in tech.
