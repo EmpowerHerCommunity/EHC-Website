@@ -51,8 +51,9 @@ const Form = () => {
           theme: "light",
         });
         setIsLoading(false);
-        router.reload(); // This will refresh the page after the form is submitted
-
+        setTimeout(()=>{
+          router.reload(); // This will refresh the page after the form is submitted
+        }, 1000)
       } catch (error) {
         setIsLoading(false);
         toast.error("Network error, please try again.", {
