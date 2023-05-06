@@ -161,10 +161,11 @@ const Support = () => {
             className="placeholder:text-xl border-2 px-4 py-2 mt-2 w-96 h-14 rounded-xl"
             name="form_email"
             id="email"
+            required
             onChange={(e) => setMail({ ...mail, email: e.target.value })}
           />
           <button className="bg-payment mt-6 text-white w-full border text-xl h-14 rounded-full">
-            {isloading ? "Donate Selected" : "Your request is being sent"}
+            {!isloading ? "Donate Selected" : "Your request is being sent"}
           </button>
         </form>
       </div>

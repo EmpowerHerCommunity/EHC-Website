@@ -89,7 +89,7 @@ const BlogDashboard = () => {
                 fetchedEvents.map((data) => (
                   <tr
                     key={data.id}
-                    className=" h-28 w-full overflow-scroll text-base bg-white rounded-l-lg py-10 hover:shadow-lg hover:bg-light hover:scale-100"
+                    className=" h-28 w-full overflow-scroll text-base bg-white rounded-l-lg py-10 hover:shadow-lg hover:bg-light"
                   >
                     <td className="">{data.title}</td>
                     <td className="w-6/12">{data.introduction}</td>
