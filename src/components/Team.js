@@ -166,10 +166,10 @@ const Team = () => {
               Lead, Communications
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/Restless_kim?s=0" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="https://twitter.com/Restless_kim?s=09" className="" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
