@@ -88,12 +88,12 @@ const Events = () => {
               className=" text-center flex items-center flex-col md:text-left  w-11/12"
             >
               <div data-aos="fade-down">
-                <div className="h-[300px]">
+                <div className="h-[300px] overflow-hidden lg:-mt-5 md:-mt-0">
                 <Image
                   src="/events3.jpeg"
-                  width={273}
+                  width={300}
                   alt="volunteer"
-                  height={273}
+                  height={300}
                   className="rounded-md"
                 />
                 </div>

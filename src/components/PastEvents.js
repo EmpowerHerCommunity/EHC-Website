@@ -9,7 +9,7 @@ const PastEvents = () => {
       description: [
         "Empower Her Community Bootcamp 1.0 was a game-changing initiative that provided women with a month-long, free-of-charge training program. Our dedicated facilitators, who were all volunteers, generously contributed their time and expertise to ensure that participants received the highest quality training in Digital Marketing, Web Development, Graphics Design, Data Science, 3D Design, Modeling, and Printing. The bootcamp was an incredible success, and we are proud to have empowered so many women to develop new skills and enhance their knowledge.",
       ],
-      image: "/volunteers.JPEG",
+      image: "/events1.jpg",
 
       gallery: [
         "/volunteers.JPEG",

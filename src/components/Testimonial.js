@@ -24,13 +24,6 @@ const Testimonial = () => {
       testimonial:
       "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable.",
     },
-  
-    {
-      id: 3,
-      image: "/Nancy.png",
-      name: "Nancy Olatuja",
-      role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
 
       {
         id: 4,
@@ -40,15 +33,13 @@ const Testimonial = () => {
         testimonial:
           "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
       },
+   
     {
-      id: 5,
-      image: "/Jessica.png",
-      name: "Jessica Joseph",
+      id: 3,
+      image: "/Nancy.png",
+      name: "Nancy Olatuja",
       role: "Frontend developer",
-      height: "400px",
-      testimonial:
-        "The program was intense and challenging, but also incredibly rewarding. I had the opportunity to learn and connect with some of the best instructors in the industry, who were not only knowledgeable but very supportive.",
-    },
+      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
 
     // {
     //   id: 5,
