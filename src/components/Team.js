@@ -54,7 +54,7 @@ const Team = () => {
               <a href="https://twitter.com/Precy_Oriarewo" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/twitter.png" alt="" className="" />
               </a>
-              <a href="https://www.linkedin.com/in/eromosele-precious-oriarewo-b216a9231" className="" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/precy-oriarewo-b216a9231/" className="" target="_blank" rel="noopener noreferrer">
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
@@ -134,7 +134,46 @@ const Team = () => {
                 <img src="/social-media/linkedin.png" alt="" className="" />
               </a>
             </div>
-          </div> 
+          </div>
+          {/* <div className="w-[220px] xl:w-[250px] text-center">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-left'>
+              <img src="/team-images/pearl.png" alt="Pearl Christain image" className="w-[80%]" />
+            </div>
+            <p className="md:text-lg text-xl">
+              Pearl Christain
+            </p>
+            <p className="text-[#737373] text-lg">
+              Lead, Engineering
+            </p>
+            <div className="flex justify-center items-center gap-6 mt-2">
+              <a href="https://twitter.com/pearlchristain" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/twitter.png" alt="" className="" />
+              </a>
+              <a href="https://www.linkedin.com/in/pearl-christian" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/linkedin.png" alt="" className="" />
+              </a>
+            </div>
+          </div> */}
+         
+          <div className="w-[220px] xl:w-[250px] text-center">
+            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
+              <img src="/team-images/anita.png" alt="Anita Kimemenihia image" className="w-[80%]" />
+            </div>
+            <p className="md:text-lg text-xl">
+              Anita Kimemenihia
+            </p>
+            <p className="text-[#737373] text-lg">
+              Lead, Communications
+            </p>
+            <div className="flex justify-center items-center gap-6 mt-2">
+              <a href="https://twitter.com/Restless_kim?s=0" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/twitter.png" alt="" className="" />
+              </a>
+              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
+                <img src="/social-media/linkedin.png" alt="" className="" />
+              </a>
+            </div>
+          </div>
           <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-right'>
               <img src="/team-images/gracious.png" alt="Gracious Sede image" className="w-[80%]" />
