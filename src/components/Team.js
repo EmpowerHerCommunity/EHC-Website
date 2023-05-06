@@ -117,25 +117,6 @@ const Team = () => {
             </div>
           </div>
           <div className="w-[220px] xl:w-[250px] text-center">
-            <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='zoom-in-down'>
-              <img src="/Jess.png" alt="Jessica Joseph's image" className="w-[80%]" />
-            </div>
-            <p className="md:text-lg text-xl">
-              Jessica Joseph
-            </p>
-            <p className="text-[#737373] text-lg">
-              Lead, Engineering
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a href="http://www.linkedin.com/in/anita-kimemenihia" className="" target="_blank" rel="noopener noreferrer">
-                <img src="/social-media/twitter.png" alt="" className="" />
-              </a>
-              <a href="https://twitter.com/Restless_kim?s=09" className="" target="_blank" rel="noopener noreferrer">
-                <img src="/social-media/linkedin.png" alt="" className="" />
-              </a>
-            </div>
-          </div>
-          <div className="w-[220px] xl:w-[250px] text-center">
             <div className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden" data-aos='fade-down-right'>
               <img src="/team-images/mary.png" alt="Mary Sule image" className="w-[80%]" />
             </div>

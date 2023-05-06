@@ -169,7 +169,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
             {filtered !== null
               ? filtered?.map((blog) => (
                   <article className="w-12/12 p-4 mb-4" key={blog.id}>
-                    <div className=" h-full px-3 py-2 rounded-lg shadow-md hover:shadow-xl hover:shadow-blogshd">
+                    <div className=" h-full px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:shadow-supportb">
                       <Link href={`/blog/${blog.slug}/`}>
                         <div>
                           <img
@@ -204,7 +204,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             {blog.introduction}
                           </p>
                           <section className="flex items-center flex-wrap mt-3 rounded-full">
-                            <div className="h-16 w-16 rounded-full">
+                            <div className="h-24 w-24 rounded-full">
                               <img
                                 src={blog.author_image}
                                 alt="author avatar"
@@ -220,7 +220,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                           <aside className="flex items-center flex-wrap mb-2 mt-4 text-2xl lg:text-lg">
                             {blog?.tags.map((tag) => (
                               <button
-                                className="rounded-2xl border border-black py-1 px-4 ml-2"
+                                className="rounded-2xl border mb-3 lg:mb-2 border-black py-1 px-4 ml-2"
                               >
                                 {tag.tag}
                               </button>

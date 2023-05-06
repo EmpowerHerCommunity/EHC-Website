@@ -49,14 +49,14 @@ function Featured() {
           <Link href={`/blog/featured/${feature.slug}`}>
             <div key={feature.id}>
              
-              <div  data-aos="fade-right">
+              <div  data-aos="fade-right" >
                 <img
                   src={feature.cover_photo}
                   alt="article cover"
-                  className="w-full lg:h-auto h-56"
+                  className="w-full lg:h-auto h-56 rounded-md"
                 />
               </div>
-              <div className="lg:absolute static max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
+              <div className="lg:absolute static lg:max-h-full max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
                 <div className="lg:w-7/12 w-full">
                 <section className=" text-light font-semibold flex items-center justify-between lg:w-80 lg:mt-10 mt-0 xl:mt-0 w-80 ml-0 lg:text-xl text-xl">
                 <div className=" mb-1">
@@ -75,17 +75,21 @@ function Featured() {
                   </h1>
                   <p className="lg:text-xl text-2xl">{feature.introduction}</p>
                 </div>
-                <section className="py-4 flex items-center">
+                <section className="max-w-md flex items-center">
+
+                  <div className="rounded-full h-24 w-24">
                   <img
                     src={feature.author_image}
-                    className="w-10 h-10 rounded-full"
+                    className="w-full h-full rounded-full"
                     alt="author avatar"
                   />
+                  </div>
+                
                   <p className="lg:text-xl text-2xl ml-6 font-semibold">
                     {feature.author}
                   </p>
                 </section>
-                <aside className="py-2 w-full">
+                <aside className="py-6 w-full">
                   {feature.tags.map((tag) => (
                     <button className="rounded-2xl border  border-black lg:border-white py-1 px-4 ml-2 text-2xl">
                       {tag.tag}
