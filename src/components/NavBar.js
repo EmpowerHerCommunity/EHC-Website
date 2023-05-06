@@ -19,8 +19,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="overflow-hidden px-5 cursor-pointer lg:bg-white lg:bg-opacity-0  bg-primary bg-opacity-10  ">
-      <nav className="flex lg:flex-row items-center container mx-auto  py-10 lg:py-3 flex-col-reverse lg:justify-center">
+    <div className="overflow-hidden px-5 cursor-pointer lg:bg-white lg:bg-opacity-0  bg-primary bg-opacity-10">
+      <nav className="flex lg:flex-row items-center container mx-auto py-10 lg:py-1 flex-col-reverse lg:justify-center">
         <ul
           className={`${
             active ? "block" : "hidden"
@@ -84,7 +84,7 @@ const NavBar = () => {
         <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 xl:w-3/12 lg:w-2/12 lg:justify-center items-center">
           <Link href="/" legacyBehavior>
             <a className="border-none">
-              <Image src="/logo.png" width={110} height={110} alt="logo" />
+              <Image src="/logo.png" width={100} height={100} alt="logo" />
             </a>
           </Link>
           {active ? (

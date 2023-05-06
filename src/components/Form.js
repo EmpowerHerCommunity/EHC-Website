@@ -85,8 +85,8 @@ const Form = () => {
             <input
               type="text"
               name="from_name"
-              required
               id="name"
+              required
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder="Enter your name"
               value={mail.name}
