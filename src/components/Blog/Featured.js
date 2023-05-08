@@ -42,7 +42,7 @@ function Featured() {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 lg:py-10 py-4 relative">
+    <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 py-2 relative">
       {error && <p>{error.message}</p> }
       {featuredBlog &&
         featuredBlog.results.map((feature) => (

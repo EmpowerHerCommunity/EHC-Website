@@ -51,8 +51,9 @@ const Form = () => {
           theme: "light",
         });
         setIsLoading(false);
-        router.reload(); // This will refresh the page after the form is submitted
-
+        setTimeout(()=>{
+          router.reload(); // This will refresh the page after the form is submitted
+        }, 1000)
       } catch (error) {
         setIsLoading(false);
         toast.error("Network error, please try again.", {
@@ -85,8 +86,8 @@ const Form = () => {
             <input
               type="text"
               name="from_name"
-              required
               id="name"
+              required
               className="outline-none border-b-2 border-primary w-full px-3 py-2.5 my-2 placeholder:text-2xl lg:placeholder:text-xl"
               placeholder="Enter your name"
               value={mail.name}

@@ -110,7 +110,7 @@ const FeaturedDashboard = () => {
                 fetchedEvents.map((data) => (
                   <tr
                     key={data.id}
-                    className=" h-28 w-full overflow-scroll text-base bg-white rounded-l-lg py-10 hover:shadow-lg hover:bg-light hover:scale-100"
+                    className=" h-28 w-full overflow-scroll text-base bg-white rounded-l-lg py-10 hover:shadow-lg hover:bg-light"
                   >
                     <td className="w-3/12">{data.title}</td>
                     <td className="w-6/12">{data.introduction}</td>
@@ -121,18 +121,11 @@ const FeaturedDashboard = () => {
                         href={`/admin/dashboard/featured/${data.slug}`}
                       >
                         <a>
-                          <button className="w-16 rounded-md hover:scale-105 border bg-white text-primary h-10">
+                          <button className="w-16 rounded-md border bg-white text-primary h-10">
                             Edit
                           </button> 
                         </a>
                       </Link>
-
-                      {/* <button
-                        className=" ml-4 hover:scale-105 w-16 rounded-md border bg-primary text-white h-10"
-                        onClick={() => handleDelete(data.slug)}
-                      >
-                        Delete
-                      </button> */}
                     </td>
                   </tr>
                 ))}

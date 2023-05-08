@@ -11,21 +11,21 @@ const NewsLetter = () => {
   return (
     <section className="bg-primary bg-opacity-10 p-8">
       <div className="container xl:max-w-screen-xl mx-auto py-10">
-        <div className="flex flex-wrap gap-6 text-dark">
+        <div className="flex justify-between items-center flex-row text-dark">
           <h2
-            className="md:text-4xl sm:text-5xl lg:text-6xl text-5xl w-full lg:w-1/2 lg:flex-auto mb-1"
+            className="md:text-2xl sm:text-5xl lg:text-4xl  text-5xl max-w-3xl lg:w-1/2 lg:flex-auto mb-1"
             data-aos="fade-right"
           >
-            Join our NewsLetter
+            Get community updates and opportunities delivered to your inbox
           </h2>
-          <div className="w-full lg:w-5/12 lg:flex-auto">
+          <div className="">
             <Link
               href="https://empowerhercommunity.substack.com/embed"
               legacyBehavior
             >
               <a target="_blank">
-                <button className="bg-primary text-white w-96 h-14 rounded-md flex-auto text-2xl hover:scale-105">
-                  Subscribe
+                <button className="bg-primary text-white w-96 h-14 rounded-md flex-auto text-2xl hover:bg-transparent hover:shadow-md hover:text-primary">
+                  Yes, I’m in!
                 </button>
               </a>
             </Link>
