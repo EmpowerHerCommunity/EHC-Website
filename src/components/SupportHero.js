@@ -11,7 +11,9 @@ const SupportHero = () => {
                     <p className="mb-1 lg:text-xl text-2xl lg:w-10/12">Funds to support the women in tech BootCamp for over 6,000 ladies in Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.</p>
                 </article>
                 <figure className="lg:max-w-lg lg:w-full w-full mx-auto flex justify-center">
-                    <img className="object-cover object-center rounded" alt="EHC group" src="/ehc.svg" />
+                    <img
+                                  data-aos="fade-left"
+                    className="object-cover object-center rounded" alt="EHC group" src="/ehc.svg" />
                 </figure>
             </section>
         </>
