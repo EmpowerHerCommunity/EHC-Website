@@ -72,30 +72,17 @@ const Support = () => {
   const submit = useRef(null);
 
   return (
-    <section className="mx-auto mb-5 container flex items-center px-4 flex-col justify-center mt-8">
+    <section className="mx-auto my-16  container flex items-center px-4 lg:flex-row flex-col justify-center  lg:justify-between mt-8">
       <div
-        className="flex flex-col justify-center items-center first-letter:first-line"
-        data-aos="zoom-in"
-      >
-        {/* <Image src="/logo.png" width={110} height={110} alt="logo" /> */}
-        <h2 className="lg:text-xl font-bold text-lg py-3 text-center">
-          Support Us at Empower Her Community
-        </h2>
-        <p className="text-center text-base max-w-sm leading-6">
-          Funds to support the women in tech BootCamp for over 300 ladies in
-          Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
-        </p>
-      </div>
-      <div
-        className="border rounded-2xl mt-5 p-6 bg-supportb border-support"
+        className="border rounded-2xl mt-5 p-6  bg-supportb border-support"
         data-aos="zoom-in"
       >
         <h1 className="text-xl font-bold">Donate Cash</h1>
-        <p className=" text-base w-96 py-3 leading-6">
+        <p className=" text-base w-96 py-5 leading-6">
           Funds to support the women in tech BootCamp for over 300 ladies in
           Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
         </p>
-        <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 rounded-full">
+        <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
           <span>Pay with&nbsp;</span>
           <span class="font-semibold">interswitch</span>
           <img src="/switch.svg" alt="Interswitch" class="h-6 ml-2" />
@@ -103,7 +90,6 @@ const Support = () => {
       </div>
       <div
         className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey"
-        data-aos="zoom-in"
       >
         <h1 className="text-xl font-bold">Donate Materials</h1>
         <p className="text-base w-96 py-3 leading-6">
