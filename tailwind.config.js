@@ -21,8 +21,6 @@ module.exports = {
         "blogshd":"#c9b6ce",
         'support': '#DDDDDD',
         'supportb': '#FBFBFB',
-
-
       },
       width:{
         nav:"28rem"
