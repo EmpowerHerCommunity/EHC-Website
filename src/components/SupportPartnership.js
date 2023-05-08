@@ -38,17 +38,6 @@ function SupportPartnership() {
             </div>
           </div>
         </div>
-        {/* <div className=" grid lg:grid-cols-3 grid-cols-1  lg:pt-0 pt-5 lg:gap-20">
-          <div className="bg-payment lg:h-[139px] lg:w-[232px] flex items-center justify-center rounded-md">
-           <Image src="/p3.svg" alt="getEquity" width={150} height={40}/>
-          </div>
-          <div className="bg-payment lg:h-[139px] lg:w-[232px]  w-[96px] h-[46px] flex items-center justify-center rounded-md">
-            <img src="/p2.svg" alt="partners" className="lg:h-[39px] lg:w-[44px] h-[17px] w-[18px]"  />
-          </div>
-          <div className="bg-white lg:h-[139px] lg:w-[232px]  w-[96px] h-[46px] border border-slug flex items-center justify-center  rounded-md">
-          <img src="/p1.svg" alt="partners" className="lg:h-[39px] lg:w-[44px] h-[17px] w-[18px]"  />
-          </div>
-        </div> */}
 
         <div className="flex justify-end pt-8 container mx-auto">
           <Image
