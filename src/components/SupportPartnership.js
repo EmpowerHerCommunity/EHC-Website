@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const SupportPartnership = () => {
+function SupportPartnership() {
   return (
     <section className="bg-primary bg-opacity-5 flex flex-col  justify-center h-[382px] xl:items-center">
       <div className="container mx-auto px-10 md:px-10 ">
@@ -61,6 +61,6 @@ const SupportPartnership = () => {
       </div>
     </section>
   );
-};
+}
 
 export default SupportPartnership;
