@@ -15,7 +15,7 @@ const Support = () => {
   const [isloading, setIsLoading] = React.useState(false);
   const router = useRouter();
   const [mail, setMail] = React.useState({
-    email: false,
+    email: "",
     laptops: false,
     courses: false,
     stipends: false,
@@ -69,6 +69,8 @@ const Support = () => {
     }
   };
 
+  console.log(mail)
+
   const submit = useRef(null);
 
   return (
@@ -108,8 +110,9 @@ const Support = () => {
             <input
               className="mr-2 h-5 w-5"
               type="checkbox"
-              name="from_laptops"
+              name="form_laptops"
               id="laptops"
+              value={mail.laptops}
               onChange={(e) => setMail({ ...mail, laptops:true})}
             />
             Laptops
@@ -120,6 +123,7 @@ const Support = () => {
               type="checkbox"
               name="form_paidcourses"
               id="courses"
+              value={mail.courses}
               onChange={(e) => setMail({ ...mail, courses:true})}
             />
             Paid Courses
@@ -130,6 +134,7 @@ const Support = () => {
               type="checkbox"
               name="form_stipends"
               id="stipends"
+              value={mail.stipends}
               onChange={(e) => setMail({ ...mail, stipends:true})}
             />
             Data Stipends
@@ -140,6 +145,7 @@ const Support = () => {
               type="checkbox"
               name="form_others"
               id="others"
+              value={mail.others}
               onChange={(e) => setMail({ ...mail, others:true})}
             />
             Others
@@ -150,6 +156,7 @@ const Support = () => {
             name="form_email"
             id="email"
             required
+            value={mail.email}
             onChange={(e) => setMail({ ...mail, email: e.target.value })}
           />
           <button className="bg-payment mt-6 text-white w-full border text-xl h-14 rounded-full">
