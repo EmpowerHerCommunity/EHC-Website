@@ -86,7 +86,7 @@ const Team = () => {
             Goldie Chukwuedo
             </p>
             <p className="text-[#737373] text-lg">
-              Lead, Community Manager
+              Lead, Community Management
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a href="https://twitter.com/Goldiechukwuedo?s=09" className="" target="_blank" rel="noopener noreferrer">
@@ -105,7 +105,7 @@ const Team = () => {
               Tracy Obakhena
             </p>
             <p className="text-[#737373] text-lg">
-             Lead, Programs Manager
+             Lead, Programs Management
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a href="https://mobile.twitter.com/whoisourlight" className="" target="_blank" rel="noopener noreferrer">
