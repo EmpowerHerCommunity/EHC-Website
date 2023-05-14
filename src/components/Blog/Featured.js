@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import AOS from "aos";
+import Image from "next/image";
 
 function Featured() {  
   const [featuredBlog, setFeaturedBlog] = useState(null);
@@ -42,7 +43,7 @@ function Featured() {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   return (
-    <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 py-2 relative">
+    <article className="cursor-pointer lg:block hidden flex-col container mx-auto px-6 py-7 relative">
       {error && <p>{error.message}</p> }
       {featuredBlog &&
         featuredBlog.results.map((feature) => (
@@ -51,14 +52,14 @@ function Featured() {
              
               <div  data-aos="fade-right" >
                 <img
-                  src={feature.cover_photo}
+                  src={feature?.cover_photo}
                   alt="article cover"
                   className="w-full lg:h-auto h-56 rounded-md"
                 />
               </div>
-              <div className="lg:absolute static lg:max-h-full max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-light">
+              <div className="lg:absolute static lg:max-h-full max-h-80 bottom-28 left-0 lg:left-16 text-black lg:text-black">
                 <div className="lg:w-7/12 w-full">
-                <section className=" text-light font-semibold flex items-center justify-between lg:w-80 lg:mt-10 mt-0 xl:mt-0 w-80 ml-0 lg:text-xl text-xl">
+                <section className=" text-black font-semibold flex items-center justify-between lg:w-72 lg:mt-10 mt-0 xl:mt-0 w-80 ml-0 lg:text-xl text-xl">
                 <div className=" mb-1">
                   {new Date(feature.created).toLocaleDateString("en-US", options)}
                 </div>
@@ -77,7 +78,7 @@ function Featured() {
                 </div>
                 <section className="max-w-md flex items-center">
 
-                  <div className="rounded-full h-24 w-24">
+                  <div className="rounded-full h-20 my-4 w-20">
                   <img
                     src={feature.author_image}
                     className="w-full h-full rounded-full"
