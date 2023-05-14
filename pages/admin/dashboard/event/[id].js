@@ -48,7 +48,7 @@ const eventEdit = () => {
     try {
       setLoading(true)
       const response = await fetch(
-        `https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${routeId}/`,
+        process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/events/${routeId}/`,
         {
           method: "PATCH",
           headers: {
@@ -93,7 +93,7 @@ const eventEdit = () => {
       try {
         setLoading(true)
         const response = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${routeId}/`
+          process.env.NEXT_PUBLIC_BASE_URL + `/api/v1/indexapi/events/${routeId}/`
         );
         const data = await response.json();
         setResult(data);

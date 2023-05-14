@@ -21,7 +21,7 @@ const FeaturedDashboard = () => {
     try {
       const deleteFunction = async () => {
         const res = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/`,
+          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${slug}/`,
           {
             method: "DELETE",
             headers: {
@@ -49,8 +49,7 @@ const FeaturedDashboard = () => {
     }
   };
 
-  const URL =
-    "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?mode=featured";
+  const URL = process.env.NEXT_PUBLIC_BASE_URL  + "/api/v1/indexapi/blogpost/?mode=featured";
 
   useEffect(() => {
     async function fetchEvents() {

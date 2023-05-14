@@ -18,7 +18,7 @@ function Featured() {
     const FetchBlogs = async () => {
       try {
         const response = await fetch(
-          "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?mode=featured"
+          process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/?mode=featured"
         );
         const data = await response.json();
         setFeaturedBlog(data);

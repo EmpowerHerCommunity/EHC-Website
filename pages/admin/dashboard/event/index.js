@@ -24,7 +24,7 @@ const EventDashboard = () => {
     try {
       const deleteFunction = async () => {
         const res = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/events/${id}/`,
+          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/events/${id}/`,
           {
             method: "DELETE",
             headers: {
@@ -50,7 +50,7 @@ const EventDashboard = () => {
     }
   };
 
-  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/";
+  const URL = process.env.NEXT_PUBLIC_BASE_URL  + "/api/v1/indexapi/events/";
 
   useEffect(() => {
     async function fetchEvents() {

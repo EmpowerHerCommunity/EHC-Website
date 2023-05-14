@@ -25,7 +25,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
     const searchFetch = async () => {
       try {
         const res = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?search=${search}`
+          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?search=${search}`
         );
         const data = await res.json();
         setFiltered(data.results);
@@ -40,7 +40,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
     const fetchNext = async () => {
       try {
         const response = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
+          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
         );
         const data = await response.json();
         setNewBlog(data.results);

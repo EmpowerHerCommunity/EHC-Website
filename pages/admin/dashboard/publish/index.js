@@ -47,7 +47,7 @@ const Publish = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/",
+        process.env.NEXT_PUBLIC_BASE_URL  + "/api/v1/indexapi/blogpost/",
         {
           method: "POST",
           headers: {

@@ -11,7 +11,7 @@ const BlogDashboard = () => {
   const [error, setError] = useState(null);
 
 
-  const URL = "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/";
+  const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/";
 
   const router = useRouter();
   useEffect(() => {
