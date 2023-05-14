@@ -8,7 +8,6 @@ function SupportPartnership() {
         <div className="flex xl:flex-row flex-col ">
           <div className="lg:w-4/12">
             <h1
-              data-aos="fade-right"
               className="font-bold border-b-4 max-w-[200px] xl:max-w-[290px]  border-yellow text-2xl md:text-2xl xl:text-5xl"
             >
               In Partnership With

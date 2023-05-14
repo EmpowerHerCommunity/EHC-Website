@@ -81,7 +81,7 @@ const Support = () => {
       >
         <h1 className="text-xl font-bold">Donate Cash</h1>
         <p className=" text-base w-96 py-5 leading-6">
-          Funds to support the women in tech BootCamp for over 300 ladies in
+          Funds to support the women in tech BootCamp for over 5,000 ladies in
           Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
         </p>
         <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
@@ -92,10 +92,10 @@ const Support = () => {
       </div>
       <div
         className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey"
-      >
+     >
         <h1 className="text-xl font-bold">Donate Materials</h1>
         <p className="text-base w-96 py-3 leading-6">
-          Funds to support the women in tech BootCamp for over 300 ladies in
+          Funds to support the women in tech BootCamp for over 5,000 ladies in
           Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
         </p>
         <p className="lg:text-lg text-base text-blogSearch">
