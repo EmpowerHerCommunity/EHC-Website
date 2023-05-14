@@ -204,11 +204,11 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             {blog.introduction}
                           </p>
                           <section className="flex items-center flex-wrap mt-3 rounded-full">
-                            <div className="h-24 w-24 rounded-full">
+                            <div className="h-28 w-28 ">
                               <img
                                 src={blog.author_image}
                                 alt="author avatar"
-                                className="h-full w-full object-contain rounded-full"
+                                className="h-full w-full object-cover rounded-full"
                               />
                             </div>
 
