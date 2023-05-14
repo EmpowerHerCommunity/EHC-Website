@@ -72,11 +72,11 @@ const Slug = ({ blog }) => {
               </p>
             </div>
           <section className="flex items-center -mt-10">
-            <div className="rounded-full">
+            <div className="">
               <img
                 src={blog.author_image}
                 alt="author avatar"
-                className="h-24 w-24 object-contain rounded-full"
+                className="h-28 w-28 object-cover rounded-full"
               />
             </div>
             <div className="text-2xl text-black font-medium ml-6">

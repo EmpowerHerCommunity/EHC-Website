@@ -217,7 +217,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             </p>
                           </section>
                           
-                          <aside className="flex items-center flex-wrap mb-2 mt-4 text-2xl lg:text-lg">
+                          <aside className="flex items-center flex-wrap mb-2 mt-6 text-2xl lg:text-lg">
                             {blog?.tags.map((tag) => (
                               <button
                                 className="rounded-2xl border mb-3 lg:mb-2 border-black py-1 px-4 ml-2"
