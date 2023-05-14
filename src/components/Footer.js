@@ -82,7 +82,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='https://paystack.com/pay/empowerhercommunity' legacyBehavior>
+                <Link href='/support' legacyBehavior>
                   <a target='_blank'>
                     Support Us
                   </a>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='#partnership'legacyBehavior>
+                <Link href='/#partnership'legacyBehavior>
                   <a>
                     Partners
                   </a>
