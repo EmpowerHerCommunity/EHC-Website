@@ -6,10 +6,7 @@ import { MdOutlineEmail } from 'react-icons/md';
 import Image from 'next/image';
 import AOS from 'aos';
 
-
-
 const Footer = () => {
-
   useEffect(() => {
     AOS.init({ duration: 2500 });
     AOS.refresh();
