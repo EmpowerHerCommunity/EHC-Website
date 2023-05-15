@@ -47,7 +47,7 @@ const Slug = ({ blog }) => {
           </Head>
 
       <NavBar />
-      <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-6 lg:pt-4">
+      <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-7 lg:pt-10">
         <article className="">
           <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
             <section className="text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
@@ -112,7 +112,7 @@ export async function getServerSideProps({ params }) {
   const { slug } = params;
 
   const response = await fetch(
-    `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${slug}/`
+    process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${slug}/`
   );
 
   const data = await response.json();

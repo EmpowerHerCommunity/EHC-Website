@@ -50,7 +50,7 @@ const Slug = ({ blogs }) => {
             <meta name="twitter:image:alt" content={blog.title} />
           </Head>
 
-          <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-6 lg:pt-4">
+          <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-8 lg:pt-10">
             <article key={blog.slug}>
             <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
             <section className=" text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
@@ -66,7 +66,7 @@ const Slug = ({ blogs }) => {
                 </div>
               </section>
 
-              <div className="max-w-5xl">
+              <div className="max-w-5xl Z-50">
                 <h1 className="lg:text-4xl text-3xl mt-4 font-semibold">
                   {blog.title}
                 </h1>
@@ -80,7 +80,7 @@ const Slug = ({ blogs }) => {
                   <img
                     src={blog.author_image}
                     alt="author avatar"
-                    className="h-28 w-28 object-cover rounded-full"
+                    className="h-32 w-32 object-cover rounded-full"
                   />
                 </div>
                 <div className="text-2xl ml-6">{blog.author}</div>
@@ -112,9 +112,9 @@ const Slug = ({ blogs }) => {
 
 export default Slug;
 
-export async function getServerSideProps({}) {
+export async function getServerSideProps() {
   const response = await fetch(
-    "https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?mode=featured"
+    process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/?mode=featured"
   );
 
   const data = await response.json();

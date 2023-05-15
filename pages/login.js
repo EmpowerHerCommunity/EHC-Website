@@ -9,7 +9,8 @@ import Head from "next/head";
 
 const login = () => {
   const router = useRouter();
-  const URL = "https://empowerher.pythonanywhere.com/api/v1/adminapi/login/";
+  const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/adminapi/login/";
+  console.log(URL)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

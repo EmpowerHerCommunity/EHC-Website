@@ -61,7 +61,7 @@ export async function getServerSideProps({ query }) {
   const pageSize = 9; // set the number of items per page
 
   const response = await fetch(
-    `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
+    process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
   );
 
   const data = await response.json();

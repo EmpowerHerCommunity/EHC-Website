@@ -30,7 +30,7 @@ const Create = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://empowerher.pythonanywhere.com/api/v1/indexapi/events/",
+        process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/events/",
         {
           method: "POST",
           headers: {

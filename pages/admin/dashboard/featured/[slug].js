@@ -63,7 +63,7 @@ const FeatureEdit = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${routeId}/`,
+        process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${routeId}/`,
         {
           method: "PATCH",
           headers: {
@@ -107,7 +107,7 @@ const FeatureEdit = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://empowerher.pythonanywhere.com/api/v1/indexapi/blogpost/${routeId}/`
+          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${routeId}/`
         );
         const data = await response.json();
         setResult(data);
