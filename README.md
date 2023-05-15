@@ -8,9 +8,7 @@ The Empower Her Community is a technology based community that sees to the growt
 
 ## About The Project 
 
-The Empower Her community website was developed utilizing the following libraries and frameworks;
-
-- React.js
+The Empower Her community website was developed utilizing the following libraries and frameworks:
 - Next.js
 - Tailwind 
 
