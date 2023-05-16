@@ -52,7 +52,7 @@ const Create = () => {
           progress: undefined,
           theme: "light",
         });
-        router.push("/admin/dashboard/event")
+        router.push("/admin/dashboard/event");
       }
     } catch (error) {
       setLoading(false);

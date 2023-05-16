@@ -9,7 +9,7 @@ const NewsLetter = () => {
   }, []);
 
   return (
-    <section className="bg-primary bg-opacity-10 p-8">
+    <section className="bg-primary bg-opacity-10 py-20 px-5">
       <div className="container xl:max-w-screen-xl mx-auto py-10">
         <div className="flex justify-between xl:items-center items-start xl:flex-row flex-col text-dark">
           <h2

@@ -57,7 +57,7 @@ const aboutUs = () => {
         <HeroAbout />
         <OurVision />
         <Team />
-        <NewsLetter />
+        {/* <NewsLetter /> */}
       </main>
       <Footer />
     </div>

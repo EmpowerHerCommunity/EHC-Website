@@ -16,7 +16,6 @@ const Slug = ({ blogs }) => {
   }
 
   const options = { day: "numeric", month: "long", year: "numeric" };
-
   return (
     <section className="overflow-y-hidden">
       <NavBar />
@@ -36,15 +35,15 @@ const Slug = ({ blogs }) => {
               content={blog.author}
             />
             <meta property="og:description" content={blog.introduction} />
-            <meta property="og:url" content="https://empower-her-community.vercel.app/"/>
+            <meta
+              property="og:url"
+              content="https://empower-her-community.vercel.app/"
+            />
 
             <meta name="twitter:card" content="summary_large_image" />
 
             <meta name="description" content={blog.introduction} />
-            <meta
-              property="og:site_name"
-              content="Empower Her Community"
-            />
+            <meta property="og:site_name" content="Empower Her Community" />
             <meta property="og:image:secure_url" content={blog.cover_photo} />
 
             <meta name="twitter:image:alt" content={blog.title} />
@@ -52,39 +51,42 @@ const Slug = ({ blogs }) => {
 
           <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-8 lg:pt-10">
             <article key={blog.slug}>
-            <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
-            <section className=" text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
-                <div className=" font-medium mb-1">
-                  {new Date(blog.created).toLocaleDateString("en-US", options)}
-                </div>
-                <div className="border-black h-1 w-1 bg-black rounded-full"></div>
+              <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
+                <section className=" text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
+                  <div className=" font-medium mb-1">
+                    {new Date(blog.created).toLocaleDateString(
+                      "en-US",
+                      options
+                    )}
+                  </div>
+                  <div className="border-black h-1 w-1 bg-black rounded-full"></div>
 
-                <div className="-mt-1">
-                  {`${calculateReadingTime(blog.description)}` > 1
-                    ? `${calculateReadingTime(blog.description)} minutes read`
-                    : `${calculateReadingTime(blog.description)} minute read`}
-                </div>
-              </section>
+                  <div className="-mt-1">
+                    {`${calculateReadingTime(blog.description)}` > 1
+                      ? `${calculateReadingTime(blog.description)} minutes read`
+                      : `${calculateReadingTime(blog.description)} minute read`}
+                  </div>
+                </section>
 
-              <div className="max-w-5xl Z-50">
-                <h1 className="lg:text-4xl text-3xl mt-4 font-semibold">
-                  {blog.title}
-                </h1>
-                <p className="md:text-xl leading-10 text-2xl lg:text-xl">
-                  {blog.introduction}
-                </p>
-              </div>
-
-              <section className="flex items-center -mt-10">
-                <div className="">
-                  <img
-                    src={blog.author_image}
-                    alt="author avatar"
-                    className="h-32 w-32 object-cover rounded-full"
-                  />
+                <div className="max-w-5xl Z-50">
+                  <h1 className="lg:text-4xl text-3xl mt-4 font-semibold">
+                    {blog.title}
+                  </h1>
+                  <p className="md:text-xl leading-10 text-2xl lg:text-xl">
+                    {blog.introduction}
+                  </p>
                 </div>
-                <div className="text-2xl ml-6">{blog.author}</div>
-              </section>
+
+                <section className="flex items-center -mt-10">
+                  <div className="">
+                    <img
+                      src={blog.author_image}
+                      alt="author avatar"
+                      className="h-32 w-32 object-cover rounded-full"
+                    />
+                  </div>
+                  <div className="text-2xl ml-6">{blog.author}</div>
+                </section>
               </div>
 
               <div className="-mt-1">
@@ -114,7 +116,8 @@ export default Slug;
 
 export async function getServerSideProps() {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/?mode=featured"
+    process.env.NEXT_PUBLIC_BASE_URL +
+      "/api/v1/indexapi/blogpost/?mode=featured"
   );
 
   const data = await response.json();

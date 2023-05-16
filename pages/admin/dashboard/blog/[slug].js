@@ -65,8 +65,9 @@ const blogEdit = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(
-        process.env.NEXT_PUBLIC_BASE_URL + `/api/v1/indexapi/blogpost/${routeId}/`,
+      await fetch(
+        process.env.NEXT_PUBLIC_BASE_URL +
+          `/api/v1/indexapi/blogpost/${routeId}/`,
         {
           method: "PATCH",
           headers: {
@@ -75,7 +76,6 @@ const blogEdit = () => {
           body: formData,
         }
       );
-      const data = await response.json();
       setLoading(false);
       toast.success("Blog updated", {
         position: "top-right",
@@ -110,13 +110,13 @@ const blogEdit = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL + `/api/v1/indexapi/blogpost/${routeId}/`
+          process.env.NEXT_PUBLIC_BASE_URL +
+            `/api/v1/indexapi/blogpost/${routeId}/`
         );
         const data = await response.json();
         setResult(data);
         setLoading(false);
       } catch (error) {
-        setLoading(false);
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,

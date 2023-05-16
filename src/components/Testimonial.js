@@ -26,7 +26,7 @@ const Testimonial = () => {
     },
 
       {
-        id: 4,
+        id: 3,
         image: "/erica (2).png",
         name: "Osawaru Erica",
         role: "Data Scientist",
@@ -35,11 +35,12 @@ const Testimonial = () => {
       },
    
     {
-      id: 3,
+      id: 4,
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    },
+      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    
+    },
 
     // {
     //   id: 5,
@@ -48,7 +49,7 @@ const Testimonial = () => {
     //   role: "Cyber Security Specialist",
     //   height: "400px",
     //   testimonial:
-    //     "My experience at Bootcamp 3.0 has been truly exceptional. With the help of my facilitators, I was able to publish my first article on cybersecurity on Medium, which was a thrilling experience. In addition, I was introduced to the Cisco packet tracer, which I am currently mastering for my networking practical.",
+    //     "My experience at Bootcamp 3.0 has been truly exceptional. With the help of my facilitators, I was able to publish my first article on cybersecurity on Medium, which was a thrilling experience.",
     // },
   ];
   const [prevIndex, setPrevIndex] = useState(2);

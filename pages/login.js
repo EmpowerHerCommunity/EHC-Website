@@ -10,7 +10,6 @@ import Head from "next/head";
 const login = () => {
   const router = useRouter();
   const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/adminapi/login/";
-  console.log(URL)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -32,7 +31,6 @@ const login = () => {
         // Login successful, store user data in session storage
         const data = await response.json();
         localStorage.setItem("accessToken", data.data.access);
-
         toast.warning("Successfully Logged in", {
           position: "top-right",
           autoClose: 5000,
