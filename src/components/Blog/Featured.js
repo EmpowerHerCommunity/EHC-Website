@@ -5,7 +5,7 @@ import AOS from "aos";
 function Featured() {
   const [featuredBlog, setFeaturedBlog] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const Hero = () => {
     useEffect(() => {
@@ -17,7 +17,6 @@ function Featured() {
   useEffect(() => {
     const FetchBlogs = async () => {
       try {
-        setLoading(true);
         const response = await fetch(
           process.env.NEXT_PUBLIC_BASE_URL +
             "/api/v1/indexapi/blogpost/?mode=featured"
@@ -27,6 +26,7 @@ function Featured() {
         setLoading(false);
       } catch (error) {
         setError(error.message);
+        setLoading(false);
       }
     };
     FetchBlogs();
