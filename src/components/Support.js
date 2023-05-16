@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import AOS from "aos";
@@ -50,9 +50,9 @@ const Support = () => {
           theme: "light",
         });
         setIsLoading(false);
-        setTimeout(()=>{
+        setTimeout(() => {
           router.reload(); // This will refresh the page after the form is submitted
-        }, 1000)
+        }, 1000);
       } catch (error) {
         setIsLoading(false);
         toast.error("Network error, please try again.", {
@@ -69,7 +69,7 @@ const Support = () => {
     }
   };
 
-  console.log(mail)
+  console.log(mail);
 
   const submit = useRef(null);
 
@@ -79,24 +79,27 @@ const Support = () => {
         className="border rounded-2xl mt-5 p-6  bg-supportb border-support"
         data-aos="zoom-in"
       >
-        <h1 className="text-xl font-bold">Donate Cash</h1>
+        <h1 className="text-2xl font-bold">Donate Cash</h1>
         <p className=" text-base w-96 py-5 leading-6">
-          Funds to support the women in tech BootCamp for over 5,000 ladies in
-          Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
-        </p>
-        <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
-          <span>Pay with&nbsp;</span>
-          <span class="font-semibold">interswitch</span>
-          <img src="/switch.svg" alt="Interswitch" class="h-6 ml-2" />
-        </button>
+        Your support will make a tangible difference in the lives of these aspiring female technologists. Donate today and help us empower women in tech.        </p>
+        <Link
+          href="https://paystack.com/pay/empowerhercommunity"
+          legacyBehavior
+        >
+          <a target="_blank">
+            <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
+              <span>Pay with&nbsp;</span>
+              <span class="font-semibold">Paystack</span>
+              {/* <img src="/switch.svg" alt="Interswitch" class="h-6 ml-2" /> */}
+            </button>
+          </a>
+        </Link>
       </div>
-      <div
-        className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey"
-     >
-        <h1 className="text-xl font-bold">Donate Materials</h1>
+      <div className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey">
+        <h1 className="text-2xl font-bold">Donate Materials</h1>
         <p className="text-base w-96 py-3 leading-6">
-          Funds to support the women in tech BootCamp for over 5,000 ladies in
-          Nigeria, Nairobi, America, UK, Ghana and Cote d'ivoire.
+          Your generous donation will directly impact the lives of women in
+          tech. Every contribution, matters
         </p>
         <p className="lg:text-lg text-base text-blogSearch">
           Choose Materials to donate:
@@ -113,7 +116,7 @@ const Support = () => {
               name="form_laptops"
               id="laptops"
               value={mail.laptops}
-              onChange={(e) => setMail({ ...mail, laptops:true})}
+              onChange={(e) => setMail({ ...mail, laptops: true })}
             />
             Laptops
           </label>
@@ -124,7 +127,7 @@ const Support = () => {
               name="form_paidcourses"
               id="courses"
               value={mail.courses}
-              onChange={(e) => setMail({ ...mail, courses:true})}
+              onChange={(e) => setMail({ ...mail, courses: true })}
             />
             Paid Courses
           </label>
@@ -135,7 +138,7 @@ const Support = () => {
               name="form_stipends"
               id="stipends"
               value={mail.stipends}
-              onChange={(e) => setMail({ ...mail, stipends:true})}
+              onChange={(e) => setMail({ ...mail, stipends: true })}
             />
             Data Stipends
           </label>
@@ -146,7 +149,7 @@ const Support = () => {
               name="form_others"
               id="others"
               value={mail.others}
-              onChange={(e) => setMail({ ...mail, others:true})}
+              onChange={(e) => setMail({ ...mail, others: true })}
             />
             Others
           </label>
@@ -180,4 +183,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default Support;
