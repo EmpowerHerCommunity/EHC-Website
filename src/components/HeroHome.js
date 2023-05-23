@@ -29,10 +29,10 @@ const HeroHome = () => {
                 <div className="flex lg:gap-4 gap-12">
                   <button className="bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-md">
                     <Link
-                      href="https://paystack.com/pay/empowerhercommunity"
+                      href="/support"
                       legacyBehavior
                     >
-                      <a target="_blank">
+                      <a>
                         <span className="text-primary text-2xl">
                           {" "}
                           Support Us{" "}
