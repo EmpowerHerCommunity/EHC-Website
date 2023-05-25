@@ -52,7 +52,7 @@ const Support = () => {
         setIsLoading(false);
         setTimeout(() => {
           router.reload(); // This will refresh the page after the form is submitted
-        }, 1000);
+        }, 3000);
       } catch (error) {
         setIsLoading(false);
         toast.error("Network error, please try again.", {
@@ -81,7 +81,10 @@ const Support = () => {
       >
         <h1 className="text-2xl font-bold">Donate Cash</h1>
         <p className=" text-base w-96 py-5 leading-6">
-        Your support will make a tangible difference in the lives of these aspiring female technologists. Donate today and help us empower women in tech.        </p>
+          Your support will make a tangible difference in the lives of these
+          aspiring female technologists. Donate today and help us empower women
+          in tech.{" "}
+        </p>
         <Link
           href="https://paystack.com/pay/empowerhercommunity"
           legacyBehavior
@@ -95,7 +98,10 @@ const Support = () => {
           </a>
         </Link>
       </div>
-      <div className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey">
+      <div
+        className="border border-support bg-supportb rounded-2xl mt-10 px-7 py-7 bg-grey"
+        data-aos="zoom-in"
+      >
         <h1 className="text-2xl font-bold">Donate Materials</h1>
         <p className="text-base w-96 py-3 leading-6">
           Your generous donation will directly impact the lives of women in
