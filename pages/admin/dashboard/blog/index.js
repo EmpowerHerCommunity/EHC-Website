@@ -6,13 +6,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const BlogDashboard = () => {
+  const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/";
   const [fetchedEvents, setFetchedEvents] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
-
-
-  const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/";
-
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
@@ -33,11 +30,6 @@ const BlogDashboard = () => {
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "light",
         });
       }

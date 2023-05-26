@@ -6,10 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 
 const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
-  useEffect(() => {
-    AOS.init({ duration: 2500 });
-    AOS.refresh();
-  }, []);
 
   const pageSize = 42;
   const [page, setPage] = useState(currentPage);
@@ -20,6 +16,11 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const sortedBlogs = blogs?.sort(sortByDate);
   const sortednewBlogs = newBlog?.sort(sortByDate);
+
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+    AOS.refresh();
+  }, []);
 
   useEffect(() => {
     const searchFetch = async () => {
@@ -168,7 +169,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           <section className="container px-4 mx-auto grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 w-12/12">
             {filtered !== null
               ? filtered?.map((blog) => (
-                  <article className="w-12/12 p-4 mb-4" key={blog.id}>
+                  <article className="w-12/12 p-4 mb-4" key={blog.slug}>
                     <div className=" h-full px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:shadow-supportb">
                       <Link href={`/blog/${blog.slug}/`}>
                         <div>

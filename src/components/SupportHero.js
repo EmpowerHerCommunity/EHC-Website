@@ -6,7 +6,7 @@ const SupportHero = () => {
       <section className="container mx-auto flex px-8 py-12 md:flex-row flex-col items-center">
         <div
           data-aos="fade-right"
-          class="lg:flex-grow lg:pr-24 flex flex-col mb-16 md:mb-0 text-left"
+          className="lg:flex-grow lg:pr-24 flex flex-col mb-16 md:mb-0 text-left"
         >
           <h1 className="text-5xl mb-3 font-semibold text-primary leading-normal">
             Support Us &
