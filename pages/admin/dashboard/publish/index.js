@@ -6,17 +6,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Publish = () => {
-  const [mode, setMode] = useState("normal");
-  const [cover, setCover] = useState("");
-  const [author, setAuthor] = useState("");
-  const [title, setTitle] = useState("");
-  const [introduction, setIntroduction] = useState("");
-  const [description, setDescription] = useState("");
-  const [authorImage, setAuthorImage] = useState("");
-  const [tag, setTag] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
@@ -25,29 +14,69 @@ const Publish = () => {
     }
   }, []);
 
+  const [blog, setBlog] = useState({
+    mode: "normal",
+    cover: "",
+    author: "",
+    title: "",
+    introduction: "",
+    description: "",
+    authorImage: "",
+    tag: "A day in the life",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const upload = ({ target: { files = [] } }) => {
+    if (!files[0]) {
+      return;
+    }
+    if (!files[0].type.match("image.*")) {
+      return;
+    }
+    setBlog({ ...blog, cover: files[0] });
+  };
+
+  const uploadAuthor = ({ target: { files = [] } }) => {
+    if (!files[0]) {
+      return;
+    }
+    if (!files[0].type.match("image.*")) {
+      return;
+    }
+    setBlog({ ...blog, authorImage: files[0] });
+  };
+
+  blog.tag === "Communities"
+    ? setBlog({ ...blog, tag: "660baf3f-e46f-417b-8bfe-8630505b2fe3" })
+    : blog.tag === "Information Corner"
+    ? setBlog({ ...blog, tag: "5afdcf88-3aa2-4993-9ca3-0980c7f73cb9" })
+    : blog.tag === "Imposter Syndrome"
+    ? setBlog({ ...blog, tag: "78da67cc-d3d5-4ea2-9e36-390c45d7f507" })
+    : blog.tag === "A day in the life"
+    ? setBlog({ ...blog, tag: "091584af-de35-4555-a662-e0d325d92e16" })
+    : blog.tag === "Tech Lifestyle"
+    ? setBlog({ ...blog, tag: "3104b8b3-5041-49d8-80f4-eff71987676d" })
+    : blog.tag === "Career Moves"
+    ? setBlog({ ...blog, tag: "c285c121-c886-4434-8b1a-b16e8855d112" })
+    : null;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
-    data.append("mode", mode);
-    data.append("cover_photo", cover);
-    data.append("author", author);
-    data.append("title", title);
-    data.append("introduction", introduction);
-    data.append("description", description);
-    data.append("author_image", authorImage);
-    // Append tags to the FormData object
-  
-    data.append("tags[]", {
-      id: 'new-tag-id', // replace with your new tag ID
-      created: new Date().toISOString(),
-      modified: new Date().toISOString(),
-      tag: tag,
-    })
+    data.append("mode", blog.mode);
+    data.append("cover_photo", blog.cover);
+    data.append("author", blog.author);
+    data.append("title", blog.title);
+    data.append("introduction", blog.introduction);
+    data.append("description", blog.description);
+    data.append("author_image", blog.authorImage);
+    data.append("tags", [blog.tag]);
 
     try {
       setLoading(true);
       const response = await fetch(
-        process.env.NEXT_PUBLIC_BASE_URL  + "/api/v1/indexapi/blogpost/",
+        process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/blogpost/",
         {
           method: "POST",
           headers: {
@@ -61,27 +90,17 @@ const Publish = () => {
         toast.success("Blog successfully added", {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "light",
         });
         const responseData = await response.json();
         setTimeout(() => {
           router.push("/admin/dashboard/blog");
-        }, 500);
+        }, 2000);
       } else {
         setLoading(false);
         toast.error("Kindly try again", {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "light",
         });
       }
@@ -91,34 +110,9 @@ const Publish = () => {
       toast.error(error, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "light",
       });
     }
-  };
-
-  const upload = ({ target: { files = [] } }) => {
-    if (!files[0]) {
-      return;
-    }
-    if (!files[0].type.match("image.*")) {
-      return;
-    }
-    setCover(files[0]);
-  };
-
-  const uploadAuthor = ({ target: { files = [] } }) => {
-    if (!files[0]) {
-      return;
-    }
-    if (!files[0].type.match("image.*")) {
-      return;
-    }
-    setAuthorImage(files[0]);
   };
 
   return (
@@ -150,8 +144,8 @@ const Publish = () => {
             <div className="w-9/12">
               <select
                 className="border w-24 h-10 rounded-md px-1"
-                value={mode}
-                onChange={(e) => setMode(e.target.value)}
+                value={blog.mode}
+                onChange={(e) => setBlog({ ...blog, mode: e.target.value })}
               >
                 <option value="normal">normal</option>
                 <option value="featured">featured</option>
@@ -179,10 +173,8 @@ const Publish = () => {
               <input
                 type="text"
                 className="border h-12 rounded-md w-72"
-                value={author}
-                onChange={(e) => {
-                  setAuthor(e.target.value);
-                }}
+                value={blog.author}
+                onChange={(e) => setBlog({ ...blog, author: e.target.value })}
               ></input>
             </div>
           </div>
@@ -207,11 +199,10 @@ const Publish = () => {
               <input
                 type="text"
                 className="border h-16 rounded-md w-full"
-                value={title}
+                value={blog.title}
                 maxLength="55"
-
                 onChange={(e) => {
-                  setTitle(e.target.value);
+                  setBlog({ ...blog, title: e.target.value });
                 }}
               ></input>
             </div>
@@ -224,10 +215,10 @@ const Publish = () => {
               <input
                 type="text"
                 className="border h-16 rounded-md w-full"
-                value={introduction}
+                value={blog.introduction}
                 maxLength="185"
                 onChange={(e) => {
-                  setIntroduction(e.target.value);
+                  setBlog({ ...blog, introduction: e.target.value });
                 }}
               ></input>
             </div>
@@ -240,9 +231,9 @@ const Publish = () => {
               <textarea
                 type="text"
                 className="border rounded-md h-56 w-full"
-                value={description}
+                value={blog.description}
                 onChange={(e) => {
-                  setDescription(e.target.value);
+                  setBlog({ ...blog, description: e.target.value });
                 }}
               ></textarea>
             </div>
@@ -253,17 +244,19 @@ const Publish = () => {
               <label className="text-lg">Tags</label>
             </div>
             <div className="w-9/12">
-              <p>{tag}</p>
-
               <select
                 className="border w-44 h-10 rounded-md px-1"
-                value={tag}
+                value={blog.tag}
                 onChange={(e) => {
-                  setTag(e.target.value);
+                  setBlog({ ...blog, tag: e.target.value });
                 }}
               >
-                <option value="Web Development">Web Development</option>
-                <option value="Mobile Development">Mobile Development</option>
+                <option value="A day in the life">A day in the life</option>
+                <option value="Communities">Communities</option>
+                <option value="Imposter Syndrome">Imposter Syndrome</option>
+                <option value="Information Corner">Information Corner</option>
+                <option value="Career moves">Career Moves</option>
+                <option value="Tech Lifestyle">Tech Lifestyle</option>
               </select>
             </div>
           </div>

@@ -47,6 +47,8 @@ const blogEdit = () => {
     }
     setSelectedAuthor(files[0]);
   };
+  const tagArray = result?.tags?.map((tag) => tag?.tag);
+  const tag = tagArray && tagArray.length > 0 ? tagArray[0] : null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,10 +60,7 @@ const blogEdit = () => {
     formData.append("introduction", result?.introduction);
     formData.append("author", result?.author);
     formData.append("author_image", selectedAuthor);
-    formData.append("tags", [
-      "660baf3f-e46f-417b-8bfe-8630505b2fe3",
-      "5afdcf88-3aa2-4993-9ca3-0980c7f73cb9",
-    ]);
+    formData.append("tags", [tag]);
 
     try {
       setLoading(true);
@@ -80,11 +79,6 @@ const blogEdit = () => {
       toast.success("Blog updated", {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "light",
       });
       setTimeout(() => {
@@ -95,11 +89,6 @@ const blogEdit = () => {
       toast.error("Kindly try again", {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "light",
       });
     }
@@ -270,12 +259,11 @@ const blogEdit = () => {
               <div className="w-10/12">
                 <select
                   className="border w-44 h-10 rounded-md px-1"
-                  value={result?.tags}
-                  name="tags"
-                  onChange={handleInputChange}
+                  value={tag}
                 >
-                  <option value="Web Development">Web Development</option>
-                  <option value="Mobile Development">Mobile Development</option>
+                  <option value={tag}>
+                    {tag}
+                  </option>
                 </select>
               </div>
             </div>
