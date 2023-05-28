@@ -66,14 +66,14 @@ const Description = () => {
                   legacyBehavior
                 >
                   <a target="_blank">
-                    <button className='rounded-md bg-primary py-3 px-4 border text-white border-primary hover:border-transparent w-44  hover:text-primary hover:bg-transparent hover:border-opacity-5 hover:shadow hover:border-primary'>
+                    <button className="rounded-md bg-primary py-3 px-4 border text-white border-primary hover:border-transparent w-44  hover:text-primary hover:bg-transparent hover:border-opacity-5 hover:shadow hover:border-primary">
                       <span className=" text-2xl "> Join Us Today </span>
                     </button>
                   </a>
                 </Link>
               </div>
               <div
-                className="flex items-end lg:gap-20 gap-14" 
+                className="flex items-end lg:gap-20 gap-14"
                 data-aos="fade-up-right"
               >
                 <div>
@@ -112,7 +112,7 @@ const Description = () => {
                     height={36}
                   />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
-                    5000+ <br />
+                    6000+ <br />
                     <span className="text-xl md:text-xl text-dark font-normal">
                       {" "}
                       Members
