@@ -13,7 +13,7 @@ const SupportHero = () => {
             <br className="lg:inline-block" /> Empower Her
           </h1>
           <p className="mb-1 lg:text-xl text-2xl lg:w-10/12">
-          Join us today in supporting and empowering 5000+ women across the globe. Together, we can make a lasting impact on the future of technology.
+          Join us today in supporting and empowering 6000+ women across the globe. Together, we can make a lasting impact on the future of technology.
           </p>
         </div>
         <figure className="lg:max-w-lg lg:w-full w-full mx-auto flex justify-center">
