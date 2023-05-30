@@ -30,7 +30,6 @@ function Featured() {
       }
     };
     FetchBlogs();
-    console.log(featuredBlog);
   }, []);
 
   function calculateReadingTime(content) {
@@ -54,8 +53,9 @@ function Featured() {
         {error && <p>{error.message}</p>}
         {featuredBlog &&
           featuredBlog.results.map((feature) => (
+            <div key={feature.description}>
             <Link href={`/blog/featured/${feature.slug}`}>
-              <div key={feature.id}>
+              <div>
                 <div data-aos="fade-right">
                   <img
                     src={feature?.cover_photo}
@@ -106,14 +106,17 @@ function Featured() {
                   </section>
                   <aside className="py-6 w-full">
                     {feature.tags.map((tag) => (
-                      <button className="rounded-2xl border  border-black lg:border-white py-1 px-4 ml-2 text-2xl">
-                        {tag.tag}
-                      </button>
+                      <div key={tag.id}>
+                        <button className="rounded-2xl border  border-black lg:border-white py-1 px-4 ml-2 text-2xl">
+                          {tag.tag}
+                        </button>
+                      </div>
                     ))}
                   </aside>
                 </div>
               </div>
             </Link>
+            </div>
           ))}
       </article>
     </>

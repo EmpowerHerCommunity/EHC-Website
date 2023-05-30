@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Head from "next/head";
 
-const login = () => {
+const Login = () => {
   const router = useRouter();
   const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/adminapi/login/";
   const [email, setEmail] = useState("");
@@ -80,7 +80,7 @@ const login = () => {
   return (
     <>
       <Head>
-        <title>"Empower Her Community"</title>
+      <title>Empower Her Community</title>
         <meta
           name="title"
           property="og:title"
@@ -206,4 +206,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

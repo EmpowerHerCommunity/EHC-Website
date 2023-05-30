@@ -59,7 +59,7 @@ const Publish = () => {
     ? setBlog({ ...blog, tag: "3104b8b3-5041-49d8-80f4-eff71987676d" })
     : blog.tag === "Career Moves"
     ? setBlog({ ...blog, tag: "c285c121-c886-4434-8b1a-b16e8855d112" })
-    : null;
+    : "";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import SideBar from "../../../../src/components/admin/SideBar";
 
-const eventEdit = () => {
+const EventEdit = () => {
   const [result, setResult] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -227,4 +227,4 @@ const eventEdit = () => {
   );
 };
 
-export default eventEdit;
+export default EventEdit;

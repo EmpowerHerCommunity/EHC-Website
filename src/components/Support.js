@@ -90,9 +90,9 @@ const Support = () => {
           legacyBehavior
         >
           <a target="_blank">
-            <button class="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
+            <button className="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
               <span>Pay with&nbsp;</span>
-              <span class="font-semibold">Paystack</span>
+              <span className="font-semibold">Paystack</span>
               {/* <img src="/switch.svg" alt="Interswitch" class="h-6 ml-2" /> */}
             </button>
           </a>
