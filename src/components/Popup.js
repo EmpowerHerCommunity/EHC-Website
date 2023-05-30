@@ -16,10 +16,10 @@ function PopUp({ closePopup }) {
         <section className="flex justify-center flex-col">
         <button className="cursor-pointer flex justify-end mr-2" onClick={() => closePopup()}>
             <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_2643_686)">
+              <g clipPath="url(#clip0_2643_686)">
                 <path d="M15.9998 31.2382C24.4156 31.2382 31.2379 24.4158 31.2379 16.0001C31.2379 7.58429 24.4156 0.761963 15.9998 0.761963C7.58405 0.761963 0.761719 7.58429 0.761719 16.0001C0.761719 24.4158 7.58405 31.2382 15.9998 31.2382Z" fill="#DDDDDD" />
                 <path d="M20.5716 20.5713L11.4287 11.4285L20.5716 20.5713ZM20.5716 11.4285L11.4287 20.5713L20.5716 11.4285Z" fill="white" />
-                <path d="M20.5716 20.5713L11.4287 11.4285M20.5716 11.4285L11.4287 20.5713" stroke="#999999" stroke-width="2" stroke-linecap="round" />
+                <path d="M20.5716 20.5713L11.4287 11.4285M20.5716 11.4285L11.4287 20.5713" stroke="#999999" strokeWidth="2" strokeLinecap="round" />
               </g>
               <defs>
                 <clipPath id="clip0_2643_686">

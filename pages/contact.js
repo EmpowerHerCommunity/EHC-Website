@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="overflow-hidden">
       <Head>
         <meta charSet="UTF-8" />
-        <title>"Empower Her Community"</title>
+        <title>Empower Her Community</title>
         <meta
           name="title"
           property="og:title"

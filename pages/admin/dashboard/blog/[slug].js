@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import SideBar from "../../../../src/components/admin/SideBar";
 
-const blogEdit = () => {
+const BlogEdit = () => {
   const [result, setResult] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [selectedAuthor, setSelectedAuthor] = useState(null);
@@ -299,4 +299,4 @@ const blogEdit = () => {
   );
 };
 
-export default blogEdit;
+export default BlogEdit;

@@ -20,10 +20,10 @@ const Slug = ({ blogs }) => {
     <section className="overflow-y-hidden">
       <NavBar />
       {blogs.results.map((blog) => (
-        <>
+        <div key={blog.description}>
           <Head>
             <meta charSet="UTF-8" />
-            <title>"Empower Her Community"</title>
+            <title>Empower Her Community</title>
             <meta name="title" property="og:title" content={blog.title} />
             <meta name="image" property="og:image" content={blog.cover_photo} />
             <meta name="twitter:title" content={blog.title} />
@@ -39,9 +39,7 @@ const Slug = ({ blogs }) => {
               property="og:url"
               content="https://empower-her-community.vercel.app/"
             />
-
             <meta name="twitter:card" content="summary_large_image" />
-
             <meta name="description" content={blog.introduction} />
             <meta property="og:site_name" content="Empower Her Community" />
             <meta property="og:image:secure_url" content={blog.cover_photo} />
@@ -81,7 +79,7 @@ const Slug = ({ blogs }) => {
                   <div className="">
                     <img
                       src={blog.author_image}
-                      alt="author avatar"
+                      alt="author"
                       className="h-32 w-32 object-cover rounded-full"
                     />
                   </div>
@@ -105,7 +103,7 @@ const Slug = ({ blogs }) => {
               </section>
             </article>
           </div>
-        </>
+        </div>
       ))}
       <Footer />
     </section>

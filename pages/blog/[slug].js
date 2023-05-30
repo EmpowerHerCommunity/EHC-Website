@@ -13,14 +13,13 @@ const Slug = ({ blog }) => {
     const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
     return readingTime;
   }
-
   const options = { day: "numeric", month: "long", year: "numeric" };
   
   return (
     <section className="overflow-y-hidden">
       <Head>
         <meta charSet="UTF-8" />
-        <title>"Empower Her Community"</title>
+        <title>Empower Her Community</title>
         <meta name="title" property="og:title" content={blog.title} />
         <meta name="image" property="og:image" content={blog.cover_photo} />
         <meta name="twitter:title" content={blog.title} />

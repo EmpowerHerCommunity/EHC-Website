@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 
 const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
-
   const pageSize = 42;
   const [page, setPage] = useState(currentPage);
   const [newBlog, setNewBlog] = useState(null);
@@ -26,7 +25,8 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
     const searchFetch = async () => {
       try {
         const res = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?search=${search}`
+          process.env.NEXT_PUBLIC_BASE_URL +
+            `/api/v1/indexapi/blogpost/?search=${search}`
         );
         const data = await res.json();
         setFiltered(data.results);
@@ -41,7 +41,8 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
     const fetchNext = async () => {
       try {
         const response = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
+          process.env.NEXT_PUBLIC_BASE_URL +
+            `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
         );
         const data = await response.json();
         setNewBlog(data.results);
@@ -134,7 +135,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                 </li>
                 <li
                   className={`hover:border-b-2 border-primary  ${
-                    selectedCategory === "Information corner" 
+                    selectedCategory === "Information corner"
                   }`}
                   onClick={() => handleCategoryClick("Information corner")}
                 >
@@ -169,7 +170,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           <section className="container px-4 mx-auto grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 w-12/12">
             {filtered !== null
               ? filtered?.map((blog) => (
-                  <article className="w-12/12 p-4 mb-4" key={blog.slug}>
+                  <article className="w-12/12 p-4 mb-4" key={blog.description}>
                     <div className=" h-full px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:shadow-supportb">
                       <Link href={`/blog/${blog.slug}/`}>
                         <div>
@@ -217,14 +218,14 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                               {blog.author}
                             </p>
                           </section>
-                          
+
                           <aside className="flex items-center flex-wrap mb-2 mt-6 text-2xl lg:text-lg">
                             {blog?.tags.map((tag) => (
-                              <button
-                                className="rounded-2xl border mb-3 lg:mb-2 border-black py-1 px-4 ml-2"
-                              >
-                                {tag.tag}
-                              </button>
+                              <div key={tag.id}>
+                                <button className="rounded-2xl border mb-3 lg:mb-2 border-black py-1 px-4 ml-2">
+                                  {tag.tag}
+                                </button>
+                              </div>
                             ))}
                           </aside>
                         </div>
