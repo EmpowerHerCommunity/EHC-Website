@@ -12,8 +12,8 @@ const Form = () => {
   }, []);
 
   const [loading, setIsLoading] = useState(false);
-  const router = useRouter()
-
+  const router = useRouter();
+  
   const [mail, setMail] = useState({
     name: "",
     email: "",
@@ -21,10 +21,15 @@ const Form = () => {
     nationality: "",
     message: "",
   });
+  
+    //regex for email
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail?.email);
 
   const handleSubmit = async (e) => {
+    setIsLoading(true);
     e.preventDefault();
     if (
+      isValidEmail &&
       submit.current &&
       mail.name !== "" &&
       mail.email !== "" &&
@@ -33,14 +38,13 @@ const Form = () => {
       mail.message !== ""
     ) {
       try {
-        setIsLoading(true);
         await emailjs.sendForm(
           "service_sqhbqh5",
           "template_ayka0t2",
           submit.current,
           "v_22EFbmmIAh7jydz"
         );
-        toast.success("mail sent successfully", {
+        toast.success("Your request has been sent successfully", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -50,12 +54,10 @@ const Form = () => {
           progress: undefined,
           theme: "light",
         });
-        setIsLoading(false);
-        setTimeout(()=>{
+        setTimeout(() => {
           router.reload(); // This will refresh the page after the form is submitted
-        }, 3000)
+        }, 3000);
       } catch (error) {
-        setIsLoading(false);
         toast.error("Network error, please try again.", {
           position: "top-right",
           autoClose: 5000,
@@ -67,6 +69,10 @@ const Form = () => {
           theme: "light",
         });
       }
+      setIsLoading(false);
+    }
+    else{
+      toast.error("Invalid Email Address")
     }
   };
 

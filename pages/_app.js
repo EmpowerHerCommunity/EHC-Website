@@ -11,6 +11,7 @@ import createEmotionCache from '../src/createEmotionCache';
 const clientSideEmotionCache = createEmotionCache();
 // animate on scroll
 import 'aos/dist/aos.css';
+
 export default function MyApp(props) {
     const { Component, emotionCache = 
         clientSideEmotionCache, pageProps } = props;
