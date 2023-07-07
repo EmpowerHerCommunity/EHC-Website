@@ -28,11 +28,11 @@ function PopUp({ closePopup }) {
               </defs>
             </svg>
           </button>
-          <div className=" text-center lg:w-12/12 w-12/12 py-2">
-            <h2 className="text-3xl text-popUpColor font-semibold">
+          <div className=" text-center flex flex-col justify-center items-center lg:w-12/12 w-12/12 py-2">
+            <h2 className="text-4xl text-popUpColor font-semibold">
               Empower Her in Tech
             </h2>
-            <p className=" text-lg lg:text-lg text-center font-semi-bold pt-4">
+            <p className=" text-xl lg:text-lg max-w-sm text-center font-semi-bold pt-4">
               You can be a part of our initiative to help over 50,000 women
               kickstart their career in technology.
             </p>
@@ -40,7 +40,7 @@ function PopUp({ closePopup }) {
           <button className="pt-7 pb-4">
           <Link legacyBehavior href="/support"  >
            <a
-           className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-lg text-center border-primary border-2 c-pointer" >Donate Now</a> 
+           className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-xl text-center border-primary border-2 c-pointer" >Donate Now</a> 
           </Link>
           </button>
         </section>
