@@ -10,7 +10,8 @@ const Slug = ({ blog }) => {
     const readingTimeInMinutes = wordCount / wordsPerMinute;
     const minutes = Math.floor(readingTimeInMinutes);
     const seconds = Math.floor((readingTimeInMinutes - minutes) * 60);
-    const readingTime = minutes + (seconds > 30 ? 1 : 0); // round up if more than 30 seconds
+    // round up if more than 30 seconds
+    const readingTime = minutes + (seconds > 30 ? 1 : 0); 
     return readingTime;
   }
   const options = { day: "numeric", month: "long", year: "numeric" };
