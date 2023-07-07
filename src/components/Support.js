@@ -80,7 +80,7 @@ const Support = () => {
         data-aos="zoom-in"
       >
         <h1 className="text-2xl font-bold">Donate Cash</h1>
-        <p className=" text-base w-96 py-5 leading-6">
+        <p className=" text-xl lg:text-lg text-justify w-96 py-5 leading-6">
           Your support will make a tangible difference in the lives of these
           aspiring female technologists. Donate today and help us empower women
           in tech.{" "}
@@ -90,7 +90,7 @@ const Support = () => {
           legacyBehavior
         >
           <a target="_blank">
-            <button className="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-lg h-14 my-3 rounded-full">
+            <button className="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-xl h-14 my-3 rounded-full">
               <span>Pay with&nbsp;</span>
               <span className="font-semibold">Paystack</span>
               {/* <img src="/switch.svg" alt="Interswitch" class="h-6 ml-2" /> */}
@@ -103,15 +103,15 @@ const Support = () => {
         data-aos="zoom-in"
       >
         <h1 className="text-2xl font-bold">Donate Materials</h1>
-        <p className="text-base w-96 py-3 leading-6">
+        <p className="text-xl lg:text-lg text-justify w-96 py-3 leading-6">
           Your generous donation will directly impact the lives of women in
           tech. Every contribution, matters
         </p>
-        <p className="lg:text-lg text-base text-blogSearch">
+        <p className="lg:text-lg text-xl text-blogSearch">
           Choose Materials to donate:
         </p>
         <form
-          className="flex flex-col text-lg mt-2 cursor-pointer"
+          className="flex flex-col text-xl mt-2 cursor-pointer"
           onSubmit={handleSubmit}
           ref={submit}
         >

@@ -18,7 +18,7 @@ const Footer = () => {
         <h2 className='leading-10 md:text-5xl text-4xl font-normal mb-6'>Empower Her Community</h2>
         <div className='flex flex-wrap lg:flex-nowrap justify-between gap-10 w-full'>
           <div className='flex flex-col max-w-lg w-full' data-aos='zoom-in-up'>
-            <p className='font-normal md:text-xl text-xl leading-8 mb-8'>
+            <p className='font-normal text-2xl md:text-xl leading-8 mb-8'>
               A Technology-based community focused on training
               and promoting women in the field of information
               technology, so as to help them advance in their career.
@@ -53,10 +53,10 @@ const Footer = () => {
                 </Link>
               </span>
             </div>
-            <h4 className='text-xl'>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
+            <h4 className='text-2xl md:text-xl'>Copyright &copy; {new Date().getFullYear()} EmpowerHer Community</h4>
           </div>
           <div className='flex flex-wrap sm:flex-nowrap gap-6 lg:gap-x-8 gap-x-16 w-full lg:w-auto text-xl' data-aos='zoom-in-down'>
-            <ul className="min-w-max">
+            <ul className="min-w-max text-2xl md:text-xl">
               <li className="mb-4">
                 <Link href='/' legacyBehavior>
                   <a>
@@ -86,7 +86,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <ul className="min-w-max">
+            <ul className="min-w-max text-2xl md:text-xl">
               <li className="mb-4">
                 <Link href='/volunteer' legacyBehavior>
                   <a>
@@ -116,12 +116,12 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <ul className="w-full">
+            <ul className="w-full text-2xl md:text-xl">
               <li className="mb-4">
                 Contact Information
               </li>
           
-              <li className="mb-4">
+              <li className="mb-4 ">
                 <Link href='mailto:info@empowerher.community'legacyBehavior>
                   <a className='flex items-center gap-4'>
                     <MdOutlineEmail />
