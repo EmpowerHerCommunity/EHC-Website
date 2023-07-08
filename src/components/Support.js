@@ -69,8 +69,6 @@ const Support = () => {
     }
   };
 
-  console.log(mail);
-
   const submit = useRef(null);
 
   return (

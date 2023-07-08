@@ -14,7 +14,7 @@ const UpcomingEvents = () => {
         setFetchedEvents(data);
         setIsFetching(false);
       } catch (error) {
-        console.log("Failed to fetch events data: ", error);
+        return error
       }
     }
     if (isFetching) {
