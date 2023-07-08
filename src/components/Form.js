@@ -86,7 +86,7 @@ const Form = () => {
             className="input-group w-full py-2 sm:flex-1"
             data-aos="fade-right"
           >
-            <label htmlFor="name" className="uppercase text-xl">
+            <label htmlFor="name" className="uppercase text-2xl md:text-xl">
               name
             </label>
             <input
@@ -104,7 +104,7 @@ const Form = () => {
             className="input-group w-full py-2 sm:flex-1"
             data-aos="fade-left"
           >
-            <label htmlFor="email" className="uppercase text-xl">
+            <label htmlFor="email" className="uppercase text-2xl md:text-xl">
               email
             </label>
             <input
@@ -124,7 +124,7 @@ const Form = () => {
           data-aos="fade-right"
         >
           <div className="input-group w-full py-2 sm:flex-1">
-            <label htmlFor="mobile-number" className="uppercase text-xl">
+            <label htmlFor="mobile-number" className="uppercase text-2xl md:text-xl">
               mobile number
             </label>
             <input
@@ -142,7 +142,7 @@ const Form = () => {
             className="input-group w-full py-2 sm:flex-1"
             data-aos="fade-left"
           >
-            <label htmlFor="nationality" className="uppercase text-xl">
+            <label htmlFor="nationality" className="uppercase text-2xl md:text-xl">
               Nationality
             </label>
             <input
@@ -161,7 +161,7 @@ const Form = () => {
         </div>
         <div className="" data-aos="fade-right">
           <div className="input-group w-full py-2">
-            <label htmlFor="" className="uppercase text-xl">
+            <label htmlFor="" className="uppercase text-2xl md:text-xl">
               message
             </label>
             <textarea

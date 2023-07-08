@@ -87,7 +87,7 @@ const NavBar = () => {
                 : "hover:font-light"
             } hover:font-medium lg:hidden block`}
           >
-            <Link href="/blog">Support</Link>
+            <Link href="/support">Support</Link>
           </li>
         </ul>
 
@@ -99,7 +99,7 @@ const NavBar = () => {
           </Link>
           {active ? (
             <h1
-              className="text-4xl flex items-center lg:hidden font-medium"
+              className="text-5xl flex pr-3 items-center lg:hidden font-medium"
               onClick={handleClick}
             >
               X
@@ -110,7 +110,7 @@ const NavBar = () => {
               onClick={handleClick}
             >
               <svg
-                className="w-10 h-10"
+                className="w-12 h-12"
                 fill="none"
                 stroke="black"
                 viewBox="0 0 24 24"

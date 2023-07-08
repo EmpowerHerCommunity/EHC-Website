@@ -12,7 +12,7 @@ import Link from "next/link";
 function PopUp({ closePopup }) {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 p-2 flex items-center justify-center z-50 bg-black/25">
-      <div className="grid grid-col-1 py-5 lg:px-4 px-4 xl:w-4/12 w-9/12 md:w-6/12 bg-white rounded-md">
+      <div className="grid grid-col-1 py-7 lg:px-4 px-4 xl:w-4/12 w-10/12 md:w-6/12 bg-white rounded-md">
         <section className="flex justify-center flex-col">
         <button className="cursor-pointer flex justify-end mr-2" onClick={() => closePopup()}>
             <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@ function PopUp({ closePopup }) {
             <h2 className="text-4xl text-popUpColor font-semibold">
               Empower Her in Tech
             </h2>
-            <p className=" text-xl lg:text-lg max-w-sm text-center font-semi-bold pt-4">
+            <p className=" text-2xl lg:text-lg max-w-sm text-center font-semi-bold pt-4">
               You can be a part of our initiative to help over 50,000 women
               kickstart their career in technology.
             </p>
@@ -40,7 +40,7 @@ function PopUp({ closePopup }) {
           <button className="pt-7 pb-4">
           <Link legacyBehavior href="/support"  >
            <a
-           className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-xl text-center border-primary border-2 c-pointer" >Donate Now</a> 
+           className="w-96 px-10 py-3 text-primary rounded-md hover:bg-primary hover:text-white font-semibold text-2xl text-center border-primary border-2 c-pointer" >Donate Now</a> 
           </Link>
           </button>
         </section>
