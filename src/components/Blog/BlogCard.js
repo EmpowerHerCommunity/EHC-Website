@@ -31,7 +31,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
         const data = await res.json();
         setFiltered(data.results);
       } catch (error) {
-        console.log(error.message);
+        return error;
       }
     };
     searchFetch();
@@ -384,8 +384,6 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           ""
         )}
       </section>
-
-   
     </div>
   );
 };
