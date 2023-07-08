@@ -74,7 +74,7 @@ const Support = () => {
   const submit = useRef(null);
 
   return (
-    <section className="mx-auto my-16  container flex items-center px-4 lg:flex-row flex-col justify-center  lg:justify-between mt-8">
+    <section className="mx-auto my-16  container flex items-center px-4 lg:flex-row flex-col justify-center  lg:justify-around mt-8">
       <div
         className="border rounded-2xl mt-5 p-6  bg-supportb border-support"
         data-aos="zoom-in"
