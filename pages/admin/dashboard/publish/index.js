@@ -7,13 +7,6 @@ import Link from "next/link";
 
 const Publish = () => {
   const router = useRouter();
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
-
   const [blog, setBlog] = useState({
     mode: "normal",
     cover: "",
@@ -87,31 +80,19 @@ const Publish = () => {
       );
       if (response.ok) {
         setLoading(false);
-        toast.success("Blog successfully added", {
-          position: "top-right",
-          autoClose: 5000,
-          theme: "light",
-        });
+        toast.success("Blog successfully added");
         const responseData = await response.json();
         setTimeout(() => {
           router.push("/admin/dashboard/blog");
-        }, 2000);
+        }, 3000);
       } else {
         setLoading(false);
-        toast.error("Kindly try again", {
-          position: "top-right",
-          autoClose: 5000,
-          theme: "light",
-        });
+        toast.error("Kindly try again");
       }
     } catch (error) {
       setLoading(false);
       setError(error.message);
-      toast.error(error, {
-        position: "top-right",
-        autoClose: 5000,
-        theme: "light",
-      });
+      toast.error(error);
     }
   };
 
@@ -145,6 +126,7 @@ const Publish = () => {
               <select
                 className="border w-24 h-10 rounded-md px-1"
                 value={blog.mode}
+                required
                 onChange={(e) => setBlog({ ...blog, mode: e.target.value })}
               >
                 <option value="normal">normal</option>
@@ -159,6 +141,7 @@ const Publish = () => {
             <div className="w-9/12">
               <input
                 type="file"
+                required
                 onChange={(e) => {
                   upload(e);
                 }}
@@ -172,6 +155,7 @@ const Publish = () => {
             <div className="w-9/12">
               <input
                 type="text"
+                required
                 className="border h-12 rounded-md w-72"
                 value={blog.author}
                 onChange={(e) => setBlog({ ...blog, author: e.target.value })}
@@ -185,6 +169,7 @@ const Publish = () => {
             <div className="w-9/12">
               <input
                 type="file"
+                required
                 onChange={(e) => {
                   uploadAuthor(e);
                 }}
@@ -198,6 +183,7 @@ const Publish = () => {
             <div className="w-9/12">
               <input
                 type="text"
+                required
                 className="border h-16 rounded-md w-full"
                 value={blog.title}
                 maxLength="55"
@@ -214,6 +200,7 @@ const Publish = () => {
             <div className="w-9/12">
               <input
                 type="text"
+                required
                 className="border h-16 rounded-md w-full"
                 value={blog.introduction}
                 maxLength="185"
@@ -230,6 +217,7 @@ const Publish = () => {
             <div className="w-9/12">
               <textarea
                 type="text"
+                required
                 className="border rounded-md h-56 w-full"
                 value={blog.description}
                 onChange={(e) => {

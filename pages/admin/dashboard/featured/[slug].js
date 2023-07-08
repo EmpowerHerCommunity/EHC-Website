@@ -13,13 +13,6 @@ const FeatureEdit = () => {
   const routeId = router.query.slug;
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setResult((prevState) => ({
@@ -63,7 +56,8 @@ const FeatureEdit = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${routeId}/`,
+        process.env.NEXT_PUBLIC_BASE_URL +
+          `/api/v1/indexapi/blogpost/${routeId}/`,
         {
           method: "PATCH",
           headers: {
@@ -74,31 +68,13 @@ const FeatureEdit = () => {
       );
       const data = await response.json();
       setLoading(false);
-      toast.info("Blog updated", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      setTimeout(()=>{
-        router.push("/admin/dashboard/blog")
-      }, 500)
+      toast.info("Blog updated");
+      setTimeout(() => {
+        router.push("/admin/dashboard/blog");
+      }, 500);
     } catch (error) {
-      setLoading(false)
-      toast.error("Kindly try again", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      setLoading(false);
+      toast.error("Kindly try again");
     }
   };
 
@@ -107,23 +83,15 @@ const FeatureEdit = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/${routeId}/`
+          process.env.NEXT_PUBLIC_BASE_URL +
+            `/api/v1/indexapi/blogpost/${routeId}/`
         );
         const data = await response.json();
         setResult(data);
         setLoading(false);
       } catch (error) {
-        setLoading(false)
-        toast.error("Kindly try again", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        setLoading(false);
+        toast.error("Kindly try again");
       }
     };
     fetchEvent();
@@ -290,21 +258,8 @@ const FeatureEdit = () => {
           </form>
         </div>
       </div>
-
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </>
   );
 };
 
-export default FeatureEdit
+export default FeatureEdit;

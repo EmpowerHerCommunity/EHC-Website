@@ -56,9 +56,9 @@ export default function Blog({ blogs, raw, currentPage, totalPages }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
-  const currentPage = 1; // get the current page from the query parameters or default to page 1
-  const pageSize = 9; // set the number of items per page
+export async function getStaticProps() {
+  const currentPage = 1;
+  const pageSize = 9; 
 
   const response = await fetch(
     process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
