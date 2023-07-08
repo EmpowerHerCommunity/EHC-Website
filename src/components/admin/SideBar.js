@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { deleteCookie } from "cookies-next";
 
 import {
   MdOutlineArticle,
@@ -7,13 +8,18 @@ import {
   MdSupervisedUserCircle,
   MdEmojiEvents,
 } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const SideBar = () => {
+
   const router = useRouter();
   const handleLogOut = () => {
+    toast.success("You have successfully logged out.");
     localStorage.removeItem("accessToken");
-    // document.cookie = `accessToken=""; httpOnly; path=/`;
-    router.push("/login");
+    deleteCookie("token");
+    setTimeout(() => {
+      router.push("/login");
+    }, 3000);
   };
 
   return (

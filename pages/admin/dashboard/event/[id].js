@@ -12,13 +12,6 @@ const EventEdit = () => {
   const router = useRouter();
   const routeId = router.query.id;
 
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setResult((prevState) => ({
@@ -40,15 +33,16 @@ const EventEdit = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("image", selectedFile); // append selected file to form data
+    formData.append("image", selectedFile); 
     formData.append("name", result?.name);
     formData.append("description", result?.description);
     formData.append("date", result?.date);
 
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await fetch(
-        process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/events/${routeId}/`,
+        process.env.NEXT_PUBLIC_BASE_URL +
+          `/api/v1/indexapi/events/${routeId}/`,
         {
           method: "PATCH",
           headers: {
@@ -58,59 +52,31 @@ const EventEdit = () => {
         }
       );
       const data = await response.json();
-      setLoading(false)
-      toast.success("event updated", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      setTimeout(()=>{
-        router.push("/admin/dashboard/event")
-      }, 500)
-
+      setLoading(false);
+      toast.success("event updated");
+      setTimeout(() => {
+        router.push("/admin/dashboard/event");
+      }, 3000);
     } catch (error) {
-      setLoading(false)
-      toast.error("Kindly try again", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      setLoading(false);
+      toast.error("Kindly try again");
     }
   };
 
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const response = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL + `/api/v1/indexapi/events/${routeId}/`
+          process.env.NEXT_PUBLIC_BASE_URL +
+            `/api/v1/indexapi/events/${routeId}/`
         );
         const data = await response.json();
         setResult(data);
-        setLoading(false)
-
+        setLoading(false);
       } catch (error) {
-        setLoading(false)
-        toast.error("Kindly try again", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        setLoading(false);
+        toast.error("Kindly try again");
       }
     };
     fetchEvent();

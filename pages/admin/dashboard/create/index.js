@@ -12,13 +12,6 @@ const Create = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
@@ -42,32 +35,14 @@ const Create = () => {
 
       if (response.ok) {
         setLoading(false);
-        toast.info("Event successfully added", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.success("Event successfully added");
         setTimeout(() => {
           router.push("/admin/dashboard/event");
-        }, 2000);
+        }, 3000);
       }
     } catch (error) {
       setLoading(false);
-      toast.error("A network error occurred", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.error("A network error occurred");
     }
   };
 
@@ -165,18 +140,6 @@ const Create = () => {
             </button>
           )}
         </div>
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
       </form>
     </div>
   );

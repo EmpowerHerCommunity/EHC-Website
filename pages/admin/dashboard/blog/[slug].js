@@ -13,13 +13,6 @@ const BlogEdit = () => {
   const routeId = router.query.slug;
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setResult((prevState) => ({
@@ -86,11 +79,7 @@ const BlogEdit = () => {
       }, 500);
     } catch (error) {
       setLoading(false);
-      toast.error("Kindly try again", {
-        position: "top-right",
-        autoClose: 5000,
-        theme: "light",
-      });
+      toast.error("Kindly try again");
     }
   };
 
@@ -106,16 +95,7 @@ const BlogEdit = () => {
         setResult(data);
         setLoading(false);
       } catch (error) {
-        toast.error("Kindly try again", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.error("Kindly try again");
       }
     };
     fetchEvent();
@@ -261,9 +241,7 @@ const BlogEdit = () => {
                   className="border w-44 h-10 rounded-md px-1"
                   value={tag}
                 >
-                  <option value={tag}>
-                    {tag}
-                  </option>
+                  <option value={tag}>{tag}</option>
                 </select>
               </div>
             </div>

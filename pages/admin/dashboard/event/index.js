@@ -10,48 +10,29 @@ const EventDashboard = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(true);
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-
-    if (!token) {
-      router.push("/login");
-    }
-  }, []);
 
   const handleDelete = (id) => {
     try {
       const deleteFunction = async () => {
         const res = await fetch(
-          process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/events/${id}/`,
+          process.env.NEXT_PUBLIC_BASE_URL + `/api/v1/indexapi/events/${id}/`,
           {
             method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
             body: "",
           }
         );
       };
+      toast.success("event successfully deleted");
       deleteFunction();
-      window.location.reload();
+      setTimeout(()=>{
+        router.reload()
+      }, 2000)
     } catch (error) {
-      toast.error("Kindly try again", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.error("Kindly try again");
     }
   };
 
-  const URL = process.env.NEXT_PUBLIC_BASE_URL  + "/api/v1/indexapi/events/";
-
+  const URL = process.env.NEXT_PUBLIC_BASE_URL + "/api/v1/indexapi/events/";
   useEffect(() => {
     async function fetchEvents() {
       try {
@@ -117,11 +98,14 @@ const EventDashboard = () => {
                     <td className="">{data.date}</td>
 
                     <td>
-                      <Link href={`/admin/dashboard/event/${data.id}`} legacyBehavior>
+                      <Link
+                        href={`/admin/dashboard/event/${data.id}`}
+                        legacyBehavior
+                      >
                         <a>
-                        <button className="w-14 rounded-md border bg-light text-primary h-10">
-                          Edit
-                        </button>
+                          <button className="w-14 rounded-md border bg-light text-primary h-10">
+                            Edit
+                          </button>
                         </a>
                       </Link>
                     </td>

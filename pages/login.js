@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Head from "next/head";
+import { setCookie } from "cookies-next";
 
 const Login = () => {
   const router = useRouter();
@@ -31,18 +32,13 @@ const Login = () => {
         // Login successful, store user data in session storage
         const data = await response.json();
         localStorage.setItem("accessToken", data.data.access);
-        toast.warning("Successfully Logged in", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        setCookie("token", data.data.access);
+        toast.success("Welcome back Admin!");
         // Redirect to user profile page
-        router.push("/admin");
+        setTimeout(() => {
+          router.push("/admin");
+        }, 3000);
+
       } else {
         // Login failed, display error message
         setError(error);
@@ -80,7 +76,7 @@ const Login = () => {
   return (
     <>
       <Head>
-      <title>Empower Her Community</title>
+        <title>Empower Her Community</title>
         <meta
           name="title"
           property="og:title"
