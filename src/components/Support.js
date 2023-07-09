@@ -39,32 +39,14 @@ const Support = () => {
           submit.current,
           "v_22EFbmmIAh7jydz"
         );
-        toast.success("mail sent successfully", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.success("mail sent successfully");
         setIsLoading(false);
         setTimeout(() => {
           router.reload(); // This will refresh the page after the form is submitted
         }, 3000);
       } catch (error) {
         setIsLoading(false);
-        toast.error("Network error, please try again.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.error("Network error, please try again.");
       }
     }
   };
