@@ -47,7 +47,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
         const data = await response.json();
         setNewBlog(data.results);
       } catch (error) {
-        toast.error(error.message);
+        return error.message;
       }
     };
     fetchNext();
