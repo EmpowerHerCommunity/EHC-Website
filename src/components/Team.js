@@ -105,7 +105,7 @@ const Team = () => {
               />
             </div>
             <p className="md:text-xl text-2xl py-1">Anita Kimemenihia</p>
-            <p className="text-[#737373] md:text-lg text-2xl">
+            <p className="text-[#737373] md:text-lg text-xl">
               Lead, Communications
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -139,7 +139,7 @@ const Team = () => {
               />
             </div>
             <p className="md:text-xl text-2xl py-1">Goldie Chukwuedo</p>
-            <p className="text-[#737373] md:text-lg text-2xl">
+            <p className="text-[#737373] md:text-lg text-xl">
               Lead, Community Management
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -173,7 +173,7 @@ const Team = () => {
               />
             </div>
             <p className="md:text-xl text-2xl py-1">Tracy Obakhena</p>
-            <p className="text-[#737373] md:text-lg text-2xl">
+            <p className="text-[#737373] md:text-lg text-xl">
               Lead, Programs Management
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
@@ -207,7 +207,7 @@ const Team = () => {
               />
             </div>
             <p className="md:text-xl text-2xl py-1">Mary Sule</p>
-            <p className="text-[#737373] md:text-lg text-2xl">Lead, Finance</p>
+            <p className="text-[#737373] md:text-lg text-xl">Lead, Finance</p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a
                 href="https://mobile.twitter.com/_sulemary"
@@ -240,7 +240,7 @@ const Team = () => {
               />
             </div>
             <p className="md:text-xl text-2xl py-1">Gracious Sede</p>
-            <p className="text-[#737373] md:text-lg text-2xl">Legal Advisor</p>
+            <p className="text-[#737373] md:text-lg text-xl">Legal Advisor</p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a
                 href="https://twitter.com/WestsidePOV?t=uocG-lALKcVkX77_qhHTeQ&s=09"
