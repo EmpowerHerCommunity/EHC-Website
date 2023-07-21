@@ -35,7 +35,7 @@ const Form = () => {
       mail.email !== "" &&
       mail.number !== "" &&
       mail.message !== "" &&
-      mail.message !== ""
+      mail.nationality !== ""
     ) {
       try {
         await emailjs.sendForm(
@@ -44,35 +44,17 @@ const Form = () => {
           submit.current,
           "v_22EFbmmIAh7jydz"
         );
-        toast.success("Your request has been sent successfully", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.success("Your request has been sent successfully");
         setTimeout(() => {
-          router.reload(); // This will refresh the page after the form is submitted
+          router.reload();
         }, 3000);
       } catch (error) {
-        toast.error("Network error, please try again.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.error("Network error, please try again.");
       }
       setIsLoading(false);
     }
     else{
-      toast.error("Invalid Email Address")
+      toast.error("An unexpected error occurred")
     }
   };
 

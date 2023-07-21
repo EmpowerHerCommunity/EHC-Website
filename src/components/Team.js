@@ -195,6 +195,42 @@ const Team = () => {
               </a>
             </div>
           </div>
+
+          <div className="w-[220px] xl:w-[250px] text-center">
+            <div
+              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
+              data-aos="fade-up-left"
+            >
+              <img
+                src="/Jess.png"
+                alt="Jessica image"
+                className="w-[80%]"
+              />
+            </div>
+            <p className="md:text-xl text-2xl py-1">Jessica Joseph</p>
+            <p className="text-[#737373] md:text-lg text-xl">
+              Lead, Engineering
+            </p>
+            <div className="flex justify-center items-center gap-6 mt-2">
+              <a
+                href="https://twitter.com/forJessica_sake"
+                className=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineTwitter className="text-primary text-xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jessica-joseph-/"
+                className=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn className="text-primary text-xl" />
+              </a>
+            </div>
+          </div>
+
           <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
