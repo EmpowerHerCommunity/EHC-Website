@@ -72,10 +72,23 @@ const PastEvents = () => {
       image: "/webinar2.jpg",
       gallery: [
         "/webinar3.jpg",
+        "/events/cs.jpeg",
+        "/webinar4.jpg",
         "/webinar2.jpg",
-        "/webinar4.jpg",
         "/webinar3.jpg",
-        "/webinar4.jpg",
+      ],
+    },
+    {
+      title: "Bootcamp 3.0",
+      description: ["Empower Her Community Bootcamp 3.0 was a comprehensive training program designed specifically for women who wanted to take their tech skills to the next level. This two-month long initiative offered training in a range of advanced skills, including: Frontend and Backend Web Development, Cloud Engineering, Data Science, Digital Marketing, Product Design, Quality Assurance Testing, Graphics Design and Blockchain. The program was completely virtual and it provided participants with access to a team of experienced and dedicated facilitators who committed to ensuring the success of each participant."],
+      image: "/events/3.0.jpeg",
+      gallery: [
+        "/events/1.png",
+        "/events/2.png",
+        "/events/3.png",
+        "/events/4.png",
+        "/events/1.png",
+
       ],
     },
    
@@ -87,7 +100,7 @@ const PastEvents = () => {
   }, []);
 
   return (
-    <section className="">
+    <section>
       {events.map((event, i) => {
         return <PastEventsCard event={event} i={i} key={`pastevent${i}`} />;
       })}

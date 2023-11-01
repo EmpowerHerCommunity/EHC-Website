@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
 
 const Cards = () => {

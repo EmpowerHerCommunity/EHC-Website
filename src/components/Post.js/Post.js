@@ -1,10 +1,10 @@
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import BlogCard from "../Blog/BlogCard";
-import BlogNewsletter from "../Blog/BlogNewsletter";
+import BlogCard from "../Blog/Card";
+import BlogNewsletter from "../Blog/Newsletter";
 import Featured from "../Blog/Featured";
 
-const post = ({ blogs, isFetching, currentPage, totalPages, raw}) => {
+const Post = ({ blogs, isFetching, currentPage, totalPages, raw}) => {
   return (
     <>
     <section className="">
@@ -20,4 +20,4 @@ const post = ({ blogs, isFetching, currentPage, totalPages, raw}) => {
   );
 };
 
-export default post;
+export default Post;

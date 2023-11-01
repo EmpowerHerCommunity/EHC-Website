@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Post from "../../src/components/Post.js/Post";
 import Head from "next/head";
 
