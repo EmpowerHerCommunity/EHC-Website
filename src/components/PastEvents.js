@@ -80,7 +80,7 @@ const PastEvents = () => {
     },
     {
       title: "Bootcamp 3.0",
-      description: ["Empower Her Community Bootcamp 3.0 was a comprehensive training program designed specifically for women who wanted to take their tech skills to the next level. This two-month long initiative offered training in a range of advanced skills, including: Frontend and Backend Web Development, Cloud Engineering, Data Science, Digital Marketing, Product Design, Quality Assurance Testing, Graphics Design and Blockchain. The program was completely virtual and it provided participants with access to a team of experienced and dedicated facilitators who committed to ensuring the success of each participant."],
+      description: ["Empower Her Community Bootcamp 3.0 was a comprehensive training program designed specifically for women who wanted to take their tech skills to the next level. This two-month long initiative offered training in a range of advanced skills, including: Frontend and Backend Web Development, Cloud Engineering, Data Science, Product Design, Quality Assurance Testing, Graphics Design and Blockchain. The program was completely virtual and it provided participants with access to a team of experienced and dedicated facilitators who committed to ensuring the success of each participant."],
       image: "/events/3.0.jpeg",
       gallery: [
         "/events/1.png",
