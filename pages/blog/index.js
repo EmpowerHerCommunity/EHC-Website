@@ -1,4 +1,4 @@
-import Post from "../../src/components/Post.js/Post";
+import Post from "../../src/components/Post/Post";
 import Head from "next/head";
 
 export default function Blog({ blogs, raw, currentPage, totalPages }) {
