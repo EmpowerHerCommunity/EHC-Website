@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 
@@ -13,7 +12,7 @@ const Events = () => {
     <section className="bg-primary bg-opacity-10 text-black py-20 ">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src="/group2.png" width={135} height={135} />
+          <img src="/group2.png" className="w-32 h-32" />
         </div>
         <div className="lg:pl-11 pl-0 lg:pt-7 pt-20">
           <div className="relative mb-8 max-w-max mx-auto">

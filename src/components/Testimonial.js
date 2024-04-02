@@ -14,32 +14,32 @@ const Testimonial = () => {
       testimonial:
         "I participated in Bootcamp 2.0 front-end web development and it was amazing, I really enjoyed my time in the Bootcamp. I started this Bootcamp not being able to make a responsive websites and now I make websites responsive at ease.",
     },
-    
-    
+
     {
       id: 2,
       image: "/sam.png",
       name: "Olamide Sanusi ",
       role: "Data analyst",
       testimonial:
-      "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable.",
+        "The technical bootcamp 3.0 has been an incredible experience. As someone new to data analysis, I found it difficult at first, but thanks to the facilitator, the learning process has been enjoyable.",
     },
 
-      {
-        id: 3,
-        image: "/erica (2).png",
-        name: "Osawaru Erica",
-        role: "Data Scientist",
-        testimonial:
-          "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
-      },
-   
+    {
+      id: 3,
+      image: "/erica (2).png",
+      name: "Osawaru Erica",
+      role: "Data Scientist",
+      testimonial:
+        "The EHC Bootcamp 2.0 was the program that introduced me to the world of tech. After going through the bootcamp, I decided to explore more on Data Science, and now I am practicing Machine Learning and how to train machines.",
+    },
+
     {
       id: 4,
       image: "/Nancy.png",
       name: "Nancy Olatuja",
       role: "Frontend developer",
-      testimonial:"The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community."    
+      testimonial:
+        "The bootcamp was an unforgettable experience. Despite having no prior knowledge, I learned to create user-friendly websites. The facilitators were always available to help with any challenges and I'm grateful to be a part of this supportive community.",
     },
 
     // {
@@ -75,7 +75,7 @@ const Testimonial = () => {
     <section className="py-12 text-justify">
       <div className="container xl:max-w-screen-xl mx-auto px-4 relative z-10">
         <div className="absolute top-[0px] left-[5px] sm:left-[-15px] ml-4">
-          <Image src="/group2.png" width={115} height={115} />
+          <img src="/group2.png" className="w-24 h-21" />
         </div>
         <div className="">
           <div className="relative mb-14  max-w-max mx-auto lg:pt-4 pt-36">
@@ -158,10 +158,9 @@ const Testimonial = () => {
                               </span>
                             </div>
                             <div className="flex-none flex items-end w-44 sm:w-fit">
-                              <Image
+                              <img
+                                className="w-44 h-72"
                                 src={testimonial.image}
-                                width={190}
-                                height={300}
                                 alt="attendee"
                               />
                             </div>
