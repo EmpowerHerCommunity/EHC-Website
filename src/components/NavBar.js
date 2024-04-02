@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import AOS from "aos";
 import { useRouter } from "next/router";
@@ -94,7 +93,7 @@ const NavBar = () => {
         <figure className=" flex justify-between w-full lg:h-0 h-10 px-1 lg:px-2 xl:w-3/12 lg:w-2/12 lg:justify-center items-center">
           <Link href="/" legacyBehavior>
             <a className="border-none">
-              <Image src="/logo.png" width={100} height={100} alt="logo" />
+              <img src="/logo.png" className="w-24 h-24" alt="logo" />
             </a>
           </Link>
           {active ? (

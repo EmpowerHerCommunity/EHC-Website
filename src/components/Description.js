@@ -32,11 +32,10 @@ const Description = () => {
                     height={130}
                   />
                 </div>
-                <Image
+                <img
                   src="/volunteers.JPEG"
                   alt="women"
-                  width={500}
-                  height={500}
+                  className="w-[500px] md:h-[500px]"
                 />
               </div>
             </div>
@@ -77,12 +76,7 @@ const Description = () => {
                 data-aos="fade-up-right"
               >
                 <div>
-                  <Image
-                    src="/1.png"
-                    alt="training icon"
-                    width={36}
-                    height={36}
-                  />
+                  <img src="/1.png" alt="training icon" className="w-9 h-9" />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     3000+ <br />
                     <span className="text-xl md:text-xl text-dark font-normal">
@@ -91,11 +85,10 @@ const Description = () => {
                   </p>
                 </div>
                 <div>
-                  <Image
+                  <img
                     src="/2.png"
                     alt="mentoring icon"
-                    width={50}
-                    height={44}
+                    className="w-12 h-10"
                   />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     1000+ <br />
@@ -105,12 +98,7 @@ const Description = () => {
                   </p>
                 </div>
                 <div>
-                  <Image
-                    src="/3.png"
-                    alt="members icon"
-                    width={36}
-                    height={36}
-                  />
+                  <img src="/3.png" alt="members icon" className="w-9 h-9" />
                   <p className="text-4xl md:text-4xl text-primary font-semibold leading-5 mt-6">
                     6000+ <br />
                     <span className="text-xl md:text-xl text-dark font-normal">
