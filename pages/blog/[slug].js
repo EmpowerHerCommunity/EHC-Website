@@ -10,7 +10,6 @@ const Slug = ({ blog }) => {
     const readingTimeInMinutes = wordCount / wordsPerMinute;
     const minutes = Math.floor(readingTimeInMinutes);
     const seconds = Math.floor((readingTimeInMinutes - minutes) * 60);
-    // round up if more than 30 seconds
     const readingTime = minutes + (seconds > 30 ? 1 : 0); 
     return readingTime;
   }
@@ -21,17 +20,17 @@ const Slug = ({ blog }) => {
       <Head>
         <meta charSet="UTF-8" />
         <title>Empower Her Community</title>
-        <meta name="title" property="og:title" content={blog.title} />
-        <meta name="image" property="og:image" content={blog.cover_photo} />
-        <meta name="twitter:title" content={blog.title} />
-        <meta name="twitter:description" content={blog.introduction} />
-        <meta name="twitter:image" content={blog.cover_photo} />
+        <meta name="title" property="og:title" content={blog?.title} />
+        <meta name="image" property="og:image" content={blog?.cover_photo} />
+        <meta name="twitter:title" content={blog?.title} />
+        <meta name="twitter:description" content={blog?.introduction} />
+        <meta name="twitter:image" content={blog?.cover_photo} />
         <meta
           name="author"
           property="og:article:author"
-          content={blog.author}
+          content={blog?.author}
         />
-        <meta property="og:description" content={blog.introduction} />
+        <meta property="og:description" content={blog?.introduction} />
         <meta
           property="og:url"
           content="https://empower-her-community.vercel.app/"
@@ -39,11 +38,11 @@ const Slug = ({ blog }) => {
 
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta name="description" content={blog.introduction} />
+        <meta name="description" content={blog?.introduction} />
         <meta property="og:site_name" content="Empower Her Community" />
-        <meta property="og:image:secure_url" content={blog.cover_photo} />
+        <meta property="og:image:secure_url" content={blog?.cover_photo} />
 
-        <meta name="twitter:image:alt" content={blog.title} />
+        <meta name="twitter:image:alt" content={blog?.title} />
       </Head>
 
       <NavBar />
@@ -52,41 +51,41 @@ const Slug = ({ blog }) => {
           <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
             <section className="text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
               <div className=" font-medium">
-                {new Date(blog.created).toLocaleDateString("en-US", options)}
+                {new Date(blog?.created).toLocaleDateString("en-US", options)}
               </div>
               <div className="border-black h-1 w-1 bg-black rounded-full"></div>
 
-              <div className="">
-                {`${calculateReadingTime(blog.description)}` > 1
-                  ? `${calculateReadingTime(blog.description)} minutes read`
-                  : `${calculateReadingTime(blog.description)} minute read`}
+              <div>
+                {`${calculateReadingTime(blog?.description)}` > 1
+                  ? `${calculateReadingTime(blog?.description)} minutes read`
+                  : `${calculateReadingTime(blog?.description)} minute read`}
               </div>
             </section>
 
             <div className="max-w-5xl">
               <h1 className="lg:text-4xl mt-4 text-4xl font-semibold">
-                {blog.title}
+                {blog?.title}
               </h1>
               <p className="md:text-xl -mt-5 leading-9 text-2xl lg:text-xl">
-                {blog.introduction}
+                {blog?.introduction}
               </p>
             </div>
             <section className="flex items-center -mt-10">
               <div className="">
                 <img
-                  src={blog.author_image}
+                  src={blog?.author_image}
                   alt="author avatar"
                   className="h-28 w-28 object-cover rounded-full"
                 />
               </div>
               <div className="text-2xl text-black font-medium ml-6">
-                {blog.author}
+                {blog?.author}
               </div>
             </section>
           </div>
 
           <div className="max-w-6xl -mt-5">
-            <img src={blog.cover_photo} className="w-full" />
+            <img src={blog?.cover_photo} className="w-full" />
           </div>
 
           <section className="flex justify-between lg:ml-10 max-w-5xl overflow-x-hidden">
@@ -94,7 +93,7 @@ const Slug = ({ blog }) => {
               <div
                 className="overflow-x-hidden"
                 dangerouslySetInnerHTML={{
-                  __html: md().render(blog.description),
+                  __html: md().render(blog?.description),
                 }}
               />
             </div>
