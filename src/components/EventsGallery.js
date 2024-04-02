@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import "react-multi-carousel/lib/styles.css";
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-// import styles from '../../styles/Home.module.css';
 
 const EventsGallery = ({images, galleryI}) => {
     const allTestimonials = [
@@ -91,7 +89,7 @@ const EventsGallery = ({images, galleryI}) => {
                                         <div className={" w-full h-full"}>
                                             <div className="flex items-stretch h-full">
                                                 <div className="flex-none flex overflow-hidden rounded-xl w-fit">
-                                                    <Image src={image} width={100} height={100} alt='event images' />
+                                                    <img src={image} className='w-24 h-24' alt='event images' />
                                                 </div>
                                             </div>
                                         </div>

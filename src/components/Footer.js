@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { SiInstagram, SiTwitter, SiFacebook, SiLinkedin } from 'react-icons/si';
-import { BsTelephone } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
-import Image from 'next/image';
 import AOS from 'aos';
 
 const Footer = () => {
@@ -130,7 +128,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mt-8 text-right hidden lg:block">
-                <Image src='/footer-dots.png' width={110} height={110} alt='dot' />
+                <img src='/footer-dots.png' className='w-24 h-24' alt='dot' />
               </li>
             </ul>
           </div>
