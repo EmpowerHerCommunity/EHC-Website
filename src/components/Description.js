@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 
@@ -17,19 +16,17 @@ const Description = () => {
             <div data-aos="fade-down">
               <div className="relative px-10 py-14 z-5">
                 <div className="absolute top-0 left-0">
-                  <Image
+                  <img
                     src="/hero-about-up.png"
+                    className="w-32 h-32"
                     alt="dot"
-                    width={130}
-                    height={130}
                   />
                 </div>
                 <div className="absolute bottom-0 lg:right-0 md:right-40 right-0">
-                  <Image
+                  <img
                     src="/hero-about-down.png"
                     alt="dot"
-                    width={130}
-                    height={130}
+                    className="w-32 h-32"
                   />
                 </div>
                 <img

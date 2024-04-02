@@ -20,7 +20,7 @@ const Hero = () => {
               >
                 <img
                   src="/hero-volunteer.png"
-                  className="object-cover object-center w-64 h-64"
+                  className="object-cover object-center md:w-64 md:h-64"
                   alt="cup"
                 />
               </figure>

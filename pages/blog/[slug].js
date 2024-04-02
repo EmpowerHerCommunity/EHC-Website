@@ -10,44 +10,46 @@ const Slug = ({ blog }) => {
     const readingTimeInMinutes = wordCount / wordsPerMinute;
     const minutes = Math.floor(readingTimeInMinutes);
     const seconds = Math.floor((readingTimeInMinutes - minutes) * 60);
-    const readingTime = minutes + (seconds > 30 ? 1 : 0); 
+    const readingTime = minutes + (seconds > 30 ? 1 : 0);
     return readingTime;
   }
   const options = { day: "numeric", month: "long", year: "numeric" };
-  
+
   return (
     <section className="overflow-y-hidden">
-      <Head>
-        <meta charSet="UTF-8" />
-        <title>Empower Her Community</title>
-        <meta name="title" property="og:title" content={blog?.title} />
-        <meta name="image" property="og:image" content={blog?.cover_photo} />
-        <meta name="twitter:title" content={blog?.title} />
-        <meta name="twitter:description" content={blog?.introduction} />
-        <meta name="twitter:image" content={blog?.cover_photo} />
-        <meta
-          name="author"
-          property="og:article:author"
-          content={blog?.author}
-        />
-        <meta property="og:description" content={blog?.introduction} />
-        <meta
-          property="og:url"
-          content="https://empower-her-community.vercel.app/"
-        />
+      {blog && (
+        <Head>
+          <meta charSet="UTF-8" />
+          <title>Empower Her Community</title>
+          <meta name="title" property="og:title" content={blog?.title} />
+          <meta name="image" property="og:image" content={blog?.cover_photo} />
+          <meta name="twitter:title" content={blog?.title} />
+          <meta name="twitter:description" content={blog?.introduction} />
+          <meta name="twitter:image" content={blog?.cover_photo} />
+          <meta
+            name="author"
+            property="og:article:author"
+            content={blog?.author}
+          />
+          <meta property="og:description" content={blog?.introduction} />
+          <meta
+            property="og:url"
+            content="https://empower-her-community.vercel.app/"
+          />
 
-        <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content="summary_large_image" />
 
-        <meta name="description" content={blog?.introduction} />
-        <meta property="og:site_name" content="Empower Her Community" />
-        <meta property="og:image:secure_url" content={blog?.cover_photo} />
+          <meta name="description" content={blog?.introduction} />
+          <meta property="og:site_name" content="Empower Her Community" />
+          <meta property="og:image:secure_url" content={blog?.cover_photo} />
 
-        <meta name="twitter:image:alt" content={blog?.title} />
-      </Head>
+          <meta name="twitter:image:alt" content={blog?.title} />
+        </Head>
+      )}
 
       <NavBar />
       <div className="prose justify-between mx-auto xl:max-w-screen-xl container lg:prose-p:prose-xl prose-p:text-2xl prose-p:leading-10 prose-li:text-xl prose-h3:text-2xl prose-h2:text-3xl lg:max-w-screen-2xl md:max-w-screen-xl max-w-screen-lg text-justify px-10 lg:px-10 pt-7 lg:pt-10">
-        <article className="">
+        <article>
           <div className="xl:ml-5 ml-0 md:px-4 lg:px-0">
             <section className="text-slug flex items-center justify-between max-w-xs lg:text-xl text-2xl">
               <div className=" font-medium">
