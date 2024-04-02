@@ -27,14 +27,13 @@ const Events = () => {
               data-aos="fade-up"
               className="mb-8 text-center flex items-center flex-col  md:text-left w-11/12"
             >
-              <div data-aos="fade-down" className="">
-              <div className="h-[300px]">
-                <Image
-                  src="/2.0.jpg"
-                  width={300}
-                  height={300}
-                  className="rounded-md"
-                />
+              <div data-aos="fade-down">
+                <div className="h-[300px]">
+                  <img
+                    src="/2.0.jpg"
+                    className="w-72 h-72 rounded-md"
+                    alt="Bootcamp 2.0"
+                  />
                 </div>
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
@@ -42,7 +41,7 @@ const Events = () => {
               </h2>
               <p className="font-normal md:text-lg text-2xl text-center tracking-wider lg:text-justify w-12/12 lg:w-9/12 h-40">
                 The initiative offered training in a range of skills, including
-               Data Science...
+                Data Science...
                 <br />
                 <Link
                   href="/events#Bootcamp 2.0"
@@ -58,14 +57,12 @@ const Events = () => {
               className="mb-8 text-center flex items-center flex-col md:text-left  w-11/12"
             >
               <div data-aos="fade-down">
-              <div className="h-[300px]">
-                <Image
-                  src="/mentorship.jpg"
-                  alt="mentorship flyer"
-                  width={300}
-                  height={300}
-                  className="rounded-md"
-                />
+                <div className="h-[300px]">
+                  <img
+                    src="/mentorship.jpg"
+                    className="w-72 h-72 rounded-md"
+                    alt="mentorship flyer"
+                  />
                 </div>
               </div>
               <h2 className="lg:text-3xl text-4xl leading-10 mb-2 mt-4 font-medium">
@@ -89,17 +86,15 @@ const Events = () => {
             >
               <div data-aos="fade-down">
                 <div className="h-[300px] overflow-hidden lg:-mt-5 md:-mt-0">
-                <Image
-                  src="/events3.jpeg"
-                  width={300}
-                  alt="volunteer"
-                  height={300}
-                  className="rounded-md"
-                />
+                  <img
+                    src="/events3.jpeg"
+                    className="w-72 h-72 rounded-md"
+                    alt="volunteer"
+                  />
                 </div>
               </div>
               <h2 className="lg:text-3xl text-center text-4xl leading-10 mb-2 mt-4 font-medium">
-              Non Technical Bootcamp
+                Non Technical Bootcamp
               </h2>
               <p className="font-normal md:text-lg text-2xl text-center tracking-wider lg:text-justify w-12/12 lg:w-9/12 h-40">
                 Empower Her Community in partnership with Non Tech In Tech

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 
@@ -28,10 +27,7 @@ const HeroHome = () => {
               <div>
                 <div className="flex lg:gap-4 gap-12">
                   <button className="bg-transparent py-3 px-4 border border-primary hover:border-transparent w-44 rounded-md">
-                    <Link
-                      href="/support"
-                      legacyBehavior
-                    >
+                    <Link href="/support" legacyBehavior>
                       <a>
                         <span className="text-primary text-2xl">
                           {" "}
@@ -52,12 +48,7 @@ const HeroHome = () => {
                   </Link>
                 </div>
                 <div className="mt-14">
-                  <Image
-                    src="/group2.png"
-                    width={137}
-                    height={137}
-                    alt="group"
-                  />
+                  <img src="/group2.png" className="w-32 h-32" alt="group" />
                 </div>
               </div>
             </article>
@@ -66,7 +57,7 @@ const HeroHome = () => {
             className="hidden md:block bg-slate-100 rounded-r-lg h-3/4"
             data-aos="fade-right"
           >
-            <Image src="/herogirl.png" width={548} height={548} alt="girl" />
+            <img src="/herogirl.png" className="w-full"  alt="girl" />
           </div>
         </div>
       </div>
