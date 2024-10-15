@@ -83,7 +83,7 @@ const Support = () => {
     data-aos="zoom-in"
   >
     <h1 className="text-2xl font-bold">Donate Cash</h1>
-    <p className="text-xl lg:text-lg text-justify w-96 py-5 leading-6">
+    <p className="text-xl lg:text-lg text-justify  py-5 leading-6">
       Your support will make a tangible difference in the lives of these aspiring female technologists. Donate today and help us empower women in tech.
     </p>
     <Link href="https://paystack.com/pay/empowerhercommunity" legacyBehavior>
@@ -102,7 +102,7 @@ const Support = () => {
     data-aos="zoom-in"
   >
     <h1 className="text-2xl font-bold">Donate Materials</h1>
-    <p className="text-xl lg:text-lg text-justify w-96 py-3 leading-6">
+    <p className="text-xl lg:text-lg text-justify py-3 leading-6">
       Your generous donation will directly impact the lives of women in tech. Every contribution, matters.
     </p>
     <p className="lg:text-lg text-xl text-blogSearch">
@@ -159,7 +159,7 @@ const Support = () => {
       </label>
       <input
         placeholder="Enter your email"
-        className="placeholder:text-xl border-2 px-4 py-2 mt-2 w-96 h-14 rounded-xl"
+        className="placeholder:text-xl border-2 px-4 py-2 mt-2 h-14 rounded-xl"
         name="form_email"
         id="email"
         required
