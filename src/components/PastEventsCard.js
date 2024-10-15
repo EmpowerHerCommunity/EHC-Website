@@ -13,18 +13,13 @@ const PastEventsCard = ({ event, i }) => {
   return (
     <div className={i % 2 === 0 ? "" : "bg-primary bg-opacity-10"}>
       <div className="container relative xl:max-w-screen-xl mx-auto px-4 py-10">
-        {i % 2 === 0 ? (
+        {i % 2 == 0 ? (
           <div className="absolute bottom-[40px] right-0">
-            <Image
-              src="/purple-dots-down.png"
-              width={137}
-              height={137}
-              alt="dots"
-            />
+            <img src="/purple-dots-down.png" className="w-32 h-32" alt="dots" />
           </div>
         ) : (
           <div className="absolute top-full left-0 transform -translate-y-1/2">
-            <Image src="/group2.png" width={137} height={137} alt="women" />
+            <img src="/group2.png" className="w-32 h-32" alt="women" />
           </div>
         )}
         <div
@@ -65,9 +60,7 @@ const PastEventsCard = ({ event, i }) => {
                   >
                     <a target="_blank">
                       <button className="bg-primary py-3 px-4 border text-white border-primary hover:border-transparent lg:w-52 w-52 rounded-md hover:text-primary hover:bg-transparent hover:border-primary hover:border-opacity-5 hover:shadow-sm">
-                        <span className="text-2xl">
-                          Join Us Today
-                        </span>
+                        <span className="text-2xl">Join Us Today</span>
                       </button>
                     </a>
                   </Link>
@@ -78,45 +71,24 @@ const PastEventsCard = ({ event, i }) => {
           <div className="lg:flex-auto w-full lg:w-5/12" data-aos="fade-right">
             <div className="relative p-4">
               <div className="flex absolute top-0 left-0">
-                <Image
-                  src="/border-tl.png"
-                  width={106}
-                  height={106}
-                  alt="line"
-                />
+                <img src="/border-tl.png" className="w-24 h-24" alt="line" />
               </div>
               <div className="flex absolute top-0 right-28">
-                <Image
-                  src="/border-tr.png"
-                  width={106}
-                  height={106}
-                  alt="line"
-                />
+                <img src="/border-tr.png" className="w-24 h-24" alt="line" />
               </div>
               <div className="flex absolute bottom-0 left-0">
-                <Image
-                  src="/border-bl.png"
-                  width={106}
-                  height={106}
-                  alt="line"
-                />
+                <img src="/border-bl.png" className="w-24 h-24" alt="line" />
               </div>
               <div className="flex absolute bottom-0 right-28">
-                <Image
-                  src="/border-br.png"
-                  width={106}
-                  height={106}
-                  alt="line"
-                />
+                <img src="/border-br.png" className="w-24 h-24" alt="line" />
               </div>
               <div
                 className="relative overflow-hidden rounded-bl-[4rem] rounded-tr-[3rem] flex w-10/12 max-w-max"
                 data-aos="fade-right"
               >
-                <Image
+                <img
                   src={event.image}
-                  width={400}
-                  height={400}
+                  className="w-96 h-96"
                   alt={event.title}
                 />
               </div>

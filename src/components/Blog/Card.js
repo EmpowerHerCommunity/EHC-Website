@@ -56,10 +56,10 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
   const next = () => {
     if (page < totalPages) {
       setPagination(!pagination);
-      setPage(page + 1); // return the new page value
+      setPage(page + 1);
       alert("clicked");
     } else {
-      setPage(page); // return the current page value if it's already the last page
+      setPage(page);
     }
   };
 
@@ -233,7 +233,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                     </div>
                   </article>
                 ))
-              : sortedBlogs.map((blog) => (
+              : sortedBlogs?.map((blog) => (
                   <article className="w-12/12 p-4 mb-4" key={blog.id}>
                     <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
                       <Link href={`/blog/${blog.slug}/`}>
@@ -283,7 +283,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
                             </p>
                           </section>
                           <aside className="flex items-center flex-wrap mb-2 mt-4 text-2xl lg:text-lg">
-                            {blog.tags.map((tag) => (
+                            {blog?.tags.map((tag) => (
                               <button
                                 className="rounded-2xl border border-black py-1 px-4 ml-2"
                                 key={tag.id}
@@ -302,8 +302,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
         <section>
           {pagination != "blogs" && (
             <section className="container px-4 mx-auto grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 w-12/12">
-              {sortednewBlogs &&
-                sortednewBlogs.map((blog) => (
+              {sortednewBlogs?.map((blog) => (
                   <article className="w-12/12 p-4 mb-4" key={blog.id}>
                     <div className="border-2 border-black h-full px-3 py-2 rounded-lg hover:shadow-xl">
                       <Link href={`/blog/${blog.slug}/`}>
@@ -371,7 +370,7 @@ const BlogCard = ({ blogs, currentPage, raw, totalPages }) => {
           )}
         </section>
 
-        {raw.next !== null ? (
+        {raw?.next !== null ? (
           <section className=" container mx-auto flex justify-end mt-10 px-10">
             <button
               onClick={next}

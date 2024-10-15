@@ -1,12 +1,4 @@
-import { PopperUnstyled } from "@mui/base";
 import React from "react";
-import Image from "next/image";
-import PopupImage from "../../public/popup/PopupImage.svg";
-import PopUpBlock from "../../public/popup/PopUpBlock.svg";
-import LineTen from '../../public/popup/Line 10.svg';
-import LineEight from '../../public/popup/Line 8.svg';
-import LineNine from '../../public/popup/Line 9.svg';
-import LineNineB from '../../public/popup/Line 9 (1).svg'
 import Link from "next/link";
 
 function PopUp({ closePopup }) {

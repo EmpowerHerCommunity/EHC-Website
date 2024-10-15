@@ -57,11 +57,19 @@ export default function Blog({ blogs, raw, currentPage, totalPages }) {
 
 export async function getStaticProps() {
   const currentPage = 1;
-  const pageSize = 9; 
+  const pageSize = 9;
 
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL  + `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
+    process.env.NEXT_PUBLIC_BASE_URL +
+      `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
   );
+
+  if (!response.ok) {
+    console.error("Error fetching data:", response.statusText);
+    return {
+      notFound: true,
+    };
+  }
 
   const data = await response.json();
   const results = data.results;
