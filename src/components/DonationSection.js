@@ -8,7 +8,7 @@ const DonationSection = ({ accounts }) => {
       >
         <h1 className="text-2xl font-bold">Donate To Bank Account</h1>
         <p className="text-xl lg:text-lg text-justify py-5 leading-6">
-          Your support can help us empower the next generation of female technologists and innovators. Your contribution can make a lasting impact on a woman's life and career.
+          Your support can help us empower the next generation of female technologists and innovators. Your contribution can make a lasting impact on a woman&apos;s life and career.
         </p>
         <h3 className="font-bold leading-6 text-xl pb-2">How to Donate:</h3>
         <p className="text-justify text-xl">
