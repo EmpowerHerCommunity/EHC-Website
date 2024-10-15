@@ -14,24 +14,25 @@ const Support = () => {
   }, []);
   const accounts = [
     {
-      type: 'Naira(Fidelity Bank)',
+      type: 'International Bank Account Number (Fidelity Bank)',
       name: 'EMPOWER HER COMMUNITY',
-      number: '4110139398',
+      number: 4110139398,
+      swiftCode: 'FIDTNGLA'
     },
     {
       type: 'Dollar',
       name: 'Empower her community foundation',
-      number: '5240057626',
+      number: 5240057626,
     },
     {
       type: 'Pounds',
       name: 'Empower her community foundation',
-      number: '5240057619',
+      number: 5240057619,
     },
     {
       type: 'Euro',
       name: 'Empower her community foundation',
-      number: '5240057602',
+      number: 5240057602,
     },
   ];
   const [isloading, setIsLoading] = React.useState(false);
