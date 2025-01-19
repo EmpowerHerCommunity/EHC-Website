@@ -13,14 +13,14 @@ const Hero = () => {
       <section>
         <div className="container mx-auto lg:px-8 xl:px-56 px-10 md:px-5 flex-col items-center">
           <section className="flex lg:flex-row md:flex-row flex-col justify-center items-center lg:mt-32 mt-16">
-            <div className="relative w-5/12 md:w-6/12 lg:h-96 md:h-52 h-44 border-black">
+            <div className="relative w-8/12 mb-4 ml-8 md:w-6/12 lg:h-96 md:h-52 h-44  border-black">
               <figure
                 className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
                 data-aos="fade-up"
               >
                 <img
-                  src="/hero-volunteer.png"
-                  className="object-cover object-center md:w-64 md:h-64"
+                  src="/hero-volunteerwomen.jpg"
+                  className="object-cover object-center w-full  md:w-64 md:ml-4 md:h-64"
                   alt="cup"
                 />
               </figure>

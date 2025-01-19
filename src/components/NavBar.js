@@ -50,7 +50,7 @@ const NavBar = () => {
                 : "hover:font-light"
             } hover:font-medium`}
           >
-            <Link href="/events">Events</Link>
+            <Link href="/events">Programs</Link>
           </li>
           <li
             className={`${

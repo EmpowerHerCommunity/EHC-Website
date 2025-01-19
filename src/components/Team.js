@@ -59,7 +59,7 @@ const Team = () => {
               </a>
             </div>
           </div>
-          <div className="w-[220px] xl:w-[250px] text-center">
+          {/* <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
               data-aos="fade-left"
@@ -92,7 +92,7 @@ const Team = () => {
                 <FaLinkedinIn className="text-primary text-xl" />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
@@ -127,7 +127,7 @@ const Team = () => {
               </a>
             </div>
           </div>
-          <div className="w-[220px] xl:w-[250px] text-center">
+          {/* <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
               data-aos="fade-up-right"
@@ -160,7 +160,7 @@ const Team = () => {
                 <FaLinkedinIn className="text-primary text-xl" />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
@@ -171,10 +171,10 @@ const Team = () => {
                 alt="Tracy Obakhena image"
                 className="w-[80%]"
               />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Tracy Obakhena</p>
+            </div> 
+           <p className="md:text-xl text-2xl py-1">Tracy Obakhena</p>
             <p className="text-[#737373] md:text-lg text-xl">
-              Lead, Programs Management
+              Advisory Board Member
             </p>
             <div className="flex justify-center items-center gap-6 mt-2">
               <a
@@ -193,10 +193,10 @@ const Team = () => {
               >
                 <FaLinkedinIn className="text-primary text-xl" />
               </a>
-            </div>
+            </div> 
           </div>
 
-          <div className="w-[220px] xl:w-[250px] text-center">
+           <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
               data-aos="fade-up-left"
@@ -231,7 +231,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className="w-[220px] xl:w-[250px] text-center">
+          {/* <div className="w-[220px] xl:w-[250px] text-center">
             <div
               className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
               data-aos="fade-down-right"
@@ -262,7 +262,7 @@ const Team = () => {
                 <FaLinkedinIn className="text-primary text-xl" />
               </a>
             </div>
-          </div>
+          </div> */}
 
           <div className="w-[220px] xl:w-[250px] text-center">
             <div

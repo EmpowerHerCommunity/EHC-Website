@@ -17,7 +17,7 @@ const HeroEvents = () => {
           >
             <img src="/contact-dots.svg" alt="dot" />
             <ul className="ml-32 text-2xl lg:text-2xl mt-8">
-              <li className="font-semibold my-1"><a href="#events">Events.</a> </li>
+              <li className="font-semibold my-1"><a href="#events">Programs.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Bootcamps.</a> </li>
               <li className="font-semibold my-1"><a href="#past">Webinars.</a> </li>
               <li className="font-semibold my-1"><a href="#upcoming"> Upcoming events.</a> </li>
@@ -25,7 +25,7 @@ const HeroEvents = () => {
           </div>
           <div>
             <h2 className="md:text-5xl text-4xl font-bold text-center my-10 w-fit  relative">
-              Events
+              Programs
               <span>
                 <img src="/line2.png" alt="line" />
               </span>
