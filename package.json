@@ -17,16 +17,21 @@
     "@mui/material": "^5.7.0",
     "aos": "^2.3.4",
     "axios": "^1.7.7",
+    "canvas-confetti": "^1.9.3",
+    "clsx": "^2.1.1",
     "cookie": "^1.0.1",
     "cookies-next": "^4.3.0",
     "dotenv": "^16.0.3",
+    "framer-motion": "^12.11.0",
+    "lottie-react": "^2.4.1",
     "markdown-it": "^13.0.1",
     "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.4.0",
     "react-multi-carousel": "^2.8.0",
-    "react-toastify": "^9.1.2"
+    "react-toastify": "^9.1.2",
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

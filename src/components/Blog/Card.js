@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sortByDate } from "../../../utils";
+import { sortByDate } from "../../utils";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
