@@ -1,6 +1,5 @@
-// File: components/ui/spotlight.jsx
 
-import { cn } from "../../../utils/index";
+import { cn } from "../../utils/index";
 
 export const Spotlight = ({ className, fill }) => {
   return (
