@@ -25,7 +25,7 @@ export default function SpotlightDemo() {
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-8 md:pt-0 flex flex-col items-center justify-center">
         {/* Title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8">
-          Best Team Member Award
+          Team Member of the year
         </h1>
         
         {/* Container for image and text - flex column on mobile, row on larger screens */}
@@ -45,7 +45,7 @@ export default function SpotlightDemo() {
           {/* Name and Position - text aligned left when beside image */}
           <div className="sm:text-left flex flex-col justify-center py-4">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-2 md:mb-3">Anita Kim</h2>
-            <p className="text-base md:text-lg lg:text-xl text-white/90 block">Lead Communications</p>
+            <p className="text-base md:text-lg lg:text-xl text-white/90 block">Lead, Communications</p>
           </div>
         </div>
       </div>
