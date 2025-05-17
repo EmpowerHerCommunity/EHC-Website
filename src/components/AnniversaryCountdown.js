@@ -53,7 +53,7 @@ export default function AnniversaryCountdown() {
     // Set up recurring confetti
     confettiIntervalRef.current = setInterval(() => {
       triggerConfetti();
-    }, 3000);
+    }, 50000);
 
     return () => {
       clearInterval(confettiIntervalRef.current);
@@ -199,7 +199,7 @@ export default function AnniversaryCountdown() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  <p className="mb-3 text-gray-300 text-sm sm:text-base">
+                  {/* <p className="mb-3 text-gray-300 text-sm sm:text-base">
                     Join our anniversary live program on Google Meet.
                   </p>
                   <div className="flex flex-col items-center lg:items-start space-y-4 mt-6">
@@ -224,7 +224,7 @@ export default function AnniversaryCountdown() {
                     <p className="text-xs sm:text-sm text-gray-400">
                       Copy the link above to join the live Google Meet session.
                     </p>
-                  </div>
+                  </div> */}
                 </motion.div>
               </div>
 
@@ -239,7 +239,7 @@ export default function AnniversaryCountdown() {
                   <motion.div
                     animate={{ y: [0, -5, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                    className="w-full h-64 sm:h-80 md:h-96"
+                    className="w-full h-full"
                   >
                     <SpotlightDemo />
                   </motion.div>
