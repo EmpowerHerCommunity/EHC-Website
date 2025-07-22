@@ -4,7 +4,7 @@ import { Spotlight } from "./spotlight";
 
 export default function SpotlightDemo() {
   return (
-    <div className="relative flex h-full w-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] overflow-hidden rounded-md bg-black/[0.6] backdrop-blur-xl antialiased md:items-center md:justify-center">
+    <div className="relative flex h-full w-full min-h-[300px] sm:min-h-[350px] p-12 md:min-h-[400px] overflow-hidden rounded-md bg-black/[0.6] backdrop-blur-xl antialiased md:items-center md:justify-center">
       {/* Grid overlay */}
       <div
         className={cn(

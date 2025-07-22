@@ -150,16 +150,16 @@ export default function AnniversaryCountdown() {
       <AnimatePresence>
         {isLoaded && (
           <motion.div
-            className="w-full max-w-4xl mx-auto backdrop-blur-lg p-4 sm:p-8 rounded-2xl shadow-2xl text-white"
+            className="w-full max-w-4xl lg:max-w-full mx-auto backdrop-blur-lg p-4 sm:p-8 rounded-2xl shadow-2xl text-white"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="flex flex-col xl:flex-row w-full items-center justify-between">
               {/* LEFT SECTION */}
               <div className={`w-full ${isAnniversary ? 'lg:w-3/5' : 'lg:w-full'} text-center ${isAnniversary ? 'lg:text-left' : ''} mb-8 lg:mb-0`}>
                 <motion.p
-                  className="text-fuchsia-200 mb-2"
+                  className="text-fuchsia-200 lg:text-2xl mb-2"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
@@ -168,7 +168,7 @@ export default function AnniversaryCountdown() {
                 </motion.p>
 
                 <motion.h1
-                  className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 relative inline-block"
+                  className="text-4xl sm:text-5xl flex items-center justify-center md:text-6xl font-bold mb-6 sm:mb-8 relative inline-block"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -199,39 +199,11 @@ export default function AnniversaryCountdown() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  {/* <p className="mb-3 text-gray-300 text-sm sm:text-base">
-                    Join our anniversary live program on Google Meet.
-                  </p>
-                  <div className="flex flex-col items-center lg:items-start space-y-4 mt-6">
-                    <div className="flex items-center bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 sm:px-4 sm:py-3 w-full max-w-md">
-                      <input
-                        type="text"
-                        value="https://meet.google.com/abc-defg-hij"
-                        readOnly
-                        className="flex-1 bg-transparent text-white outline-none cursor-text text-sm sm:text-base overflow-hidden"
-                      />
-                      <button
-                        onClick={() =>
-                          navigator.clipboard.writeText(
-                            "https://meet.google.com/abc-defg-hij"
-                          )
-                        }
-                        className="ml-2 sm:ml-3 text-xs sm:text-sm text-blue-500 hover:underline whitespace-nowrap"
-                      >
-                        Copy
-                      </button>
-                    </div>
-                    <p className="text-xs sm:text-sm text-gray-400">
-                      Copy the link above to join the live Google Meet session.
-                    </p>
-                  </div> */}
                 </motion.div>
               </div>
-
-              {/* RIGHT SECTION - Only show when it's anniversary time */}
               {isAnniversary && (
                 <motion.div
-                  className="w-full lg:w-2/5"
+                  className="w-full"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
