@@ -3,6 +3,107 @@ import AOS from "aos";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+const TeamMember = ({ name, role, image, alt, aos, twitter, linkedin }) => (
+  <div className="w-[220px] xl:w-[250px] text-center group">
+    <div 
+      className="relative w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-end justify-center overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500"
+      data-aos={aos}
+    >
+
+      <div className="absolute inset-0 bg-gradient-to-t from-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-full"></div>
+      
+      
+      <div className="absolute top-3 right-3 w-6 h-6 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+      <div className="absolute bottom-3 left-3 w-4 h-4 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"></div>
+      
+
+      <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-primary/30 transition-all duration-500"></div>
+      
+
+      <img 
+        src={image} 
+        alt={alt} 
+        className="w-[80%] relative z-5 transform group-hover:scale-105 transition-transform duration-500 ease-out" 
+      />
+      
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-10"></div>
+    </div>
+    
+    <p className="md:text-xl text-2xl py-3 font-semibold text-dark group-hover:text-primary transition-colors duration-300">{name}</p>
+    <p className="text-[#737373] md:text-lg text-xl font-medium">{role}</p>
+    
+    <div className="flex justify-center items-center gap-6 mt-4">
+      {twitter && (
+        <a 
+          href={twitter} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-2  rounded-full text-primary  transition-all duration-300 transform hover:scale-110 shadow-sm hover:shadow-md"
+        >
+          <AiOutlineTwitter className="text-xl" />
+        </a>
+      )}
+      {linkedin && (
+        <a 
+          href={linkedin} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-2 text-primary rounded-full transition-all duration-300 transform hover:scale-110 shadow-sm hover:shadow-md"
+        >
+          <FaLinkedinIn className="text-xl" />
+        </a>
+      )}
+    </div>
+  </div>
+);
+
+const teamData = [
+  {
+    name: "Elizabeth Okaome",
+    role: "Founder",
+    image: "/founder.png",
+    alt: "Elizabeth Okaome image",
+    aos: "fade-right",
+    twitter: "http://twitter.com/EOkaome?s=09",
+    linkedin: "http://www.linkedin.com/in/elizabeth-okaome-a940791aa",
+  },
+  {
+    name: "Anita Kimemenihia",
+    role: "Lead, Communications",
+    image: "/team-images/anita.png",
+    alt: "Anita Kimemenihia image",
+    aos: "zoom-in-down",
+    twitter: "http://x.com/ArchivesofKim",
+    linkedin: "http://www.linkedin.com/in/anita-kimemenihia",
+  },
+  {
+    name: "Ayomide Mary Faniran",
+    role: "Lead, Human Resources",
+    image: "/ayomide.png",
+    alt: "Ayomide Mary Faniran image",
+    aos: "fade-up-left",
+    twitter: "https://x.com/Faniranayomide",
+    linkedin: "https://www.linkedin.com/in/faniranayomidemary/",
+  },
+  {
+    name: "Falomo Sharon",
+    role: "Lead, Engineering",
+    image: "/sharonf.png",
+    alt: "Falomo Sharon image",
+    aos: "fade-up-left",
+    twitter: "https://twitter.com/sharonfalomo?s=11&t=u5By12KDfWxoH722yIJ3FQ",
+    linkedin: "http://linkedin.com/in/sharon-falomo",
+  },
+  {
+    name: "Ihuoma favour Agbaru",
+    role: "Operations Manager",
+    image: "/ihuoma.png",
+    alt: "Ihuoma favour Agbaru image",
+    aos: "zoom-in-right",
+    linkedin: "https://www.linkedin.com/in/ihuomaagbaru?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+];
+
 const Team = () => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
@@ -10,292 +111,30 @@ const Team = () => {
   }, []);
 
   return (
-    <section className="" id="team">
-      <div className="container xl:max-w-screen-xl mx-auto py-5 px-4 text-dark relative">
-        <img
-          src="/contact-dots.svg"
-          alt="dots"
-          className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5"
+    <section id="team" className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="container xl:max-w-screen-xl mx-auto py-5 px-4 text-dark relative z-10">
+        <img 
+          src="/contact-dots.svg" 
+          alt="dots" 
+          className="absolute top-[20px] left-[5px] sm:left-[-5px] my-5" 
         />
+        
         <h2 className="md:text-5xl text-4xl font-bold text-center md:my-10 my-16 w-fit mx-auto relative">
           Meet The Team
-          <img
-            src="/sun.png"
-            alt="dots"
-            className="absolute top-[-10px] right-[-25px] w-14"
+          <img 
+            src="/sun.png" 
+            alt="sun" 
+            className="absolute top-[-10px] right-[-25px] w-14 animate-pulse" 
           />
-          {/* <img src="/sun.png" alt="" className="absolute top-[-5px] right-[0px]" /> */}
         </h2>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10">
-          <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-right"
-            >
-              <img
-                src="/founder.png"
-                alt="Elizabeth Okaome image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Elizabeth Okaome</p>
-            <p className="text-[#737373] text-xl md:text-lg">Founder</p>
-            <div className="flex justify-center items-center gap-4 mt-2">
-              <a
-                href="http://twitter.com/EOkaome?s=09"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="http://www.linkedin.com/in/elizabeth-okaome-a940791aa"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div>
-          {/* <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-left"
-            >
-              <img
-                src="/presh.png"
-                alt="Precious Oriarewo image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Precious Oriarewo</p>
-            <p className="text-[#737373] text-xl md:text-lg">
-              Lead, Operations
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://twitter.com/Precy_Oriarewo"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/precy-oriarewo-b216a9231/"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div> */}
-          <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="zoom-in-down"
-            >
-              <img
-                src="/team-images/anita.png"
-                alt="Anita Kimemenihia image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Anita Kimemenihia</p>
-            <p className="text-[#737373] md:text-lg text-xl">
-              Lead, Communications
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://twitter.com/Restless_kim?s=09"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="http://www.linkedin.com/in/anita-kimemenihia"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div>
-          {/* <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-up-right"
-            >
-              <img
-                src="/team-images/peace.png"
-                alt="Peace Ngozi Okafor image"
-                className="w-[85%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Goldie Chukwuedo</p>
-            <p className="text-[#737373] md:text-lg text-xl">
-              Lead, Community Management
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://twitter.com/Goldiechukwuedo?s=09"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/goldiechukwuedo"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div> */}
-          <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-up-left"
-            >
-              <img
-                src="/tracy.png"
-                alt="Tracy Obakhena image"
-                className="w-[80%]"
-              />
-            </div> 
-           <p className="md:text-xl text-2xl py-1">Tracy Obakhena</p>
-            <p className="text-[#737373] md:text-lg text-xl">
-              Advisory Board Member
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://mobile.twitter.com/whoisourlight"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tracy-obakhena-066b4912a"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div> 
-          </div>
-
-           <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-up-left"
-            >
-              <img
-                src="/Jess.png"
-                alt="Jessica image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Jessica Joseph</p>
-            <p className="text-[#737373] md:text-lg text-xl">
-              Lead, Engineering
-            </p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://twitter.com/forJessica_sake"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jessica-joseph-/"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div>
-
-          {/* <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="fade-down-right"
-            >
-              <img
-                src="/team-images/mary.png"
-                alt="Mary Sule image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Mary Sule</p>
-            <p className="text-[#737373] md:text-lg text-xl">Lead, Finance</p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://mobile.twitter.com/_sulemary"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mary-sule-13739b188"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div> */}
-
-          <div className="w-[220px] xl:w-[250px] text-center">
-            <div
-              className="w-[220px] xl:w-[250px] h-[220px] xl:h-[250px] bg-primary bg-opacity-10 rounded-full flex items-end justify-center overflow-hidden"
-              data-aos="zoom-in-right"
-            >
-              <img
-                src="/team-images/gracious.png"
-                alt="Gracious Sede image"
-                className="w-[80%]"
-              />
-            </div>
-            <p className="md:text-xl text-2xl py-1">Gracious Sede</p>
-            <p className="text-[#737373] md:text-lg text-xl">Legal Advisor</p>
-            <div className="flex justify-center items-center gap-6 mt-2">
-              <a
-                href="https://twitter.com/WestsidePOV?t=uocG-lALKcVkX77_qhHTeQ&s=09"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter className="text-primary text-xl" />
-              </a>
-              <a
-                href="http://www.linkedin.com/in/gracious-sede-a72a28188"
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-primary text-xl" />
-              </a>
-            </div>
-          </div>
+        
+        <div className="flex flex-wrap justify-center gap-8 md:gap-20 my-10 relative z-10">
+          {teamData.map((member, index) => (
+            <TeamMember key={member.name} {...member} />
+          ))}
         </div>
       </div>
     </section>
