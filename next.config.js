@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [''],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "empowerhercommunity.com",   // replace with your actual domain
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.example.com", // add more if you use multiple sources
+      },
+    ],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

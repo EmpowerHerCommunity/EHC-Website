@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import AOS from "aos";
 
+
 const Description = () => {
   useEffect(() => {
     AOS.init({ duration: 2500 });
@@ -57,15 +58,15 @@ const Description = () => {
                 women as possible.
               </p>
               <div className="leading-6 mt-2 mb-12">
-                <Link
+                <Link target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform"
-                  legacyBehavior
+                 
                 >
-                  <a target="_blank">
+                
                     <button className="rounded-md bg-primary py-3 px-4 border text-white border-primary hover:border-transparent w-44  hover:text-primary hover:bg-transparent hover:border-opacity-5 hover:shadow hover:border-primary">
                       <span className=" text-2xl "> Join Us Today </span>
                     </button>
-                  </a>
+                  
                 </Link>
               </div>
               <div
@@ -105,6 +106,7 @@ const Description = () => {
                   </p>
                 </div>
               </div>
+             
             </div>
           </div>
         </div>

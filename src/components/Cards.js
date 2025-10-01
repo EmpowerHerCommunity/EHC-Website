@@ -25,10 +25,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have any good managerial skills? Are you experienced in program management?
 										</p>
-										<Link href='https://forms.gle/jB8o8yZfYhxasNPj8' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#5C80BC] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link target='_blank' className="inline-block bg-[#5C80BC] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" href='https://forms.gle/jB8o8yZfYhxasNPj8' >
+											
 												Apply Here
-											</a>
+											
 										</Link>
 									</div>
 								</div>
@@ -47,10 +47,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have good people skills? Are you experienced in community management?
 										</p>
-										<Link href='https://bit.ly/ehc_comm_manager' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#E5A4CB] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link target='_blank' className="inline-block bg-[#E5A4CB] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" href='https://bit.ly/ehc_comm_manager' >
+										
 												Apply Here
-											</a>
+										
 										</Link>
 									</div>
 								</div>
@@ -69,10 +69,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have a love for technology? Are you experienced in web development?
 										</p>
-										<Link href='https://forms.gle/1MveyWBQbKQKbaV36' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#947BD3] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link target='_blank' className="inline-block bg-[#947BD3] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" href='https://forms.gle/1MveyWBQbKQKbaV36' >
+									
 												Apply Here
-											</a>
+										
 										</Link>
 									</div>
 								</div>
@@ -91,10 +91,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have good content and writing skills? Are you experienced in content writing?
 										</p>
-										<Link href='https://forms.gle/QkiWM536MKUHKweq5' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#5C80BC] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link target='_blank' className="inline-block bg-[#5C80BC] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" href='https://forms.gle/QkiWM536MKUHKweq5' >
+											
 												Apply Here
-											</a>
+											
 										</Link>
 									</div>
 								</div>
@@ -113,10 +113,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have good content and editing skills? Are you experienced in social media management?
 										</p>
-										<Link href='https://bit.ly/ehcsocialmediamanager' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#E5A4CB] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link href='https://bit.ly/ehcsocialmediamanager' target='_blank' className="inline-block bg-[#E5A4CB] text-white lg:text-xl text-2xl  text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" >
+			
 												Apply Here
-											</a>
+											
 										</Link>
 									</div>
 								</div>
@@ -135,10 +135,10 @@ const Cards = () => {
 										<p className='lg:text-lg text-2xl w-12/12 mb-2'>
 											Do you have good design skills? Are you experienced in Design?
 										</p>
-										<Link href='https://bit.ly/ehcdesigners' legacyBehavior>
-											<a target='_blank' className="inline-block bg-[#947BD3] text-white lg:text-xl text-2xl text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm">
+										<Link target='_blank' className="inline-block bg-[#947BD3] text-white lg:text-xl text-2xl text-center leading-[1] w-44 p-4 hover:scale-105 rounded-sm" href='https://bit.ly/ehcdesigners' >
+										
 												Apply Here
-											</a>
+										
 										</Link>
 									</div>
 								</div>

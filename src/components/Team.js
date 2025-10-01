@@ -67,6 +67,14 @@ const teamData = [
     twitter: "http://twitter.com/EOkaome?s=09",
     linkedin: "http://www.linkedin.com/in/elizabeth-okaome-a940791aa",
   },
+    {
+    name: "Ihuoma favour Agbaru",
+    role: "Lead, Operations",
+    image: "/ihuoma.png",
+    alt: "Ihuoma favour Agbaru image",
+    aos: "zoom-in-right",
+    linkedin: "https://www.linkedin.com/in/ihuomaagbaru?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
   {
     name: "Anita Kimemenihia",
     role: "Lead, Communications",
@@ -86,6 +94,15 @@ const teamData = [
     linkedin: "https://www.linkedin.com/in/faniranayomidemary/",
   },
   {
+    name: "Tracy Obakhena",
+    role: "Advisory Board Member",
+    image: "/tracy.png",
+    alt: "Tracy Obakhena image",
+    aos: "fade-up-left",
+    twitter: "https://mobile.twitter.com/whoisourlight",
+    linkedin: "https://www.linkedin.com/in/tracy-obakhena-066b4912a",
+  },
+  {
     name: "Falomo Sharon",
     role: "Lead, Engineering",
     image: "/sharonf.png",
@@ -94,13 +111,14 @@ const teamData = [
     twitter: "https://twitter.com/sharonfalomo?s=11&t=u5By12KDfWxoH722yIJ3FQ",
     linkedin: "http://linkedin.com/in/sharon-falomo",
   },
-  {
-    name: "Ihuoma favour Agbaru",
-    role: "Operations Manager",
-    image: "/ihuoma.png",
-    alt: "Ihuoma favour Agbaru image",
-    aos: "zoom-in-right",
-    linkedin: "https://www.linkedin.com/in/ihuomaagbaru?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    {
+    name: "Sopuruchi Rufus",
+    role: "Legal Counsel",
+    image: "/sopuru.png",
+    alt: "Sopuruchi Rufus image",
+    aos: "fade-up-left",
+    twitter: "https://x.com/legaltechiee?s=21",
+    linkedin: "https://www.linkedin.com/in/sopuruchi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
 ];
 

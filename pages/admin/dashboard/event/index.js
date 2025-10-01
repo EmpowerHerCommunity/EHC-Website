@@ -55,8 +55,8 @@ const EventDashboard = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the
-          <Link href="/" legacyBehavior>
-            <a className="underline text-primary">home page</a>
+          <Link className="underline text-primary" href="/" >
+           home page
           </Link>
           to continue browsing.
         </h1>
@@ -100,13 +100,13 @@ const EventDashboard = () => {
                     <td>
                       <Link
                         href={`/admin/dashboard/event/${data.id}`}
-                        legacyBehavior
+                       
                       >
-                        <a>
+                      
                           <button className="w-14 rounded-md border bg-light text-primary h-10">
                             Edit
                           </button>
-                        </a>
+                 
                       </Link>
                     </td>
 

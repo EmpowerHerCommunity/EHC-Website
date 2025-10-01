@@ -40,12 +40,10 @@ const UpcomingEventsCard = ({ events }) => {
                   </div>
                   <div className="flex my-4">
                     <button className="bg-primary bg-opacity-80 py-3 px-4 border rounded-sm border-primary hover:border-transparent w-44">
-                      <Link legacyBehavior href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform">
-                        <a target="_blank">
+                      <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform">
                           <span className="text-white text-2xl">
                             Read More
                           </span>
-                        </a>
                       </Link>
                     </button>
                   </div>

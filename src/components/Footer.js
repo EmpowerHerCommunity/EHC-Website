@@ -23,31 +23,31 @@ const Footer = () => {
             </p>
             <div className='flex lg:gap-6 gap-10 mb-6'>
               <span className='border-2 border-solid rounded-full p-2'>
-                <Link href="https://www.instagram.com/empowerher_community/" legacyBehavior>
-                  <a target='_blank'>
+                <Link target='_blank' href="https://www.instagram.com/empowerher_community/" >
+              
                     <SiInstagram size='1.6rem' />
-                  </a>
+               
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <Link href="https://twitter.com/empowerhercom?s=20" legacyBehavior>
-                <a target='_blank'>
+                <Link target='_blank' href="https://twitter.com/empowerhercom?s=20" >
+              
                     <SiTwitter size='1.6rem' />
-                  </a>
+            
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <Link href="https://www.facebook.com/empowerhercom/" legacyBehavior>
-                <a target='_blank'>
+                <Link target='_blank' href="https://www.facebook.com/empowerhercom/">
+                
                     <SiFacebook size='1.6rem' />
-                  </a>
+                
                 </Link>
               </span>
               <span className='border-2 border-solid rounded-full p-2'>
-                <Link href="https://www.linkedin.com/company/empower-her-community/" legacyBehavior>
-                <a target='_blank'>
+                <Link target='_blank' href="https://www.linkedin.com/company/empower-her-community/" >
+         
                     <SiLinkedin size='1.6rem' />
-                  </a>
+                
                 </Link>
               </span>
             </div>
@@ -56,61 +56,61 @@ const Footer = () => {
           <div className='flex flex-wrap sm:flex-nowrap gap-6 lg:gap-x-8 gap-x-16 w-full lg:w-auto text-xl' data-aos='zoom-in-down'>
             <ul className="min-w-max text-2xl md:text-xl">
               <li className="mb-4">
-                <Link href='/' legacyBehavior>
-                  <a>
+                <Link href='/' >
+                  
                     Home
-                  </a>
+                 
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/aboutUs' legacyBehavior>
-                  <a>
+                <Link href='/aboutUs' >
+               
                     About Us
-                  </a>
+               
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/events' legacyBehavior>
-                  <a>
+                <Link href='/events' >
+              
                     Events
-                  </a>
+                 
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/support' legacyBehavior>
-                  <a target='_blank'>
+                <Link href='/support' target='_blank' >
+              
                     Support Us
-                  </a>
+                
                 </Link>
               </li>
             </ul>
             <ul className="min-w-max text-2xl md:text-xl">
               <li className="mb-4">
-                <Link href='/volunteer' legacyBehavior>
-                  <a>
+                <Link href='/volunteer' >
+           
                     Volunteer
-                  </a>
+               
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/aboutUs#team' legacyBehavior>
-                  <a>
+                <Link href='/aboutUs#team'>
+            
                     Meet The Team
-                  </a>
+           
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/contact' legacyBehavior>
-                  <a>
+                <Link href='/contact' >
+            
                     Contact
-                  </a>
+            
                 </Link>
               </li>
               <li className="mb-4">
-                <Link href='/#partnership'legacyBehavior>
-                  <a>
+                <Link href='/#partnership'>
+               
                     Partners
-                  </a>
+           
                 </Link>
               </li>
             </ul>
@@ -119,12 +119,12 @@ const Footer = () => {
                 Contact Information
               </li>
           
-              <li className="mb-4 ">
-                <Link href='mailto:info@empowerher.community'legacyBehavior>
-                  <a className='flex items-center gap-4'>
+              <li className="mb-4 " >
+                <Link href='mailto:info@empowerher.community' className='flex items-center gap-4'>
+                 
                     <MdOutlineEmail />
                     info@empowerher.community
-                  </a>
+        
                 </Link>
               </li>
               <li className="mt-8 text-right hidden lg:block">

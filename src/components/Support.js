@@ -87,13 +87,11 @@ const Support = () => {
     <p className="text-xl lg:text-lg text-justify  py-5 leading-6">
       Your support will make a tangible difference in the lives of these aspiring female technologists. Donate today and help us empower women in tech.
     </p>
-    <Link href="https://paystack.com/pay/empowerhercommunity" legacyBehavior>
-      <a target="_blank">
+    <Link target="_blank" href="https://paystack.com/pay/empowerhercommunity">
         <button className="bg-payment cursor-pointer text-white inline-flex w-full justify-center items-center border text-xl h-14 my-3 rounded-full">
           <span>Pay with&nbsp;</span>
           <span className="font-semibold">Paystack</span>
         </button>
-      </a>
     </Link>
   </div>
 

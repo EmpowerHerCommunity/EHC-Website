@@ -11,6 +11,8 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* global css */
+
+
 :root {
   --main-color: #660066;
   --secondary-color: #363636;
@@ -45,4 +47,47 @@ a {
 
 p{
   /* text-align: justify; */
+}
+
+@layer components {
+    .benefit-section {
+    @apply min-h-[100dvh] bg-[#222123] overflow-hidden relative;
+
+    p {
+      @apply text-primary  text-center text-lg;
+    }
+
+    .first-title {
+      @apply rotate-[3deg] relative z-10;
+    }
+
+    .second-title {
+      @apply rotate-[-1deg] md:-translate-y-5;
+    }
+
+    .third-title {
+      @apply rotate-[1deg] md:-translate-y-12 relative z-10;
+    }
+
+    .fourth-title {
+      @apply rotate-[-5deg] md:-translate-y-12;
+    }
+
+    .vd-pin-section {
+      @apply md:h-[110vh] h-[100dvh] overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20;
+
+      video {
+        @apply w-full h-full absolute inset-0 object-cover;
+      }
+
+      .play-btn {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[9vw] h-[9vw] flex justify-center items-center bg-[#ffffff1a] backdrop-blur-xl rounded-full;
+      }
+
+      img:first-of-type {
+        @apply w-[15vw] h-[15vw];
+      }
+    }
+  }
+
 }

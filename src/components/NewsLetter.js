@@ -19,15 +19,15 @@ const NewsLetter = () => {
             Get community updates and opportunities delivered to your inbox
           </h2>
           <div className="">
-            <Link
+            <Link target="_blank"
               href="https://empowerhercommunity.substack.com/embed"
-              legacyBehavior
+       
             >
-              <a target="_blank">
+           
                 <button className="bg-primary text-white md:w-96 w-48 h-14 rounded-md flex-auto text-2xl hover:bg-transparent hover:shadow-md hover:text-primary">
                   Yes, I’m in!
                 </button>
-              </a>
+           
             </Link>
           </div>
         </div>

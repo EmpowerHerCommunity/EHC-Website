@@ -107,8 +107,8 @@ const BlogEdit = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the
-          <Link href="/" legacyBehavior>
-            <a className="underline text-primary">home page</a>
+          <Link className="underline text-primary" href="/" >
+           home page
           </Link>
           to continue browsing.
         </h1>

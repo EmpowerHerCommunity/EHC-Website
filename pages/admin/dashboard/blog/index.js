@@ -34,8 +34,8 @@ const BlogDashboard = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the
-          <Link href="/" legacyBehavior>
-            <a className="underline text-primary">home page</a>
+          <Link  className="underline text-primary" href="/" >
+         home page
           </Link>
           to continue browsing.
         </h1>
@@ -78,13 +78,13 @@ const BlogDashboard = () => {
                     <td>
                       <Link
                         href={`/admin/dashboard/blog/${data.slug}`}
-                        legacyBehavior
+                       
                       >
-                        <a>
+                    
                           <button className="w-16 rounded-md border bg-primary text-white h-10">
                             Edit
                           </button>
-                        </a>
+                     
                       </Link>
                     </td>
                   </tr>

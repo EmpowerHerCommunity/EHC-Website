@@ -54,15 +54,15 @@ const PastEventsCard = ({ event, i }) => {
               </div>
               <div>
                 <div className="flex gap-4">
-                  <Link
+                  <Link target="_blank"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdiqxcF-QKi9bf97M6XaNUEmr1dc-5wOLpeAJqNWaCtRjTb5A/viewform"
-                    legacyBehavior
+                   
                   >
-                    <a target="_blank">
+                 
                       <button className="bg-primary py-3 px-4 border text-white border-primary hover:border-transparent lg:w-52 w-52 rounded-md hover:text-primary hover:bg-transparent hover:border-primary hover:border-opacity-5 hover:shadow-sm">
                         <span className="text-2xl">Join Us Today</span>
                       </button>
-                    </a>
+               
                   </Link>
                 </div>
               </div>

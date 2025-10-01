@@ -58,8 +58,8 @@ const FeaturedDashboard = () => {
         <h1>
           Sorry, this page is not available on your current screen size. Please
           go back to the{" "}
-          <Link href="/" legacyBehavior>
-            <a className="underline text-primary">home page</a>
+          <Link className="underline text-primary" href="/" >
+          home page
           </Link>{" "}
           to continue browsing.
         </h1>
@@ -95,14 +95,14 @@ const FeaturedDashboard = () => {
                     <td className="">{data.author}</td>
                     <td className="">
                       <Link
-                        legacyBehavior
+                       
                         href={`/admin/dashboard/featured/${data.slug}`}
                       >
-                        <a>
+                      
                           <button className="w-16 rounded-md border bg-white text-primary h-10">
                             Edit
                           </button>
-                        </a>
+                   
                       </Link>
 
                       <a>
