@@ -9,7 +9,7 @@ import Partnership from "../src/components/Partnership";
 import Testimonial from "../src/components/Testimonial";
 import Footer from "../src/components/Footer";
 import PopUp from "../src/components/Popup";
-import AnniversaryCountdown from "../src/components/AnniversaryCountdown"
+// import AnniversaryCountdown from "../src/components/AnniversaryCountdown"
 // import SpotlightPreview from '../src/components/ui/spotlight-demo';
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
       <NavBar />
       <main className="main overflow-hidden">
         <HeroHome />
-      <AnniversaryCountdown  />
+      {/* <AnniversaryCountdown  /> */}
        {/* <SpotlightPreview /> */}
         <Description />
         <Events />
