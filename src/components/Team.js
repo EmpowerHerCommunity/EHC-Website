@@ -104,7 +104,7 @@ const teamData = [
   },
    {
     name: "Edike Esther",
-    role: "Communiity Lead",
+    role: "Lead, Community",
     image: "/Esther.png",
     alt: "Edike Esther image",
     aos: "zoom-in-right",
