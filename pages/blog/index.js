@@ -58,28 +58,62 @@ export default function Blog({ blogs, raw, currentPage, totalPages }) {
 export async function getStaticProps() {
   const currentPage = 1;
   const pageSize = 9;
-
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL +
-      `/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
-  );
-
-  if (!response.ok) {
-    console.error("Error fetching data:", response.statusText);
+  
+  // FIX: Add fallback for undefined environment variable
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+  
+  // Check if baseUrl is empty (environment variable not set)
+  if (!baseUrl) {
+    console.error('NEXT_PUBLIC_BASE_URL is not defined');
     return {
-      notFound: true,
+      props: {
+        blogs: [],
+        raw: { count: 0, results: [] },
+        currentPage: currentPage,
+        totalPages: 0,
+      },
     };
   }
 
-  const data = await response.json();
-  const results = data.results;
+  try {
+    const response = await fetch(
+      `${baseUrl}/api/v1/indexapi/blogpost/?page=${currentPage}&page_size=${pageSize}`
+    );
 
-  return {
-    props: {
-      blogs: results,
-      raw: data,
-      currentPage: currentPage,
-      totalPages: Math.ceil(data.count / pageSize),
-    },
-  };
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      return {
+        props: {
+          blogs: [],
+          raw: { count: 0, results: [] },
+          currentPage: currentPage,
+          totalPages: 0,
+        },
+      };
+    }
+
+    const data = await response.json();
+    const results = data.results || [];
+
+    return {
+      props: {
+        blogs: results,
+        raw: data,
+        currentPage: currentPage,
+        totalPages: Math.ceil((data.count || 0) / pageSize),
+      },
+      // Optional: Re-generate page at most once per 60 seconds
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error in getStaticProps:", error);
+    return {
+      props: {
+        blogs: [],
+        raw: { count: 0, results: [] },
+        currentPage: currentPage,
+        totalPages: 0,
+      },
+    };
+  }
 }

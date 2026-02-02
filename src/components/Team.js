@@ -102,6 +102,14 @@ const teamData = [
     twitter: "https://mobile.twitter.com/whoisourlight",
     linkedin: "https://www.linkedin.com/in/tracy-obakhena-066b4912a",
   },
+   {
+    name: "Edike Esther",
+    role: "Communiity Lead",
+    image: "/Esther.png",
+    alt: "Edike Esther image",
+    aos: "zoom-in-right",
+    linkedin: "https://www.linkedin.com/in/uchechukwuedike/",
+  },
   {
     name: "Falomo Sharon",
     role: "Lead, Engineering",
